@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "errors": [],
+  "assembled_refs": [
+    "D1",
+    "D2"
+  ],
+  "stock_verified": false,
+  "rotation_verified": false,
+  "production_ready": false
+}

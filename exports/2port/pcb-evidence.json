@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "pass": true,
+  "reports_older_than_source": [],
+  "checks": [
+    {
+      "kind": "erc",
+      "pass": true,
+      "errors": 0,
+      "warnings": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "reason": "",
+      "exclusions": 0
+    },
+    {
+      "kind": "drc",
+      "pass": true,
+      "errors": 0,
+      "warnings": 0,
+      "unconnected": 0,
+      "parity": 0,
+      "reason": "",
+      "exclusions": 0
+    }
+  ],
+  "source_sha256": {
+    "hardware/2port/thor-2port.kicad_sch": "d5bb1029b2f2da4e82d6deeff24bfaa80192755a637e897c3c6b297fb3258403",
+    "hardware/2port/thor-2port.kicad_pcb": "48604679460e75b26541dbf2afc2812784c1d9f134b28c32d20808a477144c0a",
+    "hardware/2port/thor-2port.kicad_pro": "daa492cbc08055404ae152bb69a3570173d7e52520ab425ef773ab2f96da0b8f",
+    "hardware/2port/thor-2port.kicad_dru": "8a8b2a9f51ce5dde8a24c7edf205429e4f05e420502414323cae544eea7a7cb0",
+    "hardware/interface.json": "f60db67a017d760b2b224e08d1f8d520e6ff5979be7a18c546b3ce2ffa73e56d",
+    "research/j47-footprint-measurements.json": "826fcbe8c997e5bdd5d02492d9293ff240b68ba0026cf5da6c69d63f7650c235"
+  },
+  "report_sha256": {
+    "exports/2port/erc.json": "e48ab55a77d209bba5b575ec37cb7ff7b996b0f332f9a2ed442cdd35697837d5",
+    "exports/2port/drc.json": "ff86b29466b9e3e300b63ca12541b7c532e2dbb47f886b456b45a062ca6e94b1"
+  },
+  "production_ready": false,
+  "release_gates": [
+    {
+      "id": "mating",
+      "pass": false,
+      "detail": "Native Wieson lands verified; current drawing/height, procurement and physical FFSD fit/continuity pending"
+    },
+    {
+      "id": "sourcing",
+      "pass": false,
+      "detail": "Exact manufacturer connector footprint and assembly quote"
+    },
+    {
+      "id": "protection",
+      "pass": false,
+      "detail": "CAN waveform, ESD/EFT/surge and sustained fault scope"
+    },
+    {
+      "id": "mechanical",
+      "pass": false,
+      "detail": "Printed housing, clamp pull test and cable routing"
+    },
+    {
+      "id": "assembly",
+      "pass": false,
+      "detail": "JLC DFM, placement rotation and first article inspection"
+    }
+  ],
+  "physical_fit_verified": false,
+  "electrical_tested": false
+}

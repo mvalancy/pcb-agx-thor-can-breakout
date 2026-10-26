@@ -1,0 +1,112 @@
+{
+  "pass": true,
+  "checks": {
+    "board_shell_intersection_mm3": 0.0,
+    "native_pcb_shell_intersection_mm3": 0.0,
+    "base_lid_intersection_mm3": 0.0,
+    "clamp_shell_intersection_mm3": 0.0,
+    "ribbon_hard_parts_intersection_mm3": 0.0,
+    "screw_plastic_intersection_mm3": 0.0
+  },
+  "physical_fit_verified": false,
+  "slicer_run": false,
+  "protection_tested": false,
+  "release_ready": false,
+  "port_checks": [
+    {
+      "port": 0,
+      "flange_separation_mm": 6.35,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 0,
+      "flange_separation_mm": 7.11,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "flange_separation_mm": 6.35,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "flange_separation_mm": 7.11,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 2,
+      "flange_separation_mm": 6.35,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 2,
+      "flange_separation_mm": 7.11,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 3,
+      "flange_separation_mm": 6.35,
+      "housing_intersection_mm3": 0.0
+    },
+    {
+      "port": 3,
+      "flange_separation_mm": 7.11,
+      "housing_intersection_mm3": 0.0
+    }
+  ],
+  "outer_size_mm": [
+    184.2,
+    86.2,
+    26.799999999999997
+  ],
+  "mechanical_sources": {
+    "cad/build.py": "86d9e3fa9cb736e84e48cee06ad4875a188f434a04c2b9fbcb4297d960ee79b3",
+    "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
+    "cad/parameters.json": "5ce10454a78c98033400abae1f4633b1703557cee80ddeb4fbd614fa89607002",
+    "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec"
+  },
+  "native_step_sha256": "e77cc7119c494b2f5842580b05c70fb9e5728580a43a40643e90e443164fbc90",
+  "envelope_basis": "Native KiCad models plus original Assmann drawing envelopes; hood capture and screw seating assumed. No official manufacturer STEP.",
+  "mating": {
+    "hood_gap_nominal_mm": 8.200000000000003,
+    "hood_gap_max_width_mm": 7.700000000000003,
+    "front_rib_mm": 9.799999999999997,
+    "screw_engagement_verified": false,
+    "reference": "research/mating-dsub-measurements.json"
+  },
+  "heat_set_inserts": {
+    "quantity": 6,
+    "mpn": "94459A130",
+    "pilot_mm": 4.0,
+    "intentional_knurl_plastic_interference_mm3": 123.403,
+    "physical_installation_verified": false
+  },
+  "lid_screws": {
+    "quantity": 4,
+    "size": "M3x20",
+    "counterbore_mm": [
+      6.4,
+      3.3
+    ],
+    "head_recess_mm": 0.3,
+    "tip_z_mm": 3.5,
+    "engagement_mm": 3.8,
+    "tip_clearance_mm": 1.2,
+    "insert_bottom_clearance_mm": 0.5,
+    "pcb_pad_gap_mm": 0.8,
+    "pad_thickness_mm": 1.0
+  },
+  "strain_relief": {
+    "hard_stop_gap_mm": 1.8,
+    "pad_compression_fraction_assumed": 0.25,
+    "screws": "2 x M3x6 with heat-set inserts",
+    "tip_z_mm": 12.5,
+    "engagement_mm": 3.6,
+    "tip_clearance_mm": 1.4,
+    "insert_bottom_clearance_mm": 0.7,
+    "pull_test_target_N": 10,
+    "pull_test_passed": false,
+    "ribbon_thickness_assumed_mm": 0.6,
+    "limits": "Cable thickness, compression curve, pull strength, creep and bend radius unqualified."
+  }
+}

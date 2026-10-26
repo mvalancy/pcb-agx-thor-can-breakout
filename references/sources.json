@@ -1,0 +1,68 @@
+{
+  "sources": [
+    {
+      "title": "Samtec SHF footprint revA",
+      "url": "https://suddendocs.samtec.com/prints/shf-1xx-01-x-d-xx-xx-footprint.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "7d1eff1a140a0ca862c0d28b87dbdbb70a0e55adec5c029630f129ea2d4461f0",
+      "facts": "SMT pad pitch, dimensions and rows",
+      "redistributed": false
+    },
+    {
+      "title": "Samtec SHF product drawing",
+      "url": "https://suddendocs.samtec.com/prints/shf-1xx-01-x-d-xx-xx-xx-mkt.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "a89f0649e4902f0a68c27b410e024fd25cb31ff07a0726a95bd8b783ee8b65a1",
+      "facts": "body and mating family",
+      "redistributed": false
+    },
+    {
+      "title": "Assmann ASS4888CO rev10 sheet1",
+      "url": "https://www.lcsc.com/datasheet/C3127392.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "8c7dda832468ebea2b22ec1be27a5dded64a57f38689a3c5617f94e83b4ca851",
+      "facts": "DE9 shell holes, signal rows, flange and body",
+      "redistributed": false
+    },
+    {
+      "title": "BOOMELE2x7 header drawing",
+      "url": "https://www.lcsc.com/datasheet/C71397.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "235dd44adbaf51551b9d34e63814bf274849fcafc57816023191333e402fef69",
+      "facts": "14contacts, body/pin/hole dimensions",
+      "redistributed": false
+    },
+    {
+      "title": "BOOMELE2x3 header drawing",
+      "url": "https://www.lcsc.com/datasheet/C65114.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "7907c8fbabf70f8dbfff00bc9a397b5b92e846fa2a0271b05b3d7c25931ec1be",
+      "facts": "6contacts, body/pin/hole dimensions",
+      "redistributed": false
+    },
+    {
+      "title": "XFCN PZ254V-11-02P",
+      "url": "https://www.lcsc.com/datasheet/C492401.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": "d4cb67e0fd15267bd26f8e782f79b44bc2c8e05fd2ac63c5a88712860c9aacd0",
+      "facts": "1.02mm drill,2.54mm pitch",
+      "redistributed": false
+    },
+    {
+      "title": "Bourns CDSOT23-SM712",
+      "url": "https://www.bourns.com/docs/product-datasheets/cdsot23-sm712.pdf",
+      "reviewed": "2026-10-26",
+      "sha256": null,
+      "facts": "manufacturer pinout, working and clamp voltages;75pFtyp",
+      "redistributed": false
+    },
+    {
+      "title": "P4071_A02_Concept_schematics.pdf",
+      "url": "https://developer.nvidia.com/embedded/downloads",
+      "reviewed": "2026-10-26",
+      "sha256": "b3b8547259a62ff21d061c111f31a39a7183bc9989aee130e411bf05b6d4f722",
+      "facts": "P4071A02 generic schematic: J47sheet11, CAN circuits47\u201350. Not IGXA04 population evidence.",
+      "redistributed": false
+    }
+  ]
+}

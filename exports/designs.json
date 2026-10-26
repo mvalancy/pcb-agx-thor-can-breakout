@@ -1,0 +1,60 @@
+{
+  "designs": [
+    {
+      "name": "2port / protected breakout + housing",
+      "verdict": "A0 prototype",
+      "summary": "Routed KiCad adapter; replaceable ribbon strain relief. Unqualified for production.",
+      "pcb_evidence": "exports/2port/pcb-evidence.json",
+      "metrics": [
+        {
+          "label": "Board",
+          "value": "93 \u00d7 65",
+          "unit": "mm"
+        },
+        {
+          "label": "Target run",
+          "value": 50,
+          "unit": "units"
+        }
+      ],
+      "links": [
+        {
+          "title": "Sourcing audit",
+          "href": "research/connector-sourcing.md"
+        },
+        {
+          "title": "Checks",
+          "href": "exports/2port/pcb-evidence.json"
+        }
+      ]
+    },
+    {
+      "name": "4port / protected breakout + housing",
+      "verdict": "A0 prototype",
+      "summary": "Routed KiCad adapter; replaceable ribbon strain relief. Unqualified for production.",
+      "pcb_evidence": "exports/4port/pcb-evidence.json",
+      "metrics": [
+        {
+          "label": "Board",
+          "value": "177 \u00d7 65",
+          "unit": "mm"
+        },
+        {
+          "label": "Target run",
+          "value": 50,
+          "unit": "units"
+        }
+      ],
+      "links": [
+        {
+          "title": "Sourcing audit",
+          "href": "research/connector-sourcing.md"
+        },
+        {
+          "title": "Checks",
+          "href": "exports/4port/pcb-evidence.json"
+        }
+      ]
+    }
+  ]
+}

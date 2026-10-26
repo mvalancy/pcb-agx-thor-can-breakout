@@ -1,0 +1,41 @@
+- id: workspace
+  title: Local engineering site and reproducible project
+  status: done
+  done_when: Localhost serves the cad-agent project dashboard.
+  notes: cad-agent improvements isolated from unrelated work.
+- id: interface
+  title: Verify Thor schematic, header and cable
+  status: active
+  done_when: All 26 pins traced to the vendor schematic; header and cable have sourced
+    drawings.
+  notes: "Original NVIDIA P4071 A02 design files found in local Downloads. J47 is\
+    \ 2\xD713 at 1.27 mm."
+- id: protection
+  title: Protection architecture and assembly parts
+  status: active
+  done_when: Protection limits, termination and part choices documented against source
+    evidence.
+  notes: TVS protection baseline; CAN bus isolation needs an active repeater.
+- id: pcb
+  title: KiCad schematic, layout and manufacturing review
+  status: active
+  done_when: ERC, DRC, connectivity and BOM/CPL checks complete with evidence.
+  notes: 'Both 42 mm pitch layouts pass ERC, DRC, unconnected-net and schematic-parity checks; assembly files validated.'
+- id: enclosure
+  title: Printed housing and connector access
+  status: active
+  done_when: Parametric CAD, printable exports, mating access and fastener checks
+    available.
+  notes: Both printable shells generated; checking board interference, mating envelopes
+    and fasteners.
+- id: handoff
+  title: Publish project and reusable PCB lessons
+  status: next
+  done_when: Project published; cad-agent and library changes submitted through review.
+- id: qualification
+  title: Prototype validation before 50-unit order
+  status: blocked
+  done_when: Cable continuity, physical fit, CAN communication and electrical protection
+    tested on hardware.
+  notes: Requires fabricated prototypes and bench measurements. No physical testing
+    has occurred.

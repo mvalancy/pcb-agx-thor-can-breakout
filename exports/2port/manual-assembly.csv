@@ -1,0 +1,11 @@
+Designator,Description,MPN,Disposition
+J1,THOR J47 / Wieson,AC2800-0011-022-H0,Manual/consigned; sourcing and fit approval pending
+J10,AUX / RAW IO,BOOMELE 2.54-2x7P male C71397,Manual/consigned; sourcing and fit approval pending
+J2,FSI_CAN0 / CAN,A-DS 09 A/KG-T2S,Manual/consigned; sourcing and fit approval pending
+JP1,120R HOST TERM / OPEN,PZ254V-11-02P,Manual/consigned; sourcing and fit approval pending
+J3,FSI_CAN1 / CAN,A-DS 09 A/KG-T2S,Manual/consigned; sourcing and fit approval pending
+JP2,120R HOST TERM / OPEN,PZ254V-11-02P,Manual/consigned; sourcing and fit approval pending
+J11,RESERVED CAN / RAW,BOOMELE 2.54-2x3P male C65114,Manual/consigned; sourcing and fit approval pending
+JP5,3V3 AUX ENABLE / OPEN,PZ254V-11-02P,Manual/consigned; sourcing and fit approval pending
+JP6,5V AUX ENABLE / OPEN,PZ254V-11-02P,Manual/consigned; sourcing and fit approval pending
+J12,SHIELD / GND / OPEN,PZ254V-11-02P,Manual/consigned; sourcing and fit approval pending

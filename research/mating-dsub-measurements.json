@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-26",
+  "units": "mm",
+  "status": "Manufacturer-drawing reference geometry; exact Assmann mating depth, hood capture datums and screw engagement are unresolved.",
+  "selected_reference": {
+    "female": {
+      "manufacturer": "Assmann WSW",
+      "mpn": "A-DF 09 LL/Z",
+      "digikey": "AE11063-ND",
+      "url": "https://www.digikey.com/en/products/detail/assmann-wsw-components/A-DF-09-LL-Z/5051922",
+      "stock_snapshot": 26570,
+      "price_usd_qty50": 0.3906
+    },
+    "hood": {
+      "manufacturer": "Assmann WSW",
+      "mpn": "A-FT 09",
+      "digikey": "AE11002-ND",
+      "url": "https://www.digikey.com/en/products/detail/assmann-wsw-components/A-FT-09/1241834",
+      "stock_snapshot": 18288,
+      "price_usd_qty50": 1.0194,
+      "includes": "Hinged hood, clamp, clamp screws and two #4-40 thumbscrews"
+    },
+    "board_male": {
+      "manufacturer": "Assmann WSW",
+      "mpn": "A-DS 09 A/KG-T2S"
+    }
+  },
+  "sources": [
+    {
+      "id": "hood",
+      "url": "https://www.assmann-wsw.com/uploads/datasheets/ASS_3205_CO.pdf",
+      "drawing": "ASS3205 CO",
+      "revision": "02",
+      "date": "2018-07-30",
+      "sheet": 1,
+      "local_ignored_path": "references/vendor/mating-dsub/ASS_3205_CO_A-FT09.pdf",
+      "sha256": "5196a14346f359baf2d98c3d24ebe76506db771fae051e60d3327f4435d287c9"
+    },
+    {
+      "id": "female",
+      "url": "https://www.assmann-wsw.com/uploads/datasheets/ASS_4884_CO.pdf",
+      "drawing": "ASS4884 CO",
+      "revision": "12",
+      "date": "2024-01-16",
+      "sheet": 2,
+      "local_ignored_path": "references/vendor/mating-dsub/ASS_4884_CO_A-DF09_LLZ.pdf",
+      "sha256": "9b36356ea62e6ce792f6a0f74ac2037cabd11d9f8eb090551386843569b667bc"
+    },
+    {
+      "id": "male",
+      "url": "https://www.assmann-wsw.com/uploads/datasheets/ASS_4888_CO.pdf",
+      "drawing": "ASS4888 CO",
+      "revision": "10",
+      "date": "2023-10-27",
+      "sheet": 1
+    },
+    {
+      "id": "mating_proxy_te",
+      "url": "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-40010&DocType=Specification+Or+Standard&PartCntxt=5-747905-2",
+      "drawing": "114-40010",
+      "revision": "G",
+      "date": "2011-07-05",
+      "sheet": 4,
+      "section": "3.4, Figure 4",
+      "scope": "TE connectors, not certification of exact Assmann pair"
+    },
+    {
+      "id": "mating_proxy_positronic",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8882/C005RevC1_HighPerfDsub_FA.pdf",
+      "catalog": "C005",
+      "revision": "C1",
+      "pdf_page": 14,
+      "printed_page": 7,
+      "local_ignored_path": "references/vendor/mating-dsub/Positronic_C005RevC1.pdf",
+      "sha256": "fb81df72368bb1ac91e7c3fbcbef6b0769f2f89d304cf9a5b79d23387165d147",
+      "scope": "Cross-manufacturer comparison only"
+    }
+  ],
+  "hood_geometry": {
+    "source": "hood",
+    "width": 33.8,
+    "height": 14.8,
+    "depth": 33.3,
+    "size_tolerance_plus_minus": 0.5,
+    "screw_pitch": 24.99,
+    "screw_pitch_tolerance_plus_minus": 0.5,
+    "cable_exit_opening_width": 8.0,
+    "cable_clamp_validated_diameter_range": null,
+    "rear_taper_starts_at_depth": 24.6,
+    "rear_taper_start_tolerance_plus_minus": 0.5,
+    "rear_tip_width": null,
+    "corner_radii": null,
+    "front_lip_beyond_female_facing_flange": null,
+    "female_capture_groove_datums": null,
+    "note": "8.0 is an aperture width callout, not a stated validated cable OD range. Unspecified contours must remain marked assumptions."
+  },
+  "female_geometry": {
+    "source": "female",
+    "flange_width": 30.81,
+    "flange_height": 12.55,
+    "flange_size_tolerance_plus_minus": 0.25,
+    "hole_pitch": 24.99,
+    "clearance_hole_diameter": 3.05,
+    "front_shell_width": 16.33,
+    "front_shell_height": 7.9,
+    "front_shell_projection": 5.8,
+    "keystone_wall_angle_degrees": 10.0,
+    "rear_body_width": 19.2,
+    "rear_body_height": 10.72,
+    "rear_body_depth_drawing_callout": 4.1,
+    "tail_extension": 3.1,
+    "tail_extension_tolerance_plus_minus": 0.38,
+    "flange_thickness": null,
+    "drawing_general_tolerances": {
+      "one_decimal": 0.25,
+      "two_decimal": 0.13
+    },
+    "wire_gauge_drawing_recommendation_awg": [
+      28,
+      30
+    ],
+    "note": "Do not infer current cable gauge suitability; flange thickness and precise hood capture are unspecified."
+  },
+  "thumbscrew_geometry": {
+    "source": "hood",
+    "thread": "#4-40 UNC",
+    "thread_pitch": 0.635,
+    "head_max_diameter": 7.0,
+    "head_length": 9.7,
+    "shaft_diameter": 2.6,
+    "shaft_length": 28.6,
+    "collar_length": 1.5,
+    "tip_thread_length": 8.7,
+    "overall_length": 48.5,
+    "one_decimal_tolerance_plus_minus": 0.25,
+    "axis_u": "Positive outward toward cable; origin at collar-front/thread-start plane.",
+    "intervals_u": {
+      "threaded_tip": [
+        -8.7,
+        0.0
+      ],
+      "collar": [
+        0.0,
+        1.5
+      ],
+      "shaft": [
+        1.5,
+        30.1
+      ],
+      "head": [
+        30.1,
+        39.8
+      ]
+    },
+    "collar_to_female_facing_flange_setback_c": null,
+    "collar_diameter_verified": null,
+    "driver_interface_size": null,
+    "note": "Positions relative to female flange require measured c; these are free-screw detail dimensions, not a seated assembly."
+  },
+  "board_screwlock": {
+    "source": "male",
+    "thread": "#4-40 UNC",
+    "head_height_h": 4.8,
+    "head_height_tolerance_plus_minus": 0.25,
+    "internal_usable_thread_depth": null,
+    "note": "5.8 mm alternative in drawing is T2A, not T2S."
+  },
+  "clearance_recommendation": {
+    "port_pitch": 42,
+    "comparison": [
+      {
+        "pitch": 35,
+        "hood_gap_nominal": 1.2,
+        "hood_gap_max_hood_width": 0.7,
+        "inner_screw_head_gap_nominal": 3.01,
+        "inner_screw_head_gap_conservative": 2.26
+      },
+      {
+        "pitch": 40,
+        "hood_gap_nominal": 6.2,
+        "hood_gap_max_hood_width": 5.7,
+        "inner_screw_head_gap_nominal": 8.01,
+        "inner_screw_head_gap_conservative": 7.26
+      },
+      {
+        "pitch": 42,
+        "hood_gap_nominal": 8.2,
+        "hood_gap_max_hood_width": 7.7,
+        "inner_screw_head_gap_nominal": 10.01,
+        "inner_screw_head_gap_conservative": 9.26
+      }
+    ],
+    "project_test_gauges_not_manufacturer_requirements": {
+      "finger_diameter": 12,
+      "tool_shaft_diameter": 6,
+      "tool_projection_behind_head": 25,
+      "representative_cable_diameter": 6,
+      "cable_exit_envelope_diameter": 8
+    },
+    "note": "Add PCB, printed-part and assembly-position tolerance separately. Gauge clearance is not ergonomic certification."
+  },
+  "mating_proxy_and_panel": {
+    "flange_separation_g": 6.73,
+    "flange_separation_range": [
+      6.35,
+      7.11
+    ],
+    "is_assmann_pair_certified": false,
+    "supplied_board_male_front_flange_y": -3.44,
+    "supplied_housing_outer_wall_y": -3.6,
+    "outward_direction": "negative global Y",
+    "female_facing_flange_y_range": [
+      -10.55,
+      -9.79
+    ],
+    "female_shell_nose_nominal_projection_y_range": [
+      -4.75,
+      -3.99
+    ],
+    "female_flange_to_wall_outside_clearance_range": [
+      6.19,
+      6.95
+    ],
+    "hood_lip_wall_clearance_formula": "g - 0.16 - l, where l is hood forward lip beyond female facing flange",
+    "max_hood_forward_lip_for_0p5_wall_clearance_at_g_min": 5.69,
+    "note": "Revised near-flush flange keeps female shell nominally outside panel. Minimum0.14 nose clearance includes female projection tolerance only, not PCB/case/assembly tolerances. g is a comparison proxy; l remains unknown.",
+    "female_nose_to_wall_outside_clearance_nominal_range": [
+      0.39,
+      1.15
+    ],
+    "female_nose_to_wall_min_clearance_with_projection_tolerance": 0.14
+  },
+  "thread_engagement": {
+    "formula": "e = 8.7 - (g + c - 4.8)",
+    "nominal_range_at_proxy_g": "e = [6.39-c, 7.15-c]",
+    "tolerance_bounds": "e_min = 5.89-c_max; e_max = 7.65-c_min",
+    "physical_pass": null,
+    "required_unresolved_inputs": [
+      "Assmann-pair fully seated g",
+      "Seated collar setback c and retention travel",
+      "Board screwlock usable thread depth and lead-in",
+      "Required engagement and permissible torque"
+    ],
+    "warning": "Cylinder overlap only shows reach. It does not prove thread engagement or absence of bottoming."
+  },
+  "model_provenance": {
+    "official_step_downloaded": false,
+    "basis": "Original parameterized geometry from manufacturer drawing dimensions; no manufacturer mesh imported.",
+    "vendor_redistribution_license": "No open redistribution license established; keep vendor source documents ignored.",
+    "terms_url": "https://www.assmann-wsw.com/us/imprint/",
+    "access_limits": "TraceParts route presented bot verification; not bypassed. TE alternative official STEP URLs returned HTTP403; no files used."
+  }
+}

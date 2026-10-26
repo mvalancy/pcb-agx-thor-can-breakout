@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "audited_date": "2026-10-26",
+  "units": "mm",
+  "part": "Wieson AC2800-0011-022-H0",
+  "status": "Reference-layout-derived geometry; current manufacturer drawing, physical mating, height and procurement unverified.",
+  "coordinate_convention": {
+    "view": "Top-side KiCad footprint, component-side view; +X right, +Y down.",
+    "origin": "Center between pad rows and columns.",
+    "from_odb_package": "x_kicad=x_odb; y_kicad=-y_odb",
+    "from_this_placed_allegro_component": "x_kicad=x_board-61.700; y_kicad=y_board+3.400",
+    "caution": "The latter transform applies only to NVIDIA J47 bottom-side 180-degree placement. Do not additionally mirror new top footprint."
+  },
+  "source_archive_sha256": {
+    "P4071_A02_Allegro_layout_ascii_extract.zip": "e6816f531136a92b1dca768e4c3959714259f98568674b245f6ea1f6b9a612a6",
+    "P4071_A02_ValorODB_database.zip": "643023c079dfacb7c1e803ba31ed3cd04f9fd0c1d8be215a6e9a3a46eca72cb5",
+    "P4071_A02_BOM.xlsx": "121e49a59357c838ba5f198fdba4db70dfcf6726dd9c21b7711396d9a6402c96"
+  },
+  "source_member_paths": {
+    "allegro": "P4071_A02_Allegro_layout.brd.alg",
+    "odb_package": "616-14071-1000-A02.tgz/142-14071-1000-a02/steps/cad/eda/data",
+    "odb_placement": "616-14071-1000-A02.tgz/142-14071-1000-a02/steps/cad/layers/comp_+_bot/components",
+    "odb_copper": "616-14071-1000-A02.tgz/142-14071-1000-a02/steps/cad/layers/bottom/features"
+  },
+  "land_pattern": {
+    "pad_type": "SMD rectangle",
+    "pad_count": 26,
+    "pitch_x": 1.27,
+    "row_center_spacing": 3.86,
+    "copper_size": [
+      0.74,
+      3.0
+    ],
+    "paste_size": [
+      0.74,
+      3.0
+    ],
+    "mask_size": [
+      0.84,
+      3.1
+    ],
+    "mask_expansion_per_edge": 0.05,
+    "drilled_holes_found": 0,
+    "pads": [
+      {
+        "pin": 1,
+        "at": [
+          -7.62,
+          1.93
+        ],
+        "allegro_copper_line": 383600,
+        "odb_package_pin_line": 122115
+      },
+      {
+        "pin": 2,
+        "at": [
+          -7.62,
+          -1.93
+        ],
+        "allegro_copper_line": 382250,
+        "odb_package_pin_line": 122117
+      },
+      {
+        "pin": 3,
+        "at": [
+          -6.35,
+          1.93
+        ],
+        "allegro_copper_line": 359500,
+        "odb_package_pin_line": 122119
+      },
+      {
+        "pin": 4,
+        "at": [
+          -6.35,
+          -1.93
+        ],
+        "allegro_copper_line": 359364,
+        "odb_package_pin_line": 122121
+      },
+      {
+        "pin": 5,
+        "at": [
+          -5.08,
+          1.93
+        ],
+        "allegro_copper_line": 359430,
+        "odb_package_pin_line": 122123
+      },
+      {
+        "pin": 6,
+        "at": [
+          -5.08,
+          -1.93
+        ],
+        "allegro_copper_line": 358928,
+        "odb_package_pin_line": 122125
+      },
+      {
+        "pin": 7,
+        "at": [
+          -3.81,
+          1.93
+        ],
+        "allegro_copper_line": 359244,
+        "odb_package_pin_line": 122127
+      },
+      {
+        "pin": 8,
+        "at": [
+          -3.81,
+          -1.93
+        ],
+        "allegro_copper_line": 359024,
+        "odb_package_pin_line": 122129
+      },
+      {
+        "pin": 9,
+        "at": [
+          -2.54,
+          1.93
+        ],
+        "allegro_copper_line": 359182,
+        "odb_package_pin_line": 122131
+      },
+      {
+        "pin": 10,
+        "at": [
+          -2.54,
+          -1.93
+        ],
+        "allegro_copper_line": 408848,
+        "odb_package_pin_line": 122133
+      },
+      {
+        "pin": 11,
+        "at": [
+          -1.27,
+          1.93
+        ],
+        "allegro_copper_line": 361860,
+        "odb_package_pin_line": 122135
+      },
+      {
+        "pin": 12,
+        "at": [
+          -1.27,
+          -1.93
+        ],
+        "allegro_copper_line": 361728,
+        "odb_package_pin_line": 122137
+      },
+      {
+        "pin": 13,
+        "at": [
+          0.0,
+          1.93
+        ],
+        "allegro_copper_line": 361790,
+        "odb_package_pin_line": 122139
+      },
+      {
+        "pin": 14,
+        "at": [
+          0.0,
+          -1.93
+        ],
+        "allegro_copper_line": 361496,
+        "odb_package_pin_line": 122141
+      },
+      {
+        "pin": 15,
+        "at": [
+          1.27,
+          1.93
+        ],
+        "allegro_copper_line": 361662,
+        "odb_package_pin_line": 122143
+      },
+      {
+        "pin": 16,
+        "at": [
+          1.27,
+          -1.93
+        ],
+        "allegro_copper_line": 361596,
+        "odb_package_pin_line": 122145
+      },
+      {
+        "pin": 17,
+        "at": [
+          2.54,
+          1.93
+        ],
+        "allegro_copper_line": 361600,
+        "odb_package_pin_line": 122147
+      },
+      {
+        "pin": 18,
+        "at": [
+          2.54,
+          -1.93
+        ],
+        "allegro_copper_line": 361459,
+        "odb_package_pin_line": 122149
+      },
+      {
+        "pin": 19,
+        "at": [
+          3.81,
+          1.93
+        ],
+        "allegro_copper_line": 361422,
+        "odb_package_pin_line": 122151
+      },
+      {
+        "pin": 20,
+        "at": [
+          3.81,
+          -1.93
+        ],
+        "allegro_copper_line": 338036,
+        "odb_package_pin_line": 122153
+      },
+      {
+        "pin": 21,
+        "at": [
+          5.08,
+          1.93
+        ],
+        "allegro_copper_line": 409127,
+        "odb_package_pin_line": 122155
+      },
+      {
+        "pin": 22,
+        "at": [
+          5.08,
+          -1.93
+        ],
+        "allegro_copper_line": 337920,
+        "odb_package_pin_line": 122157
+      },
+      {
+        "pin": 23,
+        "at": [
+          6.35,
+          1.93
+        ],
+        "allegro_copper_line": 337982,
+        "odb_package_pin_line": 122159
+      },
+      {
+        "pin": 24,
+        "at": [
+          6.35,
+          -1.93
+        ],
+        "allegro_copper_line": 337912,
+        "odb_package_pin_line": 122161
+      },
+      {
+        "pin": 25,
+        "at": [
+          7.62,
+          1.93
+        ],
+        "allegro_copper_line": 337928,
+        "odb_package_pin_line": 122163
+      },
+      {
+        "pin": 26,
+        "at": [
+          7.62,
+          -1.93
+        ],
+        "allegro_copper_line": 408603,
+        "odb_package_pin_line": 122165
+      }
+    ]
+  },
+  "nominal_wieson_body_outline": {
+    "source_layer": "MECH_DIMENSION_ASTRON",
+    "allegro_lines": [
+      529150,
+      529161
+    ],
+    "core_size": [
+      16.81,
+      3.45
+    ],
+    "closed_polygon": [
+      [
+        2.55,
+        1.725
+      ],
+      [
+        2.55,
+        2.555
+      ],
+      [
+        -2.55,
+        2.555
+      ],
+      [
+        -2.55,
+        1.725
+      ],
+      [
+        -8.405,
+        1.725
+      ],
+      [
+        -8.405,
+        -1.725
+      ],
+      [
+        -2.55,
+        -1.725
+      ],
+      [
+        -2.55,
+        -2.555
+      ],
+      [
+        2.55,
+        -2.555
+      ],
+      [
+        2.55,
+        -1.725
+      ],
+      [
+        8.405,
+        -1.725
+      ],
+      [
+        8.405,
+        1.725
+      ],
+      [
+        2.55,
+        1.725
+      ]
+    ],
+    "meaning": "Nominal outline associated with Wieson MPN annotation; not an independently acquired current manufacturer drawing."
+  },
+  "cap_outline": {
+    "source_layer": "MECH_DIMENSION_ASTRON",
+    "allegro_lines": [
+      529138,
+      529149
+    ],
+    "callout_line": 529420,
+    "closed_polygon": [
+      [
+        -2.55,
+        2.09
+      ],
+      [
+        -1.2,
+        2.09
+      ],
+      [
+        -1.2,
+        4.49
+      ],
+      [
+        1.2,
+        4.49
+      ],
+      [
+        1.2,
+        2.09
+      ],
+      [
+        2.55,
+        2.09
+      ],
+      [
+        3.0,
+        2.09
+      ],
+      [
+        3.0,
+        -2.11
+      ],
+      [
+        2.55,
+        -2.11
+      ],
+      [
+        -2.55,
+        -2.11
+      ],
+      [
+        -3.0,
+        -2.11
+      ],
+      [
+        -3.0,
+        2.09
+      ],
+      [
+        -2.55,
+        2.09
+      ]
+    ],
+    "meaning": "Source calls this CAP. Whether retained after assembly is unknown. Do not label as polarizing key or shroud."
+  },
+  "source_dfa_envelope": {
+    "source_layer": "DFA_BOUND_BOTTOM",
+    "allegro_lines": [
+      529394,
+      529409
+    ],
+    "odb_contour_lines": [
+      122093,
+      122112
+    ],
+    "bounds": {
+      "xmin": -8.555,
+      "xmax": 8.555,
+      "ymin": -3.43,
+      "ymax": 4.64
+    },
+    "closed_polygon": [
+      [
+        -7.99,
+        -3.43
+      ],
+      [
+        7.99,
+        -3.43
+      ],
+      [
+        7.99,
+        -1.875
+      ],
+      [
+        8.555,
+        -1.875
+      ],
+      [
+        8.555,
+        1.875
+      ],
+      [
+        7.99,
+        1.875
+      ],
+      [
+        7.99,
+        3.43
+      ],
+      [
+        1.35,
+        3.43
+      ],
+      [
+        1.35,
+        4.64
+      ],
+      [
+        -1.35,
+        4.64
+      ],
+      [
+        -1.35,
+        3.43
+      ],
+      [
+        -7.99,
+        3.43
+      ],
+      [
+        -7.99,
+        1.875
+      ],
+      [
+        -8.555,
+        1.875
+      ],
+      [
+        -8.555,
+        -1.875
+      ],
+      [
+        -7.99,
+        -1.875
+      ],
+      [
+        -7.99,
+        -3.43
+      ]
+    ],
+    "meaning": "Source envelope includes pad extents and expanded CAP; not nominal body or a prescriptive KiCad courtyard margin."
+  },
+  "source_pin1_silk_triangle": {
+    "allegro_lines": [
+      529280,
+      529282
+    ],
+    "closed_polygon": [
+      [
+        -8.592,
+        3.147
+      ],
+      [
+        -8.309,
+        3.43
+      ],
+      [
+        -8.592,
+        3.713
+      ],
+      [
+        -8.592,
+        3.147
+      ]
+    ],
+    "meaning": "Source width is zero; a new footprint requires printable line width."
+  },
+  "height_metadata_unresolved": {
+    "package_height_max": 6.38,
+    "component_attribute": 6.456,
+    "meaning": "Shared-library metadata; exact ordered Wieson part height requires current drawing/sample."
+  },
+  "verification": {
+    "all_26_placed_lands_match_odb_package_transform": true,
+    "all_26_mask_and_paste_sizes_checked": true,
+    "physical_mating_verified": false,
+    "current_manufacturer_drawing_verified": false
+  }
+}

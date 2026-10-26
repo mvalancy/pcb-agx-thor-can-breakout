@@ -1,0 +1,126 @@
+cad:
+  name: pcb-agx-thor-can-breakout
+  title: AGX Thor CAN breakout
+  revision: A0-development
+  serve:
+    host: 127.0.0.1
+    port: 8765
+  site:
+    title: Thor CAN / engineering workspace
+    tagline: "Protected CAN breakout, ribbon interconnect and printed enclosure \xB7\
+      \ 50-unit target"
+    theme: hud
+    notice: "Development in progress \u2014 prototype and electrical validation required\
+      \ before production."
+    milestones: docs/milestones.yaml
+    decisions: docs/decisions.yaml
+    designs: exports/designs.json
+    pages:
+    - README.md
+    - docs/*.md
+    - research/*.md
+    live_reload:
+      watch:
+      - docs
+      - research
+      - exports
+      - hardware
+      - cad
+      skip: []
+    links:
+    - title: Project repository
+      href: https://github.com/mvalancy/pcb-agx-thor-can-breakout
+    - title: 2-port schematic
+      href: exports/2port/schematic.pdf
+    - title: Enclosure gallery
+      href: preview/2port-assembled.png
+    review: exports/review.json
+  printer:
+    name: Bambu P1S / prototype
+    bed_mm:
+    - 256
+    - 256
+    - 256
+  view:
+    hidden:
+    - 4port
+    - ribbon_clamp
+    - fastener_coupon
+    - port_coupon
+    colors:
+      2port_base: '#263d47'
+      2port_lid: '#4f788a'
+      4port_base: '#253742'
+      4port_lid: '#507786'
+      2port_clamp: '#e8892b'
+      4port_clamp: '#e8892b'
+      2port_pcb: '#3d8060'
+      4port_pcb: '#3d8060'
+      2port_ribbon: '#bdbbb0'
+      4port_ribbon: '#bdbbb0'
+      2port_legend_paint: '#eeecd1'
+      2port_inserts: '#d9a33d'
+      2port_screws: '#b0b6bc'
+      2port_female: '#acb2b8'
+      2port_hoods: '#292e36'
+      2port_thumbscrews: '#d18c40'
+      2port_can_cables: '#181a1d'
+      4port_legend_paint: '#eeecd1'
+      4port_inserts: '#d9a33d'
+      4port_screws: '#b0b6bc'
+      4port_female: '#acb2b8'
+      4port_hoods: '#292e36'
+      4port_thumbscrews: '#d18c40'
+      4port_can_cables: '#181a1d'
+    explode:
+      2port_lid:
+      - 0
+      - 0
+      - 1
+      4port_lid:
+      - 0
+      - 0
+      - 1
+    extra:
+    - glob: exports/asm_*.step
+      strip: asm_
+    groups:
+    - id: 2port
+      title: Thor 2-port assembly
+      prefix: 2port_
+    - id: 4port
+      title: Thor 4-port assembly
+      prefix: 4port_
+  steps:
+  - name: mechanical
+    run: cad/build.py
+    log: mechanical-build.log
+  - name: dimensional-drawings
+    run: tools/draw_mechanics.py
+  - name: render-readbacks
+    run: tools/render_review.py
+  - name: assembly-paths
+    run: tools/check_mechanics.py
+  - name: electrical
+    run: tools/check_electronics.py
+  - name: evidence
+    run: tools/update_evidence.py
+  checks:
+  - id: 2port-electrical-review
+    title: 2port electrical-review
+    file: exports/2port/electrical-review.json
+  - id: 2port-mechanical-checks
+    title: 2port mechanical-checks
+    file: exports/2port/mechanical-checks.json
+  - id: 4port-electrical-review
+    title: 4port electrical-review
+    file: exports/4port/electrical-review.json
+  - id: 4port-mechanical-checks
+    title: 4port mechanical-checks
+    file: exports/4port/mechanical-checks.json
+  - id: 2port-paths
+    title: 2port assembly paths
+    file: exports/2port/assembly-paths.json
+  - id: 4port-paths
+    title: 4port assembly paths
+    file: exports/4port/assembly-paths.json

@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "errors": [],
+  "assembly": {
+    "smt": {
+      "pass": true,
+      "errors": [],
+      "assembled_refs": [
+        "D1",
+        "D2"
+      ],
+      "stock_verified": false,
+      "rotation_verified": false,
+      "production_ready": false
+    },
+    "full": {
+      "pass": true,
+      "errors": [],
+      "assembled_refs": [
+        "D1",
+        "D2",
+        "J10",
+        "J11",
+        "J12",
+        "J2",
+        "J3",
+        "JP1",
+        "JP2",
+        "JP5",
+        "JP6"
+      ],
+      "stock_verified": false,
+      "rotation_verified": false,
+      "production_ready": false
+    }
+  },
+  "pins_checked": "DE9 CAN H/L/GND/shield/NC; TVS pin3; host termination tap; open auxiliary power boundaries",
+  "physical_tested": false
+}

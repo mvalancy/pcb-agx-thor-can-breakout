@@ -1,0 +1,18 @@
+Designator,Comment,Footprint,Manufacturer Part,LCSC Part #,Assembly,Status
+J1,THOR J47 / Wieson,Thor:Wieson_AC2800-0011-022-H0,AC2800-0011-022-H0,,SMT,Header consignment/mating pending
+J10,AUX / RAW IO,Thor:PinHeader_2x07_P2.54mm_Vertical,BOOMELE 2.54-2x7P male C71397,C71397,THT,Exact SKU; assembly/stock approval pending
+J2,FSI_CAN0 / CAN,Thor:Assmann_A-DS_09_A-KG-T2S,A-DS 09 A/KG-T2S,C3127392,THT,Exact SKU; assembly/stock approval pending
+D1,CDSOT23-SM712,Thor:SOT-23,CDSOT23-SM712,C404012,SMT,Exact SKU; assembly/stock approval pending
+JP1,120R HOST TERM / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+J3,FSI_CAN1 / CAN,Thor:Assmann_A-DS_09_A-KG-T2S,A-DS 09 A/KG-T2S,C3127392,THT,Exact SKU; assembly/stock approval pending
+D2,CDSOT23-SM712,Thor:SOT-23,CDSOT23-SM712,C404012,SMT,Exact SKU; assembly/stock approval pending
+JP2,120R HOST TERM / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+J4,AURIX_CAN1 / CAN,Thor:Assmann_A-DS_09_A-KG-T2S,A-DS 09 A/KG-T2S,C3127392,THT,Exact SKU; assembly/stock approval pending
+D3,CDSOT23-SM712,Thor:SOT-23,CDSOT23-SM712,C404012,SMT,Exact SKU; assembly/stock approval pending
+JP3,120R HOST TERM / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+J5,AURIX_CAN2 / CAN,Thor:Assmann_A-DS_09_A-KG-T2S,A-DS 09 A/KG-T2S,C3127392,THT,Exact SKU; assembly/stock approval pending
+D4,CDSOT23-SM712,Thor:SOT-23,CDSOT23-SM712,C404012,SMT,Exact SKU; assembly/stock approval pending
+JP4,120R HOST TERM / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+JP5,3V3 AUX ENABLE / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+JP6,5V AUX ENABLE / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending
+J12,SHIELD / GND / OPEN,Thor:XFCN_PZ254V-11-02P,PZ254V-11-02P,C492401,THT,Exact SKU; assembly/stock approval pending

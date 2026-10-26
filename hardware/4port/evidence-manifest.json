@@ -1,0 +1,46 @@
+{
+  "reports": {
+    "erc": "exports/4port/erc.json",
+    "drc": "exports/4port/drc.json"
+  },
+  "sources": [
+    "hardware/4port/thor-4port.kicad_sch",
+    "hardware/4port/thor-4port.kicad_pcb",
+    "hardware/4port/thor-4port.kicad_pro",
+    "hardware/4port/thor-4port.kicad_dru",
+    "hardware/interface.json",
+    "research/j47-footprint-measurements.json"
+  ],
+  "release_gates": [
+    {
+      "id": "mating",
+      "pass": false,
+      "detail": "Native Wieson lands verified; current drawing/height, procurement and physical FFSD fit/continuity pending"
+    },
+    {
+      "id": "sourcing",
+      "pass": false,
+      "detail": "Exact manufacturer connector footprint and assembly quote"
+    },
+    {
+      "id": "protection",
+      "pass": false,
+      "detail": "CAN waveform, ESD/EFT/surge and sustained fault scope"
+    },
+    {
+      "id": "mechanical",
+      "pass": false,
+      "detail": "Printed housing, clamp pull test and cable routing"
+    },
+    {
+      "id": "assembly",
+      "pass": false,
+      "detail": "JLC DFM, placement rotation and first article inspection"
+    },
+    {
+      "id": "igx",
+      "pass": false,
+      "detail": "Specific IGX carrier revision pinout and population audit"
+    }
+  ]
+}

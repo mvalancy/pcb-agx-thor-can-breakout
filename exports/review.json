@@ -1,0 +1,200 @@
+{
+  "groups": [
+    {
+      "title": "2 ports",
+      "summary": "A0 engineering prototype. Physical fit, protection qualification and sourcing remain open.",
+      "views": [
+        {
+          "title": "Schematic",
+          "kind": "pdf",
+          "file": "exports/2port/schematic.pdf",
+          "caption": "Native KiCad schematic; connector pin mapping and protection."
+        },
+        {
+          "title": "Top copper",
+          "kind": "svg",
+          "file": "exports/2port/pcb-top.svg"
+        },
+        {
+          "title": "Bottom copper",
+          "kind": "svg",
+          "file": "exports/2port/pcb-bottom.svg"
+        },
+        {
+          "title": "Assembly",
+          "kind": "svg",
+          "file": "exports/2port/assembly.svg"
+        },
+        {
+          "title": "Enclosure",
+          "kind": "image",
+          "file": "preview/2port-exploded.png",
+          "caption": "Current geometry; supplier connector models and physical validation are tracked separately."
+        },
+        {
+          "title": "Cable clamp",
+          "kind": "image",
+          "file": "preview/2port-open.png",
+          "caption": "Native PCB model and hard-stop clamp. Two adhesive silicone pads required; pull testing pending."
+        },
+        {
+          "title": "Assembled",
+          "kind": "image",
+          "file": "preview/2port-assembled.png"
+        },
+        {
+          "title": "Lid markings",
+          "kind": "image",
+          "file": "preview/2port-lid.png",
+          "caption": "Recessed port names, complete CAN pinout, part revision and github.com/mvalancy."
+        },
+        {
+          "title": "Interactive 3D",
+          "kind": "model",
+          "file": "exports/view/2port.json",
+          "caption": "Existing cad-agent viewer: orbit, hide parts, explode and section. Header/cable models remain conservative envelopes."
+        },
+        {
+          "title": "Dimensions",
+          "kind": "svg",
+          "file": "exports/2port/enclosure-plan.svg",
+          "caption": "Parameter-driven enclosure dimensions and hardware; prototype fit remains unverified."
+        }
+      ],
+      "reports": [
+        {
+          "title": "Electrical CAD",
+          "file": "exports/2port/pcb-evidence.json"
+        },
+        {
+          "title": "Housing geometry",
+          "file": "exports/2port/mechanical-checks.json"
+        },
+        {
+          "title": "Assembly paths",
+          "file": "exports/2port/assembly-paths.json"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "KiCad PCB",
+          "file": "hardware/2port/thor-2port.kicad_pcb"
+        },
+        {
+          "title": "KiCad schematic",
+          "file": "hardware/2port/thor-2port.kicad_sch"
+        },
+        {
+          "title": "Fabrication review ZIP",
+          "file": "exports/2port/thor-2port-A0-fabrication-REVIEW.zip"
+        },
+        {
+          "title": "Assembly BOM",
+          "file": "exports/2port/bom-review.csv"
+        },
+        {
+          "title": "Enclosure hardware BOM",
+          "file": "exports/enclosure-bom.csv"
+        }
+      ]
+    },
+    {
+      "title": "4 ports",
+      "summary": "A0 engineering prototype. Physical fit, protection qualification and sourcing remain open.",
+      "views": [
+        {
+          "title": "Schematic",
+          "kind": "pdf",
+          "file": "exports/4port/schematic.pdf",
+          "caption": "Native KiCad schematic; connector pin mapping and protection."
+        },
+        {
+          "title": "Top copper",
+          "kind": "svg",
+          "file": "exports/4port/pcb-top.svg"
+        },
+        {
+          "title": "Bottom copper",
+          "kind": "svg",
+          "file": "exports/4port/pcb-bottom.svg"
+        },
+        {
+          "title": "Assembly",
+          "kind": "svg",
+          "file": "exports/4port/assembly.svg"
+        },
+        {
+          "title": "Enclosure",
+          "kind": "image",
+          "file": "preview/4port-exploded.png",
+          "caption": "Current geometry; supplier connector models and physical validation are tracked separately."
+        },
+        {
+          "title": "Cable clamp",
+          "kind": "image",
+          "file": "preview/4port-open.png",
+          "caption": "Native PCB model and hard-stop clamp. Two adhesive silicone pads required; pull testing pending."
+        },
+        {
+          "title": "Assembled",
+          "kind": "image",
+          "file": "preview/4port-assembled.png"
+        },
+        {
+          "title": "Lid markings",
+          "kind": "image",
+          "file": "preview/4port-lid.png",
+          "caption": "Recessed port names, complete CAN pinout, part revision and github.com/mvalancy."
+        },
+        {
+          "title": "Interactive 3D",
+          "kind": "model",
+          "file": "exports/view/4port.json",
+          "caption": "Existing cad-agent viewer: orbit, hide parts, explode and section. Header/cable models remain conservative envelopes."
+        },
+        {
+          "title": "Dimensions",
+          "kind": "svg",
+          "file": "exports/4port/enclosure-plan.svg",
+          "caption": "Parameter-driven enclosure dimensions and hardware; prototype fit remains unverified."
+        }
+      ],
+      "reports": [
+        {
+          "title": "Electrical CAD",
+          "file": "exports/4port/pcb-evidence.json"
+        },
+        {
+          "title": "Housing geometry",
+          "file": "exports/4port/mechanical-checks.json"
+        },
+        {
+          "title": "Assembly paths",
+          "file": "exports/4port/assembly-paths.json"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "KiCad PCB",
+          "file": "hardware/4port/thor-4port.kicad_pcb"
+        },
+        {
+          "title": "KiCad schematic",
+          "file": "hardware/4port/thor-4port.kicad_sch"
+        },
+        {
+          "title": "Fabrication review ZIP",
+          "file": "exports/4port/thor-4port-A0-fabrication-REVIEW.zip"
+        },
+        {
+          "title": "Assembly BOM",
+          "file": "exports/4port/bom-review.csv"
+        },
+        {
+          "title": "Enclosure hardware BOM",
+          "file": "exports/enclosure-bom.csv"
+        }
+      ]
+    }
+  ]
+}

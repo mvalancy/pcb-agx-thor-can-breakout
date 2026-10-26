@@ -1,0 +1,7 @@
+- id: protection-baseline
+  date: '2026-10-26'
+  title: Protected passive breakout as baseline
+  status: decided
+  decision: Prioritize CAN transient suppression; assess active isolation separately.
+  why: J47 exports bus-side CAN-H/L, so adding a logic isolator alone would not isolate the interface.
+  source: {kind: user, quote: 'We do not need optoisolators unless a repeater is reasonable.'}

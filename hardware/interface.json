@@ -1,0 +1,134 @@
+{
+  "source": "NVIDIA P4071 A02 generic concept schematic sheet 11; population varies by SKU",
+  "header": {
+    "reference_mpn": "AC2800-0011-022-H0",
+    "reference_manufacturer": "Wieson",
+    "prototype_mpn": "SHF-113-01-L-D-SM",
+    "prototype_manufacturer": "Samtec",
+    "pitch_mm": 1.27,
+    "rows": 2,
+    "positions": 26,
+    "exact_wieson_footprint_verified": true,
+    "cable_mpn": "FFSD-13-D-04.00-01-N",
+    "cable_continuity_verified": false,
+    "design_mpn": "AC2800-0011-022-H0",
+    "design_manufacturer": "Wieson",
+    "verification_scope": "Native NVIDIA A02 ODB/ASCII pads and numbering; connector mating/height/sourcing not verified"
+  },
+  "pins": {
+    "1": "HOST_3V3",
+    "2": "HOST_5V_AO",
+    "3": "FSI_CAN0_H",
+    "4": "FSI_CAN0_TERM",
+    "5": "FSI_CAN0_L",
+    "6": "FSI_EXT_GPIO1",
+    "7": "FSI_CAN1_H",
+    "8": "FSI_CAN1_TERM",
+    "9": "FSI_CAN1_L",
+    "10": "GND",
+    "11": "AURIX_CAN1_H",
+    "12": "AURIX_CAN1_TERM",
+    "13": "AURIX_CAN1_L",
+    "14": "ESTOP_IN1",
+    "15": "AURIX_CAN2_H",
+    "16": "AURIX_CAN2_TERM",
+    "17": "AURIX_CAN2_L",
+    "18": "ESTOP_IN2",
+    "19": "ESTOP_OUT1",
+    "20": "AURIX_PWM_GPIO",
+    "21": "GND",
+    "22": "AURIX_SMCU_PGOOD",
+    "23": "AURIX_SCL_TXD",
+    "24": "AURIX_SMCU_WAKE",
+    "25": "AURIX_SDA_RXD",
+    "26": "GND"
+  },
+  "channels": [
+    {
+      "id": "FSI_CAN0",
+      "pins": [
+        3,
+        4,
+        5
+      ],
+      "transceiver": "TJA1463ATK/0Z"
+    },
+    {
+      "id": "FSI_CAN1",
+      "pins": [
+        7,
+        8,
+        9
+      ],
+      "transceiver": "TCAN1462VDRBRQ1"
+    },
+    {
+      "id": "AURIX_CAN1",
+      "pins": [
+        11,
+        12,
+        13
+      ],
+      "transceiver": "TJA1463ATK/0Z"
+    },
+    {
+      "id": "AURIX_CAN2",
+      "pins": [
+        15,
+        16,
+        17
+      ],
+      "transceiver": "TCAN1462VDRBRQ1"
+    }
+  ],
+  "variants": {
+    "2port": {
+      "channels": 2,
+      "target": "AGX Thor P4071 J47"
+    },
+    "4port": {
+      "channels": 4,
+      "target": "P4071 full-header engineering variant; IGX A04 compatibility pending"
+    }
+  },
+  "de9": {
+    "1": null,
+    "2": "CAN_L",
+    "3": "GND",
+    "4": null,
+    "5": "SHIELD",
+    "6": "GND",
+    "7": "CAN_H",
+    "8": null,
+    "9": null,
+    "SH": "SHIELD"
+  },
+  "aux_header": {
+    "1": "AUX_3V3",
+    "2": "AUX_5V_AO",
+    "3": "FSI_EXT_GPIO1",
+    "4": "GND",
+    "5": "ESTOP_IN1",
+    "6": "ESTOP_IN2",
+    "7": "ESTOP_OUT1",
+    "8": "AURIX_PWM_GPIO",
+    "9": "AURIX_SMCU_PGOOD",
+    "10": "AURIX_SMCU_WAKE",
+    "11": "AURIX_SCL_TXD",
+    "12": "AURIX_SDA_RXD",
+    "13": "GND",
+    "14": "GND"
+  },
+  "protection": {
+    "manufacturer": "Bourns",
+    "mpn": "CDSOT23-SM712",
+    "lcsc": "C404012",
+    "positive_standoff_V": 12,
+    "negative_standoff_V": -7,
+    "positive_clamp_5A_V": 20,
+    "negative_clamp_5A_V": -12,
+    "capacitance_typ_pF": 75,
+    "datasheet": "https://www.bourns.com/docs/product-datasheets/cdsot23-sm712.pdf",
+    "system_tested": false
+  }
+}

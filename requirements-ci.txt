@@ -1,0 +1,3 @@
+cad-agent[site] @ git+https://github.com/Valpatel/cad-agent.git@b7a366aaff627cad401684f84b91c1ccfe49535e
+trimesh==5.2.0
+numpy==2.5.4
