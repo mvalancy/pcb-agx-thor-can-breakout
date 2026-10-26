@@ -20,6 +20,8 @@ def put(z,name,data):
  z.writestr(info,data)
 checksums=[]
 for name,files in packages.items():
+ # Release only bytes covered by the validated public snapshot, never local UI state.
+ files=[rel for rel in files if rel in manifest['files'] or rel=='releases/manifest.json']
  out=R/'releases'/f'{name}.zip';hashes=[]
  with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
   for rel in sorted(set(files)):

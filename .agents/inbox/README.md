@@ -7,6 +7,7 @@ Canonical engineering lessons and repeatable review procedures.
 
 | Item | Kind |
 |---|---|
+| [2026-10-26-release-manifest-allowlist.md](2026-10-26-release-manifest-allowlist.md) | md |
 | [2026-10-26-review-export-readbacks.md](2026-10-26-review-export-readbacks.md) | md |
 | [2026-10-26-tangent-boss-mesh.md](2026-10-26-tangent-boss-mesh.md) | md |
 | [2026-10-26-thor-hardware-validation.md](2026-10-26-thor-hardware-validation.md) | md |
