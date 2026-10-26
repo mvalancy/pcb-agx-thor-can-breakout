@@ -14,15 +14,19 @@ for v in ['2port','4port']:
  packages[f'thor-{revision}-{v}-pcb']=files
 parts=json.loads((R/'exports/geometry-checks.json').read_text())
 packages[f'thor-{revision}-housings']=common+[f'exports/{p}.{ext}' for p in parts for ext in ['stl','step','3mf']]+[str(p.relative_to(R)) for p in (R/'preview').glob('*.png')]+['cad/parameters.json','exports/geometry-checks.json','research/enclosure-hardware.md','research/mating-dsub-measurements.json']+[f'exports/{v}/{f}.json' for v in ['2port','4port'] for f in ['mechanical-checks','assembly-paths']]
+def put(z,name,data):
+ # Stable archive metadata makes the same validated snapshot byte-reproducible.
+ info=zipfile.ZipInfo(name,(2026,10,26,0,0,0));info.compress_type=zipfile.ZIP_DEFLATED;info.external_attr=0o100644<<16
+ z.writestr(info,data)
 checksums=[]
 for name,files in packages.items():
  out=R/'releases'/f'{name}.zip';hashes=[]
  with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
   for rel in sorted(set(files)):
-   data=(R/rel).read_bytes();z.writestr(rel,data);hashes.append(hashlib.sha256(data).hexdigest()+'  '+rel)
+   data=(R/rel).read_bytes();put(z,rel,data);hashes.append(hashlib.sha256(data).hexdigest()+'  '+rel)
   readme=f'# {name}\n\nA0 engineering prototype / NOT PRODUCTION RELEASED.\n\nFor PCB quoting: see docs/manufacturing.md, then exports/<variant>/ for the Gerber/drill review ZIP and assembly population files. J1 Wieson procurement/consignment is unresolved. Inspect the schematic, layers and placement before ordering any prototype.\n\nFor printing: choose one matching base/lid pair plus ribbon_clamp; print coupons first. Files are millimeters. Read ASSEMBLY.md for hardware, pads, fasteners and cable pull testing.\n\nNo physical fit, signal-integrity or transient qualification has occurred. See docs/release-checklist.md. Source: https://github.com/mvalancy/pcb-agx-thor-can-breakout\n'
-  z.writestr('README.md',readme);hashes.append(hashlib.sha256(readme.encode()).hexdigest()+'  README.md')
-  z.writestr('SHA256SUMS','\n'.join(hashes)+'\n')
+  put(z,'README.md',readme);hashes.append(hashlib.sha256(readme.encode()).hexdigest()+'  README.md')
+  put(z,'SHA256SUMS','\n'.join(hashes)+'\n')
  checksums.append(hashlib.sha256(out.read_bytes()).hexdigest()+'  '+out.name);print(out.relative_to(R),round(out.stat().st_size/1e6,2),'MB')
 (R/'releases/SHA256SUMS').write_text('\n'.join(checksums)+'\n')
 (R/'releases/release-prerelease').write_text('true\n')
