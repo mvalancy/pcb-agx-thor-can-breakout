@@ -1,0 +1,9 @@
+# CAD exchange and print artifacts are generated; avoid enormous textual diffs.
+*.step binary
+*.stl binary
+*.3mf binary
+*.pdf binary
+*.png binary
+*.zip binary
+exports/** linguist-generated=true -whitespace
+preview/*.png linguist-generated=true

@@ -32,6 +32,7 @@
     ".agents/issues/geometry-and-parity.md": "e66a3eaa35ffebb3605ce70eb3b7b8a4359eb03f11688f3a940a2d9ec965ca47",
     ".agents/playbooks/README.md": "db4e0d71512e45856e26d2130e99def6dc9152249b71ab86687e7976cb97d113",
     ".agents/playbooks/release.md": "44998c2433d7c08d62a2cf4e19452fc3260c2fb4ba3b59d2d7694348e3af074a",
+    ".gitattributes": "48fab03f6d05ca89593c026ccf7442ef78718f327f4c9d9d86af2042a6428a39",
     ".github/README.md": "535bd1ea701786d69526b44dfda4152cb9806534f7dcd9a6037866a43c579571",
     ".github/workflows/README.md": "37eeae07c5af39d82e206839c3657d96acab3e90fc45f6287bc6abdb1e208ace",
     ".github/workflows/ci.yml": "101c421561c9f3e70a2ef02e7418b0b29f835a669c90e5c7f4503948f6b9f8c8",
