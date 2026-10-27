@@ -1,0 +1,28 @@
+{
+  "name": "Thor conservative JLCPCB 2-layer 1oz prototype",
+  "retrieved": "2026-10-26",
+  "source": "https://jlcpcb.com/capabilities/pcb-",
+  "source_html_sha256": "aa78b352af72191ca7078aa045f1aeee7aa4fef1a79748706abcd42e68ee575e",
+  "supplier_limits_mm": {
+    "track_width": 0.1, "clearance": 0.1, "pth_annular_recommended": 0.25,
+    "via_hole": 0.15, "via_annular_preferred": 0.075,
+    "via_hole_to_hole": 0.2, "pad_hole_to_hole": 0.45,
+    "via_hole_to_track": 0.2, "pth_hole_to_track": 0.28,
+    "smd_pad_clearance": 0.15, "soldermask_bridge_green_1oz": 0.1,
+    "silk_stroke": 0.15, "silk_height": 1.0, "silk_to_pad": 0.15,
+    "copper_to_routed_edge": 0.2, "npth_diameter": 0.5
+  },
+  "project_limits_mm": {
+    "track_width": 0.2, "clearance": 0.2, "pth_annular": 0.25,
+    "via_diameter": 0.6, "via_drill": 0.3, "via_annular": 0.15,
+    "hole_to_hole": 0.45, "hole_to_copper": 0.28,
+    "silk_stroke": 0.15, "silk_height": 1.0, "silk_to_pad": 0.15,
+    "soldermask_bridge": 0.1, "copper_to_edge": 0.3
+  },
+  "vendor_dfm": {
+    "url": "https://jlcdfm.com/",
+    "status": "not_run_login_required",
+    "attempt": "Public engineering Gerber ZIP selected in JLCDFM upload UI; service redirected to JLCPCB sign-in before analysis. No analysis report obtained and no order submitted."
+  },
+  "scope": "Project transcription of relevant published limits, not an official downloadable KiCad rules file. Native DRC plus local checks do not replace supplier DFM, assembly review or electrical qualification."
+}

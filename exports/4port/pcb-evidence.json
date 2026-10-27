@@ -25,16 +25,16 @@
     }
   ],
   "source_sha256": {
-    "hardware/4port/thor-4port.kicad_sch": "86916571344b01abb329180691048ff4a9eaf23e53fd7bd2a2564ecc1eea2cfb",
-    "hardware/4port/thor-4port.kicad_pcb": "238c21bd601fd8a1e3683f700a074a0ccbe20e1efe5e3dbfbf5d4f0733a2d1d3",
-    "hardware/4port/thor-4port.kicad_pro": "03b983fabd3e08222ff1638d359af48ac8662a3cadc5862cc74a6f70ca667166",
-    "hardware/4port/thor-4port.kicad_dru": "8a8b2a9f51ce5dde8a24c7edf205429e4f05e420502414323cae544eea7a7cb0",
+    "hardware/4port/thor-4port.kicad_sch": "81e893f1a0c43bcf8877545d205bb2ddeb56c596b8ad14231efe2fc0b3c3176f",
+    "hardware/4port/thor-4port.kicad_pcb": "70a4dca09fc8db5f079921e6724bbf91419da2c514cf51a8dcfa7e8978796d7c",
+    "hardware/4port/thor-4port.kicad_pro": "090bbbf7b7334764016c4d41e764747e87508791bb3402c95b133364e6343f3e",
+    "hardware/4port/thor-4port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1",
     "hardware/interface.json": "f60db67a017d760b2b224e08d1f8d520e6ff5979be7a18c546b3ce2ffa73e56d",
     "research/j47-footprint-measurements.json": "826fcbe8c997e5bdd5d02492d9293ff240b68ba0026cf5da6c69d63f7650c235"
   },
   "report_sha256": {
-    "exports/4port/erc.json": "7222ae860a70a3a3c06fbe9535f35a2bf326eaad092afe5d7c729eaa3578ecc6",
-    "exports/4port/drc.json": "02657c3c6f71e6427be0d6c6d864ede983f06367db937f16234dcd0bb291cb44"
+    "exports/4port/erc.json": "8d16cfae64f9980495004a8aa9083c53e9b5e168021d6115e3c5ad02f431ffac",
+    "exports/4port/drc.json": "05ae4341fee9f89930c4f7c5b4de5823f7c409cf90395319888e48504ac4dd4b"
   },
   "production_ready": false,
   "release_gates": [

@@ -1,10 +1,10 @@
 # Manufacturing and 50-unit plan
 
-A0 is an engineering review package. The files are organized for quoting and prototype preparation; unresolved release gates prevent a production-ready designation.
+A1 is an engineering review package. The files are organized for quoting and prototype preparation; unresolved release gates prevent a production-ready designation.
 
 ## PCB settings
 
-| Setting | A0 |
+| Setting | A1 |
 |---|---|
 | Board size | 93 × 65 mm two-port; 177 × 65 mm four-port |
 | Stackup | Two layers, nominal 1.6 mm FR4, 1 oz copper |
@@ -13,14 +13,20 @@ A0 is an engineering review package. The files are organized for quoting and pro
 | Assembly side | Top only; bottom ground plane |
 | Fiducials / panel rails | Three board fiducials; supplier panel tooling review required before PCBA |
 
-Rules are conservative relative to the published [JLCPCB PCB capabilities](https://jlcpcb.com/capabilities/Capabilities). Service-specific limits still apply. JLC's [assembly capabilities](https://jlcpcb.com/capabilities/pcb-assembly-capabilities) include through-hole services; do not assume that only SMT is available. Standard service's minimum dimensions may require a panel/rails for a 65 mm deep board. Ask JLC to retain the board outline and mount coordinates when panelizing.
+The current [JLCPCB fabrication capabilities](https://jlcpcb.com/capabilities/pcb-) were retrieved on 2026-10-26, hashed, and transcribed into [the project profile](../hardware/jlcpcb-profile.json). `apply_fab_rules.py` installs native KiCad constraints for clearance, tracks, drill size, hole spacing, annular rings, copper-to-edge spacing and silkscreen. Both native DRC reports must pass.
+
+The separate fabrication-profile check measures actual features: minimum 0.25 mm track, 0.30 mm via drill, 0.15 mm via ring, 0.30 mm plated-pad annular ring and 1.0 mm / 0.15 mm silkscreen height/stroke. A temporary board with an intentionally impossible 0.8 mm minimum track rule must fail native DRC, proving the rule engine is active. It never replaces the design board.
+
+**JLCDFM has not approved these files.** An actual upload attempt at [JLCDFM](https://jlcdfm.com/) redirected to the supplier sign-in before analysis. The attempt produced no vendor DFM report and no order. The downloaded capabilities and local checks are not a substitute for that review; upload the final A1 package through an authenticated session before ordering.
+
+JLC's [assembly capabilities](https://jlcpcb.com/capabilities/pcb-assembly-capabilities) include through-hole services. Confirm the selected service's stock, panel/rail and tooling requirements for a 65 mm-deep board. Ask JLC to retain the outline and mounting coordinates when panelizing.
 
 ## Files to upload
 
 Each variant has a separate folder under `exports/`. Never mix the two variants.
 
 1. Inspect `schematic.pdf`, `pcb-top.svg`, `pcb-bottom.svg`, `assembly.svg` and the ERC/DRC reports.
-2. For a fabrication quote, upload `thor-<variant>-A0-fabrication-REVIEW.zip`. It contains two copper layers, masks, top silkscreen/paste, outline, and separate plated/non-plated Excellon drills. The accompanying text explicitly says **DO NOT ORDER** until the release checklist is complete.
+2. For a fabrication quote, upload `thor-<variant>-A1-fabrication-REVIEW.zip`. It contains two copper layers, masks, top silkscreen/paste, outline, and separate plated/non-plated Excellon drills. The accompanying text explicitly says **DO NOT ORDER** until the release checklist is complete.
 3. For an economical TVS-only PCBA quote, upload `jlc-bom.csv` and `jlc-cpl.csv`. All connectors are separately assembled/consigned in this route.
 4. For a quote including sourced through-hole connectors, upload `jlc-full-bom.csv` and `jlc-full-cpl.csv`. These contain the Bourns TVS, Assmann DE9, BOOMELE auxiliary/reserved headers and XFCN jumper headers. **J1 Wieson still requires manual installation or an approved consignment/sourcing arrangement.** This is not an all-inclusive turnkey BOM.
 5. Inspect every placement in JLC's assembly viewer. The CPL uses native KiCad coordinates, millimeters, top side and uncorrected KiCad rotation. Automated CSV checks cannot prove JLC's library zero-angle convention. Confirm Bourns pin 3, header pin 1 and DE9 orientation individually.

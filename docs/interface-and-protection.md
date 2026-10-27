@@ -27,7 +27,7 @@ The host has 120 Ω from CAN-L to TERM in the examined schematic. A shunt H→TE
 
 ## Transient protection
 
-Each exposed CAN channel has a **Bourns CDSOT23-SM712**, exact supplier code **C404012**, with pins 1/2 to H/L and pin 3 to GND. The [Bourns datasheet](https://www.bourns.com/docs/product-datasheets/cdsot23-sm712.pdf) gives +12/−7 V working standoff, +20/−12 V maximum clamping at 5 A (8/20 µs), and 75 pF typical capacitance. The PCB places the TVS near the DE9 and adds a short direct ground via into the bottom return plane.
+Each exposed CAN channel has a **Bourns CDSOT23-SM712**, exact supplier code **C404012**, with pins 1/2 to H/L and pin 3 to GND. The [Bourns datasheet](https://www.bourns.com/docs/product-datasheets/cdsot23-sm712.pdf) gives +12/−7 V working standoff, +20/−12 V maximum clamping at 5 A (8/20 µs), and 75 pF typical capacitance. The PCB places the TVS near the DE9 and places the TVS pads on the main signal path and adds two short ground vias into the bottom return plane.
 
 The examined carrier uses [NXP TJA1463](https://www.nxp.com/docs/en/data-sheet/TJA1463.pdf) on FSI0 and additional CAN1, and [TI TCAN1462](https://www.ti.com/lit/gpn/tcan1462-q1) on FSI1 and additional CAN2. Their absolute bus limits differ: −36/+40 V for the NXP device versus ±58 V for TI. Selecting a generic 24 V suppressor with a 42–50 V clamp can exceed the weaker device's limit. The chosen part has better nominal voltage margin, but trace inductance, pulse waveform, temperature and tolerances still require system testing.
 
@@ -42,3 +42,11 @@ J10 breaks out all non-CAN pins and ground. JP5/JP6 separately enable 3.3 V/5 V;
 ## Isolation option
 
 A bus-side isolated repeater needs transceivers on both bus segments, isolated power and arbitration-safe dominant/recessive logic. Directly cross-coupling RX/TX can latch the buses dominant. [TI TIDA-01487](https://www.ti.com/tool/TIDA-01487) is a useful reference, but its stated 2 Mbit/s CAN FD scope does not establish 8 Mbit/s operation. An isolated version is deferred pending a separate repeater architecture and timing budget.
+
+## A1 pair routing evidence
+
+The CAN H/L trunks use 0.25 mm traces and 0.25 mm straight-section edge spacing, with the same two layer transitions per conductor. The TVS lies on each measured main path; each local H-to-termination jumper branch is 1.75 mm. H/L path imbalance is 2.67–3.01 mm across the six channels, including nominal via barrels and connector fanouts.
+
+Native bottom-layer routing keepouts preserve ground beneath the front-layer trunks while allowing the ground pour. Sampled trunk centerlines have no missing reference in the current reports. Connector/header fanouts are outside the coupling window. This is a geometric screening result, not a field simulation, controlled 120 Ω stackup or qualified maximum bitrate.
+
+[Two-port routing diagram](../exports/2port/can-routing.svg) · [Four-port routing diagram](../exports/4port/can-routing.svg) · [Two-port measurements](../exports/2port/can-routing-review.json) · [Four-port measurements](../exports/4port/can-routing-review.json)

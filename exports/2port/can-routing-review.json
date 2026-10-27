@@ -1,0 +1,74 @@
+{
+  "pass": true,
+  "errors": [],
+  "library_sha256": "ed43d13dfcd7c8a83b2ba69bdccc5936f581164ffe26e2d5c1c2b6b2c1ebeeca",
+  "channels": [
+    {
+      "channel": 0,
+      "paths": {
+        "H": {
+          "main_length_mm": 58.8926,
+          "layer_transitions": 2,
+          "tvs_on_main_path": true,
+          "trunk_reference_coverage_fraction": 1.0,
+          "longest_reference_gap_mm": 0,
+          "termination_branch_mm": 1.75
+        },
+        "L": {
+          "main_length_mm": 56.0547,
+          "layer_transitions": 2,
+          "tvs_on_main_path": true,
+          "trunk_reference_coverage_fraction": 1.0,
+          "longest_reference_gap_mm": 0
+        }
+      },
+      "length_imbalance_mm": 2.8379,
+      "paired_trunk": {
+        "edge_gap_min_mm": 0.25,
+        "edge_gap_max_mm": 0.2751,
+        "straight_edge_gap_max_mm": 0.25,
+        "measured_both_sides_mm": 62.6501,
+        "missing_peer_layer_mm": 0,
+        "sample_step_mm": 0.1
+      },
+      "reference_gap_samples": []
+    },
+    {
+      "channel": 1,
+      "paths": {
+        "H": {
+          "main_length_mm": 84.9475,
+          "layer_transitions": 2,
+          "tvs_on_main_path": true,
+          "trunk_reference_coverage_fraction": 1.0,
+          "longest_reference_gap_mm": 0,
+          "termination_branch_mm": 1.75
+        },
+        "L": {
+          "main_length_mm": 82.2811,
+          "layer_transitions": 2,
+          "tvs_on_main_path": true,
+          "trunk_reference_coverage_fraction": 1.0,
+          "longest_reference_gap_mm": 0
+        }
+      },
+      "length_imbalance_mm": 2.6664,
+      "paired_trunk": {
+        "edge_gap_min_mm": 0.25,
+        "edge_gap_max_mm": 0.4228,
+        "straight_edge_gap_max_mm": 0.25,
+        "measured_both_sides_mm": 114.9304,
+        "missing_peer_layer_mm": 0,
+        "sample_step_mm": 0.1
+      },
+      "reference_gap_samples": []
+    }
+  ],
+  "source_sha256": {
+    "hardware/2port/thor-2port.kicad_pcb": "5fe71d39df6c6bf5018fa3f1b1282ce3cf9e33bf33bfbd334f7041dac9d38138",
+    "tools/check_can_routing.py": "8e77dfcc41bd41e0f48941edf8eb0f83cc43363f4b15689111d084ecc19a68ab",
+    "tools/route_can_pairs.py": "f69398c8a7d5b894059bdfcf17cb1fe79ff81cdc9f02cc2062b2082ab20dc16f",
+    "hardware/jlcpcb-profile.json": "b818e99681e76ee1f957b24d6d9d56994c0f76a61f5cf0642de548abc34ba2c3"
+  },
+  "limits": "Length includes nominal 1.6 mm via barrels. Trunk Y15\u201345 mm: 0.25 mm traces / 0.25 mm gap; header and component fanouts excluded from coupling screen. Return reference sampled under trace centerlines at 0.1 mm, not an EM simulation. Short two-layer routes and the ribbon are NOT controlled 120-ohm impedance. No data-rate or EMC qualification."
+}

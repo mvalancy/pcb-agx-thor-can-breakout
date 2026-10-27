@@ -1,4 +1,4 @@
-# A0 engineering pre-release
+# A1 engineering pre-release
 
 Download the PCB ZIP for the selected variant and the housings ZIP. SHA256SUMS identifies every download; each ZIP also includes member hashes.
 

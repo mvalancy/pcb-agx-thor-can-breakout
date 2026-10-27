@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "title": "AGX Thor CAN breakout \u00b7 CAD verification",
+  "features": [
+    {
+      "feature_id": "cad-parts",
+      "feature_title": "Printed parts",
+      "checks": [
+        {
+          "name": "2port base",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 100.2 \u00d7 86.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "2port lid",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 100.2 \u00d7 86.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "4port base",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 184.2 \u00d7 86.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "4port lid",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 184.2 \u00d7 86.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "ribbon clamp",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 38 \u00d7 10 \u00d7 5.6 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "fastener coupon",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 44 \u00d7 24 \u00d7 8 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        },
+        {
+          "name": "port coupon",
+          "status": "pass",
+          "message": "valid single solid \u00b7 watertight \u00b7 38 \u00d7 19 \u00d7 3 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+        }
+      ]
+    },
+    {
+      "feature_id": "cad-print-files",
+      "feature_title": "Print files",
+      "checks": [
+        {
+          "name": "2port base",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port_base.3mf",
+            "label": "2port_base.3mf"
+          }
+        },
+        {
+          "name": "2port lid",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port_lid.3mf",
+            "label": "2port_lid.3mf"
+          }
+        },
+        {
+          "name": "4port base",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port_base.3mf",
+            "label": "4port_base.3mf"
+          }
+        },
+        {
+          "name": "4port lid",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port_lid.3mf",
+            "label": "4port_lid.3mf"
+          }
+        },
+        {
+          "name": "ribbon clamp",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/ribbon_clamp.3mf",
+            "label": "ribbon_clamp.3mf"
+          }
+        },
+        {
+          "name": "fastener coupon",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/fastener_coupon.3mf",
+            "label": "fastener_coupon.3mf"
+          }
+        },
+        {
+          "name": "port coupon",
+          "status": "pass",
+          "message": "STL + 3MF (print orientation), STEP (assembly)",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/port_coupon.3mf",
+            "label": "port_coupon.3mf"
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "cad-checks",
+      "feature_title": "Design checks",
+      "checks": [
+        {
+          "name": "2port-electrical-review \u00b7 2port electrical-review",
+          "status": "pass",
+          "message": "pass true in exports/2port/electrical-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/electrical-review.json",
+            "label": "exports/2port/electrical-review.json"
+          }
+        },
+        {
+          "name": "2port-mechanical-checks \u00b7 2port mechanical-checks",
+          "status": "pass",
+          "message": "pass true in exports/2port/mechanical-checks.json \u00b7 physical fit not verified",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/mechanical-checks.json",
+            "label": "exports/2port/mechanical-checks.json"
+          }
+        },
+        {
+          "name": "4port-electrical-review \u00b7 4port electrical-review",
+          "status": "pass",
+          "message": "pass true in exports/4port/electrical-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/electrical-review.json",
+            "label": "exports/4port/electrical-review.json"
+          }
+        },
+        {
+          "name": "4port-mechanical-checks \u00b7 4port mechanical-checks",
+          "status": "pass",
+          "message": "pass true in exports/4port/mechanical-checks.json \u00b7 physical fit not verified",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/mechanical-checks.json",
+            "label": "exports/4port/mechanical-checks.json"
+          }
+        },
+        {
+          "name": "2port-paths \u00b7 2port assembly paths",
+          "status": "pass",
+          "message": "pass true in exports/2port/assembly-paths.json \u00b7 physical fit not verified",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/assembly-paths.json",
+            "label": "exports/2port/assembly-paths.json"
+          }
+        },
+        {
+          "name": "4port-paths \u00b7 4port assembly paths",
+          "status": "pass",
+          "message": "pass true in exports/4port/assembly-paths.json \u00b7 physical fit not verified",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/assembly-paths.json",
+            "label": "exports/4port/assembly-paths.json"
+          }
+        },
+        {
+          "name": "2port-can-routing-review \u00b7 2port CAN paired routing",
+          "status": "pass",
+          "message": "pass true in exports/2port/can-routing-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/can-routing-review.json",
+            "label": "exports/2port/can-routing-review.json"
+          }
+        },
+        {
+          "name": "2port-fabrication-profile-check \u00b7 2port Local fabrication profile",
+          "status": "pass",
+          "message": "pass true in exports/2port/fabrication-profile-check.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/fabrication-profile-check.json",
+            "label": "exports/2port/fabrication-profile-check.json"
+          }
+        },
+        {
+          "name": "4port-can-routing-review \u00b7 4port CAN paired routing",
+          "status": "pass",
+          "message": "pass true in exports/4port/can-routing-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/can-routing-review.json",
+            "label": "exports/4port/can-routing-review.json"
+          }
+        },
+        {
+          "name": "4port-fabrication-profile-check \u00b7 4port Local fabrication profile",
+          "status": "pass",
+          "message": "pass true in exports/4port/fabrication-profile-check.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/fabrication-profile-check.json",
+            "label": "exports/4port/fabrication-profile-check.json"
+          }
+        }
+      ]
+    },
+    {
+      "feature_id": "cad-links",
+      "feature_title": "Review pages and links",
+      "checks": [
+        {
+          "name": "no pages configured",
+          "status": "skip",
+          "message": "add cad.html_pages to cad-agent.yaml"
+        }
+      ]
+    }
+  ],
+  "header_meta": {
+    "project": "pcb-agx-thor-can-breakout",
+    "revision": "rev A1-development",
+    "generated": "2026-10-27 03:53 UTC"
+  },
+  "footer_meta": {
+    "checks": "24 pass / 0 fail / 1 skip",
+    "physical_fit": "physical fit NOT verified (CAD only)",
+    "slicer": "slicer not run"
+  },
+  "project": "pcb-agx-thor-can-breakout",
+  "revision": "A1-development",
+  "physical_fit_verified": false,
+  "slicer_run": false,
+  "pass": true
+}

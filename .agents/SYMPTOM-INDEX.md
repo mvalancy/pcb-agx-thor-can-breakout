@@ -8,3 +8,7 @@
 - In-memory preview disagrees with exported STEP placement: [readback review lesson](inbox/2026-10-26-review-export-readbacks.md).
 - Local and clean-checkout release ZIPs differ: [manifest allowlist](inbox/2026-10-26-release-manifest-allowlist.md).
 - GitHub shows a folder index instead of the project overview: [README precedence](inbox/2026-10-26-github-readme-precedence.md).
+- Clean DRC but separated CAN lines or interrupted return copper: [route geometry and return-plane audit](inbox/2026-10-26-can-routing-is-not-connectivity.md).
+- Collision checks pass but PCB import reverses handedness: [proper PCB STEP transform](inbox/2026-10-26-preserve-pcb-handedness.md).
+- Zone-to-zone ground ratsnest despite vias touching both layers: [ground island bridge](inbox/2026-10-26-ground-islands-need-a-real-bridge.md).
+- Current generic report marked stale, or changed geometry still shows PASS: [report evidence formats](inbox/2026-10-26-report-freshness-formats.md).

@@ -2,11 +2,23 @@
 
 Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.
 
-[Design packages](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
+[A1 review](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) · [Design packages](releases/README.md) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
 
-![Two-port assembly with mating connectors and ribbon clamp](preview/2port-open.png)
+![Two-port assembled product with engraved lid and mating connectors](preview/2port-assembled.png)
 
-**A0 engineering prototype — not production qualified.** Both boards pass electrical CAD checks, and the housings pass modeled collision, assembly-path and mesh checks. No physical board or housing has been tested. The exact ribbon/header mating, supplier assembly, CAN operation and transient protection must be verified before connecting an expensive host or ordering 50 units.
+![Exploded housing with native PCB, keyed seam and ribbon clamp](preview/2port-exploded.png)
+
+**A1 engineering prototype — not production qualified.** Both boards pass electrical CAD checks, and the housings pass modeled collision, assembly-path and mesh checks. No physical board or housing has been tested. The exact ribbon/header mating, supplier assembly, CAN operation and transient protection must be verified before connecting an expensive host or ordering 50 units.
+
+## PINOUT proof
+
+![NVIDIA P4071 A02 sheet 11: complete J47 connector and Wieson part number](docs/proof/nvidia-p4071-a02-j47.png)
+
+© NVIDIA. Direct excerpt from **P4071 A02 concept schematic, sheet 11**. J47 is **Wieson AC2800-0011-022-H0**; read the external contact numbers beside the wires. [Source and capture provenance](docs/pinout-proof.md).
+
+<img src="docs/proof/nvidia-r38-2-thor-can.png" alt="NVIDIA r38.2 Thor CAN table: J47 FSI CAN0 H3/L5 and CAN1 H7/L9" width="250">
+
+© NVIDIA. The [Jetson Linux r38.2 CAN guide](https://docs.nvidia.com/jetson/archives/r38.2/DeveloperGuide/HR/ControllerAreaNetworkCan.html) independently identifies **CAN0 H/L = 3/5**, **CAN1 H/L = 7/9**, and termination bridges **3–4 / 7–8**. [Full proof, auxiliary mapping and limits](docs/pinout-proof.md). These sources establish documented pins; actual carrier population and all 26 cable conductors still require verification.
 
 ## What it does
 
@@ -14,7 +26,7 @@ Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adap
 - Routes CAN directly to standard CAN DE9 pins: **2 = CAN-L, 7 = CAN-H, 3/6 = ground, 5/shell = shield**. Pins 1/4/8/9 are unconnected; pin 9 supplies no power.
 - Adds a **Bourns CDSOT23-SM712 TVS** to each channel. This is a passive breakout, not an isolated repeater or a transceiver board.
 - Provides removable links for the carrier's termination resistor, auxiliary power and shield bonding. **All links ship open.**
-- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam and a padded ribbon clamp. The lid carries the pinout, port names, A0 revision and `github.com/mvalancy`.
+- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam and a padded ribbon clamp. The lid carries the pinout, port names, A1 revision and `github.com/mvalancy`.
 
 The TVS is intended to reduce transients; the assembly has no verified surge rating and does not protect against sustained 24 V miswiring. Raw auxiliary I/O has no added protection. See [electrical scope](docs/interface-and-protection.md).
 
@@ -60,7 +72,7 @@ Use one matching base/lid pair and the common ribbon clamp. Print the insert/cou
 
 ## Manufacturing and release status
 
-Download the selected PCB package plus the housing package from [GitHub Releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases). Each includes instructions and checksums. Hardware revision is **A0**; suffixes such as `revA0.1` identify packaging updates.
+**A1 is under review in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) from `dev/a1-routing-lid-review` into `main`.** Review packages are produced locally and by PR CI. Existing [A0 releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) are historical and superseded: A1 corrects the CAN pair routing and the enclosure's PCB handedness. Do not mix A0 housings with A1 files. [Package structure](releases/README.md).
 
 The [JLCPCB guide](docs/manufacturing.md) explains the Gerber/drill ZIP, SMT-only BOM/CPL and full sourced BOM/CPL. **J1 Wieson procurement/consignment is unresolved**, so this is not a complete turnkey PCBA order. Review placements and supplier DFM before ordering prototypes. No purchase has been made.
 
@@ -83,6 +95,7 @@ To rebuild and validate the committed routed design:
 ```bash
 .venv/bin/python tools/export_review.py
 .venv/bin/python tools/check_electronics.py
+# Also run check_can_routing.py and check_fabrication.py with KiCad Python.
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
 .venv/bin/python tools/render_review.py
@@ -90,6 +103,7 @@ To rebuild and validate the committed routed design:
 .venv/bin/cad-agent export-3mf
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
+.venv/bin/cad-agent report
 .venv/bin/python tools/write_readmes.py
 .venv/bin/python tools/validate_release.py --record
 .venv/bin/python tools/package_release.py
@@ -117,4 +131,4 @@ Folders have READMEs except `.github` itself: GitHub prioritizes its README over
 
 ## License
 
-Original work is [MIT licensed](LICENSE). KiCad library derivatives retain CC BY-SA 4.0 and the KiCad design exception; see [third-party notices](THIRD_PARTY.md). Vendor PDFs and logos are not redistributed or relicensed. This project is not affiliated with NVIDIA, Samtec, Assmann or JLCPCB.
+Original work is [MIT licensed](LICENSE). KiCad library derivatives retain CC BY-SA 4.0 and the KiCad design exception; see [third-party notices](THIRD_PARTY.md). Full vendor PDFs and logos are not redistributed. The attributed NVIDIA pinout excerpts retain NVIDIA rights and are excluded from the MIT grant. This project is not affiliated with NVIDIA, Samtec, Assmann or JLCPCB.

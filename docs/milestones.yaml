@@ -8,8 +8,8 @@
   status: active
   done_when: All 26 pins traced to the vendor schematic; header and cable have sourced
     drawings.
-  notes: "Original NVIDIA P4071 A02 design files found in local Downloads. J47 is\
-    \ 2\xD713 at 1.27 mm."
+  notes: Original NVIDIA P4071 A02 design files found in local Downloads. J47 is 2×13
+    at 1.27 mm.
 - id: protection
   title: Protection architecture and assembly parts
   status: active
@@ -20,22 +20,23 @@
   title: KiCad schematic, layout and manufacturing review
   status: done
   done_when: ERC, DRC, connectivity and BOM/CPL checks complete with evidence.
-  notes: 'Both native variants: ERC/DRC/connectivity/parity and assembly CSV checks
-    pass; physical qualification remains separate.'
+  notes: A1 native ERC/DRC/connectivity/parity, independent pin map, paired routes
+    and local fabrication profile pass. JLCDFM supplier approval remains open.
 - id: enclosure
   title: Printed housing and connector access
   status: done
   done_when: Parametric CAD, printable exports, mating access and fastener checks
     available.
-  notes: Seven printable parts, keyed seams, recessed heat-set hardware, lid legends
-    and mating references. Geometry/assembly-path/3MF checks pass; physical tests
-    pending.
+  notes: A1 proper PCB frame, graphical lid, inserts, keyed seam and padded clamp
+    rebuilt. Both collision/path screens and seven mesh/3MF readbacks pass; physical
+    fit remains open.
 - id: handoff
   title: Publish project and reusable PCB lessons
   status: done
   done_when: Project published; cad-agent and library changes submitted through review.
-  notes: Public MIT project pushed. cad-agent PR1 and KiCAD_Libs PR4 carry reusable
-    tools, connector evidence and lessons.
+  notes: Project PR1 into main and shared cad-agent PR1 are open with passing CI.
+    A1 packages reproduce byte-for-byte from a clean checkout. No merge, release tag
+    or order.
 - id: qualification
   title: Prototype validation before 50-unit order
   status: blocked

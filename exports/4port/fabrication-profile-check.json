@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "errors": [],
+  "metrics": {
+    "pth_annular_min_mm": 0.3,
+    "via_annular_min_mm": 0.15,
+    "via_drill_min_mm": 0.3,
+    "silk_height_min_mm": 1.0,
+    "silk_stroke_min_mm": 0.15,
+    "track_width_min_mm": 0.25
+  },
+  "native_rules_negative_control": {
+    "pass": true,
+    "intentional_requirement_mm": 0.8,
+    "expected_violation": "track_width with intentional 0.8000 mm minimum",
+    "detected_count": 199
+  },
+  "source_sha256": {
+    "hardware/jlcpcb-profile.json": "b818e99681e76ee1f957b24d6d9d56994c0f76a61f5cf0642de548abc34ba2c3",
+    "tools/apply_fab_rules.py": "7b9ec8a5bb3221995c59eebdfa1cf6ef619c4e8fc95ae4874c433463778a9c38",
+    "tools/check_fabrication.py": "e49081015fddb39aa0e90e5a5f65d99acb57cc47b55c4ba2fe662da48dfabcab",
+    "hardware/4port/thor-4port.kicad_pcb": "70a4dca09fc8db5f079921e6724bbf91419da2c514cf51a8dcfa7e8978796d7c",
+    "hardware/4port/thor-4port.kicad_pro": "090bbbf7b7334764016c4d41e764747e87508791bb3402c95b133364e6343f3e",
+    "hardware/4port/thor-4port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1"
+  },
+  "vendor_dfm": {
+    "url": "https://jlcdfm.com/",
+    "status": "not_run_login_required",
+    "attempt": "Public engineering Gerber ZIP selected in JLCDFM upload UI; service redirected to JLCPCB sign-in before analysis. No analysis report obtained and no order submitted."
+  },
+  "scope": "Local native feature measurements and custom-rule enforcement. Full board DRC is separately required. No vendor DFM approval, panelization, placement-library orientation or PCBA process qualification."
+}

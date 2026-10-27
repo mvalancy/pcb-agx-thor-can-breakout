@@ -25,7 +25,7 @@ jobs:
         run: .venv/bin/python tools/package_release.py
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
-          name: thor-A0-engineering-packages
+          name: thor-A1-engineering-packages
           path: |
             releases/*.zip
             releases/SHA256SUMS
