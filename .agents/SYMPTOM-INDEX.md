@@ -17,3 +17,4 @@
 - Reports pass locally but fail the merged toolkit: [all severities and default-disabled checks](inbox/2026-10-26-complete-kicad-evidence.md).
 
 - Mounting ears pass minimum-web checks but look too narrow or fail to support corners: [four broad corner mounts](inbox/2026-10-27-four-corner-mounts.md).
+- Engraving looks clear in a render but uses tiny lettering, or a successful slice has incorrect inherited settings: [nozzle-scale lid review](inbox/2026-10-27-printable-lid-markings.md).

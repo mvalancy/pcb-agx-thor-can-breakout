@@ -7,7 +7,7 @@ subprocess.run([sys.executable,str(R/'tools/validate_release.py')],cwd=R,check=T
 manifest=json.loads((R/'releases/manifest.json').read_text());revision=manifest['revision']
 common=['LICENSE','THIRD_PARTY.md','ASSEMBLY.md','docs/manufacturing.md','docs/interface-and-protection.md','docs/release-checklist.md','research/connector-sourcing.md','research/j47-footprint-audit.md','research/igx-compatibility.md','releases/manifest.json']
 common += [str(p.relative_to(R)) for folder in ['docs','research','preview'] for p in (R/folder).rglob('*') if p.suffix in {'.md','.json','.png','.svg'}]
-common += ['exports/enclosure-bom.csv'] + [f'exports/{v}/{name}' for v in ['2port','4port'] for name in ['controls.svg','enclosure-plan.svg','prototype-review.json']]
+common += ['exports/enclosure-bom.csv','exports/slice-report.json'] + [f'exports/{v}/{name}' for v in ['2port','4port'] for name in ['controls.svg','enclosure-plan.svg','prototype-review.json','lid-markings-review.json','lid-slicing-review.json']]
 packages={}
 for v in ['2port','4port']:
  files=common+[str(p.relative_to(R)) for directory in [R/'hardware'/v,R/'hardware/Thor.pretty',R/'exports'/v] for p in directory.rglob('*') if p.is_file() and p.suffix not in ['.log','.dsn','.ses']]+['hardware/interface.json','hardware/jlcpcb-profile.json','research/j47-footprint-measurements.json']
@@ -36,7 +36,7 @@ for name,files in packages.items():
 
 Download the PCB ZIP for the selected variant and the housings ZIP. SHA256SUMS identifies every download; each ZIP also includes member hashes.
 
-Contains native KiCad schematics/routed boards, Gerber/drill review files, schematic PDFs, PCB/assembly views, exact-source assembly populations and check reports. Housing files include STL/STEP/3MF, two fit coupons, a replaceable ribbon clamp, filleted insert supports, four broad recessed corner mounting ears (26 mm wide, R4 roots, 7 mm thick), six shown assembly screws, and heat-set/silicone-pad instructions. The 90 mm-deep PCBs add 120/324 isolated prototype pads, gated power taps, readable silkscreen and illustrated termination/I/O controls.
+Contains native KiCad schematics/routed boards, Gerber/drill review files, schematic PDFs, PCB/assembly views, exact-source assembly populations and check reports. Housing files include STL/STEP/3MF, two fit coupons, a replaceable ribbon clamp, filleted insert supports, four broad recessed corner mounting ears (26 mm wide, R4 roots, 7 mm thick), six shown assembly screws, and heat-set/silicone-pad instructions. Lid markings use larger bold lettering and 1 mm graphic strokes; native spacing and offline lid-only slicing reports include first-layer toolpath proofs. The 90 mm-deep PCBs add 120/324 isolated prototype pads, gated power taps, readable silkscreen and illustrated termination/I/O controls.
 
 The design has undergone multiple electrical and mechanical iterations. Native reports, semantic connector checks, source freshness, assembly-path/collision screens and mesh/3MF checks are recorded. CI verifies committed evidence; it does not fabricate or test hardware.
 

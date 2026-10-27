@@ -1,0 +1,589 @@
+{
+  "pass": true,
+  "failures": [],
+  "scope": "Native DejaVu Sans bold glyph solids and shared vector tools; actual text-to-artwork, roof edge and counterbore distances. Does not establish minimum glyph stroke, slicer survival or printed legibility.",
+  "source_sha256": {
+    "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
+    "cad/markings.py": "c40e0d6c4ee938af8b946a77ead7ecfd02582c0057505d4dcfd21b004fb76eb7",
+    "tools/check_lid_markings.py": "daf7eca86c0b6983ca7e0e7ffbe7d82e1fee4b2f1914424b125ab066a1a29155"
+  },
+  "library_sha256": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277",
+  "minimum_required_clearance_mm": 0.6,
+  "minimum_text_artwork_clearance_mm": 0.6055,
+  "minimum_roof_edge_clearance_mm": 6.4,
+  "minimum_counterbore_clearance_mm": 2.1523,
+  "engraved_roof_remaining_mm": 2.0,
+  "physical_print_verified": false,
+  "items": [
+    {
+      "item": 0,
+      "kind": "text",
+      "roof_edge_clearance_mm": 7.734,
+      "counterbore_clearance_mm": 59.5913,
+      "text": "THOR",
+      "measured_bounds_mm": [
+        65.2001,
+        94.937,
+        91.6713,
+        101.366
+      ],
+      "nearest_item": 4,
+      "artwork_clearance_mm": 1.1342
+    },
+    {
+      "item": 1,
+      "kind": "text",
+      "roof_edge_clearance_mm": 8.526,
+      "counterbore_clearance_mm": 52.1419,
+      "text": "CAN",
+      "measured_bounds_mm": [
+        104.2034,
+        95.6577,
+        118.5237,
+        100.574
+      ],
+      "nearest_item": 4,
+      "artwork_clearance_mm": 1.9185
+    },
+    {
+      "item": 2,
+      "kind": "line",
+      "roof_edge_clearance_mm": 10.4,
+      "counterbore_clearance_mm": 41.7411
+    },
+    {
+      "item": 3,
+      "kind": "line",
+      "roof_edge_clearance_mm": 6.8,
+      "counterbore_clearance_mm": 42.6043
+    },
+    {
+      "item": 4,
+      "kind": "text",
+      "roof_edge_clearance_mm": 15.216,
+      "counterbore_clearance_mm": 53.3469,
+      "text": "PCB-THOR-CAN  /  A1 DEV",
+      "measured_bounds_mm": [
+        60.3496,
+        90.5441,
+        116.998,
+        93.884
+      ],
+      "nearest_item": 0,
+      "artwork_clearance_mm": 1.1342
+    },
+    {
+      "item": 5,
+      "kind": "text",
+      "roof_edge_clearance_mm": 20.7457,
+      "counterbore_clearance_mm": 57.2191,
+      "text": "github.com/mvalancy",
+      "measured_bounds_mm": [
+        64.5078,
+        84.452,
+        112.5996,
+        88.3543
+      ],
+      "nearest_item": 6,
+      "artwork_clearance_mm": 1.252
+    },
+    {
+      "item": 6,
+      "kind": "line",
+      "roof_edge_clearance_mm": 14.6,
+      "counterbore_clearance_mm": 3.1476
+    },
+    {
+      "item": 7,
+      "kind": "text",
+      "roof_edge_clearance_mm": 28.816,
+      "counterbore_clearance_mm": 49.7965,
+      "text": "AUX + PROTOTYPING INSIDE",
+      "measured_bounds_mm": [
+        56.3652,
+        77.2586,
+        120.3613,
+        80.284
+      ],
+      "nearest_item": 6,
+      "artwork_clearance_mm": 1.916
+    },
+    {
+      "item": 8,
+      "kind": "text",
+      "roof_edge_clearance_mm": 34.716,
+      "counterbore_clearance_mm": 66.2258,
+      "text": "120R: JP1 / JP2",
+      "measured_bounds_mm": [
+        72.4141,
+        70.6145,
+        104.6895,
+        74.384
+      ],
+      "nearest_item": 9,
+      "artwork_clearance_mm": 0.8832
+    },
+    {
+      "item": 9,
+      "kind": "text",
+      "roof_edge_clearance_mm": 39.316,
+      "counterbore_clearance_mm": 67.0924,
+      "text": "DEFAULT OPEN",
+      "measured_bounds_mm": [
+        72.3838,
+        66.7586,
+        104.6162,
+        69.784
+      ],
+      "nearest_item": 8,
+      "artwork_clearance_mm": 0.8832
+    },
+    {
+      "item": 10,
+      "kind": "text",
+      "roof_edge_clearance_mm": 44.716,
+      "counterbore_clearance_mm": 56.4438,
+      "text": "DE-9 MALE / MATING FACE",
+      "measured_bounds_mm": [
+        59.5996,
+        61.0441,
+        117.4746,
+        64.384
+      ],
+      "nearest_item": 30,
+      "artwork_clearance_mm": 0.8586
+    },
+    {
+      "item": 11,
+      "kind": "line",
+      "roof_edge_clearance_mm": 40.1,
+      "counterbore_clearance_mm": 63.4193
+    },
+    {
+      "item": 12,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 53.3,
+      "counterbore_clearance_mm": 68.8696
+    },
+    {
+      "item": 13,
+      "kind": "text",
+      "roof_edge_clearance_mm": 55.446,
+      "counterbore_clearance_mm": 70.9338,
+      "text": "1",
+      "measured_bounds_mm": [
+        70.5125,
+        50.346,
+        72.672,
+        53.4078
+      ],
+      "nearest_item": 12,
+      "artwork_clearance_mm": 0.7324
+    },
+    {
+      "item": 14,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 53.3,
+      "counterbore_clearance_mm": 76.5405
+    },
+    {
+      "item": 15,
+      "kind": "text",
+      "roof_edge_clearance_mm": 55.446,
+      "counterbore_clearance_mm": 78.5149,
+      "text": "2",
+      "measured_bounds_mm": [
+        78.871,
+        50.346,
+        81.0961,
+        53.4632
+      ],
+      "nearest_item": 14,
+      "artwork_clearance_mm": 0.7414
+    },
+    {
+      "item": 16,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 53.3,
+      "counterbore_clearance_mm": 84.3586
+    },
+    {
+      "item": 17,
+      "kind": "text",
+      "roof_edge_clearance_mm": 55.3865,
+      "counterbore_clearance_mm": 86.4174,
+      "text": "3",
+      "measured_bounds_mm": [
+        87.3198,
+        50.2865,
+        89.6269,
+        53.4632
+      ],
+      "nearest_item": 16,
+      "artwork_clearance_mm": 0.7433
+    },
+    {
+      "item": 18,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 53.3,
+      "counterbore_clearance_mm": 76.5405
+    },
+    {
+      "item": 19,
+      "kind": "text",
+      "roof_edge_clearance_mm": 55.446,
+      "counterbore_clearance_mm": 78.7301,
+      "text": "4",
+      "measured_bounds_mm": [
+        95.7275,
+        50.346,
+        98.2684,
+        53.4078
+      ],
+      "nearest_item": 18,
+      "artwork_clearance_mm": 0.7899
+    },
+    {
+      "item": 20,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 53.3,
+      "counterbore_clearance_mm": 68.8696
+    },
+    {
+      "item": 21,
+      "kind": "text",
+      "roof_edge_clearance_mm": 55.3865,
+      "counterbore_clearance_mm": 70.9055,
+      "text": "5",
+      "measured_bounds_mm": [
+        104.3628,
+        50.2865,
+        106.6679,
+        53.4078
+      ],
+      "nearest_item": 20,
+      "artwork_clearance_mm": 0.698
+    },
+    {
+      "item": 22,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 44.5,
+      "counterbore_clearance_mm": 74.8643
+    },
+    {
+      "item": 23,
+      "kind": "text",
+      "roof_edge_clearance_mm": 46.5865,
+      "counterbore_clearance_mm": 77.147,
+      "text": "6",
+      "measured_bounds_mm": [
+        74.5493,
+        41.4865,
+        76.9856,
+        44.6591
+      ],
+      "nearest_item": 22,
+      "artwork_clearance_mm": 0.7548
+    },
+    {
+      "item": 24,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 44.5,
+      "counterbore_clearance_mm": 82.4248
+    },
+    {
+      "item": 25,
+      "kind": "text",
+      "roof_edge_clearance_mm": 46.646,
+      "counterbore_clearance_mm": 84.6427,
+      "text": "7",
+      "measured_bounds_mm": [
+        83.0698,
+        41.546,
+        85.3769,
+        44.6078
+      ],
+      "nearest_item": 24,
+      "artwork_clearance_mm": 0.6055
+    },
+    {
+      "item": 26,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 44.5,
+      "counterbore_clearance_mm": 82.4248
+    },
+    {
+      "item": 27,
+      "kind": "text",
+      "roof_edge_clearance_mm": 46.5865,
+      "counterbore_clearance_mm": 84.5796,
+      "text": "8",
+      "measured_bounds_mm": [
+        91.5452,
+        41.4865,
+        93.9507,
+        44.6632
+      ],
+      "nearest_item": 26,
+      "artwork_clearance_mm": 0.9055
+    },
+    {
+      "item": 28,
+      "kind": "circle",
+      "roof_edge_clearance_mm": 44.5,
+      "counterbore_clearance_mm": 74.8643
+    },
+    {
+      "item": 29,
+      "kind": "text",
+      "roof_edge_clearance_mm": 46.5865,
+      "counterbore_clearance_mm": 77.204,
+      "text": "9",
+      "measured_bounds_mm": [
+        100.0062,
+        41.4865,
+        102.4425,
+        44.6591
+      ],
+      "nearest_item": 28,
+      "artwork_clearance_mm": 0.8665
+    },
+    {
+      "item": 30,
+      "kind": "line",
+      "roof_edge_clearance_mm": 48.6,
+      "counterbore_clearance_mm": 51.7707
+    },
+    {
+      "item": 31,
+      "kind": "text",
+      "roof_edge_clearance_mm": 49.5346,
+      "counterbore_clearance_mm": 50.2765,
+      "text": "2 CAN-L",
+      "measured_bounds_mm": [
+        44.4346,
+        48.1586,
+        61.7725,
+        51.184
+      ],
+      "nearest_item": 30,
+      "artwork_clearance_mm": 2.8687
+    },
+    {
+      "item": 32,
+      "kind": "line",
+      "roof_edge_clearance_mm": 37.6,
+      "counterbore_clearance_mm": 53.2386
+    },
+    {
+      "item": 33,
+      "kind": "text",
+      "roof_edge_clearance_mm": 44.3586,
+      "counterbore_clearance_mm": 50.395,
+      "text": "7 CAN-H",
+      "measured_bounds_mm": [
+        43.9863,
+        39.2586,
+        61.9141,
+        42.284
+      ],
+      "nearest_item": 32,
+      "artwork_clearance_mm": 1.8201
+    },
+    {
+      "item": 34,
+      "kind": "line",
+      "roof_edge_clearance_mm": 48.6,
+      "counterbore_clearance_mm": 51.7707
+    },
+    {
+      "item": 35,
+      "kind": "text",
+      "roof_edge_clearance_mm": 49.0941,
+      "counterbore_clearance_mm": 50.1702,
+      "text": "3,6 GND",
+      "measured_bounds_mm": [
+        115.0527,
+        48.0469,
+        133.0059,
+        51.584
+      ],
+      "nearest_item": 37,
+      "artwork_clearance_mm": 2.5238
+    },
+    {
+      "item": 36,
+      "kind": "line",
+      "roof_edge_clearance_mm": 37.6,
+      "counterbore_clearance_mm": 53.2386
+    },
+    {
+      "item": 37,
+      "kind": "text",
+      "roof_edge_clearance_mm": 48.0586,
+      "counterbore_clearance_mm": 51.9741,
+      "text": "5+SHELL",
+      "measured_bounds_mm": [
+        114.2119,
+        42.9586,
+        133.9873,
+        45.984
+      ],
+      "nearest_item": 36,
+      "artwork_clearance_mm": 0.7119
+    },
+    {
+      "item": 38,
+      "kind": "text",
+      "roof_edge_clearance_mm": 43.2586,
+      "counterbore_clearance_mm": 50.8086,
+      "text": "SHIELD",
+      "measured_bounds_mm": [
+        116.1279,
+        38.1586,
+        131.9502,
+        41.184
+      ],
+      "nearest_item": 36,
+      "artwork_clearance_mm": 1.7152
+    },
+    {
+      "item": 39,
+      "kind": "text",
+      "roof_edge_clearance_mm": 32.8441,
+      "counterbore_clearance_mm": 68.5196,
+      "text": "1 / 4 / 8 / 9 : NC",
+      "measured_bounds_mm": [
+        71.6816,
+        27.7441,
+        105.5137,
+        31.084
+      ],
+      "nearest_item": 32,
+      "artwork_clearance_mm": 1.4688
+    },
+    {
+      "item": 40,
+      "kind": "text",
+      "roof_edge_clearance_mm": 28.0586,
+      "counterbore_clearance_mm": 64.2975,
+      "text": "PIN 9: NO POWER",
+      "measured_bounds_mm": [
+        69.0508,
+        22.9586,
+        108.2363,
+        25.984
+      ],
+      "nearest_item": 39,
+      "artwork_clearance_mm": 1.8129
+    },
+    {
+      "item": 41,
+      "kind": "line",
+      "roof_edge_clearance_mm": 10.6,
+      "counterbore_clearance_mm": 3.733
+    },
+    {
+      "item": 42,
+      "kind": "text",
+      "roof_edge_clearance_mm": 15.5262,
+      "counterbore_clearance_mm": 11.8152,
+      "text": "CAN 0",
+      "measured_bounds_mm": [
+        142.9484,
+        10.4262,
+        160.0617,
+        14.3592
+      ],
+      "nearest_item": 41,
+      "artwork_clearance_mm": 3.9262
+    },
+    {
+      "item": 43,
+      "kind": "line",
+      "roof_edge_clearance_mm": 6.4,
+      "counterbore_clearance_mm": 14.8
+    },
+    {
+      "item": 44,
+      "kind": "line",
+      "roof_edge_clearance_mm": 10.6,
+      "counterbore_clearance_mm": 44.0624
+    },
+    {
+      "item": 45,
+      "kind": "text",
+      "roof_edge_clearance_mm": 15.5262,
+      "counterbore_clearance_mm": 52.2299,
+      "text": "CAN 1",
+      "measured_bounds_mm": [
+        100.9484,
+        10.4262,
+        117.9525,
+        14.3592
+      ],
+      "nearest_item": 44,
+      "artwork_clearance_mm": 3.9262
+    },
+    {
+      "item": 46,
+      "kind": "line",
+      "roof_edge_clearance_mm": 6.4,
+      "counterbore_clearance_mm": 56.8
+    },
+    {
+      "item": 47,
+      "kind": "line",
+      "roof_edge_clearance_mm": 10.6,
+      "counterbore_clearance_mm": 43.8421
+    },
+    {
+      "item": 48,
+      "kind": "text",
+      "roof_edge_clearance_mm": 15.5262,
+      "counterbore_clearance_mm": 52.791,
+      "text": "RES 2",
+      "measured_bounds_mm": [
+        59.6124,
+        10.4262,
+        75.413,
+        14.3592
+      ],
+      "nearest_item": 47,
+      "artwork_clearance_mm": 3.9262
+    },
+    {
+      "item": 49,
+      "kind": "line",
+      "roof_edge_clearance_mm": 6.4,
+      "counterbore_clearance_mm": 56.8
+    },
+    {
+      "item": 50,
+      "kind": "line",
+      "roof_edge_clearance_mm": 10.6,
+      "counterbore_clearance_mm": 2.1523
+    },
+    {
+      "item": 51,
+      "kind": "text",
+      "roof_edge_clearance_mm": 15.5262,
+      "counterbore_clearance_mm": 11.8846,
+      "text": "RES 3",
+      "measured_bounds_mm": [
+        17.6124,
+        10.4262,
+        33.4511,
+        14.3592
+      ],
+      "nearest_item": 50,
+      "artwork_clearance_mm": 3.9262
+    },
+    {
+      "item": 52,
+      "kind": "line",
+      "roof_edge_clearance_mm": 6.4,
+      "counterbore_clearance_mm": 14.8
+    }
+  ]
+}

@@ -18,14 +18,19 @@ def require(ok,msg):
  if not ok:errors.append(msg)
 for v in ['2port','4port']:
  out=R/'exports'/v
- for name in ['electrical-review','mechanical-checks','assembly-paths','can-routing-review','fabrication-profile-check','prototype-review']:
+ for name in ['electrical-review','mechanical-checks','assembly-paths','can-routing-review','fabrication-profile-check','prototype-review','lid-markings-review','lid-slicing-review']:
   data=json.loads((out/f'{name}.json').read_text());require(data.get('pass') is True,f'{v}: {name} failed')
- for name in ['electrical-review','can-routing-review','fabrication-profile-check','prototype-review']:
+ for name in ['electrical-review','can-routing-review','fabrication-profile-check','prototype-review','lid-markings-review','lid-slicing-review']:
   data=json.loads((out/f'{name}.json').read_text())
   require(bool(data.get('source_sha256')),v+': missing source hashes '+name)
   for rel,sha in data.get('source_sha256',{}).items():require(digest(R/rel)==sha,rel+': stale '+name)
+  for rel,sha in data.get('artifact_sha256',{}).items():require(digest(R/rel)==sha,rel+': stale '+name)
  route=json.loads((out/'can-routing-review.json').read_text())
  require(route.get('library_sha256')==digest(Path(routing_library.__file__)),v+': routing library changed since measurement')
+ markings=json.loads((out/'lid-markings-review.json').read_text())
+ require(markings.get('library_sha256')==digest(Path(importlib.import_module('cadagent.markings').__file__)),v+': markings library changed since measurement')
+ slicing=json.loads((out/'lid-slicing-review.json').read_text())
+ require(slicing.get('library_sha256')==digest(Path(importlib.import_module('cadagent.slicer').__file__)),v+': slicer helper changed since measurement')
  paths=json.loads((out/'assembly-paths.json').read_text())
  for rel,sha in {**paths.get('mechanical_sources',{}),**paths.get('artifact_sha256',{})}.items():require(digest(R/rel)==sha,rel+': stale assembly path evidence')
  require('tools/check_mechanics.py' in paths.get('mechanical_sources',{}),v+': missing assembly checker source hash')
@@ -46,6 +51,9 @@ for v in ['2port','4port']:
    require(raw.is_file() and hashlib.sha256(z.read(name)).hexdigest()==digest(raw),v+': fabrication ZIP has stale member '+name)
   for ending in ['F_Cu.gtl','B_Cu.gbl','F_Mask.gts','B_Mask.gbs','Edge_Cuts.gm1','PTH.drl','NPTH.drl']:
    require(any(n.endswith(ending) for n in names),v+': missing fabrication layer '+ending)
+from cadagent.slicer import current_report
+from cadagent.project import load_project
+require(current_report(load_project(R)) is not None,'Shared lid-slicing report missing or stale')
 geometry=json.loads((R/'exports/geometry-checks.json').read_text())
 for name,g in geometry.items():
  require(g.get('cad_valid') and g.get('solid_count')==1 and g.get('watertight'),name+': invalid source geometry report')

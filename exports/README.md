@@ -78,5 +78,6 @@ Follow the [assembly guide](../ASSEMBLY.md) and [manufacturing guide](../docs/ma
 | [ribbon_clamp.3mf](ribbon_clamp.3mf) | Bed-oriented print mesh and units |
 | [ribbon_clamp.step](ribbon_clamp.step) | Solid model in assembly coordinates |
 | [ribbon_clamp.stl](ribbon_clamp.stl) | Bed-oriented print mesh |
+| [slice-report.json](slice-report.json) | Shared cad-agent lid slicing estimates and 3MF hashes |
 
 </details>

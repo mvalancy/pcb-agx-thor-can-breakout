@@ -224,17 +224,17 @@
     "cadagent.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
   "mechanical_sources": {
-    "cad/build.py": "002f674698938fe2242d38bb018860da26d712c5ac104261dca9bc0d9233224d",
+    "cad/build.py": "12570a0e0ddadcfcfd3c2add9546013a675febb3e90bd7404a8788297371b48a",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/markings.py": "f4d51d9594e95b1bc6e7914666744aa0ba22e213cdc5fe8fe102a03422a077ff",
-    "cad/parameters.json": "09e9b56b4d6b1c4dbb1c3bccbfe809ba471d34a9d4377b4cdb02c4a43e1bb09a",
+    "cad/markings.py": "c40e0d6c4ee938af8b946a77ead7ecfd02582c0057505d4dcfd21b004fb76eb7",
+    "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec",
     "tools/check_mechanics.py": "98ddfe91e5a39a030dacf7b3e794d5ec2bd4a954bdd6e698b28f8df585cb087e"
   },
   "artifact_sha256": {
-    "exports/4port_base.step": "07422e7c43731a02e08e32ce8c3db0012557688cdaa65b4664797ff44fef95f7",
-    "exports/4port_lid.step": "9ee5ef5d3ef340c1156177489b344572a33489e8cb2899021b2cd5c21c75414c",
-    "exports/asm_4port_clamp.step": "c749794da84a9d6782e2e88f2ce0f54226d8c88095a61a725a4104702c4d9bab",
-    "exports/asm_4port_pcb.step": "014f6393250f62ae3621e42d24b892424f0dc5c83ed7618090a8297a462ed2f1"
+    "exports/4port_base.step": "58761167cff83c875a70bcba2ea9649d9402ce98ee4b90e981300f2fb38de315",
+    "exports/4port_lid.step": "1ce7b1a3080e64c5f7df541ca24dcb135eeb0d60a99fa76e5df2e9907b346000",
+    "exports/asm_4port_clamp.step": "265d57e053f60e49198b663c800b54fdb1aed9630a75cb3214c86bc3bc60726c",
+    "exports/asm_4port_pcb.step": "4735b0e5463f1c4a46d2667728b0acd9666af6c88977398c24dc5ef8e4709294"
   }
 }

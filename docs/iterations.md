@@ -1,6 +1,6 @@
 # Iterations and validation evidence
 
-All entries are CAD/software evidence from 2026-10-26. There has been no physical prototype test.
+Entries are CAD/software evidence from 2026-10-26 onward. There has been no physical prototype test.
 
 | Round | Finding | Change and recheck |
 |---|---|---|
@@ -62,3 +62,14 @@ The larger PCB uses a 152.4 mm cable candidate to retain useful external reach a
 ## Four corner mounts — 2026-10-27
 
 The user found the two central side ears too small. Both bases now use four corner mounts with 26 mm ear widths, R4 roots and 34 mm nominal wall attachments. The 7 mm thickness and recessed M3 hardware stay unchanged. Updated checks measure the actual fused root sections and test driver/head/shank clearance at all four locations. Both housings, printable files, rendered views and interactive scenes are regenerated together. Physical strength remains untested.
+
+## Larger lid lettering — 2026-10-27
+
+| Review | Finding and correction | Evidence |
+|---|---|---|
+| Print scale | Body lettering near 2 mm and 0.45 mm leaders were too fine | Bold 4 mm body size, 4.2 mm pin numbers, 5.2 mm badges and 1 mm graphic strokes; larger diagram and split notes |
+| Native spacing | Heavier text needs room around rings, leaders and screws | Both variants: 0.6055 mm minimum text-to-artwork gap and 2.1523 mm counterbore clearance; 2.0 mm roof below engraving |
+| Slicer settings | Loading inherited preset files alone silently used incomplete defaults | Reuse shared cad-agent slicing and verify effective P1S, PETG, 0.4 mm nozzle and 0.2 mm layer settings |
+| Toolpaths | Render contrast does not demonstrate nozzle-scale details | Both lids sliced into 85 layers with four walls and 30% infill; first-layer proofs are drawn from actual extrusion paths |
+
+Text sizes are font em sizes, not guaranteed minimum stem widths. The lid-only slicing checks do not close the complete-housing slicing or physical-print gates. The small islands inside letters and numerals still need a printed sample. No printer was contacted.

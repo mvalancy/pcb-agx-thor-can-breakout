@@ -17,10 +17,13 @@ KiCad-Python tools/check_prototype.py
 .venv/bin/python tools/check_electronics.py
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
+.venv/bin/python tools/check_lid_markings.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
 .venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
+.venv/bin/cad-agent slice
+.venv/bin/python tools/check_lid_slicing.py
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
 .venv/bin/cad-agent report
@@ -30,6 +33,10 @@ KiCad-Python tools/check_prototype.py
 ```
 
 `KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes. For a schematic drawing-only adjustment, `export_review.py --schematic-only` regenerates ERC/PDF/netlist and checks parity without changing the board or its STEP.
+
+## Recheck the lid slicing
+
+With Bambu Studio installed, run `.venv/bin/cad-agent slice`, followed by `.venv/bin/python tools/check_lid_slicing.py`. The shared slicer resolves preset inheritance, runs the offline slices and binds the report to the 3MF hashes. `cad-agent.yaml` explicitly limits this check to the two lids. The project checker verifies effective P1S/PETG/nozzle/layer settings and adds actual first-layer SVGs. Vendor presets, sliced projects and G-code stay in ignored `build/slicer/`; no printer is contacted. This is lid-only evidence, not a complete housing print qualification.
 
 ## When changing the circuit or routing
 
@@ -43,6 +50,8 @@ KiCad-Python tools/check_prototype.py
 | `check_fabrication.py` | JLC-derived feature limits and deliberate native-rule negative control |
 | `check_prototype.py` | Isolated pad count/pitch, ribbon exclusion, gated power mapping and bare-pad assembly exclusions |
 | `check_mechanics.py` | Assembly insertion paths from exported solids |
+| `check_lid_markings.py` | Native glyph-to-artwork, roof edge and counterbore clearances |
+| `check_lid_slicing.py` | Offline lid-only Bambu slicing and actual first-layer toolpath proofs |
 | `validate_release.py` | Fresh hashes, source reports, printable meshes, 3MF and local links |
 
 Shared geometry, panel markings, routing analysis, reports, site navigation and 3D viewing come from the pinned **cad-agent** dependency. Project scripts hold only Thor-specific dimensions, mapping and workflow. No automated check establishes physical fit, EMC or a supported bitrate.
@@ -57,6 +66,8 @@ Shared geometry, panel markings, routing analysis, reports, site navigation and 
 | [check_can_routing.py](check_can_routing.py) | Generation or validation tool |
 | [check_electronics.py](check_electronics.py) | Generation or validation tool |
 | [check_fabrication.py](check_fabrication.py) | Generation or validation tool |
+| [check_lid_markings.py](check_lid_markings.py) | Generation or validation tool |
+| [check_lid_slicing.py](check_lid_slicing.py) | Generation or validation tool |
 | [check_mechanics.py](check_mechanics.py) | Generation or validation tool |
 | [check_prototype.py](check_prototype.py) | Generation or validation tool |
 | [draw_controls.py](draw_controls.py) | Generation or validation tool |

@@ -119,5 +119,12 @@
       14,
       90
     ]
+  },
+  "lid_markings": {
+    "text_height_mm": 4.0,
+    "pin_number_height_mm": 4.2,
+    "stroke_width_mm": 1.0,
+    "engraving_depth_mm": 0.4,
+    "minimum_text_clearance_mm": 0.6
   }
 }

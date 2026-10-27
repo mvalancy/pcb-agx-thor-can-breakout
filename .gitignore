@@ -9,6 +9,7 @@ references/vendor/
 preview/server-url.txt
 site/
 logs/
+build/
 *.log
 freerouting.json
 releases/*.zip

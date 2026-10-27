@@ -84,7 +84,7 @@ Follow the [assembly guide](../ASSEMBLY.md) and [manufacturing guide](../docs/ma
 
 ![Numbered male DE9 pinout and port labels](2port-lid.png)
 
-[Two-port vector artwork](2port-lid-artwork.svg) · [Four-port vector artwork](4port-lid-artwork.svg). The drawing drives the actual 0.4 mm engraving. Light paint fill is optional.
+[Two-port vector artwork](2port-lid-artwork.svg) · [Four-port vector artwork](4port-lid-artwork.svg). Bold 4 mm body-text size, enlarged pin numbers and 1 mm graphic strokes drive the actual 0.4 mm engraving. Light paint fill is optional.
 
 Open views show the native PCB, ribbon clamp, mating female connectors, backshells and thumbscrews. Those connector envelopes use drawing dimensions and stated seating assumptions; a render does not establish physical fit. [Enclosure details](../docs/enclosure.md).'''),
 'research':('Source investigations','Manufacturer and carrier evidence behind the selected parts, with unresolved assumptions kept visible.', '''## Read by decision
@@ -119,7 +119,7 @@ A document hash establishes which source was examined; it does not prove the sup
 
 ## Review before publication
 
-Work is developed on a branch and submitted by pull request into `main`. CI validates committed evidence and produces review packages. Tagged releases publish only after review; no automatic merge is used. A1 is currently a branch review package in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1). Existing A0 releases are historical and superseded, including their enclosure handedness and CAN routing.
+Work is developed on a branch and submitted by pull request into `main`. CI validates committed evidence and produces review packages. Tagged releases publish only after review; no automatic merge is used. Current A1 review packages are built from merged `main`; each change passes through a pull request. Existing A0 releases are historical and superseded, including their enclosure handedness and CAN routing.
 
 Generate locally with `.venv/bin/python tools/package_release.py` after validation. ZIPs are CI/release artifacts rather than source-controlled binaries. [Manufacturing instructions](../docs/manufacturing.md) explain quote inputs and outstanding gates.'''),
 'docs/proof':('NVIDIA pinout evidence','Small source excerpts for direct review of the J47 connector and the supported Thor CAN pins.', '''[Read the annotated PINOUT proof](../pinout-proof.md) for the cross-check, source revisions and limits.
@@ -179,10 +179,13 @@ KiCad-Python tools/check_prototype.py
 .venv/bin/python tools/check_electronics.py
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
+.venv/bin/python tools/check_lid_markings.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
 .venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
+.venv/bin/cad-agent slice
+.venv/bin/python tools/check_lid_slicing.py
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
 .venv/bin/cad-agent report
@@ -192,6 +195,10 @@ KiCad-Python tools/check_prototype.py
 ```
 
 `KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes. For a schematic drawing-only adjustment, `export_review.py --schematic-only` regenerates ERC/PDF/netlist and checks parity without changing the board or its STEP.
+
+## Recheck the lid slicing
+
+With Bambu Studio installed, run `.venv/bin/cad-agent slice`, followed by `.venv/bin/python tools/check_lid_slicing.py`. The shared slicer resolves preset inheritance, runs the offline slices and binds the report to the 3MF hashes. `cad-agent.yaml` explicitly limits this check to the two lids. The project checker verifies effective P1S/PETG/nozzle/layer settings and adds actual first-layer SVGs. Vendor presets, sliced projects and G-code stay in ignored `build/slicer/`; no printer is contacted. This is lid-only evidence, not a complete housing print qualification.
 
 ## When changing the circuit or routing
 
@@ -205,6 +212,8 @@ KiCad-Python tools/check_prototype.py
 | `check_fabrication.py` | JLC-derived feature limits and deliberate native-rule negative control |
 | `check_prototype.py` | Isolated pad count/pitch, ribbon exclusion, gated power mapping and bare-pad assembly exclusions |
 | `check_mechanics.py` | Assembly insertion paths from exported solids |
+| `check_lid_markings.py` | Native glyph-to-artwork, roof edge and counterbore clearances |
+| `check_lid_slicing.py` | Offline lid-only Bambu slicing and actual first-layer toolpath proofs |
 | `validate_release.py` | Fresh hashes, source reports, printable meshes, 3MF and local links |
 
 Shared geometry, panel markings, routing analysis, reports, site navigation and 3D viewing come from the pinned **cad-agent** dependency. Project scripts hold only Thor-specific dimensions, mapping and workflow. No automated check establishes physical fit, EMC or a supported bitrate.''')
@@ -253,7 +262,7 @@ Nominal stack: 1.6 mm FR4, two layers, 1 oz copper. Supplier stackup, mask, pane
 
 def description(f):
  name=f.name
- known={'erc.json':'Native schematic rule check','drc.json':'Native layout, connectivity and parity check','pcb-evidence.json':'Source freshness and open qualification gates','electrical-review.json':'Independent connector/TVS semantic checks','can-routing-review.json':'Measured paired paths and return-plane coverage','fabrication-profile-check.json':'Feature measurements and native-rule negative control','mechanical-checks.json':'Solid collision, fastener and cable envelope checks','assembly-paths.json':'Assembly insertion-path checks','geometry-checks.json':'Printable solid and mesh evidence','interface.json':'Canonical connector mapping','parameters.json':'Canonical mechanical dimensions','provenance.json':'Source capture coordinates, dates and hashes'}
+ known={'erc.json':'Native schematic rule check','drc.json':'Native layout, connectivity and parity check','pcb-evidence.json':'Source freshness and open qualification gates','electrical-review.json':'Independent connector/TVS semantic checks','can-routing-review.json':'Measured paired paths and return-plane coverage','fabrication-profile-check.json':'Feature measurements and native-rule negative control','mechanical-checks.json':'Solid collision, fastener and cable envelope checks','assembly-paths.json':'Assembly insertion-path checks','geometry-checks.json':'Printable solid and mesh evidence','lid-markings-review.json':'Native engraved lettering and roof/screw clearances','lid-slicing-review.json':'Offline lid-only slicing and toolpath evidence','slice-report.json':'Shared cad-agent lid slicing estimates and 3MF hashes','interface.json':'Canonical connector mapping','parameters.json':'Canonical mechanical dimensions','provenance.json':'Source capture coordinates, dates and hashes'}
  if name in known:return known[name]
  if f.suffix=='.md':
   text=(R/f).read_text();m=re.search(r'^#\s+(.+)',text,re.M)
