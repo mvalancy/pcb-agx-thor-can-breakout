@@ -50,6 +50,8 @@ Read [manufacturing instructions](../../docs/manufacturing.md) before upload. Th
 | [jlc-cpl.csv](jlc-cpl.csv) | Assembly or sourcing table |
 | [jlc-full-bom.csv](jlc-full-bom.csv) | Assembly or sourcing table |
 | [jlc-full-cpl.csv](jlc-full-cpl.csv) | Assembly or sourcing table |
+| [lid-markings-review.json](lid-markings-review.json) | Native engraved lettering and roof/screw clearances |
+| [lid-slicing-review.json](lid-slicing-review.json) | Offline lid-only slicing and toolpath evidence |
 | [manual-assembly.csv](manual-assembly.csv) | Assembly or sourcing table |
 | [mechanical-checks.json](mechanical-checks.json) | Solid collision, fastener and cable envelope checks |
 | [netlist.xml](netlist.xml) | Project support file |

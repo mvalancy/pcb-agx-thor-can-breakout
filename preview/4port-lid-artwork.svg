@@ -1,54 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5.1 -109.10000000000001 187.2 114.2">
 <rect x="-5.1" y="-109.10000000000001" width="187.2" height="114.2" rx="1.2" fill="#24414c"/>
-<text x="79.5" y="-97" font-family="DejaVu Sans,sans-serif" font-size="6.7" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">THOR</text>
-<text x="107.5" y="-97" font-family="DejaVu Sans,sans-serif" font-size="5.1" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN</text>
-<polyline points="53.0,-95.6 57.0,-95.6 60.0,-98.6 65.0,-98.6" fill="none" stroke="#e9eddc" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="53.0,-98.4 57.0,-98.4 60.0,-101.4 65.0,-101.4" fill="none" stroke="#e9eddc" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="10,-89 167,-89" fill="none" stroke="#e9eddc" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="88.5" y="-92" font-family="DejaVu Sans,sans-serif" font-size="2.15" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">PCB-THOR-CAN  /  A1 DEV</text>
-<text x="88.5" y="-78" font-family="DejaVu Sans,sans-serif" font-size="2.1" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">120R: JP1 / JP2  -  DEFAULT OPEN</text>
-<text x="88.5" y="-83" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">AUX + PROTOTYPING INSIDE</text>
-<text x="88.5" y="-57.7" font-family="DejaVu Sans,sans-serif" font-size="2.25" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">DE-9 MALE  /  MATING FACE</text>
-<polyline points="71.5,-52.5 105.5,-52.5 102.7,-35.5 74.3,-35.5 71.5,-52.5" fill="none" stroke="#e9eddc" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="76.5" cy="-47" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="76.5" y="-47" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">1</text>
-<circle cx="82.5" cy="-47" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="82.5" y="-47" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">2</text>
-<circle cx="88.5" cy="-47" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="88.5" y="-47" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">3</text>
-<circle cx="94.5" cy="-47" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="94.5" y="-47" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">4</text>
-<circle cx="100.5" cy="-47" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="100.5" y="-47" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">5</text>
-<circle cx="79.5" cy="-40.5" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="79.5" y="-40.5" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">6</text>
-<circle cx="85.5" cy="-40.5" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="85.5" y="-40.5" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">7</text>
-<circle cx="91.5" cy="-40.5" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="91.5" y="-40.5" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">8</text>
-<circle cx="97.5" cy="-40.5" r="1.85" fill="none" stroke="#e9eddc" stroke-width="0.45"/>
-<text x="97.5" y="-40.5" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">9</text>
-<polyline points="82.5,-49 82.5,-54.7 59.5,-54.7 59.5,-50" fill="none" stroke="#e9eddc" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="59.5" y="-47.3" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">2 / CAN-L</text>
-<polyline points="85.5,-38.5 85.5,-33 59.5,-33 59.5,-37" fill="none" stroke="#e9eddc" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="59.5" y="-39.7" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">7 / CAN-H</text>
-<polyline points="88.5,-49 88.5,-54.7 117.5,-54.7 117.5,-50" fill="none" stroke="#e9eddc" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="117.5" y="-47.3" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">3,6 / GND</text>
-<polyline points="103.7,-41 108.5,-41 108.5,-33 117.5,-33 117.5,-37" fill="none" stroke="#e9eddc" stroke-width="0.45" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="117.5" y="-40.5" font-family="DejaVu Sans,sans-serif" font-size="2.1" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">5 + SHELL</text>
-<text x="117.5" y="-37.9" font-family="DejaVu Sans,sans-serif" font-size="1.9" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">SHIELD</text>
-<text x="88.5" y="-27.9" font-family="DejaVu Sans,sans-serif" font-size="2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">1 / 4 / 8 / 9 : NC   -   NO POWER ON PIN 9</text>
-<polyline points="135.5,-6 164.5,-6 167.5,-9 167.5,-19 138.5,-19 135.5,-16 135.5,-6" fill="none" stroke="#e9eddc" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="151.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="4" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN 0</text>
-<polyline points="148.5,-4 151.5,-1.8 154.5,-4" fill="none" stroke="#e9eddc" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="93.5,-6 122.5,-6 125.5,-9 125.5,-19 96.5,-19 93.5,-16 93.5,-6" fill="none" stroke="#e9eddc" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="109.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="4" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN 1</text>
-<polyline points="106.5,-4 109.5,-1.8 112.5,-4" fill="none" stroke="#e9eddc" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="51.5,-6 80.5,-6 83.5,-9 83.5,-19 54.5,-19 51.5,-16 51.5,-6" fill="none" stroke="#e9eddc" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="67.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="4" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">RES 2</text>
-<polyline points="64.5,-4 67.5,-1.8 70.5,-4" fill="none" stroke="#e9eddc" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="9.5,-6 38.5,-6 41.5,-9 41.5,-19 12.5,-19 9.5,-16 9.5,-6" fill="none" stroke="#e9eddc" stroke-width="0.6" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="25.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="4" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">RES 3</text>
-<polyline points="22.5,-4 25.5,-1.8 28.5,-4" fill="none" stroke="#e9eddc" stroke-width="0.65" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="88.5" y="-23.1" font-family="DejaVu Sans,sans-serif" font-size="2.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">github.com/mvalancy</text>
+<text x="78.5" y="-98" font-family="DejaVu Sans,sans-serif" font-size="8.5" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">THOR</text>
+<text x="111.5" y="-98" font-family="DejaVu Sans,sans-serif" font-size="6.5" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN</text>
+<polyline points="48.5,-95.2 52.5,-95.2 56.5,-98.2 60.5,-98.2" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="48.5,-98.8 52.5,-98.8 56.5,-101.8 60.5,-101.8" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="88.5" y="-92.3" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">PCB-THOR-CAN  /  A1 DEV</text>
+<text x="88.5" y="-86.7" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">github.com/mvalancy</text>
+<polyline points="10,-82.7 167,-82.7" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="88.5" y="-78.7" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">AUX + PROTOTYPING INSIDE</text>
+<text x="88.5" y="-72.8" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">120R: JP1 / JP2</text>
+<text x="88.5" y="-68.2" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">DEFAULT OPEN</text>
+<text x="88.5" y="-62.8" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">DE-9 MALE / MATING FACE</text>
+<polyline points="65.0,-58 112.0,-58 108.5,-35.5 68.5,-35.5 65.0,-58" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="71.5" cy="-51.8" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="71.5" y="-51.8" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">1</text>
+<circle cx="80.0" cy="-51.8" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="80.0" y="-51.8" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">2</text>
+<circle cx="88.5" cy="-51.8" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="88.5" y="-51.8" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">3</text>
+<circle cx="97.0" cy="-51.8" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="97.0" y="-51.8" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">4</text>
+<circle cx="105.5" cy="-51.8" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="105.5" y="-51.8" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">5</text>
+<circle cx="75.75" cy="-43" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="75.75" y="-43" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">6</text>
+<circle cx="84.25" cy="-43" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="84.25" y="-43" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">7</text>
+<circle cx="92.75" cy="-43" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="92.75" y="-43" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">8</text>
+<circle cx="101.25" cy="-43" r="3.1" fill="none" stroke="#e9eddc" stroke-width="1.0"/>
+<text x="101.25" y="-43" font-family="DejaVu Sans,sans-serif" font-size="4.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">9</text>
+<polyline points="80.0,-54.9 80.0,-60 53.0,-60 53.0,-54.5" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="53.0" y="-49.6" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">2 CAN-L</text>
+<polyline points="84.25,-39.9 84.25,-33 53.0,-33 53.0,-37" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="53.0" y="-40.7" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">7 CAN-H</text>
+<polyline points="88.5,-54.9 88.5,-60 124.0,-60 124.0,-54.5" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="124.0" y="-50" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">3,6 GND</text>
+<polyline points="110.0,-46.3 113.0,-46.3 113.0,-33 124.0,-33 124.0,-36" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="124.0" y="-44.4" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">5+SHELL</text>
+<text x="124.0" y="-39.6" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">SHIELD</text>
+<text x="88.5" y="-29.5" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">1 / 4 / 8 / 9 : NC</text>
+<text x="88.5" y="-24.4" font-family="DejaVu Sans,sans-serif" font-size="4.0" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">PIN 9: NO POWER</text>
+<polyline points="135.5,-6 164.5,-6 167.5,-9 167.5,-19 138.5,-19 135.5,-16 135.5,-6" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="151.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="5.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN 0</text>
+<polyline points="148.5,-4 151.5,-1.8 154.5,-4" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="93.5,-6 122.5,-6 125.5,-9 125.5,-19 96.5,-19 93.5,-16 93.5,-6" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="109.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="5.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">CAN 1</text>
+<polyline points="106.5,-4 109.5,-1.8 112.5,-4" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="51.5,-6 80.5,-6 83.5,-9 83.5,-19 54.5,-19 51.5,-16 51.5,-6" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="67.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="5.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">RES 2</text>
+<polyline points="64.5,-4 67.5,-1.8 70.5,-4" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="9.5,-6 38.5,-6 41.5,-9 41.5,-19 12.5,-19 9.5,-16 9.5,-6" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="25.5" y="-12.3" font-family="DejaVu Sans,sans-serif" font-size="5.2" font-weight="700" dominant-baseline="central" text-anchor="middle" fill="#e9eddc">RES 3</text>
+<polyline points="22.5,-4 25.5,-1.8 28.5,-4" fill="none" stroke="#e9eddc" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
 </svg>

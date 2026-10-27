@@ -27,7 +27,9 @@ Print `fastener_coupon` and `port_coupon` first. The coupon provides 3.8/3.9/4.0
 
 Install all six heat-set inserts before adding electronics. Use a controlled insertion tip; seat tops 0.1 mm below the support faces, keep axes square, then allow complete cooling. Do not force a cold insert into a printed pilot. Coupon installation, torque, pull-out and repeated-service testing remain open. Do not drill larger than the validated coupon size.
 
-Base prints floor-down; lid prints roof-down; clamp prints with its smooth pad face down. Exported STL/3MF files already have these orientations and Z=0. Use approximately four perimeters, 0.2 mm layers and 30% infill as a starting profile. These are proposed settings, not a validated slicer preset. Inspect bridging under the clamp deck, engraved lettering and screw sleeves. Each part fits a 256 mm bed. No slicer or physical print has been run by this project yet.
+Base prints floor-down; lid prints roof-down; clamp prints with its smooth pad face down. Exported STL/3MF files already have these orientations and Z=0. Use approximately four perimeters, 0.2 mm layers and 30% infill as a starting profile. Inspect bridging under the clamp deck, engraved lettering and screw sleeves. Each part fits a 256 mm bed.
+
+Both enlarged-lettering lids have an **offline slicing check** in Bambu Studio 02.08.04.57: P1S, 0.4 mm nozzle, Generic PETG, 0.2 mm first/regular layers, four perimeters and 30% infill. [Two-port first layer](preview/2port-lid-first-layer.svg) · [Four-port first layer](preview/4port-lid-first-layer.svg). These show actual toolpaths viewed from the outside reading face. The bases and clamp still require slicing review; no physical part has been printed or qualified by this project. Inspect the recessed letters and their small enclosed islands in your own slicer and print a lid sample before producing the batch.
 
 ## 2. Inspect the bare assembly
 

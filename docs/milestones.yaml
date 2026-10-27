@@ -56,3 +56,9 @@
   status: done
   done_when: Both redesigned bases pass mechanical and mesh checks; current views and finer shared zoom are browser-checked and published.
   notes: Both rebuilt variants pass collision checks, all 29 assembly/clearance trials and seven mesh/3MF readbacks. All rendered views and both 13-part viewer scenes are current. Finer shared zoom passed independent review and upstream CI in PR18.
+
+- id: lid-lettering
+  title: Heavier, more readable lid engraving
+  status: done
+  done_when: Both lids pass spacing, mechanical and mesh checks; artwork, renders and models are current and published.
+  notes: Both lids, renders and 3D scenes are refreshed. Native spacing, 58 assembly trials and seven mesh/3MF readbacks pass. Shared cad-agent slicing and actual first-layer proofs cover both lids; physical print remains pending.

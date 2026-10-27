@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "scope": "Offline lid-only slicing by shared cad-agent; first two engraved layers contain extrusion paths. Does not certify every glyph, print adhesion, surface finish, other housing parts or physical readability.",
+  "slicer": "BambuStudio 02.08.04.57",
+  "profile": {
+    "printer_model": "Bambu Lab P1S",
+    "nozzle_diameter": [
+      "0.4"
+    ],
+    "filament_type": [
+      "PETG"
+    ],
+    "layer_height": "0.2",
+    "initial_layer_print_height": "0.2",
+    "wall_loops": "4",
+    "sparse_infill_density": "30%",
+    "printable_area": [
+      "0x0",
+      "256x0",
+      "256x256",
+      "0x256"
+    ],
+    "curr_bed_type": "Textured PEI Plate",
+    "enable_arc_fitting": "0"
+  },
+  "profile_names": {
+    "printer": "Bambu Lab P1S 0.4 nozzle",
+    "process": "0.20mm Standard @BBL X1C",
+    "filament": "Generic PETG"
+  },
+  "source_sha256": {
+    "tools/check_lid_slicing.py": "cafdd6fa12e375604f561426345cdeedecc133510da891766a60b4bece4cf5a4",
+    "cad-agent.yaml": "d5e493e196f7190fc07e72ec2ed0e456931f7023e0717a2608cd56d37facd564"
+  },
+  "library_sha256": "fd5a746a54d920d13af228a9766da4b5b390cc043dded2fd0be4486db3f415f0",
+  "artifact_sha256": {
+    "exports/2port_lid.3mf": "c47e87869e3a1783eb98ad9099f74418fa8e135a7f5c360fd226cbbd5cacd111",
+    "exports/2port_lid.stl": "6fcedee2d1328c97065c674f48c75b85d291be2fb9ede1923247797df4a4fbb3",
+    "preview/2port-lid-first-layer.svg": "0e5b4bb0438fc008974e1a2a408b5c9f6d3224b8b82e820f00c71ec9f5c979c9",
+    "exports/slice-report.json": "f782fc1a8086f82b69338a99f212486183f45c816015e4f7a9a0608489891ae0"
+  },
+  "gcode_sha256": "566496a7a9293f70a9177a86bc10bd64e20fe34040b0e92145ef88e79e0908f4",
+  "resolved_settings_sha256": "d6b8dc223d77092cd85a2088bab5b25c3f2905250363c9220ea5d8778cfd3a53",
+  "return_code": 0,
+  "layers": 85,
+  "layer_1_extruding_segments": 17130,
+  "layer_2_extruding_segments": 17496,
+  "warnings": [],
+  "physical_print_verified": false,
+  "printer_submission": false
+}

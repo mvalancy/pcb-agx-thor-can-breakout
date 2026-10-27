@@ -13,7 +13,7 @@
 | Signal integrity | Paired trunks, measured skew/spacing and sampled return plane; no maximum rate qualified | Intended CAN/CAN-FD rates, bus lengths, ribbon, capacitance and error measurements |
 | Auxiliary I/O | Raw pins retained, power links open | Voltage/direction/current limits and any needed protection established |
 | PCB assembly | JLC-format SMT and full-BOM paths, exact sourced connectors | Supplier stock, Wieson J1 consignment, authenticated JLCDFM (no report yet)/panel, placement rotation, first article approval |
-| Housing | Valid solids/meshes, native PCB collision and cable envelope checks | Slicer review, actual print, flange/plug/header fit, lid fasteners, hot/creep checks |
+| Housing | Valid solids/meshes, native PCB collisions, engraving clearances and offline slicing of both lids | Base/clamp slicing review, actual print and lettering legibility, flange/plug/header fit, lid fasteners, hot/creep checks |
 | Strain relief | Heat-set inserts, recessed heads, hard stops, replaceable pads and clamp | Actual ribbon thickness;10N/60s pull and continuity before/after dwell |
 | Saleable units | Proposed50-unit target | Every-unit continuity/functional test, serial/revision tracking and documented ratings |
 

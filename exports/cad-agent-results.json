@@ -242,6 +242,46 @@
             "url": "../exports/4port/prototype-review.json",
             "label": "exports/4port/prototype-review.json"
           }
+        },
+        {
+          "name": "2port-lid-markings \u00b7 2port engraved lettering clearances",
+          "status": "pass",
+          "message": "pass true in exports/2port/lid-markings-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/lid-markings-review.json",
+            "label": "exports/2port/lid-markings-review.json"
+          }
+        },
+        {
+          "name": "4port-lid-markings \u00b7 4port engraved lettering clearances",
+          "status": "pass",
+          "message": "pass true in exports/4port/lid-markings-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/lid-markings-review.json",
+            "label": "exports/4port/lid-markings-review.json"
+          }
+        },
+        {
+          "name": "2port-lid-slicing \u00b7 2port offline lid slicing",
+          "status": "pass",
+          "message": "pass true in exports/2port/lid-slicing-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/lid-slicing-review.json",
+            "label": "exports/2port/lid-slicing-review.json"
+          }
+        },
+        {
+          "name": "4port-lid-slicing \u00b7 4port offline lid slicing",
+          "status": "pass",
+          "message": "pass true in exports/4port/lid-slicing-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/lid-slicing-review.json",
+            "label": "exports/4port/lid-slicing-review.json"
+          }
         }
       ]
     },
@@ -260,16 +300,16 @@
   "header_meta": {
     "project": "pcb-agx-thor-can-breakout",
     "revision": "rev A1-development",
-    "generated": "2026-10-27 07:47 UTC"
+    "generated": "2026-10-27 15:25 UTC"
   },
   "footer_meta": {
-    "checks": "26 pass / 0 fail / 1 skip",
+    "checks": "30 pass / 0 fail / 1 skip",
     "physical_fit": "physical fit NOT verified (CAD only)",
-    "slicer": "slicer not run"
+    "slicer": "sliced (Bambu Studio (command line)): 121.1 g, 4.22 h for 2 part(s), 0.20mm Standard @BBL X1C, Generic PETG"
   },
   "project": "pcb-agx-thor-can-breakout",
   "revision": "A1-development",
   "physical_fit_verified": false,
-  "slicer_run": false,
+  "slicer_run": true,
   "pass": true
 }

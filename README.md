@@ -67,6 +67,8 @@ The board DE9 is **Assmann A-DS 09 A/KG-T2S / C3127392**. Mating clearance model
 
 ![Lid with recessed CAN pinout, port labels and revision](preview/2port-lid.png)
 
+The lid uses bold lettering throughout, 4 mm body-text size, enlarged pin numbers and 1 mm diagram strokes. The 0.4 mm recesses retain 2 mm of roof underneath. [Lid layout and clearance evidence](docs/enclosure.md) explain the dimensions and print assumptions; renders show optional light paint fill.
+
 Use one matching base/lid pair and the common ribbon clamp. Print the insert/counterbore and port coupons first. The [assembly guide](ASSEMBLY.md) and [hardware BOM](exports/enclosure-bom.csv) specify six heat-set inserts, four M3 × 20 lid screws, two M3 × 6 clamp screws, PCB washers and silicone pads.
 
 | Printed part | STL | Quantity |
@@ -107,10 +109,13 @@ To rebuild and validate the committed routed design:
 # Also run check_can_routing.py, check_fabrication.py and check_prototype.py with KiCad Python.
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
+.venv/bin/python tools/check_lid_markings.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
 .venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
+.venv/bin/cad-agent slice
+.venv/bin/python tools/check_lid_slicing.py
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
 .venv/bin/cad-agent report

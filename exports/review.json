@@ -14,7 +14,13 @@
           "title": "Lid artwork",
           "kind": "svg",
           "file": "preview/2port-lid-artwork.svg",
-          "caption": "Shared vector artwork drives the 0.4 mm engraved roof, numbered male DE9 pinout and port identity."
+          "caption": "Bold 4 mm body-text size, enlarged pin numbers and 1 mm graphic strokes; shared vector artwork drives the 0.4 mm engraved roof."
+        },
+        {
+          "title": "Lid first layer",
+          "kind": "svg",
+          "file": "preview/2port-lid-first-layer.svg",
+          "caption": "Actual extrusion paths viewed from outside the roof-down lid; P1S 0.4 mm nozzle / PETG / 0.2 mm layers. Physical print still pending."
         },
         {
           "title": "Schematic",
@@ -125,6 +131,14 @@
         {
           "title": "Prototype pads & gated power",
           "file": "exports/2port/prototype-review.json"
+        },
+        {
+          "title": "Engraved lettering clearances",
+          "file": "exports/2port/lid-markings-review.json"
+        },
+        {
+          "title": "Offline lid slicing",
+          "file": "exports/2port/lid-slicing-review.json"
         }
       ],
       "downloads": [
@@ -164,7 +178,13 @@
           "title": "Lid artwork",
           "kind": "svg",
           "file": "preview/4port-lid-artwork.svg",
-          "caption": "Shared vector artwork drives the 0.4 mm engraved roof, numbered male DE9 pinout and port identity."
+          "caption": "Bold 4 mm body-text size, enlarged pin numbers and 1 mm graphic strokes; shared vector artwork drives the 0.4 mm engraved roof."
+        },
+        {
+          "title": "Lid first layer",
+          "kind": "svg",
+          "file": "preview/4port-lid-first-layer.svg",
+          "caption": "Actual extrusion paths viewed from outside the roof-down lid; P1S 0.4 mm nozzle / PETG / 0.2 mm layers. Physical print still pending."
         },
         {
           "title": "Schematic",
@@ -275,6 +295,14 @@
         {
           "title": "Prototype pads & gated power",
           "file": "exports/4port/prototype-review.json"
+        },
+        {
+          "title": "Engraved lettering clearances",
+          "file": "exports/4port/lid-markings-review.json"
+        },
+        {
+          "title": "Offline lid slicing",
+          "file": "exports/4port/lid-slicing-review.json"
         }
       ],
       "downloads": [

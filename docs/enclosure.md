@@ -8,9 +8,15 @@ A keyed, screw-fastened housing with a separate padded ribbon clamp and enough p
 
 ![Engraved male DE9 pinout and port badges](../preview/2port-lid.png)
 
-The roof carries a numbered **male mating-face** DE9 diagram, CAN-H/L, ground and shield callouts, unconnected pins, port badges, revision and `github.com/mvalancy`. Recessed markings are 0.4 mm deep in a 2.4 mm roof. Light paint fill is optional. The same shared cad-agent vector primitive generates the engraving, paint reference and [SVG proof](../preview/2port-lid-artwork.svg).
+The roof carries a numbered **male mating-face** DE9 diagram, CAN-H/L, ground and shield callouts, unconnected pins, port badges, revision and `github.com/mvalancy`. All lettering is bold: body text uses a 4 mm font size, pin numbers 4.2 mm and port badges 5.2 mm. The nameplate uses 8.5 mm THOR and 6.5 mm CAN lettering. These are font em sizes; actual glyph heights vary. All graphic lines, rings and arrows are 1 mm wide. Notes are split across lines and the larger numbered diagram leaves room around the heavier text.
+
+Recessed markings are 0.4 mm deep in a 2.4 mm roof, leaving 2.0 mm beneath the engraving. Light paint fill is optional. The same shared cad-agent vector primitive generates the engraving, paint reference and [SVG proof](../preview/2port-lid-artwork.svg). The [two-port](../exports/2port/lid-markings-review.json) and [four-port](../exports/4port/lid-markings-review.json) checks measure native glyph-to-artwork, roof-edge and screw-counterbore distances against a 0.6 mm clearance floor. Graphic stroke width is not a minimum font-stroke claim; print legibility still needs a physical sample.
 
 Port badges follow the physical PCB orientation. CAN0 is at the right in the housing's top/front coordinate view; the native KiCad PCB view has the opposite X direction after a proper assembly rotation. The four-port model labels its extra channels **RES2 / RES3**.
+
+![Actual sliced first layer, viewed from the outside reading face](../preview/2port-lid-first-layer.svg)
+
+The lid-only offline slicing checks use Bambu Studio 02.08.04.57 with a P1S 0.4 mm nozzle, PETG, 0.2 mm layers, four walls and 30% infill. The first-layer proof is drawn from extrusion paths, including their recorded widths. No printer was contacted. These checks support layout review; tiny enclosed letter islands, bed adhesion and final legibility still need a printed sample. [Two-port slicing report](../exports/2port/lid-slicing-review.json) · [Four-port slicing report](../exports/4port/lid-slicing-review.json).
 
 ## Serviceable mechanical details
 

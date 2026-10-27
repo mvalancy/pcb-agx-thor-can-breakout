@@ -78,6 +78,20 @@ cad:
     - 256
     - 256
     - 256
+  slicer:
+    printer: Bambu Lab P1S 0.4 nozzle
+    process: 0.20mm Standard @BBL X1C
+    filament: Generic PETG
+    parts:
+    - 2port_lid
+    - 4port_lid
+    overrides:
+      wall_loops: '4'
+      sparse_infill_density: 30%
+      curr_bed_type: Textured PEI Plate
+      enable_arc_fitting: '0'
+      layer_height: '0.2'
+      initial_layer_print_height: '0.2'
   view:
     hidden:
     - 4port
@@ -136,6 +150,8 @@ cad:
     run: tools/draw_controls.py
   - name: dimensional-drawings
     run: tools/draw_mechanics.py
+  - name: lid-markings
+    run: tools/check_lid_markings.py
   - name: render-readbacks
     run: tools/render_review.py
   - name: assembly-paths
@@ -181,3 +197,15 @@ cad:
   - id: 4port-prototype
     title: 4port prototype pads and power
     file: exports/4port/prototype-review.json
+  - id: 2port-lid-markings
+    title: 2port engraved lettering clearances
+    file: exports/2port/lid-markings-review.json
+  - id: 4port-lid-markings
+    title: 4port engraved lettering clearances
+    file: exports/4port/lid-markings-review.json
+  - id: 2port-lid-slicing
+    title: 2port offline lid slicing
+    file: exports/2port/lid-slicing-review.json
+  - id: 4port-lid-slicing
+    title: 4port offline lid slicing
+    file: exports/4port/lid-slicing-review.json
