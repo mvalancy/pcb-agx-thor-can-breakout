@@ -1,11 +1,11 @@
 {
-  "observed_date": "2026-10-26",
+  "observed_date": "2026-10-27",
   "python": "3.12.3",
   "KiCad": "10.0.1",
   "cadquery": "2.8.0",
   "trimesh": "5.2.0",
   "vtk": "9.6.2",
-  "cad_agent_commit": "03eb5726fe4b5f8f688ec6a4c93aab812b5e8c56",
+  "cad_agent_commit": "29cc541e8394cd8ef181e32cc598f1f71472f7ad",
   "FreeRouting": "1.9.0",
   "FreeRouting_jar_sha256": "9084a4888937a7f31f857ecc12aa7a37407f51160e4d2892dff9c9bb47ae3102",
   "scope": "Observed local generation toolchain; CI validates committed artifacts and rebuilds packages, not KiCad/CAD geometry.",

@@ -73,3 +73,11 @@ The project now pins merged cad-agent v0.3.0, including upstream PR1 and PR14. I
 Fresh KiCad STEP exports had different presentation ordering, but CadQuery BREP readbacks were byte-identical to the previously verified solids for both variants. Those verified STEP bytes were retained, so the current mechanical screens, renders and viewer geometry remain applicable. The previous shared-toolkit counts above describe earlier snapshots.
 
 Merged project feature branches are deleted locally and remotely. GitHub automatic branch deletion is enabled, and a plain `dev` follows `main` after integration.
+
+## 2026-10-27 — Four broad corner mounts and finer viewer zoom
+
+Rebuilding both bases with four 26 mm-wide mounting ears near the corners, R4 roots and the existing 7 mm thickness. Drawings, assembly checks, meshes and viewer assets are being regenerated; older renders remain visible until that completes. The shared viewer is being updated to use one-quarter zoom sensitivity, with browser measurement and independent upstream review before integration.
+
+Both four-mount housings are rebuilt and pass collision checks. Measured wall-root sections are 30.1344 mm wide; all four M3 heads, shanks and driver paths clear the assembled housing. Each variant passes 29 assembly-path/clearance trials. Seven printable parts are watertight and their 3MF files read back correctly. All assembly/part renders, dedicated mounting-detail views, dimensions and the two 13-part interactive scenes are refreshed. The new overall widths are 149.2 and 233.2 mm; thickness remains 7 mm at the mounting ears.
+
+Shared zoom [PR18](https://github.com/Valpatel/cad-agent/pull/18) is merged after independent review and passing CI. The project pins its merged commit. Browser measurement confirms a 100-pixel wheel event changes camera distance by 1.29059% (previously 5.26316%), with continuous small deltas and reversible movement. Both current assembly scenes load without JavaScript exceptions. The shared local suite passed 388 tests with 14 optional skips. Physical strength and installation torque remain unqualified.

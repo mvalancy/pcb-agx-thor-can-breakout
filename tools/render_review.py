@@ -13,10 +13,10 @@ def load(v,name):
 colors={'base':(.20,.34,.40),'lid':(.32,.50,.58),'clamp':(.90,.48,.16),'pcb':(.10,.42,.28),'header':(.16,.17,.19),'ribbon':(.75,.73,.67),'inserts':(.85,.64,.24),'screws':(.65,.67,.69),'female':(.65,.67,.69),'hoods':(.16,.18,.21),'thumbscrews':(.82,.55,.25),'can_cables':(.09,.1,.12),'legend_paint':(.94,.93,.82)}
 for v in ['2port','4port']:
  r=Renderer(R/'preview',size=(1500,1050),background=(.065,.085,.105),subtitle=f'A1 DEVELOPMENT | {v.upper()} | EXPORTED STEP READBACK',branding='THOR CAN',accent='#11cbb1')
- for mode in ['exploded','open','lid','assembled','rear-supports']:
+ for mode in ['exploded','open','lid','assembled','rear-supports','mounting']:
   if r.only and f'{v}-{mode}.png' not in r.only:continue
   shapes=[]
-  names=['base'] if mode=='rear-supports' else ['lid','legend_paint'] if mode=='lid' else list(colors)
+  names=['base'] if mode in ['rear-supports','mounting'] else ['lid','legend_paint'] if mode=='lid' else list(colors)
   for name in names:
    if mode=='open' and name in ['lid','legend_paint','screws']:continue
    shape=load(v,name)
@@ -36,7 +36,7 @@ for v in ['2port','4port']:
    if name=='pcb':
     solids=shape.Solids();shapes.extend((s,(.62,.65,.67)) for s in solids[:-1]);shapes.append((solids[-1],colors['pcb']))
    else:shapes.append((shape,colors[name]))
-  r.render(f'{v}-{mode}.png',shapes=shapes,view='top' if mode=='lid' else 'iso',caption=f'{v} / '+mode+' / STEP readback',note=('Section at Z10 below the clamp deck · 3.2 mm ribs with R1.6 wall roots · no load rating' if mode=='rear-supports' else '4 × M3×20 lid screws · 2 × M3×6 clamp screws · 6 × M3 heat-set inserts' if mode=='exploded' else 'Recessed legends with optional paint fill · mating seating assumptions and physical tests remain open'))
+  r.render(f'{v}-{mode}.png',shapes=shapes,view=(.25,-.18,1) if mode=='mounting' else 'top' if mode=='lid' else 'iso',caption=f'{v} / '+mode+' / STEP readback',note=('4 × M3 corner mounts · 26 mm wide · R4 roots · unchanged 7 mm thickness · physical load rating unverified' if mode=='mounting' else 'Section at Z10 below the clamp deck · 3.2 mm ribs with R1.6 wall roots · no load rating' if mode=='rear-supports' else '4 × M3×20 lid screws · 2 × M3×6 clamp screws · 6 × M3 heat-set inserts' if mode=='exploded' else 'Recessed legends with optional paint fill · mating seating assumptions and physical tests remain open'))
  for part in ['base','lid']:
   if r.only and f'{v}_{part}.png' not in r.only:continue
   shapes=[(load(v,part),colors[part])]

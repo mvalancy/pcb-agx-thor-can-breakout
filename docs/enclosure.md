@@ -27,7 +27,7 @@ Port badges follow the physical PCB orientation. CAN0 is at the right in the hou
 | Lid screw bosses | Ø10.6 mm; 2.1 mm radial web around Ø6.4 counterbores |
 | Wall and seam root | 4.5 mm wall; 2.25 mm remaining outside the groove |
 | Rear clamp support | Two 3.2 mm ribs, R1.6 wall roots, positive floor/wall overlap |
-| Side mounting | Two Ø3.4 M3 holes; Ø6.4 × 3.3 counterbores in 7 mm ears; R2 roots |
+| Side mounting | Four Ø3.4 M3 holes; Ø6.4 × 3.3 counterbores; 26 mm-wide, 7 mm-thick ears; R4 roots |
 | Pilot selection | Print the 3.8 / 3.9 / 4.0 mm insert coupon first |
 
 ![Open assembly and ribbon retention](../preview/2port-open.png)
@@ -40,7 +40,11 @@ The section cuts the exported base at Z10 to expose the supports beneath the cla
 
 The six exploded screws are four **M3 × 20 lid screws** and two **M3 × 6 clamp screws**; all six engage heat-set inserts. There are no self-tapping screws in this version. The 40 × 12 mm clamp leaves 2.8 mm of plastic at the closest counterbore edge. The modeled structural webs are at least 2 mm, including 2.1 mm at lid counterbores, 2.3 mm under clamp counterbores and 2.0 mm under engraved roof strokes; recessed artwork intentionally uses finer cosmetic strokes. These dimensions improve the load path but are not a printed strength rating.
 
-The two mounting ears belong to the base, one on each connector-free side. Their centers are 8 mm outside the side walls, at Y45. M3 socket heads recess below the 7 mm tab surface; mounting screw length and the receiving nut/thread depend on the installation. Driver clearance is checked with the lid fitted. Overall sizes including ears are **132.2 × 114.2 × 26.8 mm** and **216.2 × 114.2 × 26.8 mm**.
+The four mounting ears belong to the base, two near the corners of each connector-free side. Each is **26 mm wide**, with an **R4 root** spreading to **34 mm at the wall**, while thickness remains **7 mm**. The outer edge leaves 9.8 mm of plastic around the counterbore. Their centers are 10 mm outside the side walls at Y14 and Y90, keeping the front connectors and rear ribbon path clear. Four M3 holes form a **123.2 × 76 mm** pattern on the two-port base or **207.2 × 76 mm** on the four-port base.
+
+![Four broad corner mounting ears and recessed M3 holes](../preview/2port-mounting.png)
+
+M3 socket heads recess below the tab surface; mounting screw length and receiving nut/thread depend on the installation. Both driver access with the lid fitted and the head/shank clearances are checked at all four holes. The actual fused wall-root sections are also measured. Overall sizes including ears are **149.2 × 114.2 × 26.8 mm** and **233.2 × 114.2 × 26.8 mm**. These are geometry checks, not a printed load rating.
 
 The extended PCB has two prototype regions outside the central ribbon lane. A separate clearance check covers components up to 12 mm above the PCB and leads trimmed to 3 mm below it. [Prototype area and controls](termination-and-io.md).
 

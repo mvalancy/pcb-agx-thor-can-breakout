@@ -47,7 +47,7 @@
           "title": "Enclosure",
           "kind": "image",
           "file": "preview/2port-exploded.png",
-          "caption": "Six exploded screws and six heat-set inserts; filleted rear supports and recessed side mounting ears."
+          "caption": "Six exploded screws and heat-set inserts; four broad corner mounting ears and filleted rear supports."
         },
         {
           "title": "Cable clamp",
@@ -71,6 +71,12 @@
           "kind": "model",
           "file": "exports/view/2port.json",
           "caption": "Shared cad-agent viewer of current A1 exported solids: orbit, part visibility, explode and section. Mating envelopes retain stated assumptions."
+        },
+        {
+          "title": "Corner mounts",
+          "kind": "image",
+          "file": "preview/2port-mounting.png",
+          "caption": "Four 26 mm-wide corner ears, R4 roots, 7 mm thickness and recessed M3 holes. Exported base oblique top view; physical strength remains untested."
         },
         {
           "title": "Dimensions",
@@ -191,7 +197,7 @@
           "title": "Enclosure",
           "kind": "image",
           "file": "preview/4port-exploded.png",
-          "caption": "Six exploded screws and six heat-set inserts; filleted rear supports and recessed side mounting ears."
+          "caption": "Six exploded screws and heat-set inserts; four broad corner mounting ears and filleted rear supports."
         },
         {
           "title": "Cable clamp",
@@ -215,6 +221,12 @@
           "kind": "model",
           "file": "exports/view/4port.json",
           "caption": "Shared cad-agent viewer of current A1 exported solids: orbit, part visibility, explode and section. Mating envelopes retain stated assumptions."
+        },
+        {
+          "title": "Corner mounts",
+          "kind": "image",
+          "file": "preview/4port-mounting.png",
+          "caption": "Four 26 mm-wide corner ears, R4 roots, 7 mm thickness and recessed M3 holes. Exported base oblique top view; physical strength remains untested."
         },
         {
           "title": "Dimensions",

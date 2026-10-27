@@ -60,10 +60,10 @@
     26.799999999999997
   ],
   "mechanical_sources": {
-    "cad/build.py": "cdfacc92f1b9da842eb803bd9bef0107a91316019eb3110f6ddf070f5896a05d",
+    "cad/build.py": "002f674698938fe2242d38bb018860da26d712c5ac104261dca9bc0d9233224d",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
     "cad/markings.py": "f4d51d9594e95b1bc6e7914666744aa0ba22e213cdc5fe8fe102a03422a077ff",
-    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
+    "cad/parameters.json": "09e9b56b4d6b1c4dbb1c3bccbfe809ba471d34a9d4377b4cdb02c4a43e1bb09a",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec"
   },
   "mechanical_library_sha256": {
@@ -136,23 +136,40 @@
     "rear_support_root_radius_mm": 1.6,
     "rear_support_wall_overlap_mm": 0.3,
     "mount_tab_counterbore_web_mm": 3.7,
-    "mount_tab_radial_web_mm": 3.3,
+    "mount_tab_radial_web_mm": 9.8,
     "mount_tab_centers_mm": [
       [
-        -13.1,
-        45
+        -15.1,
+        14
       ],
       [
-        190.1,
-        45
+        -15.1,
+        90
+      ],
+      [
+        192.1,
+        14
+      ],
+      [
+        192.1,
+        90
       ]
     ],
     "base_solid_count": 1,
     "lid_solid_count": 1,
-    "pass": true
+    "pass": true,
+    "mount_tab_quantity": 4,
+    "mount_tab_width_mm": 26,
+    "mount_tab_root_radius_mm": 4,
+    "mount_tab_root_section_widths_mm": [
+      30.1344,
+      30.1344,
+      30.1344,
+      30.1344
+    ]
   },
   "size_including_mounting_tabs_mm": [
-    216.2,
+    233.2,
     114.2,
     26.799999999999997
   ]

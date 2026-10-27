@@ -19,7 +19,7 @@ A1 is a fit-check and electrical-evaluation prototype. Use a matched PCB/housing
 | Assmann A-DF09LL/Z female + A-FT09 hood | 2 or 4 | Demonstration mating set; hood includes #4-40 thumbscrews |
 | Adhesive silicone foam pads | 2 | 18 × 6 × 0.8 mm; qualify adhesive/compression |
 | Removable 2.54 mm two-position shunts | 5 or 7 loose | 2/4 termination, 2 power, 1 shield; ship detached |
-| M3 side mounting screws | 2 optional | Length and mating hardware suit the installation; recessed socket heads |
+| M3 corner mounting screws | 4 optional | Length and mating hardware suit the installation; recessed socket heads |
 
 ## 1. Print coupons before the full housing
 
@@ -57,7 +57,7 @@ Leave JP5/JP6 open unless a documented internal auxiliary load requires the host
 
 Seat the perimeter tongue in the lid groove and use four M3×20 socket-head screws. Fit four 1 mm silicone foam washers around the mount screws, between the PCB and lid sleeves. The sleeves leave a 0.8 mm gap at nominal board thickness, giving 20% nominal washer compression; this accommodates board-thickness variation without a rigid plastic clamp on the PCB. The lid screws have 3.8 mm nominal insert overlap and 1.2 mm tip clearance above the blind-hole floor; clamp screws have 3.6 mm overlap and 1.4 mm tip clearance. These nominal stacks are CAD checks, not load or torque ratings. Tighten gently; insert pull-out and repeated service life remain physical tests. Check that the lid does not pinch the cable. The roof engraves CAN0/CAN1 (RES2/RES3 on four-port), CAN pinout, A1 development revision and github.com/mvalancy. Confirm labels against the schematic before electrical testing.
 
-The base has two M3 side mounting ears with Ø3.4 clearance holes and Ø6.4 × 3.3 counterbores. Use a flat mounting surface and suitable M3 screws/nuts or tapped holes; choose screw length for that surface. Mounting screws do not use the six enclosure inserts. Do not pull a warped or unsupported ear flat with screw torque. Inspect the R2 roots and tab webs after installation.
+The base has four M3 corner mounting ears, two on each connector-free side, with Ø3.4 clearance holes and Ø6.4 × 3.3 counterbores. The ears are 26 mm wide and 7 mm thick, with R4 roots spreading to 34 mm at the wall. Hole patterns are 123.2 × 76 mm (two-port) and 207.2 × 76 mm (four-port). Use a flat mounting surface and suitable M3 screws/nuts or tapped holes; choose screw length for that surface. Mounting screws do not use the six enclosure inserts. Do not pull a warped or unsupported ear flat with screw torque. Inspect the R4 roots and tab webs after installation.
 
 ## 5. Bench acceptance
 

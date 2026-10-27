@@ -38,16 +38,23 @@ def build_variant(n):
   return shape.cut(box(cx-C['ribbon_slot_width_mm']/2,rear-clear-.2,axis-C['ribbon_slot_height_mm']/2,C['ribbon_slot_width_mm'],wall+2*clear+1.2,C['ribbon_slot_height_mm']))
  shell=openings(shell)
  base=shell.intersect(box(x0-1,y0-1,-1,ow+2,od+2,seam+1));lid=shell.intersect(box(x0-1,y0-1,seam,ow+2,od+2,roof-seam+1))
- # Two mounting ears on the cable-free sides. The screw seats are outside the
+ # Four broad corner mounts on the cable-free sides. The screw seats are outside the
  # wall so an installed lid never obstructs the driver or mounting hardware.
- tabs=P['mounting_tabs'];tab_centers=[]
+ tabs=P['mounting_tabs'];tab_centers=[];tab_root_widths=[]
+ assert tabs['quantity']==4 and len(tabs['y_centers_mm'])==2
  for side in [-1,1]:
-  wx=x0 if side<0 else w-x0;tx=wx+side*tabs['hole_offset_from_wall_mm'];ty=tabs['y_mm']
-  rib=filleted_wall_rib(thickness=2*tabs['outer_radius_mm'],reach=tabs['hole_offset_from_wall_mm'],height=tabs['thickness_mm'],root_radius=tabs['root_radius_mm'],overlap=tabs['overlap_mm'])
-  rib=rib.rotate((0,0,0),(0,0,1),-90 if side<0 else 90).translate((tx,ty,0))
-  ear=rib.fuse(cyl(tx,ty,0,tabs['outer_radius_mm'],tabs['thickness_mm']))
-  ear=ear.cut(cyl(tx,ty,-1,tabs['hole_diameter_mm']/2,tabs['thickness_mm']+2)).cut(cyl(tx,ty,tabs['thickness_mm']-tabs['counterbore_depth_mm'],tabs['counterbore_diameter_mm']/2,tabs['counterbore_depth_mm']+1))
-  base=base.fuse(ear);tab_centers.append((tx,ty))
+  wx=x0 if side<0 else w-x0;tx=wx+side*tabs['hole_offset_from_wall_mm']
+  for ty in tabs['y_centers_mm']:
+   rib=filleted_wall_rib(thickness=2*tabs['outer_radius_mm'],reach=tabs['hole_offset_from_wall_mm'],height=tabs['thickness_mm'],root_radius=tabs['root_radius_mm'],overlap=tabs['overlap_mm'])
+   rib=rib.rotate((0,0,0),(0,0,1),-90 if side<0 else 90).translate((tx,ty,0))
+   ear=rib.fuse(cyl(tx,ty,0,tabs['outer_radius_mm'],tabs['thickness_mm']))
+   ear=ear.cut(cyl(tx,ty,-1,tabs['hole_diameter_mm']/2,tabs['thickness_mm']+2)).cut(cyl(tx,ty,tabs['thickness_mm']-tabs['counterbore_depth_mm'],tabs['counterbore_diameter_mm']/2,tabs['counterbore_depth_mm']+1))
+   base=base.fuse(ear);tab_centers.append((tx,ty))
+   # Measure actual plastic in a thin section just outside the wall, including
+   # the roots after fusion/cutting. The case wall itself is outside this probe.
+   root_half=tabs['outer_radius_mm']+tabs['root_radius_mm']
+   probe=box(wx+side*.5-.1,ty-root_half,0,.2,2*root_half,tabs['thickness_mm'])
+   tab_root_widths.append(round(base.intersect(probe).Volume()/(.2*tabs['thickness_mm']),4))
  # Continuous perimeter tongue is interrupted only by connector/cable openings.
  outer=clear+C['lip_width_mm'];h=C['lip_height_mm'];tol=C['lip_clearance_mm']
  base=base.fuse(openings(ring(w,rear,outer,clear,seam-.4,h+.4)))
@@ -85,6 +92,8 @@ def build_variant(n):
  checks={'board_shell_intersection_mm3':round(board.intersect(base.fuse(lid)).Volume(),6),'native_pcb_shell_intersection_mm3':round(native.intersect(base.fuse(lid)).Volume(),6) if native else None,'base_lid_intersection_mm3':round(base.intersect(lid).Volume(),6),'clamp_shell_intersection_mm3':round(bar.intersect(base.fuse(lid)).Volume(),6),'ribbon_hard_parts_intersection_mm3':round(cable.intersect(base.fuse(lid).fuse(bar)).Volume(),6),'screw_plastic_intersection_mm3':round(sum(s.intersect(base.fuse(lid).fuse(bar)).Volume() for s in screws),6)}
  features={'minimum_structural_web_mm':2.0,'lid_counterbore_radial_web_mm':(C['boss_diameter_mm']-C['counterbore_diameter_mm'])/2,'lid_engraved_roof_mm':C['lid_mm']-.4,'lid_lower_sleeve_radial_wall_mm':4.3-C['screw_clearance_mm']/2,'clamp_counterbore_floor_mm':S['clamp_thickness_mm']-C['counterbore_depth_mm'],'insert_blind_floor_mm':boardz-I['pilot_depth_mm'],'seam_outer_web_mm':wall-C['lip_width_mm']-tol,'key_width_mm':C['lip_width_mm'],'clamp_counterbore_end_web_mm':cw/2-S['screw_pitch_mm']/2-C['counterbore_diameter_mm']/2,'clamp_counterbore_side_web_mm':cd/2-C['counterbore_diameter_mm']/2,'insert_radial_wall_mm':(S['boss_diameter_mm']-I['outer_diameter_mm'])/2,'rear_support_rib_mm':S['support_rib_mm'],'rear_support_root_radius_mm':S['support_root_radius_mm'],'rear_support_wall_overlap_mm':S['support_overlap_mm'],'mount_tab_counterbore_web_mm':tabs['thickness_mm']-tabs['counterbore_depth_mm'],'mount_tab_radial_web_mm':tabs['outer_radius_mm']-tabs['counterbore_diameter_mm']/2,'mount_tab_centers_mm':tab_centers,'base_solid_count':len(base.Solids()),'lid_solid_count':len(lid.Solids())}
  features['pass']=all(features[k]>=2 for k in ['lid_counterbore_radial_web_mm','lid_engraved_roof_mm','lid_lower_sleeve_radial_wall_mm','clamp_counterbore_floor_mm','insert_blind_floor_mm','seam_outer_web_mm','key_width_mm','clamp_counterbore_end_web_mm','clamp_counterbore_side_web_mm','insert_radial_wall_mm','rear_support_rib_mm','mount_tab_counterbore_web_mm','mount_tab_radial_web_mm']) and len(base.Solids())==len(lid.Solids())==1
+ features.update(mount_tab_quantity=len(tab_centers),mount_tab_width_mm=2*tabs['outer_radius_mm'],mount_tab_root_radius_mm=tabs['root_radius_mm'],mount_tab_root_section_widths_mm=tab_root_widths)
+ features['pass']=features['pass'] and len(tab_centers)==4 and all(width>=28 for width in tab_root_widths)
  mates=[];plugchecks=[];male_flange=B['port_pin_y_mm']-10.94
  for k in range(n):
   px=w-(B['first_port_x_mm']+k*B['port_pitch_mm']);parts=mating_set(px,axis,male_flange);mates.append(parts)

@@ -39,7 +39,7 @@
   "assembly_default": "All prototype and rail holes bare; no automatic assembly or net connections on free pads.",
   "source_sha256": {
     "hardware/4port/thor-4port.kicad_pcb": "111761434cfe97e47f39bf701ec65cfad7bd4a68519b899eaa80a41c79565446",
-    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
+    "cad/parameters.json": "09e9b56b4d6b1c4dbb1c3bccbfe809ba471d34a9d4377b4cdb02c4a43e1bb09a",
     "tools/check_prototype.py": "ac3623805fdcfc524c12e27a5ebabaeac5a8555f0170a994e774fae878904430",
     "tools/update_layout_features.py": "7127f423aa5e8871236a80729f093c4380d2cfe91197dcf9f1297f2402614034"
   }

@@ -32,7 +32,10 @@ for n in ([int(args.variant[0])] if args.variant else [2,4]):
  # Side mount driver paths stay outside the assembled enclosure, even with lid fitted.
  for x,y in review['structural_features']['mount_tab_centers_mm']:
   tool=m.cyl(x,y,m.P['mounting_tabs']['thickness_mm']+.05,3,35)
-  trials.append({'test':'mounting ear driver access with lid fitted','x_mm':x,'overlap_mm3':round(tool.intersect(base.fuse(lid).fuse(native)).Volume(),6)})
+  trials.append({'test':'mounting ear driver access with lid fitted','x_mm':x,'y_mm':y,'overlap_mm3':round(tool.intersect(base.fuse(lid).fuse(native)).Volume(),6)})
+  seat=m.P['mounting_tabs']['thickness_mm']-m.P['mounting_tabs']['counterbore_depth_mm']
+  fastener=m.socket_head_envelope(3,10,5.5,3).translate((x,y,seat))
+  trials.append({'test':'mounting ear M3 head and shank clearance','x_mm':x,'y_mm':y,'overlap_mm3':round(fastener.intersect(base.fuse(lid).fuse(native)).Volume(),6)})
  # User circuits must stay within these documented XY regions, <=12 mm above
  # the PCB and <=3 mm below it. The ribbon lane is deliberately excluded.
  proto=json.loads((R/f'exports/{n}port/prototype-review.json').read_text())

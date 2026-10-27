@@ -58,3 +58,7 @@ JLCDFM upload reached sign-in without a report. No supplier approval or physical
 | Evidence completeness | Merged cad-agent rejected default-filtered KiCad reports and unexamined disabled checks | Enabled all checks, added four bare-pad courtyards per board, centered a 1 nm termination-track offset and reran all severities with no waivers |
 
 The larger PCB uses a 152.4 mm cable candidate to retain useful external reach after the longer internal run. Physical cable fit, current budget and qualification remain open.
+
+## Four corner mounts — 2026-10-27
+
+The user found the two central side ears too small. Both bases now use four corner mounts with 26 mm ear widths, R4 roots and 34 mm nominal wall attachments. The 7 mm thickness and recessed M3 hardware stay unchanged. Updated checks measure the actual fused root sections and test driver/head/shank clearance at all four locations. Both housings, printable files, rendered views and interactive scenes are regenerated together. Physical strength remains untested.
