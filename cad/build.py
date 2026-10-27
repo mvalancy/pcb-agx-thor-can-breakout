@@ -4,8 +4,7 @@ import json, hashlib, importlib
 from pathlib import Path
 import cadquery as cq
 from cadagent.geometry import export_print_stl
-from cadagent.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack
-from cadagent.render import Renderer
+from cadagent.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack, filleted_wall_rib
 from hardware_models import mating_set
 from markings import lid_markings
 ROOT=Path(__file__).resolve().parents[1]
@@ -39,6 +38,16 @@ def build_variant(n):
   return shape.cut(box(cx-C['ribbon_slot_width_mm']/2,rear-clear-.2,axis-C['ribbon_slot_height_mm']/2,C['ribbon_slot_width_mm'],wall+2*clear+1.2,C['ribbon_slot_height_mm']))
  shell=openings(shell)
  base=shell.intersect(box(x0-1,y0-1,-1,ow+2,od+2,seam+1));lid=shell.intersect(box(x0-1,y0-1,seam,ow+2,od+2,roof-seam+1))
+ # Two mounting ears on the cable-free sides. The screw seats are outside the
+ # wall so an installed lid never obstructs the driver or mounting hardware.
+ tabs=P['mounting_tabs'];tab_centers=[]
+ for side in [-1,1]:
+  wx=x0 if side<0 else w-x0;tx=wx+side*tabs['hole_offset_from_wall_mm'];ty=tabs['y_mm']
+  rib=filleted_wall_rib(thickness=2*tabs['outer_radius_mm'],reach=tabs['hole_offset_from_wall_mm'],height=tabs['thickness_mm'],root_radius=tabs['root_radius_mm'],overlap=tabs['overlap_mm'])
+  rib=rib.rotate((0,0,0),(0,0,1),-90 if side<0 else 90).translate((tx,ty,0))
+  ear=rib.fuse(cyl(tx,ty,0,tabs['outer_radius_mm'],tabs['thickness_mm']))
+  ear=ear.cut(cyl(tx,ty,-1,tabs['hole_diameter_mm']/2,tabs['thickness_mm']+2)).cut(cyl(tx,ty,tabs['thickness_mm']-tabs['counterbore_depth_mm'],tabs['counterbore_diameter_mm']/2,tabs['counterbore_depth_mm']+1))
+  base=base.fuse(ear);tab_centers.append((tx,ty))
  # Continuous perimeter tongue is interrupted only by connector/cable openings.
  outer=clear+C['lip_width_mm'];h=C['lip_height_mm'];tol=C['lip_clearance_mm']
  base=base.fuse(openings(ring(w,rear,outer,clear,seam-.4,h+.4)))
@@ -57,9 +66,12 @@ def build_variant(n):
  for dx in [-S['screw_pitch_mm']/2,S['screw_pitch_mm']/2]:
   x=cx+dx
   deck=deck.fuse(cyl(x,cy,floor-.1,S['boss_diameter_mm']/2,high-floor+.1))
+  rib=filleted_wall_rib(thickness=S['support_rib_mm'],reach=rear+clear-cy,height=low-floor+.1,root_radius=S['support_root_radius_mm'],overlap=S['support_overlap_mm']).translate((x,cy,floor-.1))
+  deck=deck.fuse(rib)
   deck=deck.cut(cyl(x,cy,high-I['pilot_depth_mm'],C['pilot_diameter_mm']/2,I['pilot_depth_mm']+.2))
   inserts.append(insert_at(x,cy,high));screws.append(socket_head_envelope(3,S['screw_length_mm'],5.5,3).translate((x,cy,high+S['clamp_thickness_mm']-C['counterbore_depth_mm'])))
- deck=deck.fuse(box(cx-1,cy-cd/2,floor-.1,2,rear+clear-(cy-cd/2)+.1,low-floor+.1))
+ # The load paths run beside the ribbon, through both insert bosses to the
+ # floor and rear wall; no thin central blade underneath the cable.
  deck=deck.cut(box(cx-9.2,cy-cd/2-.1,low,18.4,cd+.2,high-low+.3));base=base.fuse(deck)
  # A single vector drawing drives the engraved roof, paint reference and 2-D proof.
  artwork=lid_markings(n,w)
@@ -71,6 +83,8 @@ def build_variant(n):
  pcbpath=OUT/f'{n}port/pcb.step';native=cq.importers.importStep(str(pcbpath)).val().rotate((0,0,0),(0,0,1),180).translate((w,0,boardz)) if pcbpath.exists() else None
  cable=box(cx-S['ribbon_width_mm']/2,57,axis-S['ribbon_thickness_assumed_mm']/2,S['ribbon_width_mm'],rear+10-57,S['ribbon_thickness_assumed_mm'])
  checks={'board_shell_intersection_mm3':round(board.intersect(base.fuse(lid)).Volume(),6),'native_pcb_shell_intersection_mm3':round(native.intersect(base.fuse(lid)).Volume(),6) if native else None,'base_lid_intersection_mm3':round(base.intersect(lid).Volume(),6),'clamp_shell_intersection_mm3':round(bar.intersect(base.fuse(lid)).Volume(),6),'ribbon_hard_parts_intersection_mm3':round(cable.intersect(base.fuse(lid).fuse(bar)).Volume(),6),'screw_plastic_intersection_mm3':round(sum(s.intersect(base.fuse(lid).fuse(bar)).Volume() for s in screws),6)}
+ features={'minimum_structural_web_mm':2.0,'lid_counterbore_radial_web_mm':(C['boss_diameter_mm']-C['counterbore_diameter_mm'])/2,'lid_engraved_roof_mm':C['lid_mm']-.4,'lid_lower_sleeve_radial_wall_mm':4.3-C['screw_clearance_mm']/2,'clamp_counterbore_floor_mm':S['clamp_thickness_mm']-C['counterbore_depth_mm'],'insert_blind_floor_mm':boardz-I['pilot_depth_mm'],'seam_outer_web_mm':wall-C['lip_width_mm']-tol,'key_width_mm':C['lip_width_mm'],'clamp_counterbore_end_web_mm':cw/2-S['screw_pitch_mm']/2-C['counterbore_diameter_mm']/2,'clamp_counterbore_side_web_mm':cd/2-C['counterbore_diameter_mm']/2,'insert_radial_wall_mm':(S['boss_diameter_mm']-I['outer_diameter_mm'])/2,'rear_support_rib_mm':S['support_rib_mm'],'rear_support_root_radius_mm':S['support_root_radius_mm'],'rear_support_wall_overlap_mm':S['support_overlap_mm'],'mount_tab_counterbore_web_mm':tabs['thickness_mm']-tabs['counterbore_depth_mm'],'mount_tab_radial_web_mm':tabs['outer_radius_mm']-tabs['counterbore_diameter_mm']/2,'mount_tab_centers_mm':tab_centers,'base_solid_count':len(base.Solids()),'lid_solid_count':len(lid.Solids())}
+ features['pass']=all(features[k]>=2 for k in ['lid_counterbore_radial_web_mm','lid_engraved_roof_mm','lid_lower_sleeve_radial_wall_mm','clamp_counterbore_floor_mm','insert_blind_floor_mm','seam_outer_web_mm','key_width_mm','clamp_counterbore_end_web_mm','clamp_counterbore_side_web_mm','insert_radial_wall_mm','rear_support_rib_mm','mount_tab_counterbore_web_mm','mount_tab_radial_web_mm']) and len(base.Solids())==len(lid.Solids())==1
  mates=[];plugchecks=[];male_flange=B['port_pin_y_mm']-10.94
  for k in range(n):
   px=w-(B['first_port_x_mm']+k*B['port_pitch_mm']);parts=mating_set(px,axis,male_flange);mates.append(parts)
@@ -82,6 +96,8 @@ def build_variant(n):
  compression=(2*S['pad_thickness_mm']+S['ribbon_thickness_assumed_mm']-S['gap_mm'])/(2*S['pad_thickness_mm'])
  review={'pass':all(v is not None and v<1e-5 for v in checks.values()) and all(c['housing_intersection_mm3']<1e-5 for c in plugchecks) and all(s['engagement_mm']>=3 and s['tip_clearance_mm']>.3 for s in [lidstack,clampstack]) and .1<=compression<=.35,'checks':checks,'physical_fit_verified':False,'slicer_run':False,'protection_tested':False,'release_ready':False,'port_checks':plugchecks,'outer_size_mm':[ow,od,roof],'mechanical_sources':source_hashes(),'mechanical_library_sha256':library_hashes(),'native_step_sha256':hashlib.sha256(pcbpath.read_bytes()).hexdigest() if pcbpath.exists() else None,'pcb_frame':{'mapping':'KiCad STEP (x,-y,z) -> housing (width-x,y,z+board_z) by 180 degree Z rotation','determinant':1,'reflection_used':False},'envelope_basis':'Native KiCad models plus original Assmann drawing envelopes; hood capture and screw seating assumed. No official manufacturer STEP.','mating':{'hood_gap_nominal_mm':B['port_pitch_mm']-M['hood_width_mm'],'hood_gap_max_width_mm':B['port_pitch_mm']-M['hood_width_mm']-M['hood_tolerance_mm'],'front_rib_mm':B['port_pitch_mm']-C['db9_window_width_mm'],'screw_engagement_verified':False,'reference':'research/mating-dsub-measurements.json'},'heat_set_inserts':{'quantity':6,'mpn':I['mpn'],'pilot_mm':C['pilot_diameter_mm'],'intentional_knurl_plastic_interference_mm3':round(sum(s.intersect(base).Volume() for s in inserts),3),'physical_installation_verified':False},'lid_screws':{'quantity':4,'size':'M3x20','counterbore_mm':[6.4,3.3],'head_recess_mm':.3,**lidstack,'pcb_pad_gap_mm':C['pcb_retention_gap_mm'],'pad_thickness_mm':C['pcb_retention_pad_mm']},'strain_relief':{'hard_stop_gap_mm':S['gap_mm'],'pad_compression_fraction_assumed':round(compression,3),'screws':'2 x M3x6 with heat-set inserts',**clampstack,'pull_test_target_N':10,'pull_test_passed':False,'ribbon_thickness_assumed_mm':.6,'limits':'Cable thickness, compression curve, pull strength, creep and bend radius unqualified.'}}
  header=box(cx-11.43,48.57,boardz+1.6,22.86,8.07,6.456)
+ review['structural_features']=features;review['pass']=review['pass'] and features['pass']
+ review['size_including_mounting_tabs_mm']=[ow+2*(tabs['hole_offset_from_wall_mm']+tabs['outer_radius_mm']),od,roof]
  hardware={'legend_paint':paint,'inserts':cq.Compound.makeCompound(inserts),'screws':cq.Compound.makeCompound(screws),'female':cq.Compound.makeCompound([m[0] for m in mates]),'hoods':cq.Compound.makeCompound([m[1] for m in mates]),'thumbscrews':cq.Compound.makeCompound([m[2] for m in mates]),'can_cables':cq.Compound.makeCompound([m[3] for m in mates])}
  return base,lid,bar,board,native,header,cable,hardware,review
 
@@ -109,14 +125,6 @@ if __name__=='__main__':
   (OUT/f'{n}port/mechanical-checks.json').write_text(json.dumps(review,indent=2)+'\n')
   for name,shape in [('clamp',bar),('pcb',native),('ribbon',cable),('header',header),*hardware.items()]:
    if shape:cq.exporters.export(shape,str(OUT/f'asm_{n}port_{name}.step'))
-  r=Renderer(ROOT/'preview',size=(1500,1050),background=(.065,.085,.105),subtitle=f'A1 DEVELOPMENT | {n} PORT | HEAT-SET INSERTS / KEYED SEAM',branding='THOR CAN',accent='#11cbb1')
-  pcbshapes=[(s,(.6,.64,.67)) for s in native.Solids()[:-1]]+[(native.Solids()[-1],(.04,.43,.28))] if native else [(board,(.04,.43,.28))]
-  common=pcbshapes+[(header,(.16,.17,.19)),(cable,(.75,.73,.67)),(hardware['inserts'],(.85,.64,.24))]
-  mated=[(hardware['female'],(.65,.67,.69)),(hardware['hoods'],(.16,.18,.21)),(hardware['thumbscrews'],(.82,.55,.25)),(hardware['can_cables'],(.09,.1,.12))]
-  r.render(f'{n}port-exploded.png',shapes=[(base,(.20,.34,.40)),(lid.translate((0,0,32)),(.32,.50,.58)),(hardware['legend_paint'].translate((0,0,32)),(.94,.93,.82)),(bar.translate((0,0,14)),(.90,.48,.16))]+common,caption=f'{n}-port housing / exploded assembly',note='Six heat-set inserts · recessed socket heads · 1.6 mm keyed seam')
-  r.render(f'{n}port-open.png',shapes=[(base,(.20,.34,.40)),(bar,(.90,.48,.16))]+common+mated,caption=f'{n}-port housing / cable retention',note='Assmann mating references · screw seating assumed · physical fit pending')
-  r.render(f'{n}port-lid.png',shapes=[(lid,(.32,.50,.58)),(hardware['legend_paint'],(.94,.93,.82))],view='top',caption=f'{n}-port lid / permanent identification',note='0.4 mm recessed legends · optional light paint fill shown · A1 development')
-  r.render(f'{n}port-assembled.png',shapes=[(base,(.20,.34,.40)),(lid,(.32,.50,.58)),(hardware['legend_paint'],(.94,.93,.82)),(hardware['screws'],(.65,.67,.69))]+common+mated,caption=f'{n}-port housing / assembled',note='42 mm port pitch · permanent pinout/revision labels · A1 fit prototype')
   print(n,review['pass'],review['checks'],flush=True)
  for part,shape in [('ribbon_clamp',clamp_part()),('fastener_coupon',fit_coupon()),('port_coupon',port_coupon())]:
   cq.exporters.export(shape,str(OUT/f'{part}.step'));geometry[part]=export_print_stl(shape,OUT/f'{part}.stl');geometry[part]['physical_fit_verified']=False

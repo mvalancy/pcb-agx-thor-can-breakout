@@ -2,7 +2,7 @@
 
 The GitHub landing-page defect is fixed: `.github/README.md` took precedence over the root README. The generator now omits that one special directory index, and release validation rejects its return. All other public content directories remain indexed.
 
-A1 replaces the earlier routing and enclosure frame. Both boards now pass native ERC, DRC, connectivity and schematic parity; independent pin-map, paired-path and fabrication-profile checks also pass. Previously published A0 packages are historical and superseded. A1 remains subject to PR review and the physical/supplier gates below.
+A1 replaces the earlier routing and enclosure frame. Both boards now pass native ERC, DRC, connectivity and schematic parity; independent pin-map, paired-path and fabrication-profile checks also pass. Previously published A0 packages are historical and superseded. A1 is published on main; physical and supplier qualification remains open.
 
 ## Findings and corrective work
 
@@ -25,6 +25,12 @@ The old PCB STEP import reflected the board across a plane, reversing handedness
 
 ## Review workflow
 
-The project changes are on `dev/a1-routing-lid-review` and submitted into `main` in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1). Shared cad-agent code is pinned to its reviewed branch commit and proposed in [PR1](https://github.com/Valpatel/cad-agent/pull/1); connector resources remain in [KiCAD_Libs PR4](https://github.com/mvalancy/KiCAD_Libs/pull/4). No new release tag or production order is created by this review.
+The earlier A1 review is merged into `main` in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1). Shared cad-agent code is pinned to merged v0.3.0, including [PCB tooling PR1](https://github.com/Valpatel/cad-agent/pull/1) and [filleted support / engraving follow-up PR14](https://github.com/Valpatel/cad-agent/pull/14); connector resources remain in [KiCAD_Libs PR4](https://github.com/mvalancy/KiCAD_Libs/pull/4). No new release tag or production order is created by this review.
 
 Final validation: both native electrical variants, independent routing/fabrication checks, both mechanical collision/path screens, seven STL/3MF parts and both current 13-part viewer scenes pass. Browser checks found no JavaScript exceptions, broken review assets or mobile page overflow. All three package ZIPs reproduce byte-for-byte from a clean checkout; project PR CI passes.
+
+## Prototyping and mechanical service iteration
+
+Both PCBs are now 90 mm deep, with 120/324 isolated 2.54 mm prototype pads, two gated-power tap banks, readable J10 functions and explicit termination labels. Independent checks verify free-pad isolation, power boundaries, pitch, copper keepouts and assembly exclusions. FSI_EXT_GPIO1 remains accessible with its actual FSI firmware limitation documented. The existing paired CAN routes and measured return corridors remain intact.
+
+The enclosure has thicker post-cut seam webs, a wider clamp, two filleted rear insert ribs and two recessed M3 side mounting ears. Exploded readback renders include all six assembly screws and six inserts. A 152.4 mm cable candidate replaces the shorter candidate to allow for the extended internal route; actual mating and routing still need a sample. [Controls and prototyping](termination-and-io.md) provides illustrated setup.

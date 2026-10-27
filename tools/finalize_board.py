@@ -70,25 +70,27 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
    f.Reference().SetPosition(vec(w-14.7,57))
    for pad in f.Pads():
     if pad.GetNumber()=='14':pad.SetLocalZoneConnection(p.ZONE_CONNECTION_FULL)
+  if ref=='J12':f.Reference().SetPosition(vec(w-10,20.6))
  for t in b.GetDrawings():
   if isinstance(t,p.PCB_TEXT):
+   if t.GetText() in {'CAN0','CAN1','RES2','RES3'}:t.SetPosition(vec(p.ToMM(t.GetPosition().x),16.3))
    if t.GetText()=='TERM=SHUNT':t.SetPosition(vec(p.ToMM(t.GetPosition().x)+7,28.2));t.SetText('TERM')
    if t.GetText() in {'FSI_CAN0','FSI_CAN1','AURIX_CAN1','AURIX_CAN2'}:t.SetPosition(vec(p.ToMM(t.GetPosition().x),24.5))
    if t.GetText()=='AUX RAW':t.SetPosition(vec(w-15,35))
  if not any(z.GetLayer()==p.B_Cu and not z.GetIsRuleArea() for z in b.Zones()):
   z=p.ZONE(b);z.SetLayer(p.B_Cu);z.SetNet(nets['/GND']);z.SetLocalClearance(mm(.25));z.SetThermalReliefGap(mm(.3));z.SetThermalReliefSpokeWidth(mm(.3));z.SetPadConnection(p.ZONE_CONNECTION_THERMAL)
   poly=z.Outline();poly.NewOutline()
-  for x,y in [(.5,.5),(w-.5,.5),(w-.5,64.5),(.5,64.5)]:poly.Append(mm(x),mm(y))
+  for x,y in [(.5,.5),(w-.5,.5),(w-.5,params['pcb']['depth_mm']-.5),(.5,params['pcb']['depth_mm']-.5)]:poly.Append(mm(x),mm(y))
   b.Add(z)
  # CAN routing places two protection return vias per TVS before auxiliary routing.
  for f in b.GetFootprints():
   if f.GetReference().startswith('D'):
    next(pad for pad in f.Pads() if pad.GetNumber()=='3').SetLocalZoneConnection(p.ZONE_CONNECTION_FULL)
  # Top ground pour supports the short bottom-layer header escapes.
- if not any(z.GetLayer()==p.F_Cu for z in b.Zones()):
+ if not any(z.GetLayer()==p.F_Cu and not z.GetIsRuleArea() for z in b.Zones()):
   z=p.ZONE(b);z.SetLayer(p.F_Cu);z.SetNet(nets['/GND']);z.SetLocalClearance(mm(.25));z.SetThermalReliefGap(mm(.3));z.SetThermalReliefSpokeWidth(mm(.3));z.SetPadConnection(p.ZONE_CONNECTION_THERMAL)
   poly=z.Outline();poly.NewOutline()
-  for x,y in [(.5,.5),(w-.5,.5),(w-.5,64.5),(.5,64.5)]:poly.Append(mm(x),mm(y))
+  for x,y in [(.5,.5),(w-.5,.5),(w-.5,params['pcb']['depth_mm']-.5),(.5,params['pcb']['depth_mm']-.5)]:poly.Append(mm(x),mm(y))
   b.Add(z)
  # Three asymmetric optical fiducials, board-only and excluded from assembly population.
  import shutil,os
@@ -107,6 +109,7 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
   if not isinstance(t,p.PCB_VIA) and t.GetNetname()=='/GND' and t.GetLayer()==p.B_Cu:b.Delete(t)
 
  for z in b.Zones():
+  if z.GetIsRuleArea():continue
   z.SetLocalClearance(mm(.3))
   if z.GetLayer()==p.F_Cu and z.GetNetname()=='/GND':
    z.SetPadConnection(p.ZONE_CONNECTION_THERMAL);poly=z.Outline();poly.RemoveAllContours();poly.NewOutline();cx=w/2-10
@@ -125,5 +128,16 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
   end=vec(x,y)
   if not any(isinstance(t,p.PCB_VIA) and t.GetNetname()=='/GND' and t.GetPosition()==end for t in b.GetTracks()):
    via=p.PCB_VIA(b);via.SetPosition(end);via.SetWidth(mm(.6));via.SetDrill(mm(.3));via.SetViaType(p.VIATYPE_THROUGH);via.SetLayerPair(p.F_Cu,p.B_Cu);via.SetNet(nets['/GND']);b.Add(via)
+ # Float-to-integer routing can leave a one-nanometer offset at a via center.
+ # Snap only same-net endpoints already within 10 nm; larger offsets require review.
+ vias=[t for t in b.GetTracks() if isinstance(t,p.PCB_VIA)]
+ for t in b.GetTracks():
+  if isinstance(t,p.PCB_VIA):continue
+  for get,setter in [(t.GetStart,t.SetStart),(t.GetEnd,t.SetEnd)]:
+   q=get()
+   for via in vias:
+    a=via.GetPosition()
+    if via.GetNetCode()==t.GetNetCode() and 0<(q.x-a.x)**2+(q.y-a.y)**2<=100:
+     setter(a);break
  b.BuildConnectivity();p.ZONE_FILLER(b).Fill(b.Zones());p.SaveBoard(str(path),b)
  print(v,'finalized')

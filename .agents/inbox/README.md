@@ -13,9 +13,11 @@ Use these records to understand why a guard or design constraint exists. Start a
 | File or folder | Purpose |
 |---|---|
 | [2026-10-26-can-routing-is-not-connectivity.md](2026-10-26-can-routing-is-not-connectivity.md) | A clean connectivity DRC does not establish differential routing or return continuity |
+| [2026-10-26-complete-kicad-evidence.md](2026-10-26-complete-kicad-evidence.md) | Run every KiCad severity and enable default-disabled checks before accepting a clean report |
 | [2026-10-26-github-readme-precedence.md](2026-10-26-github-readme-precedence.md) | A generic .github README overrides the repository's project overview |
 | [2026-10-26-ground-islands-need-a-real-bridge.md](2026-10-26-ground-islands-need-a-real-bridge.md) | Stitching vias must join distinct ground regions, not the same isolated island |
 | [2026-10-26-preserve-pcb-handedness.md](2026-10-26-preserve-pcb-handedness.md) | Align a PCB STEP with a proper rotation, never a reflection |
+| [2026-10-26-prototype-power-and-supports.md](2026-10-26-prototype-power-and-supports.md) | Verify new power taps and post-cut structural webs independently |
 | [2026-10-26-release-manifest-allowlist.md](2026-10-26-release-manifest-allowlist.md) | Package the validated public manifest, not every file beside a design |
 | [2026-10-26-report-freshness-formats.md](2026-10-26-report-freshness-formats.md) | Check each report's declared evidence rather than assuming one report schema |
 | [2026-10-26-review-export-readbacks.md](2026-10-26-review-export-readbacks.md) | Render the exported assembly readback to check the deliverable |

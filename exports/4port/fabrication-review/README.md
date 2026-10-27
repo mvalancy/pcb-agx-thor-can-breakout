@@ -26,6 +26,7 @@ Nominal stack: 1.6 mm FR4, two layers, 1 oz copper. Supplier stackup, mask, pane
 | [README.txt](README.txt) | Project support file |
 | [thor-4port-B_Cu.gbl](thor-4port-B_Cu.gbl) | Project support file |
 | [thor-4port-B_Mask.gbs](thor-4port-B_Mask.gbs) | Project support file |
+| [thor-4port-B_Silkscreen.gbo](thor-4port-B_Silkscreen.gbo) | Project support file |
 | [thor-4port-Edge_Cuts.gm1](thor-4port-Edge_Cuts.gm1) | Project support file |
 | [thor-4port-F_Cu.gtl](thor-4port-F_Cu.gtl) | Project support file |
 | [thor-4port-F_Mask.gts](thor-4port-F_Mask.gts) | Project support file |

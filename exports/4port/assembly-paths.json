@@ -79,6 +79,24 @@
       "overlap_mm3": 0.0
     },
     {
+      "test": "mounting ear driver access with lid fitted",
+      "x_mm": -13.1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear driver access with lid fitted",
+      "x_mm": 190.1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "prototype P1 component and lead clearance",
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "prototype P2 component and lead clearance",
+      "overlap_mm3": 0.0
+    },
+    {
       "test": "lid insertion",
       "z_offset_mm": 0,
       "overlap_mm3": 0.0
@@ -164,21 +182,21 @@
   "physical_fit_verified": false,
   "mechanical_library_sha256": {
     "cadagent.geometry": "148f271304dab6fd940e813ca560871ba27e82e3ce23e67634e9627a05b1d163",
-    "cadagent.fasteners": "c0fcec84f9d888996b91ef07e94c739a37538cd655ba33bc3b41678ef1f0a312",
-    "cadagent.markings": "a6d02ce51e34cf06f8ab85f78a87d1588fd925ae19492b4f0ffa21f3aeed1330"
+    "cadagent.fasteners": "5f156ce960bb11705bd8cefd00f6191bec48fd7136ce680b609914fd4c37b6a1",
+    "cadagent.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
   "mechanical_sources": {
-    "cad/build.py": "0dd2bb61bacdd2ef46a0007d3731fe1199dfdef716d5301b9b6aa7973c2dd3ee",
+    "cad/build.py": "cdfacc92f1b9da842eb803bd9bef0107a91316019eb3110f6ddf070f5896a05d",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/markings.py": "6310801e557dd29a009aec577bccc9d4ba78b8e4c16e75aefca5275f1fcacce0",
-    "cad/parameters.json": "b04e7a637e1c203d9f37c0278b9760d0b20cfd6f45fbeb5c176f2d9f650c4f6d",
+    "cad/markings.py": "f4d51d9594e95b1bc6e7914666744aa0ba22e213cdc5fe8fe102a03422a077ff",
+    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec",
-    "tools/check_mechanics.py": "bb9a50f25b05daaddb491f2da572eeb00964c661ba4c71ff0b033a1840911d4f"
+    "tools/check_mechanics.py": "40517e76b0d22e28140341c0820eceea08622587e8f1656fc740de51653049f0"
   },
   "artifact_sha256": {
-    "exports/4port_base.step": "def64a65298b3759d03962d4c9eb7d7d2e38a41bac3ff8f129745d12a74bc290",
-    "exports/4port_lid.step": "4bdd1450c4cbb0fd18de8fc7538e10a01d5bd9f35c0eb737a7d42880fe35944f",
-    "exports/asm_4port_clamp.step": "5a0d8091123a418f2ba658282f2f1086b825e28e3c2e741dfed16ae65e1d972e",
-    "exports/asm_4port_pcb.step": "e6e4eeedf8fdf0c35dda801cd816c33ad552fe9560d03f505535fe58011fc3c4"
+    "exports/4port_base.step": "c65ef9b0c38cf8f85f1b202f8f525d3c32da8b352dcfe883717deee61f3eed1b",
+    "exports/4port_lid.step": "fe299597f17d9e4e51bece220378b494c9f0f97d0e1a4aef264d7a1cfb32b175",
+    "exports/asm_4port_clamp.step": "7c20c6ec1fac08016d3c8981b75142a6574e57a12d58c5a3c32b1e2b59698208",
+    "exports/asm_4port_pcb.step": "cd35e90ef734db638080488212343ff8d8e610ef40d160d5a798138ec917b37e"
   }
 }

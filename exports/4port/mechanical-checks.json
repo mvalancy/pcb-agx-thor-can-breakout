@@ -55,23 +55,23 @@
     }
   ],
   "outer_size_mm": [
-    184.2,
-    86.2,
+    187.2,
+    114.2,
     26.799999999999997
   ],
   "mechanical_sources": {
-    "cad/build.py": "0dd2bb61bacdd2ef46a0007d3731fe1199dfdef716d5301b9b6aa7973c2dd3ee",
+    "cad/build.py": "cdfacc92f1b9da842eb803bd9bef0107a91316019eb3110f6ddf070f5896a05d",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/markings.py": "6310801e557dd29a009aec577bccc9d4ba78b8e4c16e75aefca5275f1fcacce0",
-    "cad/parameters.json": "b04e7a637e1c203d9f37c0278b9760d0b20cfd6f45fbeb5c176f2d9f650c4f6d",
+    "cad/markings.py": "f4d51d9594e95b1bc6e7914666744aa0ba22e213cdc5fe8fe102a03422a077ff",
+    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec"
   },
   "mechanical_library_sha256": {
     "cadagent.geometry": "148f271304dab6fd940e813ca560871ba27e82e3ce23e67634e9627a05b1d163",
-    "cadagent.fasteners": "c0fcec84f9d888996b91ef07e94c739a37538cd655ba33bc3b41678ef1f0a312",
-    "cadagent.markings": "a6d02ce51e34cf06f8ab85f78a87d1588fd925ae19492b4f0ffa21f3aeed1330"
+    "cadagent.fasteners": "5f156ce960bb11705bd8cefd00f6191bec48fd7136ce680b609914fd4c37b6a1",
+    "cadagent.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
-  "native_step_sha256": "96170e1fe34c7455194372d06b3fbf444da54a4628833bcf1b214f48bec36fa6",
+  "native_step_sha256": "4a6359390b03d0724a2c710dbc5fd73d34ae51c1de34f3eb1a168b712cefa3c5",
   "pcb_frame": {
     "mapping": "KiCad STEP (x,-y,z) -> housing (width-x,y,z+board_z) by 180 degree Z rotation",
     "determinant": 1,
@@ -119,5 +119,41 @@
     "pull_test_passed": false,
     "ribbon_thickness_assumed_mm": 0.6,
     "limits": "Cable thickness, compression curve, pull strength, creep and bend radius unqualified."
-  }
+  },
+  "structural_features": {
+    "minimum_structural_web_mm": 2.0,
+    "lid_counterbore_radial_web_mm": 2.0999999999999996,
+    "lid_engraved_roof_mm": 2.0,
+    "lid_lower_sleeve_radial_wall_mm": 2.5999999999999996,
+    "clamp_counterbore_floor_mm": 2.3,
+    "insert_blind_floor_mm": 2.3000000000000007,
+    "seam_outer_web_mm": 2.25,
+    "key_width_mm": 2.0,
+    "clamp_counterbore_end_web_mm": 2.8,
+    "clamp_counterbore_side_web_mm": 2.8,
+    "insert_radial_wall_mm": 2.2499999999999996,
+    "rear_support_rib_mm": 3.2,
+    "rear_support_root_radius_mm": 1.6,
+    "rear_support_wall_overlap_mm": 0.3,
+    "mount_tab_counterbore_web_mm": 3.7,
+    "mount_tab_radial_web_mm": 3.3,
+    "mount_tab_centers_mm": [
+      [
+        -13.1,
+        45
+      ],
+      [
+        190.1,
+        45
+      ]
+    ],
+    "base_solid_count": 1,
+    "lid_solid_count": 1,
+    "pass": true
+  },
+  "size_including_mounting_tabs_mm": [
+    216.2,
+    114.2,
+    26.799999999999997
+  ]
 }

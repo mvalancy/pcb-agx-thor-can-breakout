@@ -18,9 +18,9 @@ def require(ok,msg):
  if not ok:errors.append(msg)
 for v in ['2port','4port']:
  out=R/'exports'/v
- for name in ['electrical-review','mechanical-checks','assembly-paths','can-routing-review','fabrication-profile-check']:
+ for name in ['electrical-review','mechanical-checks','assembly-paths','can-routing-review','fabrication-profile-check','prototype-review']:
   data=json.loads((out/f'{name}.json').read_text());require(data.get('pass') is True,f'{v}: {name} failed')
- for name in ['electrical-review','can-routing-review','fabrication-profile-check']:
+ for name in ['electrical-review','can-routing-review','fabrication-profile-check','prototype-review']:
   data=json.loads((out/f'{name}.json').read_text())
   require(bool(data.get('source_sha256')),v+': missing source hashes '+name)
   for rel,sha in data.get('source_sha256',{}).items():require(digest(R/rel)==sha,rel+': stale '+name)

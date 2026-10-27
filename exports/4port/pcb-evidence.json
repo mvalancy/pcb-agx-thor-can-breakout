@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "pass": true,
+  "problems": [],
   "reports_older_than_source": [],
   "checks": [
     {
@@ -8,33 +9,45 @@
       "pass": true,
       "errors": 0,
       "warnings": 0,
+      "exclusions": 0,
       "unconnected": 0,
       "parity": 0,
-      "reason": "",
-      "exclusions": 0
+      "ignored_checks": [],
+      "excluded_checks": [],
+      "unwaived": [],
+      "waived": {},
+      "waived_counts": {},
+      "unused_waivers": [],
+      "reason": ""
     },
     {
       "kind": "drc",
       "pass": true,
       "errors": 0,
       "warnings": 0,
+      "exclusions": 0,
       "unconnected": 0,
       "parity": 0,
-      "reason": "",
-      "exclusions": 0
+      "ignored_checks": [],
+      "excluded_checks": [],
+      "unwaived": [],
+      "waived": {},
+      "waived_counts": {},
+      "unused_waivers": [],
+      "reason": ""
     }
   ],
   "source_sha256": {
-    "hardware/4port/thor-4port.kicad_sch": "81e893f1a0c43bcf8877545d205bb2ddeb56c596b8ad14231efe2fc0b3c3176f",
-    "hardware/4port/thor-4port.kicad_pcb": "70a4dca09fc8db5f079921e6724bbf91419da2c514cf51a8dcfa7e8978796d7c",
-    "hardware/4port/thor-4port.kicad_pro": "090bbbf7b7334764016c4d41e764747e87508791bb3402c95b133364e6343f3e",
+    "hardware/4port/thor-4port.kicad_sch": "773703d20292167b999b8b18025d7fa2958fedf8e6d4339b8d6bafcd6ded2131",
+    "hardware/4port/thor-4port.kicad_pcb": "111761434cfe97e47f39bf701ec65cfad7bd4a68519b899eaa80a41c79565446",
+    "hardware/4port/thor-4port.kicad_pro": "51d15e9f45004d13fc27f015a55e0f660dcdd7843deb5482f0d8ea4835e58aee",
     "hardware/4port/thor-4port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1",
-    "hardware/interface.json": "f60db67a017d760b2b224e08d1f8d520e6ff5979be7a18c546b3ce2ffa73e56d",
+    "hardware/interface.json": "1921e0cc59cfe9a4597145f08cf852d251a2f5faeb47da42dc454f562678edf3",
     "research/j47-footprint-measurements.json": "826fcbe8c997e5bdd5d02492d9293ff240b68ba0026cf5da6c69d63f7650c235"
   },
   "report_sha256": {
-    "exports/4port/erc.json": "8d16cfae64f9980495004a8aa9083c53e9b5e168021d6115e3c5ad02f431ffac",
-    "exports/4port/drc.json": "05ae4341fee9f89930c4f7c5b4de5823f7c409cf90395319888e48504ac4dd4b"
+    "exports/4port/erc.json": "642246d3cf95cf3a5fb17c9fb738b5963e9ce3fde81c662aa5453f632b6d0cd2",
+    "exports/4port/drc.json": "e4d6c286479a16c0e0a98e8b1c7d8caaa2299ee8915dce1c675ffe8f3675b3a4"
   },
   "production_ready": false,
   "release_gates": [
@@ -69,6 +82,7 @@
       "detail": "Specific IGX carrier revision pinout and population audit"
     }
   ],
+  "waivers": {},
   "physical_fit_verified": false,
   "electrical_tested": false
 }

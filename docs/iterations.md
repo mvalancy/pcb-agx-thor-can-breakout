@@ -42,3 +42,19 @@ Clean-checkout packaging found local `.kicad_prl` UI state in locally generated 
 | Documentation | GitHub prioritized `.github/README.md`; folder indexes lacked guidance | Removed overriding index, guarded against recurrence, and created curated guides at every public content level |
 
 JLCDFM upload reached sign-in without a report. No supplier approval or physical test has occurred. A0 results above describe prior iterations and do not establish current compatibility.
+
+## Prototype access and mounting iteration
+
+| Round | Finding | Correction and validation |
+|---|---|---|
+| Prototype routing | Router export left one AUX_3V3 branch disconnected; direct detours crossed raw I/O or host 5 V | Explicit layer transition and clearance-preserving route; final native DRC/connectivity/parity all zero |
+| Prototype function | Raw net names can imply unsupported GPIO functions | Trace J47 pin 6 to J39 / FSI_GPIO06; cite NVIDIA FSI firmware ownership; retain raw access and label its limit |
+| Enclosure supports | Nominal walls hid 1.35 mm seam and 1.8 mm clamp edge webs | Wider clamp and wall, two 3.2 mm ribs with R1.6 roots, recessed M3 side ears with R2 roots |
+| Mesh export | Two kerned bold letters overlapped in the new lid label, producing non-manifold STL edges | Reproduced on a flat coupon, then fixed bounded text union in shared cad-agent; regression and full suite pass |
+| Final thickness audit | Lid bosses left 1.6 mm around the recessed screw heads | Increase bosses to Ø10.6, measure the 2.1 mm radial web, and rebuild both variants |
+| Exploded view | Renderer omitted the six assembly screws | Include four M3×20 and two M3×6 screws at separate exploded heights with all six inserts |
+| Publication | Validated A1 remained only on the development branch | Merge PR #1 into main, verify GitHub root README/images, and continue new work on a separate development branch |
+
+| Evidence completeness | Merged cad-agent rejected default-filtered KiCad reports and unexamined disabled checks | Enabled all checks, added four bare-pad courtyards per board, centered a 1 nm termination-track offset and reran all severities with no waivers |
+
+The larger PCB uses a 152.4 mm cable candidate to retain useful external reach after the longer internal run. Physical cable fit, current budget and qualification remain open.

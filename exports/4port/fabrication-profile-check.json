@@ -16,17 +16,19 @@
     "detected_count": 199
   },
   "source_sha256": {
-    "hardware/jlcpcb-profile.json": "b818e99681e76ee1f957b24d6d9d56994c0f76a61f5cf0642de548abc34ba2c3",
-    "tools/apply_fab_rules.py": "7b9ec8a5bb3221995c59eebdfa1cf6ef619c4e8fc95ae4874c433463778a9c38",
+    "hardware/jlcpcb-profile.json": "6c47ba60885769e1aa75d0ad101e0a59f1ec84955ba51684c5dcf137ea1509a6",
+    "tools/apply_fab_rules.py": "ff81604383d949cc06d0d17b8ad0e3419df309f931d666b67a268286337290c7",
     "tools/check_fabrication.py": "e49081015fddb39aa0e90e5a5f65d99acb57cc47b55c4ba2fe662da48dfabcab",
-    "hardware/4port/thor-4port.kicad_pcb": "70a4dca09fc8db5f079921e6724bbf91419da2c514cf51a8dcfa7e8978796d7c",
-    "hardware/4port/thor-4port.kicad_pro": "090bbbf7b7334764016c4d41e764747e87508791bb3402c95b133364e6343f3e",
+    "hardware/4port/thor-4port.kicad_pcb": "111761434cfe97e47f39bf701ec65cfad7bd4a68519b899eaa80a41c79565446",
+    "hardware/4port/thor-4port.kicad_pro": "51d15e9f45004d13fc27f015a55e0f660dcdd7843deb5482f0d8ea4835e58aee",
     "hardware/4port/thor-4port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1"
   },
   "vendor_dfm": {
     "url": "https://jlcdfm.com/",
     "status": "not_run_login_required",
-    "attempt": "Public engineering Gerber ZIP selected in JLCDFM upload UI; service redirected to JLCPCB sign-in before analysis. No analysis report obtained and no order submitted."
+    "attempt": "2026-10-26: current A1 93 x 90 mm two-port engineering Gerber ZIP selected in JLCDFM upload UI. Service redirected to JLCPCB sign-in before analysis; no report, checkout or order.",
+    "attempted_artifact": "exports/2port/thor-2port-A1-fabrication-REVIEW.zip",
+    "attempted_sha256": "20a52184ab5f3bf6f90c592a44f2035a83a31150a545a7b3bcc0fab49c1b96ad"
   },
   "scope": "Local native feature measurements and custom-rule enforcement. Full board DRC is separately required. No vendor DFM approval, panelization, placement-library orientation or PCBA process qualification."
 }

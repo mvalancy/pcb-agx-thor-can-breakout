@@ -13,11 +13,13 @@ Run from the repository root. `kicad-cli` must be on PATH. The commands marked `
 .venv/bin/python tools/export_review.py
 KiCad-Python tools/check_can_routing.py
 KiCad-Python tools/check_fabrication.py
+KiCad-Python tools/check_prototype.py
 .venv/bin/python tools/check_electronics.py
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
+.venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
@@ -27,11 +29,11 @@ KiCad-Python tools/check_fabrication.py
 .venv/bin/python tools/package_release.py
 ```
 
-`KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes.
+`KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes. For a schematic drawing-only adjustment, `export_review.py --schematic-only` regenerates ERC/PDF/netlist and checks parity without changing the board or its STEP.
 
 ## When changing the circuit or routing
 
-`build_electronics.py` overwrites native layouts unless passed `--schematic-only`. Full regeneration requires paired CAN seeds (`route_can_pairs.py`), auxiliary routing (`route_boards.py`), net/zone finalization (`finalize_board.py`), and every electrical check. Read their module documentation before invoking them. Never accept a router exit code as connectivity proof.
+`build_electronics.py` overwrites native layouts unless passed `--schematic-only`. Full regeneration includes `update_layout_features.py` for board outline, prototype grids and legends. Export the schematic netlist, then use paired CAN seeds (`route_can_pairs.py`), auxiliary routing (`route_boards.py`), net/zone finalization (`finalize_board.py`), and every electrical check. Read their module documentation before invoking them. Never accept a router exit code as connectivity proof.
 
 | Check | Evidence |
 |---|---|
@@ -39,6 +41,7 @@ KiCad-Python tools/check_fabrication.py
 | `check_electronics.py` | Independent 26-pin source transcription, DE9/TVS/links and BOM/CPL |
 | `check_can_routing.py` | H/L path, pair gap, skew, TVS placement and sampled return plane |
 | `check_fabrication.py` | JLC-derived feature limits and deliberate native-rule negative control |
+| `check_prototype.py` | Isolated pad count/pitch, ribbon exclusion, gated power mapping and bare-pad assembly exclusions |
 | `check_mechanics.py` | Assembly insertion paths from exported solids |
 | `validate_release.py` | Fresh hashes, source reports, printable meshes, 3MF and local links |
 
@@ -55,6 +58,8 @@ Shared geometry, panel markings, routing analysis, reports, site navigation and 
 | [check_electronics.py](check_electronics.py) | Generation or validation tool |
 | [check_fabrication.py](check_fabrication.py) | Generation or validation tool |
 | [check_mechanics.py](check_mechanics.py) | Generation or validation tool |
+| [check_prototype.py](check_prototype.py) | Generation or validation tool |
+| [draw_controls.py](draw_controls.py) | Generation or validation tool |
 | [draw_mechanics.py](draw_mechanics.py) | Generation or validation tool |
 | [export_review.py](export_review.py) | Generation or validation tool |
 | [finalize_board.py](finalize_board.py) | Generation or validation tool |
@@ -63,6 +68,7 @@ Shared geometry, panel markings, routing analysis, reports, site navigation and 
 | [route_boards.py](route_boards.py) | Generation or validation tool |
 | [route_can_pairs.py](route_can_pairs.py) | Generation or validation tool |
 | [update_evidence.py](update_evidence.py) | Generation or validation tool |
+| [update_layout_features.py](update_layout_features.py) | Generation or validation tool |
 | [validate_release.py](validate_release.py) | Generation or validation tool |
 | [write_readmes.py](write_readmes.py) | Generation or validation tool |
 

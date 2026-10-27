@@ -9,11 +9,13 @@
     "rows": 2,
     "positions": 26,
     "exact_wieson_footprint_verified": true,
-    "cable_mpn": "FFSD-13-D-04.00-01-N",
+    "cable_mpn": "FFSD-13-D-06.00-01-N",
     "cable_continuity_verified": false,
     "design_mpn": "AC2800-0011-022-H0",
     "design_manufacturer": "Wieson",
-    "verification_scope": "Native NVIDIA A02 ODB/ASCII pads and numbering; connector mating/height/sourcing not verified"
+    "verification_scope": "Native NVIDIA A02 ODB/ASCII pads and numbering; connector mating/height/sourcing not verified",
+    "cable_length_mm": 152.4,
+    "cable_length_basis": "Preferred for the 90 mm PCB housing; approximately 57 mm internal span plus bend/strain-relief allowance. Physical routing and pin-for-pin continuity unverified."
   },
   "pins": {
     "1": "HOST_3V3",

@@ -9,27 +9,27 @@
         {
           "name": "2port base",
           "status": "pass",
-          "message": "valid single solid \u00b7 watertight \u00b7 100.2 \u00d7 86.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+          "message": "valid single solid \u00b7 watertight \u00b7 132.197 \u00d7 114.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
         },
         {
           "name": "2port lid",
           "status": "pass",
-          "message": "valid single solid \u00b7 watertight \u00b7 100.2 \u00d7 86.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+          "message": "valid single solid \u00b7 watertight \u00b7 103.2 \u00d7 114.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
         },
         {
           "name": "4port base",
           "status": "pass",
-          "message": "valid single solid \u00b7 watertight \u00b7 184.2 \u00d7 86.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+          "message": "valid single solid \u00b7 watertight \u00b7 216.197 \u00d7 114.2 \u00d7 16.9 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
         },
         {
           "name": "4port lid",
           "status": "pass",
-          "message": "valid single solid \u00b7 watertight \u00b7 184.2 \u00d7 86.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+          "message": "valid single solid \u00b7 watertight \u00b7 187.2 \u00d7 114.2 \u00d7 17 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
         },
         {
           "name": "ribbon clamp",
           "status": "pass",
-          "message": "valid single solid \u00b7 watertight \u00b7 38 \u00d7 10 \u00d7 5.6 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
+          "message": "valid single solid \u00b7 watertight \u00b7 40 \u00d7 12 \u00d7 5.6 mm \u00b7 fits Bambu P1S / prototype bed 256 \u00d7 256 \u00d7 256 mm"
         },
         {
           "name": "fastener coupon",
@@ -222,6 +222,26 @@
             "url": "../exports/4port/fabrication-profile-check.json",
             "label": "exports/4port/fabrication-profile-check.json"
           }
+        },
+        {
+          "name": "2port-prototype \u00b7 2port prototype pads and power",
+          "status": "pass",
+          "message": "pass true in exports/2port/prototype-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/2port/prototype-review.json",
+            "label": "exports/2port/prototype-review.json"
+          }
+        },
+        {
+          "name": "4port-prototype \u00b7 4port prototype pads and power",
+          "status": "pass",
+          "message": "pass true in exports/4port/prototype-review.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/4port/prototype-review.json",
+            "label": "exports/4port/prototype-review.json"
+          }
         }
       ]
     },
@@ -240,10 +260,10 @@
   "header_meta": {
     "project": "pcb-agx-thor-can-breakout",
     "revision": "rev A1-development",
-    "generated": "2026-10-27 03:53 UTC"
+    "generated": "2026-10-27 05:39 UTC"
   },
   "footer_meta": {
-    "checks": "24 pass / 0 fail / 1 skip",
+    "checks": "26 pass / 0 fail / 1 skip",
     "physical_fit": "physical fit NOT verified (CAD only)",
     "slicer": "slicer not run"
   },

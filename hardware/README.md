@@ -16,7 +16,7 @@ Native KiCad sources for the two-port AGX adapter and the four-port engineering 
 
 ## Review before editing
 
-Read the [NVIDIA pinout proof](../docs/pinout-proof.md), [protection rationale](../docs/interface-and-protection.md) and [native header audit](../research/j47-footprint-audit.md). All power, termination and shield shunts ship open. DE9 pin 9 has no power.
+Read the [NVIDIA pinout proof](../docs/pinout-proof.md), [protection rationale](../docs/interface-and-protection.md) and [native header audit](../research/j47-footprint-audit.md). All power, termination and shield shunts ship open. [Controls and prototyping](../docs/termination-and-io.md) identifies every link and the isolated pad fields. DE9 pin 9 has no power.
 
 The committed layouts contain explicit paired CAN routing and return-plane keepouts. Regenerating the electronics can erase that routing; use the documented [tool sequence](../tools/README.md).
 

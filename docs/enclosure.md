@@ -20,15 +20,31 @@ Port badges follow the physical PCB orientation. CAN0 is at the right in the hou
 |---|---|
 | Port spacing | 42 mm centers; 9.8 mm plastic rib between openings |
 | Mating clearance | 7.7 mm between maximum-width modeled backshells |
-| Keyed seam | 1.4 mm tongue width, 1.6 mm height, 0.25 mm clearance |
+| Keyed seam | 2.0 mm tongue width, 1.6 mm height, 0.25 mm clearance |
 | Lid hardware | Four M3 × 20 screws, heat-set inserts, Ø6.4 × 3.3 mm counterbores |
 | Ribbon clamp | Replaceable bar, two M3 × 6 screws and heat-set inserts |
 | Cable contact | Two 0.8 mm silicone pads; 1.8 mm hard-stop gap |
+| Lid screw bosses | Ø10.6 mm; 2.1 mm radial web around Ø6.4 counterbores |
+| Wall and seam root | 4.5 mm wall; 2.25 mm remaining outside the groove |
+| Rear clamp support | Two 3.2 mm ribs, R1.6 wall roots, positive floor/wall overlap |
+| Side mounting | Two Ø3.4 M3 holes; Ø6.4 × 3.3 counterbores in 7 mm ears; R2 roots |
 | Pilot selection | Print the 3.8 / 3.9 / 4.0 mm insert coupon first |
 
 ![Open assembly and ribbon retention](../preview/2port-open.png)
 
 The mating references include Assmann A-DF 09 LL/Z female connectors, A-FT 09 backshells, #4-40 thumbscrews and cable envelopes. Their dimensions come from drawings; hood capture and screw engagement require physical samples. [Mating audit](../research/mating-dsub-clearance.md).
+
+![Section below the clamp deck showing filleted rear insert supports](../preview/2port-rear-supports.png)
+
+The section cuts the exported base at Z10 to expose the supports beneath the clamp deck. It shows the actual load-path geometry used in the printable part.
+
+The six exploded screws are four **M3 × 20 lid screws** and two **M3 × 6 clamp screws**; all six engage heat-set inserts. There are no self-tapping screws in this version. The 40 × 12 mm clamp leaves 2.8 mm of plastic at the closest counterbore edge. The modeled structural webs are at least 2 mm, including 2.1 mm at lid counterbores, 2.3 mm under clamp counterbores and 2.0 mm under engraved roof strokes; recessed artwork intentionally uses finer cosmetic strokes. These dimensions improve the load path but are not a printed strength rating.
+
+The two mounting ears belong to the base, one on each connector-free side. Their centers are 8 mm outside the side walls, at Y45. M3 socket heads recess below the 7 mm tab surface; mounting screw length and the receiving nut/thread depend on the installation. Driver clearance is checked with the lid fitted. Overall sizes including ears are **132.2 × 114.2 × 26.8 mm** and **216.2 × 114.2 × 26.8 mm**.
+
+The extended PCB has two prototype regions outside the central ribbon lane. A separate clearance check covers components up to 12 mm above the PCB and leads trimmed to 3 mm below it. [Prototype area and controls](termination-and-io.md).
+
+The preferred cable candidate is now the 152.4 mm Samtec assembly. The larger enclosure consumes approximately 57 mm of straight internal span before bend and strain-relief allowances, so the previous 101.6 mm candidate leaves substantially less external reach. Actual cable routing, connector keying and conductor continuity still need a sample.
 
 ## Build and inspect
 

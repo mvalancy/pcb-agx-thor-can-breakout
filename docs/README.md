@@ -12,6 +12,7 @@ Review the interface, inspect the enclosure, and follow the evidence from source
 | I want to… | Read this | What it answers |
 |---|---|---|
 | Verify the wiring | [PINOUT proof](pinout-proof.md) | Original NVIDIA excerpts, J47 pins and termination |
+| Set up termination / I/O | [Controls and prototyping](termination-and-io.md) | JP shunts, power rails, FSI GPIO limits and free pad area |
 | Understand protection | [Interface and protection](interface-and-protection.md) | TVS selection, open links, raw I/O and electrical limits |
 | Inspect the housing | [Enclosure design](enclosure.md) | Lid graphics, keyed seam, inserts, clamp and mating clearances |
 | Review the latest changes | [Design review](design-review.md) | Routing, fabrication rules and corrected PCB orientation |
@@ -42,5 +43,6 @@ The current design is **A1, under engineering review**. Native CAD passes do not
 | [pinout-proof.md](pinout-proof.md) | PINOUT proof |
 | [progress.md](progress.md) | Progress log |
 | [release-checklist.md](release-checklist.md) | Release checklist |
+| [termination-and-io.md](termination-and-io.md) | Termination, power and prototyping |
 
 </details>

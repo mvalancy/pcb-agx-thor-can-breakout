@@ -51,3 +51,25 @@ The enclosure rebuild corrects an improper mirrored PCB frame, replaces the lid 
 Shared cad-agent now provides panel markings, routing analysis and consistent navigation in addition to PCB evidence, reports and the interactive viewer. Its combined suite passed 153 tests with five skips. A1 changes follow the requested development-branch and PR-into-main workflow; historical A0 releases are superseded. Physical and supplier qualification remain open.
 
 A1 is published for review in [project PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1), targeting `main`. Its GitHub validation job passed and built the three engineering packages. A separate clean checkout reproduced the local ZIP checksums exactly. Browser review confirmed both 13-part scenes, the new lid, all report badges current, working navigation and no JavaScript exceptions.
+
+## Prototype-area and mounting iteration — in progress
+
+The PCB is extended to 90 mm depth, with 120 / 324 isolated prototype pads, gated power taps and clearer controls. Two recessed M3 side ears and filleted rear insert supports are being added. Electrical and mechanical checks, render/viewer regeneration and final PR merge are in progress; earlier results above describe the previous geometry.
+
+The extended native boards now pass ERC/DRC, connectivity, parity, CAN pair/return-plane, fabrication and isolated-pad checks. A lid mesh failure from overlapping bold letters was reproduced by a small cad-agent regression, then corrected by fusing each text label before engraving. The shared suite now reports 155 passed and five skipped; both housings are rebuilding with that correction. PR #1 is merged into main, and GitHub browser review confirmed the root README and all five existing product/proof images load.
+
+The old `dev/a1-routing-lid-review` branch has been deleted locally and remotely after its merge. The final thickness audit extended the structural checks to the lid counterbore rings, roof engraving, sleeves and blind-hole floors; corner boss diameter increased to 10.6 mm. A third native housing build is underway. The exploded-layout review now visibly shows all six enclosure screws; the clamp is offset to the side for clarity.
+
+## Prototype and mounting iteration — validation complete
+
+Both 90 mm-deep boards pass ERC/DRC, connectivity/parity, independent pin/power/prototype checks, paired CAN/reference-plane checks and the native fabrication-rule probe. Both reinforced housings pass collision checks and all 23 assembly-path/clearance trials per variant. Seven printable parts export as watertight STL/3MF and fit a 256 mm bed. The minimum audited structural web is 2 mm; the lid counterbore ring is 2.1 mm.
+
+Final renders, both 13-part viewer scenes, drawings and folder guides are refreshed. Desktop/mobile browser checks found no broken images or JavaScript exceptions, and all 78 review/scene assets returned HTTP 200. The engineering packages pass source/artifact validation. JLCDFM still requires sign-in; no physical qualification or production order has occurred.
+
+## Merged shared tooling and complete native checks
+
+The project now pins merged cad-agent v0.3.0, including upstream PR1 and PR14. Its stricter evidence review exposed KiCad default-disabled checks and filtered severities. Both native projects now enable those checks, and the export command uses `--severity-all`. Four bare-pad courtyard outlines were added per board; a two-port termination endpoint was centered by 1 nm. Both ERC/DRC reports have zero findings, zero ignored checks and zero exclusions; no waivers are used. The relevant merged-toolkit evidence, marking and fastener tests pass (22 tests).
+
+Fresh KiCad STEP exports had different presentation ordering, but CadQuery BREP readbacks were byte-identical to the previously verified solids for both variants. Those verified STEP bytes were retained, so the current mechanical screens, renders and viewer geometry remain applicable. The previous shared-toolkit counts above describe earlier snapshots.
+
+Merged project feature branches are deleted locally and remotely. GitHub automatic branch deletion is enabled, and a plain `dev` follows `main` after integration.

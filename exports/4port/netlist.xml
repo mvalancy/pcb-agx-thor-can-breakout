@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>hardware/4port/thor-4port.kicad_sch</source>
-    <date>2026-10-26T20:24:14</date>
+    <date>2026-10-26T22:38:21</date>
     <tool>Eeschema 10.0.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -538,6 +538,62 @@
         </unit>
       </units>
     </comp>
+    <comp ref="TP1">
+      <value>PROTO POWER / JP5-JP6 GATED</value>
+      <footprint>Thor:Prototype_Power_3x3_P2.54</footprint>
+      <fields>
+        <field name="MPN"/>
+        <field name="LCSC"/>
+        <field name="Footprint">Thor:Prototype_Power_3x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Thor" part="TP1_function" description=""/>
+      <property name="MPN" value=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="thor-4port.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>528b5269-9bb3-55f7-8919-2b6b9db92377</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>PROTO POWER / JP5-JP6 GATED</value>
+      <footprint>Thor:Prototype_Power_3x3_P2.54</footprint>
+      <fields>
+        <field name="MPN"/>
+        <field name="LCSC"/>
+        <field name="Footprint">Thor:Prototype_Power_3x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Thor" part="TP2_function" description=""/>
+      <property name="MPN" value=""/>
+      <property name="LCSC" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="thor-4port.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e74a9b4-6d5e-5b60-aa72-9fc356f8403a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
   </components>
   <libparts>
     <libpart lib="Thor" part="D1_function">
@@ -833,6 +889,34 @@
         <pin num="2" name="AUX_5V_AO" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Thor" part="TP1_function">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TP1_function</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="AUX_3V3" type="passive"/>
+        <pin num="3" name="AUX_5V_AO" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Thor" part="TP2_function">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">TP2_function</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="AUX_3V3" type="passive"/>
+        <pin num="3" name="AUX_5V_AO" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
     <library logical="Thor">
@@ -893,10 +977,14 @@
     <net code="12" name="/AUX_3V3" class="Default">
       <node ref="J10" pin="1" pinfunction="AUX_3V3_1" pintype="passive"/>
       <node ref="JP5" pin="2" pinfunction="AUX_3V3_2" pintype="passive"/>
+      <node ref="TP1" pin="2" pinfunction="AUX_3V3_2" pintype="passive"/>
+      <node ref="TP2" pin="2" pinfunction="AUX_3V3_2" pintype="passive"/>
     </net>
     <net code="13" name="/AUX_5V_AO" class="Default">
       <node ref="J10" pin="2" pinfunction="AUX_5V_AO_2" pintype="passive"/>
       <node ref="JP6" pin="2" pinfunction="AUX_5V_AO_2" pintype="passive"/>
+      <node ref="TP1" pin="3" pinfunction="AUX_5V_AO_3" pintype="passive"/>
+      <node ref="TP2" pin="3" pinfunction="AUX_5V_AO_3" pintype="passive"/>
     </net>
     <net code="14" name="/ESTOP_IN1" class="Default">
       <node ref="J1" pin="14" pinfunction="ESTOP_IN1_14" pintype="passive"/>
@@ -964,6 +1052,8 @@
       <node ref="J4" pin="6" pinfunction="GND_6" pintype="passive"/>
       <node ref="J5" pin="3" pinfunction="GND_3" pintype="passive"/>
       <node ref="J5" pin="6" pinfunction="GND_6" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="GND_1" pintype="passive"/>
     </net>
     <net code="25" name="/HOST_3V3" class="Default">
       <node ref="J1" pin="1" pinfunction="HOST_3V3_1" pintype="passive"/>

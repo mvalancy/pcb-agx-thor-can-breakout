@@ -16,6 +16,7 @@ guides={
 | I want to… | Read this | What it answers |
 |---|---|---|
 | Verify the wiring | [PINOUT proof](pinout-proof.md) | Original NVIDIA excerpts, J47 pins and termination |
+| Set up termination / I/O | [Controls and prototyping](termination-and-io.md) | JP shunts, power rails, FSI GPIO limits and free pad area |
 | Understand protection | [Interface and protection](interface-and-protection.md) | TVS selection, open links, raw I/O and electrical limits |
 | Inspect the housing | [Enclosure design](enclosure.md) | Lid graphics, keyed seam, inserts, clamp and mating clearances |
 | Review the latest changes | [Design review](design-review.md) | Routing, fabrication rules and corrected PCB orientation |
@@ -53,7 +54,7 @@ KiCad STEP is placed by a proper 180° rotation, preserving connector handedness
 
 ## Review before editing
 
-Read the [NVIDIA pinout proof](../docs/pinout-proof.md), [protection rationale](../docs/interface-and-protection.md) and [native header audit](../research/j47-footprint-audit.md). All power, termination and shield shunts ship open. DE9 pin 9 has no power.
+Read the [NVIDIA pinout proof](../docs/pinout-proof.md), [protection rationale](../docs/interface-and-protection.md) and [native header audit](../research/j47-footprint-audit.md). All power, termination and shield shunts ship open. [Controls and prototyping](../docs/termination-and-io.md) identifies every link and the isolated pad fields. DE9 pin 9 has no power.
 
 The committed layouts contain explicit paired CAN routing and return-plane keepouts. Regenerating the electronics can erase that routing; use the documented [tool sequence](../tools/README.md).'''),
 'exports':('Design downloads','Reviewable electrical packages, printable housing parts and source-bound validation evidence.', '''![Assembled product](../preview/2port-assembled.png)
@@ -141,6 +142,7 @@ These JSON/mesh files are browser assets. Use [STL/3MF](../README.md) for printi
 | Wieson AC2800-0011-022-H0 | Native NVIDIA J47 lands; [audit](../../research/j47-footprint-audit.md) |
 | Assmann A-DS 09 A/KG-T2S | Manufacturer drill/row/shell dimensions applied to KiCad geometry |
 | XFCN PZ254V-11-02P | Exact 1.02 mm drill and 2.54 mm pitch |
+| Prototype grids and 3×3 power taps | Original MIT geometry; 2.54 mm pitch, 1.0 mm drill, 1.8 mm pads; [use and checks](../../docs/termination-and-io.md) |
 | SOT-23, mounting holes and fiducials | Pinned KiCad library geometry |
 | Samtec SHF-113 | Alternative candidate only; not the default J1 or an approved Wieson substitute |
 
@@ -173,11 +175,13 @@ Run from the repository root. `kicad-cli` must be on PATH. The commands marked `
 .venv/bin/python tools/export_review.py
 KiCad-Python tools/check_can_routing.py
 KiCad-Python tools/check_fabrication.py
+KiCad-Python tools/check_prototype.py
 .venv/bin/python tools/check_electronics.py
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
+.venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
@@ -187,11 +191,11 @@ KiCad-Python tools/check_fabrication.py
 .venv/bin/python tools/package_release.py
 ```
 
-`KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes.
+`KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes. For a schematic drawing-only adjustment, `export_review.py --schematic-only` regenerates ERC/PDF/netlist and checks parity without changing the board or its STEP.
 
 ## When changing the circuit or routing
 
-`build_electronics.py` overwrites native layouts unless passed `--schematic-only`. Full regeneration requires paired CAN seeds (`route_can_pairs.py`), auxiliary routing (`route_boards.py`), net/zone finalization (`finalize_board.py`), and every electrical check. Read their module documentation before invoking them. Never accept a router exit code as connectivity proof.
+`build_electronics.py` overwrites native layouts unless passed `--schematic-only`. Full regeneration includes `update_layout_features.py` for board outline, prototype grids and legends. Export the schematic netlist, then use paired CAN seeds (`route_can_pairs.py`), auxiliary routing (`route_boards.py`), net/zone finalization (`finalize_board.py`), and every electrical check. Read their module documentation before invoking them. Never accept a router exit code as connectivity proof.
 
 | Check | Evidence |
 |---|---|
@@ -199,6 +203,7 @@ KiCad-Python tools/check_fabrication.py
 | `check_electronics.py` | Independent 26-pin source transcription, DE9/TVS/links and BOM/CPL |
 | `check_can_routing.py` | H/L path, pair gap, skew, TVS placement and sampled return plane |
 | `check_fabrication.py` | JLC-derived feature limits and deliberate native-rule negative control |
+| `check_prototype.py` | Isolated pad count/pitch, ribbon exclusion, gated power mapping and bare-pad assembly exclusions |
 | `check_mechanics.py` | Assembly insertion paths from exported solids |
 | `validate_release.py` | Fresh hashes, source reports, printable meshes, 3MF and local links |
 
@@ -214,7 +219,7 @@ The project includes the schematic, routed board, local symbol/footprint tables 
 CAN trunks use 0.25 mm copper with 0.25 mm straight-section spacing and a protected bottom return corridor. This two-layer/ribbon assembly is not controlled 120 Ω impedance or qualified for a maximum data rate. All removable links are open by default.''')
  guides[f'exports/{v}']=(f'{n}-port design package',f'Generated review and manufacturing inputs for {scope}.',f'''## Inspect the design
 
-[Schematic PDF](schematic.pdf) · [Top copper](pcb-top.svg) · [Bottom copper](pcb-bottom.svg) · [Assembly drawing](assembly.svg) · [Enclosure dimensions](enclosure-plan.svg)
+[Schematic PDF](schematic.pdf) · [Top copper](pcb-top.svg) · [Bottom copper](pcb-bottom.svg) · [Assembly drawing](assembly.svg) · [Enclosure dimensions](enclosure-plan.svg) · [Controls and prototype map](controls.svg)
 
 ![CAN pair review](can-routing.svg)
 
@@ -230,7 +235,7 @@ CAN trunks use 0.25 mm copper with 0.25 mm straight-section spacing and a protec
 
 ## Evidence
 
-[Native electrical](pcb-evidence.json) · [Pin mapping](electrical-review.json) · [Pair routing](can-routing-review.json) · [Fabrication profile](fabrication-profile-check.json) · [Housing](mechanical-checks.json) · [Assembly paths](assembly-paths.json)
+[Native electrical](pcb-evidence.json) · [Pin mapping](electrical-review.json) · [Pair routing](can-routing-review.json) · [Fabrication profile](fabrication-profile-check.json) · [Prototype pads](prototype-review.json) · [Housing](mechanical-checks.json) · [Assembly paths](assembly-paths.json)
 
 Read [manufacturing instructions](../../docs/manufacturing.md) before upload. The local fabrication-profile report is **not JLCDFM approval**. Stock, J1 sourcing, placement rotations, panelization and physical testing remain open. Keep this variant's files together.''')
  guides[f'exports/{v}/fabrication-review']=(f'{n}-port fabrication layers','Two-layer Gerber and Excellon data generated from the native KiCad board.', f'''Use the [parent fabrication ZIP](../thor-{v}-A1-fabrication-REVIEW.zip) to keep the layer set together. These files are for **A1 engineering review**, not an approved 50-unit order.

@@ -12,6 +12,7 @@ The small footprint set used by this project, kept local so the source remains r
 | Wieson AC2800-0011-022-H0 | Native NVIDIA J47 lands; [audit](../../research/j47-footprint-audit.md) |
 | Assmann A-DS 09 A/KG-T2S | Manufacturer drill/row/shell dimensions applied to KiCad geometry |
 | XFCN PZ254V-11-02P | Exact 1.02 mm drill and 2.54 mm pitch |
+| Prototype grids and 3×3 power taps | Original MIT geometry; 2.54 mm pitch, 1.0 mm drill, 1.8 mm pads; [use and checks](../../docs/termination-and-io.md) |
 | SOT-23, mounting holes and fiducials | Pinned KiCad library geometry |
 | Samtec SHF-113 | Alternative candidate only; not the default J1 or an approved Wieson substitute |
 
@@ -31,6 +32,11 @@ Shared connector work is proposed in [KiCAD_Libs PR4](https://github.com/mvalanc
 | [PinHeader_1x02_P2.54mm_Vertical.kicad_mod](PinHeader_1x02_P2.54mm_Vertical.kicad_mod) | Pinned footprint geometry |
 | [PinHeader_2x03_P2.54mm_Vertical.kicad_mod](PinHeader_2x03_P2.54mm_Vertical.kicad_mod) | Pinned footprint geometry |
 | [PinHeader_2x07_P2.54mm_Vertical.kicad_mod](PinHeader_2x07_P2.54mm_Vertical.kicad_mod) | Pinned footprint geometry |
+| [Prototype_14x6_P2.54.kicad_mod](Prototype_14x6_P2.54.kicad_mod) | Pinned footprint geometry |
+| [Prototype_23x6_P2.54.kicad_mod](Prototype_23x6_P2.54.kicad_mod) | Pinned footprint geometry |
+| [Prototype_31x6_P2.54.kicad_mod](Prototype_31x6_P2.54.kicad_mod) | Pinned footprint geometry |
+| [Prototype_6x6_P2.54.kicad_mod](Prototype_6x6_P2.54.kicad_mod) | Pinned footprint geometry |
+| [Prototype_Power_3x3_P2.54.kicad_mod](Prototype_Power_3x3_P2.54.kicad_mod) | Pinned footprint geometry |
 | [SOT-23.kicad_mod](SOT-23.kicad_mod) | Pinned footprint geometry |
 | [Samtec_SHF-113-01-L-D-SM.kicad_mod](Samtec_SHF-113-01-L-D-SM.kicad_mod) | Pinned footprint geometry |
 | [Wieson_AC2800-0011-022-H0.kicad_mod](Wieson_AC2800-0011-022-H0.kicad_mod) | Pinned footprint geometry |

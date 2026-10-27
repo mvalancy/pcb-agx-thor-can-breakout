@@ -1,6 +1,6 @@
 # Assembly and prototype checks
 
-A1 is a fit-check and electrical-evaluation prototype. Read the [release checklist](docs/release-checklist.md) before connecting an expensive host.
+A1 is a fit-check and electrical-evaluation prototype. Use a matched PCB/housing set from the same manifest; the current board is 90 mm deep. Read the [release checklist](docs/release-checklist.md) before connecting an expensive host.
 
 ![Open enclosure and ribbon clamp](preview/2port-open.png)
 
@@ -11,14 +11,15 @@ A1 is a fit-check and electrical-evaluation prototype. Read the [release checkli
 | Matching two- or four-port PCB | 1 | Default shunts OPEN |
 | Matching printed base and lid | 1 each | PETG baseline, 0.2 mm layers |
 | Printed `ribbon_clamp` | 1 | Same part for both variants |
-| Samtec FFSD-13-D-04.00-01-N cable | 1 | Candidate; mating/continuity test required |
+| Samtec FFSD-13-D-06.00-01-N cable | 1 | Candidate; mating/continuity test required |
 | M3 × 20 socket-head screws | 4 | Shared lid/PCB retention; head Ø5.5 × 3 mm |
 | M3 × 6 socket-head screws | 2 | Ribbon clamp; head Ø5.5 × 3 mm |
 | Silicone foam washers, OD7/ID3.4×1mm | 4 | Compliant PCB retention under lid sleeves |
 | McMaster 94459A130 M3 heat-set inserts | 6 | 4.3 mm installed length; four PCB supports, two clamp stops |
 | Assmann A-DF09LL/Z female + A-FT09 hood | 2 or 4 | Demonstration mating set; hood includes #4-40 thumbscrews |
 | Adhesive silicone foam pads | 2 | 18 × 6 × 0.8 mm; qualify adhesive/compression |
-| Optional removable 2.54 mm shunts | As needed | Termination/power/shield; ship detached |
+| Removable 2.54 mm two-position shunts | 5 or 7 loose | 2/4 termination, 2 power, 1 shield; ship detached |
+| M3 side mounting screws | 2 optional | Length and mating hardware suit the installation; recessed socket heads |
 
 ## 1. Print coupons before the full housing
 
@@ -46,11 +47,17 @@ A sample cable must pass the planned **10 N axial pull for 60 seconds**, without
 
 ## 4. Configure and close
 
+![Termination and AUX controls](exports/2port/controls.svg)
+
+Use the [illustrated termination, power and prototyping guide](docs/termination-and-io.md). It identifies the exact JP headers, J10 pinout, raw-I/O limitations and safe component envelope.
+
 Identify the bus endpoints. Enable the host termination only where needed: JP1 for CAN0, JP2 for CAN1; JP3/JP4 only on a verified four-channel host. The carrier-side 120 Ω is between L and TERM; each shunt joins H to TERM. Two correctly terminated endpoints read approximately 60 Ω H-to-L on an otherwise unpowered bus.
 
 Leave JP5/JP6 open unless a documented internal auxiliary load requires the host rails and its current limit is verified. J12 shield bonding is a system-grounding choice. The auxiliary header is raw and unprotected; keep it internal unless a separately designed interface handles the environment.
 
-Seat the perimeter tongue in the lid groove and use four M3×20 socket-head screws. Fit four1mm silicone foam washers around the mount screws, between the PCB and lid sleeves. The sleeves leave a0.8mm gap at nominal board thickness, giving20% nominal washer compression; this accommodates board-thickness variation without a rigid plastic clamp on the PCB. The lid screws have 3.8 mm nominal insert overlap and 1.2 mm tip clearance above the blind-hole floor; clamp screws have 3.6 mm overlap and 1.4 mm tip clearance. These nominal stacks are CAD checks, not load or torque ratings. Tighten gently; insert pull-out and repeated service life remain physical tests. Check that the lid does not pinch the cable. The roof engraves CAN0/CAN1 (RES2/RES3 on four-port), CAN pinout, A1 development revision and github.com/mvalancy. Confirm labels against the schematic before electrical testing.
+Seat the perimeter tongue in the lid groove and use four M3×20 socket-head screws. Fit four 1 mm silicone foam washers around the mount screws, between the PCB and lid sleeves. The sleeves leave a 0.8 mm gap at nominal board thickness, giving 20% nominal washer compression; this accommodates board-thickness variation without a rigid plastic clamp on the PCB. The lid screws have 3.8 mm nominal insert overlap and 1.2 mm tip clearance above the blind-hole floor; clamp screws have 3.6 mm overlap and 1.4 mm tip clearance. These nominal stacks are CAD checks, not load or torque ratings. Tighten gently; insert pull-out and repeated service life remain physical tests. Check that the lid does not pinch the cable. The roof engraves CAN0/CAN1 (RES2/RES3 on four-port), CAN pinout, A1 development revision and github.com/mvalancy. Confirm labels against the schematic before electrical testing.
+
+The base has two M3 side mounting ears with Ø3.4 clearance holes and Ø6.4 × 3.3 counterbores. Use a flat mounting surface and suitable M3 screws/nuts or tapped holes; choose screw length for that surface. Mounting screws do not use the six enclosure inserts. Do not pull a warped or unsupported ear flat with screw torque. Inspect the R2 roots and tab webs after installation.
 
 ## 5. Bench acceptance
 

@@ -34,9 +34,9 @@
   title: Publish project and reusable PCB lessons
   status: done
   done_when: Project published; cad-agent and library changes submitted through review.
-  notes: Project PR1 into main and shared cad-agent PR1 are open with passing CI.
-    A1 packages reproduce byte-for-byte from a clean checkout. No merge, release tag
-    or order.
+  notes: Project PR1 is merged into main and its old feature branch is deleted.
+    Shared cad-agent PR1 and PR14 are merged; the project imports merged v0.3.0.
+    Feature branches are deleted after merge; plain dev follows main. No production order.
 - id: qualification
   title: Prototype validation before 50-unit order
   status: blocked
@@ -44,3 +44,9 @@
     tested on hardware.
   notes: Requires fabricated prototypes and bench measurements. No physical testing
     has occurred.
+
+- id: prototype-mounting
+  title: Prototype pads, controls and sturdy mounting
+  status: done
+  done_when: Both variants pass native pad/power checks, enclosure mesh/path checks and browser review.
+  notes: Both all-severity ERC/DRC checks pass with no ignores, exclusions or waivers. 120/324 isolated pads, gated power, clearer silk, two M3 side ears and filleted rear supports are validated. Both collision/path screens, seven STL/3MF readbacks and desktop/mobile browser review pass. Physical qualification remains open.

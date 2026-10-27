@@ -3,35 +3,43 @@
 <style>text{font-family:DejaVu Sans,sans-serif;fill:#152b36} .dim{stroke:#176962;stroke-width:1;fill:none} .body{stroke:#233d49;stroke-width:2;fill:#e0e9e8}</style>
 <text x="45" y="43" font-size="27">THOR CAN / 2-PORT ENCLOSURE</text>
 <text x="45" y="73" font-size="15">A1 DEVELOPMENT · DIMENSIONAL REVIEW · ALL DIMENSIONS mm</text>
-<text x="45" y="101" font-size="14">github.com/mvalancy/pcb-agx-thor-can-breakout</text>
-<rect x="65.00" y="280.60" width="400.80" height="344.80" fill="#dbe7e6" stroke="#334d5b"/>
-<rect x="79.40" y="295.00" width="372.00" height="260.00" fill="#f6f5ef" stroke="#334d5b"/>
-<circle cx="95.4" cy="311.0" r="12.8" fill="none" stroke="#233d49"/>
-<circle cx="435.4" cy="311.0" r="12.8" fill="none" stroke="#233d49"/>
-<circle cx="95.4" cy="539.0" r="12.8" fill="none" stroke="#233d49"/>
-<circle cx="435.4" cy="539.0" r="12.8" fill="none" stroke="#233d49"/>
-<rect x="281.80" y="147.40" width="135.20" height="133.20" fill="#566670" stroke="#334d5b"/>
-<text x="317.4" y="331.0" font-size="14">CAN0</text>
-<rect x="285.00" y="280.60" width="128.80" height="14.40" fill="#f7f6ee" stroke="#334d5b"/>
-<path class="dim" d="M 349.4 127.0 L 181.4 127.0 M 345.4 123.0 L 353.4 131.0 M 177.4 123.0 L 185.4 131.0"/>
-<text x="269.4" y="121.0" font-size="13">42 pitch</text>
-<rect x="113.80" y="147.40" width="135.20" height="133.20" fill="#566670" stroke="#334d5b"/>
-<text x="149.4" y="331.0" font-size="14">CAN1</text>
-<rect x="117.00" y="280.60" width="128.80" height="14.40" fill="#f7f6ee" stroke="#334d5b"/>
-<rect x="229.40" y="563.00" width="152.00" height="40.00" fill="#dba76c" stroke="#334d5b"/>
-<circle cx="249.4" cy="583.0" r="12.8" fill="#f6f5ef" stroke="#233d49"/>
-<circle cx="361.4" cy="583.0" r="12.8" fill="#f6f5ef" stroke="#233d49"/>
-<path class="dim" d="M 65.0 653.4 L 465.79999999999995 653.4 M 61.0 649.4 L 69.0 657.4 M 461.79999999999995 649.4 L 469.79999999999995 657.4"/>
-<text x="269.4" y="647.4" font-size="13">100.2 overall</text>
-<path class="dim" d="M 489.79999999999995 280.6 L 489.79999999999995 625.4 M 485.79999999999995 276.6 L 493.79999999999995 284.6 M 485.79999999999995 621.4 L 493.79999999999995 629.4"/>
-<text x="493.79999999999995" y="447.0" font-size="13">86.2</text>
+<text x="45" y="91" font-size="14">github.com/mvalancy/pcb-agx-thor-can-breakout</text>
+<rect x="69.60" y="421.30" width="30.78" height="49.40" fill="#dbe7e6" stroke="#334d5b"/>
+<circle cx="69.6" cy="446.0" r="24.7" fill="#dbe7e6" stroke="#233d49"/>
+<circle cx="69.6" cy="446.0" r="6.46" fill="#fff" stroke="#233d49"/>
+<rect x="492.16" y="421.30" width="30.78" height="49.40" fill="#dbe7e6" stroke="#334d5b"/>
+<circle cx="522.56" cy="446.0" r="24.7" fill="#dbe7e6" stroke="#233d49"/>
+<circle cx="522.56" cy="446.0" r="6.46" fill="#fff" stroke="#233d49"/>
+<rect x="100.00" y="255.62" width="392.16" height="433.96" fill="#dbe7e6" stroke="#334d5b"/>
+<rect x="119.38" y="275.00" width="353.40" height="342.00" fill="#f6f5ef" stroke="#334d5b"/>
+<circle cx="134.57999999999998" cy="290.2" r="12.16" fill="none" stroke="#233d49"/>
+<circle cx="457.58" cy="290.2" r="12.16" fill="none" stroke="#233d49"/>
+<circle cx="134.57999999999998" cy="601.8" r="12.16" fill="none" stroke="#233d49"/>
+<circle cx="457.58" cy="601.8" r="12.16" fill="none" stroke="#233d49"/>
+<rect x="311.66" y="134.78" width="128.44" height="126.54" fill="#566670" stroke="#334d5b"/>
+<text x="345.48" y="309.2" font-size="14">CAN0</text>
+<rect x="314.70" y="255.62" width="122.36" height="19.38" fill="#f7f6ee" stroke="#334d5b"/>
+<path class="dim" d="M 375.88 115.4 L 216.27999999999997 115.4 M 371.88 111.4 L 379.88 119.4 M 212.27999999999997 111.4 L 220.27999999999997 119.4"/>
+<text x="300.08" y="109.4" font-size="13">42 pitch</text>
+<rect x="152.06" y="134.78" width="128.44" height="126.54" fill="#566670" stroke="#334d5b"/>
+<text x="185.88" y="309.2" font-size="14">CAN1</text>
+<rect x="155.10" y="255.62" width="122.36" height="19.38" fill="#f7f6ee" stroke="#334d5b"/>
+<rect x="258.08" y="620.80" width="152.00" height="45.60" fill="#dba76c" stroke="#334d5b"/>
+<circle cx="280.88" cy="643.5999999999999" r="12.16" fill="#f6f5ef" stroke="#233d49"/>
+<circle cx="387.28" cy="643.5999999999999" r="12.16" fill="#f6f5ef" stroke="#233d49"/>
+<path class="dim" d="M 100.0 716.18 L 492.15999999999997 716.18 M 96.0 712.18 L 104.0 720.18 M 488.15999999999997 712.18 L 496.15999999999997 720.18"/>
+<text x="300.08" y="710.18" font-size="13">103.2 case body</text>
+<path class="dim" d="M 568.16 255.62 L 568.16 689.5799999999999 M 564.16 251.62 L 572.16 259.62 M 564.16 685.5799999999999 L 572.16 693.5799999999999"/>
+<text x="572.16" y="466.59999999999997" font-size="13">114.2</text>
+<path class="dim" d="M 44.89999999999999 742.78 L 547.26 742.78 M 40.89999999999999 738.78 L 48.89999999999999 746.78 M 543.26 738.78 L 551.26 746.78"/>
+<text x="300.08" y="736.78" font-size="13">132.2 including ears</text>
 <text x="935" y="145" font-size="16">ASSEMBLY NOTES</text>
 <text x="935" y="174" font-size="13">Height 26.8</text>
 <text x="935" y="203" font-size="13">Port rib 9.8</text>
 <text x="935" y="232" font-size="13">Hood gap ≥7.7*</text>
-<text x="935" y="261" font-size="13">Wall 3.0</text>
+<text x="935" y="261" font-size="13">Wall 4.5</text>
 <text x="935" y="290" font-size="13">Floor / roof 2.4</text>
-<text x="935" y="319" font-size="13">Tongue 1.4 × 1.6</text>
+<text x="935" y="319" font-size="13">Tongue 2.0 × 1.6</text>
 <text x="935" y="348" font-size="13">Groove clearance 0.25/side</text>
 <text x="935" y="377" font-size="13">6 × M3 heat-set inserts</text>
 <text x="935" y="406" font-size="13">4 × M3×20 lid screws</text>
@@ -40,7 +48,9 @@
 <text x="935" y="493" font-size="13">Head recess 0.3</text>
 <text x="935" y="522" font-size="13">Clamp screw pitch 28</text>
 <text x="935" y="551" font-size="13">Clamp hard gap 1.8</text>
+<text x="935" y="580" font-size="13">2 × recessed M3 mount ears</text>
+<text x="935" y="609" font-size="13">Rear ribs 3.2 / roots R1.6</text>
 <text x="45" y="770" font-size="14">* Maximum-width A-FT09 hood envelope; exact capture and thumbscrew seating remain unverified.</text>
 <text x="45" y="797" font-size="14">Plan envelopes shown; use STEP for geometry. Print coupons and verify actual parts before ordering a batch.</text>
-<text x="45" y="824" font-size="11">Parameter SHA256 b04e7a637e1c203d9f37</text>
+<text x="45" y="824" font-size="11">Parameter SHA256 9ae25b3b9d12bca11f14</text>
 </svg>

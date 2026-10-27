@@ -14,8 +14,10 @@ if len(sys.argv)==1:
  raise SystemExit
 v=sys.argv[1];n=int(v[0]);path=R/f'hardware/{v}/thor-{v}.kicad_pcb';b=p.LoadBoard(str(path));fps={f.GetReference():f for f in b.GetFootprints()}
 for t in list(b.GetTracks()):b.Delete(t)
-for z in list(b.Zones()):b.Delete(z)
+for z in list(b.Zones()):
+ if not z.GetZoneName().startswith('Prototype '):b.Delete(z)
 nets={net.GetNetname():net for net in b.GetNetsByName().values()}
+ground='/GND' if '/GND' in nets else 'GND'
 def trace(net,points,layer=p.F_Cu,width=.25):
  for a,c in zip(points,points[1:]):
   if math.dist(a,c)<1e-6:continue
@@ -77,7 +79,7 @@ for k in range(n):
   trace(net,[(ux,46.67),*control,(dx-2,21.54)])
  # Two short ground vias immediately at the protection device's ground pad.
  gx,gy=xy(next(pad for pad in tvs.Pads() if pad.GetNumber()=='3').GetPosition())
- for vy in [gy-.9,gy-1.7]:trace('/GND',[(gx,gy),(gx,vy)],width=.4);via('/GND',gx,vy)
+ for vy in [gy-.9,gy-1.7]:trace(ground,[(gx,gy),(gx,vy)],width=.4);via(ground,gx,vy)
 # Dense header escapes use fixed between-pad vias, never vias in SMD pads.
 escapes=[(8,.635),(20,-.635)] if v=='2port' else [(6,-.635)]
 for number,offset_x in escapes:
@@ -88,8 +90,14 @@ for number,offset_x in escapes:
   if v=='4port':trace(net,[(hx+offset_x,52.0),(hx+offset_x,58)],p.B_Cu)
 # Ground stitching at both ends of the local header layer transitions.
 for x in [xy(next(pad for pad in fps['J1'].Pads() if pad.GetNumber()==str(q)).GetPosition())[0] for q in [1,19]]:
- for y in [46.2,57.5]:via('/GND',x,y)
+ for y in [46.2,57.5]:via(ground,x,y)
 # Factory minimum readable silk; placement is rechecked after auxiliary routing.
+if v=='2port':
+ # Keep the added prototype supply above the rear raw-I/O crossings and away
+ # from the adjacent GND tap's exposed solder mask.
+ power='/AUX_3V3' if '/AUX_3V3' in nets else 'AUX_3V3'
+ trace(power,[(53.5,53.54),(53.5,57.5)],p.B_Cu);via(power,53.5,57.5)
+ trace(power,[(53.5,57.5),(53.73,57.27),(55.4,57.27),(55.4,62.72),(53.58,64.54)])
 for f in b.GetFootprints():
  for t in [f.Reference(),f.Value()]:
   if t.IsVisible():t.SetTextSize(vec(1,1));t.SetTextThickness(mm(.15))
