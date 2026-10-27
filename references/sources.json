@@ -52,7 +52,7 @@
       "title": "Bourns CDSOT23-SM712",
       "url": "https://www.bourns.com/docs/product-datasheets/cdsot23-sm712.pdf",
       "reviewed": "2026-10-26",
-      "sha256": null,
+      "sha256": "75c1a765dbea8b5d7e57611b8787ce6b2856e57eef387b334bc0a894d91a19d2",
       "facts": "manufacturer pinout, working and clamp voltages;75pFtyp",
       "redistributed": false
     },

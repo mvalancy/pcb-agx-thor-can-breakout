@@ -34,7 +34,7 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
    for pad,source in zip(shell,local_shell):
     x=p.ToMM(source.GetPosition().x);y=p.ToMM(source.GetPosition().y)
     pad.SetPosition(vec(p.ToMM(origin.x)+x*math.cos(angle)+y*math.sin(angle),p.ToMM(origin.y)-x*math.sin(angle)+y*math.cos(angle)))
- if not list(b.GetTracks()):
+ if '--import-routes' in sys.argv or not list(b.GetTracks()):
   assert p.ImportSpecctraSES(b,str(root/f'exports/{v}/routed.ses'))
  netlist=ET.parse(root/f'exports/{v}/netlist.xml').getroot()
  # Preserve routed net IDs while adopting schematic's root-sheet namespace.
@@ -57,7 +57,8 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
   for key in ['MPN','LCSC']:
    if key in fields.get(ref,{}):
     f.SetField(key,fields[ref][key]);f.GetField(key).SetVisible(False)
-  if ref.startswith('D'):f.Reference().SetPosition(vec(p.ToMM(f.GetPosition().x)+3.5,17.5))
+  if ref.startswith('D'):f.Reference().SetPosition(vec(p.ToMM(f.GetPosition().x)+4,12.5))
+  if ref.startswith('JP') and ref not in {'JP5','JP6'}:f.Reference().SetPosition(vec(p.ToMM(f.GetPosition().x)-3,19))
   if ref in {'J2','J3','J4','J5'}:
    # Clip only off-board silk; retain full body/courtyard on fabrication layers.
    for graphic in f.GraphicalItems():
@@ -72,26 +73,23 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
  for t in b.GetDrawings():
   if isinstance(t,p.PCB_TEXT):
    if t.GetText()=='TERM=SHUNT':t.SetPosition(vec(p.ToMM(t.GetPosition().x)+7,28.2));t.SetText('TERM')
+   if t.GetText() in {'FSI_CAN0','FSI_CAN1','AURIX_CAN1','AURIX_CAN2'}:t.SetPosition(vec(p.ToMM(t.GetPosition().x),24.5))
    if t.GetText()=='AUX RAW':t.SetPosition(vec(w-15,35))
- if not list(b.Zones()):
+ if not any(z.GetLayer()==p.B_Cu and not z.GetIsRuleArea() for z in b.Zones()):
   z=p.ZONE(b);z.SetLayer(p.B_Cu);z.SetNet(nets['/GND']);z.SetLocalClearance(mm(.25));z.SetThermalReliefGap(mm(.3));z.SetThermalReliefSpokeWidth(mm(.3));z.SetPadConnection(p.ZONE_CONNECTION_THERMAL)
   poly=z.Outline();poly.NewOutline()
   for x,y in [(.5,.5),(w-.5,.5),(w-.5,64.5),(.5,64.5)]:poly.Append(mm(x),mm(y))
   b.Add(z)
- # Short direct ground via at each TVS reduces return inductance; no thermal relief.
+ # CAN routing places two protection return vias per TVS before auxiliary routing.
  for f in b.GetFootprints():
   if f.GetReference().startswith('D'):
-   pad=next(x for x in f.Pads() if x.GetNumber()=='3');pad.SetLocalZoneConnection(p.ZONE_CONNECTION_FULL)
-   pos=pad.GetPosition()
-   offset=-.9 if v=='2port' and f.GetReference()=='D1' else 1.2
-   end=vec(p.ToMM(pos.x)+offset,p.ToMM(pos.y))
-   if True:
-    old=vec(p.ToMM(pos.x)+(1.2 if offset<0 else -.9),p.ToMM(pos.y))
-    for track in list(b.GetTracks()):
-     if track.GetNetname()=='/GND' and ((isinstance(track,p.PCB_VIA) and track.GetPosition()==old) or (not isinstance(track,p.PCB_VIA) and track.GetStart()==pos and track.GetEnd()==old)):b.Remove(track)
-   if not any(isinstance(t,p.PCB_VIA) and t.GetPosition()==end for t in b.GetTracks()):
-    t=p.PCB_TRACK(b);t.SetStart(pos);t.SetEnd(end);t.SetWidth(mm(.4));t.SetLayer(p.F_Cu);t.SetNet(nets['/GND']);b.Add(t)
-    via=p.PCB_VIA(b);via.SetPosition(end);via.SetWidth(mm(.6));via.SetDrill(mm(.3));via.SetViaType(p.VIATYPE_THROUGH);via.SetLayerPair(p.F_Cu,p.B_Cu);via.SetNet(nets['/GND']);b.Add(via)
+   next(pad for pad in f.Pads() if pad.GetNumber()=='3').SetLocalZoneConnection(p.ZONE_CONNECTION_FULL)
+ # Top ground pour supports the short bottom-layer header escapes.
+ if not any(z.GetLayer()==p.F_Cu for z in b.Zones()):
+  z=p.ZONE(b);z.SetLayer(p.F_Cu);z.SetNet(nets['/GND']);z.SetLocalClearance(mm(.25));z.SetThermalReliefGap(mm(.3));z.SetThermalReliefSpokeWidth(mm(.3));z.SetPadConnection(p.ZONE_CONNECTION_THERMAL)
+  poly=z.Outline();poly.NewOutline()
+  for x,y in [(.5,.5),(w-.5,.5),(w-.5,64.5),(.5,64.5)]:poly.Append(mm(x),mm(y))
+  b.Add(z)
  # Three asymmetric optical fiducials, board-only and excluded from assembly population.
  import shutil,os
  lib=Path(os.environ.get('KICAD_FOOTPRINT_DIR',str(Path.home()/'.local/share/kicad-10.0.1/share/kicad/footprints')))
@@ -106,6 +104,26 @@ for v,w in [(sys.argv[1],params['pcb'][f'width_{sys.argv[1]}_mm'])]:
  # The solid bottom ground zone carries return current; redundant router ground traces
  # can crowd connector shell holes after exact manufacturer pad updates.
  for t in list(b.GetTracks()):
-  if not isinstance(t,p.PCB_VIA) and t.GetNetname()=='/GND' and t.GetLayer()==p.B_Cu:b.Remove(t)
+  if not isinstance(t,p.PCB_VIA) and t.GetNetname()=='/GND' and t.GetLayer()==p.B_Cu:b.Delete(t)
+
+ for z in b.Zones():
+  z.SetLocalClearance(mm(.3))
+  if z.GetLayer()==p.F_Cu and z.GetNetname()=='/GND':
+   z.SetPadConnection(p.ZONE_CONNECTION_THERMAL);poly=z.Outline();poly.RemoveAllContours();poly.NewOutline();cx=w/2-10
+   for x,y in [(cx-12,46),(cx+12,46),(cx+12,59),(cx-12,59)]:poly.Append(mm(x),mm(y))
+ # Normalize the seeded GPIO escape at the router's actual branch attachment.
+ # Specctra can attach to a fixed segment interior without splitting that segment.
+ if v=='4port':
+  for t in b.GetTracks():
+   if isinstance(t,p.PCB_VIA) or t.GetNetname()!='/FSI_EXT_GPIO1' or t.GetLayer()!=p.B_Cu:continue
+   if t.GetStart()==vec(72.785,52) and t.GetEnd()==vec(72.785,58):
+    joins=[p.ToMM(q.y) for other in b.GetTracks() if other!=t and other.GetNetname()==t.GetNetname() and not isinstance(other,p.PCB_VIA) and other.GetLayer()==p.B_Cu for q in [other.GetStart(),other.GetEnd()] if abs(p.ToMM(q.x)-72.785)<1e-5 and 52<p.ToMM(q.y)<58]
+    if joins:t.SetEnd(vec(72.785,max(joins)))
+ # Header stitching bridges the isolated front/bottom region to the main plane.
+ stitches=[(76.595,52),(77.865,56.72)] if v=='4port' else []
+ for x,y in stitches:
+  end=vec(x,y)
+  if not any(isinstance(t,p.PCB_VIA) and t.GetNetname()=='/GND' and t.GetPosition()==end for t in b.GetTracks()):
+   via=p.PCB_VIA(b);via.SetPosition(end);via.SetWidth(mm(.6));via.SetDrill(mm(.3));via.SetViaType(p.VIATYPE_THROUGH);via.SetLayerPair(p.F_Cu,p.B_Cu);via.SetNet(nets['/GND']);b.Add(via)
  b.BuildConnectivity();p.ZONE_FILLER(b).Fill(b.Zones());p.SaveBoard(str(path),b)
  print(v,'finalized')

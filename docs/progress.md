@@ -28,7 +28,7 @@ The native NVIDIA A02 ODB/Allegro archive resolves the actual J47 lands and pin 
 
 ## Recessed hardware and labeled lid iteration
 
-Ports now have 42 mm pitch; PCB widths are 93 and 177 mm. The housing uses six heat-set inserts, M3×20 lid screws, M3×6 clamp screws and recessed socket heads. A perimeter tongue-and-groove joint replaces the short side keys. The top carries port labels, complete CAN pin mapping, A0 development revision and github.com/mvalancy.
+Ports now have 42 mm pitch; PCB widths are 93 and 177 mm. The housing uses six heat-set inserts, M3×20 lid screws, M3×6 clamp screws and recessed socket heads. A perimeter tongue-and-groove joint replaces the short side keys. The top carries port labels, complete CAN pin mapping, A1 development revision and github.com/mvalancy.
 
 Original Assmann drawing-based mating models include female connectors, backshells, thumbscrews and representative cables. Their seating assumptions remain visible. Maximum-width hoods leave 7.7 mm between adjacent ports. Manufacturer STEP downloads were unavailable through normal access; no access gate was bypassed. McMaster's browser session requires login for CAD. Current public catalog data supports the selected insert's 4.3 mm length and maximum 4 mm pilot; received-part fit remains a coupon test.
 
@@ -41,3 +41,11 @@ Both widened boards pass native ERC/DRC with no unconnected items or schematic-p
 The reusable cad-agent changes are public in [PR1](https://github.com/Valpatel/cad-agent/pull/1), with 139 tests passed and five skipped. The exact connector resources and Wieson audit are in [KiCAD_Libs PR4](https://github.com/mvalancy/KiCAD_Libs/pull/4). Project packaging separates both PCB variants from the printable housing bundle; automated CI will validate the committed evidence and release bytes.
 
 The public MIT repository is now available at [pcb-agx-thor-can-breakout](https://github.com/mvalancy/pcb-agx-thor-can-breakout). Headless Chrome verified embedded lid drawings and a 13-part interactive assembly with no JavaScript exceptions. Both variants' 13-part scene assets return HTTP 200. Clean-checkout artifact validation and GitHub CI verify the publication package separately from the working directory.
+
+## A1 review — current state
+
+The paired routes, TVS positions and ground return have been redesigned and rechecked. Both native boards have zero ERC/DRC, unconnected and parity findings. The 26-pin independent transcription, DE9/TVS/link semantics, JLC-format assembly checks, pair routing and native fabrication profile pass. JLCDFM itself still requires sign-in and has not issued a report.
+
+The enclosure rebuild corrects an improper mirrored PCB frame, replaces the lid with a graphical DE9 pinout and retains the keyed seam, recessed insert hardware and padded clamp. All product renders and shared viewer assets are regenerated from exported solids. NVIDIA source screenshots and provenance are linked from the root README. Curated folder guides replace generic file tables.
+
+Shared cad-agent now provides panel markings, routing analysis and consistent navigation in addition to PCB evidence, reports and the interactive viewer. Its combined suite passed 153 tests with five skips. A1 changes follow the requested development-branch and PR-into-main workflow; historical A0 releases are superseded. Physical and supplier qualification remain open.

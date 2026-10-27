@@ -2,8 +2,8 @@
   "designs": [
     {
       "name": "2port / protected breakout + housing",
-      "verdict": "A0 prototype",
-      "summary": "Routed KiCad adapter; replaceable ribbon strain relief. Unqualified for production.",
+      "verdict": "A1 engineering review",
+      "summary": "Paired CAN routing, graphical lid, keyed housing and padded strain relief. Physical qualification pending.",
       "pcb_evidence": "exports/2port/pcb-evidence.json",
       "metrics": [
         {
@@ -12,9 +12,9 @@
           "unit": "mm"
         },
         {
-          "label": "Target run",
-          "value": 50,
-          "unit": "units"
+          "label": "Program target",
+          "value": "~50 total",
+          "unit": "both variants"
         }
       ],
       "links": [
@@ -30,8 +30,8 @@
     },
     {
       "name": "4port / protected breakout + housing",
-      "verdict": "A0 prototype",
-      "summary": "Routed KiCad adapter; replaceable ribbon strain relief. Unqualified for production.",
+      "verdict": "A1 engineering review",
+      "summary": "Paired CAN routing, graphical lid, keyed housing and padded strain relief. Physical qualification pending.",
       "pcb_evidence": "exports/4port/pcb-evidence.json",
       "metrics": [
         {
@@ -40,9 +40,9 @@
           "unit": "mm"
         },
         {
-          "label": "Target run",
-          "value": 50,
-          "unit": "units"
+          "label": "Program target",
+          "value": "~50 total",
+          "unit": "both variants"
         }
       ],
       "links": [

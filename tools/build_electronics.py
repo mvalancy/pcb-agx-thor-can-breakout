@@ -103,8 +103,8 @@ def build(variant):
   cx=P['pcb']['first_port_x_mm']+k*P['pcb']['port_pitch_mm']; prefix=c['id']; h,t,l=c['pins']
   nets={pin: (prefix+'_H' if net=='CAN_H' else prefix+'_L' if net=='CAN_L' else net) for pin,net in I['de9'].items()}
   add('J'+str(k+2),prefix+' / CAN','de9',nets,cx+5.54,P['pcb']['port_pin_y_mm'],180,mpn='A-DS 09 A/KG-T2S',lcsc='C3127392')
-  add('D'+str(k+1),'CDSOT23-SM712','tvs',{'1':prefix+'_H','2':prefix+'_L','3':'GND'},cx,17.5,mpn=I['protection']['mpn'],lcsc=I['protection']['lcsc'])
-  add('JP'+str(k+1),'120R HOST TERM / OPEN','jumper',{'1':prefix+'_H','2':prefix+'_TERM'},cx,27,mpn='PZ254V-11-02P',lcsc='C492401')
+  add('D'+str(k+1),'CDSOT23-SM712','tvs',{'1':prefix+'_H','2':prefix+'_L','3':'GND'},cx+2.08,12.5,a=90,mpn=I['protection']['mpn'],lcsc=I['protection']['lcsc'])
+  add('JP'+str(k+1),'120R HOST TERM / OPEN','jumper',{'1':prefix+'_H','2':prefix+'_TERM'},cx+.08,19,mpn='PZ254V-11-02P',lcsc='C492401')
  if n==2:
   add('J11','RESERVED CAN / RAW','extra',{str(k+1):I['pins'][str(p)] for k,p in enumerate([11,12,13,15,16,17])},13,40,mpn='BOOMELE 2.54-2x3P male C65114',lcsc='C65114')
  add('JP5','3V3 AUX ENABLE / OPEN','jumper',{'1':'HOST_3V3','2':'AUX_3V3'},w/2+7,51,mpn='PZ254V-11-02P',lcsc='C492401')
@@ -119,7 +119,7 @@ def build(variant):
   defs[name],positions[name],heights[name]=symbol_def(name,pins);part['symbol']=name
  schid=UUID(variant+'/schematic');lib='\n'.join(defs.values())
  sch=[f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {schid})(paper "A3")',
- f'(title_block(title "Thor CAN breakout - {n} ports")(rev "A0 REVIEW")(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation"))',f'(lib_symbols {lib})']
+ f'(title_block(title "Thor CAN breakout - {n} ports")(rev "A1 REVIEW")(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation"))',f'(lib_symbols {lib})']
  schpos={'J1':(62.23,66.04),'J10':(62.23,139.7),'J11':(62.23,208.28),'JP5':(62.23,248.92),'JP6':(149.86,248.92),'J12':(243.84,248.92)}
  for k in range(n):
   x=170.18+(k%2)*127;y=55.88+(k//2)*91.44
@@ -168,7 +168,7 @@ def build(variant):
   e=pcb.PCB_SHAPE();e.SetShape(pcb.SHAPE_T_SEGMENT);e.SetStart(vec(*a));e.SetEnd(vec(*z));e.SetLayer(pcb.Edge_Cuts);e.SetWidth(mm(.05));b.Add(e)
  def label(txt,x,y,size=1):
   t=pcb.PCB_TEXT(b);t.SetText(txt);t.SetPosition(vec(x,y));t.SetTextSize(vec(size,size));t.SetTextThickness(mm(.15));t.SetLayer(pcb.F_SilkS);b.Add(t)
- label(f'THOR CAN {n} / A0 REVIEW',w/2,61)
+ label(f'THOR CAN {n} / A1 REVIEW',w/2,61)
  label('PIN 9: NC / NOT RS232',w/2,33,0.9)
  for k,c in enumerate(I['channels'][:n]):
   cx=P['pcb']['first_port_x_mm']+k*P['pcb']['port_pitch_mm'];label(c['id'],cx,21,0.9);label('TERM=SHUNT',cx,31,0.8)
@@ -186,3 +186,7 @@ def build(variant):
    writer.writerow([p['ref'],p['value'],p['footprint'],p['mpn'],p['lcsc'],'SMT' if p['kind'] in ('header','tvs') else 'THT','Supplier approval pending' if not p['lcsc'] else 'Exact manufacturer; availability recheck'])
  print(variant,len(parts),'footprints',len(netmap),'nets')
 for v in I['variants']:build(v)
+
+# Keep generator defaults aligned with the source-dated fabrication profile.
+import subprocess
+subprocess.run([sys.executable,str(ROOT/"tools/apply_fab_rules.py")],check=True)

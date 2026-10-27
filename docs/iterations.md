@@ -28,3 +28,17 @@ The enlarged lower lid sleeves initially overlapped the base sidewalls by 11.896
 Final review renders read the exported STEP files back before each scene. A direct in-memory repeated text-compound render placed a port legend incorrectly even though the STEP solid coordinates were correct. The readback view preserves the downloadable model's placements and makes the discrepancy visible. The exact underlying triangulation cause is not established; avoid claiming a general CAD kernel defect from this observation.
 
 Clean-checkout packaging found local `.kicad_prl` UI state in locally generated PCB ZIPs. CI's clean checkout did not contain those files, so the published A0 assets excluded them. Packaging now selects only files in the validated public manifest, and compares local versus clean-checkout package hashes. This changes packaging only; the A0 electrical and mechanical design is unchanged.
+
+## A1 independent design audit
+
+| Round | Finding | Correction and validation |
+|---|---|---|
+| Routing 1 | General autorouting passed connectivity while H/L wandered apart | Explicit paired trunks and symmetric layer transitions; native pair-geometry measurements |
+| Routing 2 | Auxiliary routing interrupted ground below CAN | Bottom routing keepouts allow ground pour; sampled trunk reference has no gaps |
+| Routing 3 | Four-port J1 ground sat on isolated front and bottom islands | Added two stitching locations joining the header region to the main plane; native DRC now has zero unconnected items |
+| Fabrication | Conservative settings had not been checked against current supplier data | Retrieved dated JLC capabilities; native limits, actual feature metrics and deliberate failing-rule control pass |
+| Mechanics | Mirroring the PCB STEP reversed connector handedness | Proper rotation; clamp, port windows, labels and mating references use the corrected frame |
+| Identity | Lid was a dense block of text | Shared vector engraving with numbered DE9, leaders, port badges and revision identity |
+| Documentation | GitHub prioritized `.github/README.md`; folder indexes lacked guidance | Removed overriding index, guarded against recurrence, and created curated guides at every public content level |
+
+JLCDFM upload reached sign-in without a report. No supplier approval or physical test has occurred. A0 results above describe prior iterations and do not establish current compatibility.

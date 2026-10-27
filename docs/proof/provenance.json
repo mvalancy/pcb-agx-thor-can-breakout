@@ -1,0 +1,22 @@
+{
+  "reviewed": "2026-10-26",
+  "copyright": "NVIDIA. Source excerpts for engineering pinout review; not covered by the project MIT license.",
+  "captures": [
+    {
+      "file": "docs/proof/nvidia-p4071-a02-j47.png",
+      "source": "P4071_A02_Concept_schematics.pdf",
+      "source_url": "https://developer.nvidia.com/embedded/downloads",
+      "source_sha256": "b3b8547259a62ff21d061c111f31a39a7183bc9989aee130e411bf05b6d4f722",
+      "sheet": 11,
+      "capture": "pdftoppm at 288 DPI; x=1200 y=1240 width=2400 height=600 pixels; no annotations or rearrangement",
+      "image_sha256": "58575e31d670b9531b5ba637a62ea2c41a7ed110011519d7fb5566a5480cf065"
+    },
+    {
+      "file": "docs/proof/nvidia-r38-2-thor-can.png",
+      "source": "Jetson Linux Developer Guide r38.2 CAN, Thor table column",
+      "source_url": "https://docs.nvidia.com/jetson/archives/r38.2/DeveloperGuide/HR/ControllerAreaNetworkCan.html",
+      "capture": "Chrome viewport 1600x1200, device scale 1.5, screenshot clip x=1006 y=665 width=194 height=372 CSS pixels, scale=2; optional cookies rejected; source content unchanged",
+      "image_sha256": "e88ccd6661ce7201ef7ae92987aa7797850527477e3c45cd6626015febf96b6a"
+    }
+  ]
+}

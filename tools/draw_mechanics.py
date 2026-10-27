@@ -12,17 +12,17 @@ for n in [2,4]:
  def dim(x1,y1,x2,y2,label):
   a,b,c,d=ox+x1*scale,oy+y1*scale,ox+x2*scale,oy+y2*scale
   out.append(f'<path class="dim" d="M {a} {b} L {c} {d} M {a-4} {b-4} L {a+4} {b+4} M {c-4} {d-4} L {c+4} {d+4}"/>');text((a+c)/2+4,(b+d)/2-6,label,13)
- text(45,43,f'THOR CAN / {n}-PORT ENCLOSURE',27);text(45,73,'A0 DEVELOPMENT · DIMENSIONAL REVIEW · ALL DIMENSIONS mm',15)
+ text(45,43,f'THOR CAN / {n}-PORT ENCLOSURE',27);text(45,73,'A1 DEVELOPMENT · DIMENSIONAL REVIEW · ALL DIMENSIONS mm',15)
  text(45,101,'github.com/mvalancy/pcb-agx-thor-can-breakout',14)
  rect(-outer,-outer,w+2*outer,rear+2*outer,'#dbe7e6');rect(0,0,w,65,'#f6f5ef')
  for x,y in [(4,4),(w-4,4),(4,61),(w-4,61)]:
   out.append(f'<circle cx="{ox+x*scale}" cy="{oy+y*scale}" r="{3.2*scale}" fill="none" stroke="#233d49"/>')
  for k in range(n):
-  x=B['first_port_x_mm']+k*B['port_pitch_mm'];rect(x-16.9,-36.9,33.8,33.3,'#566670')
+  x=w-(B['first_port_x_mm']+k*B['port_pitch_mm']);rect(x-16.9,-36.9,33.8,33.3,'#566670')
   text(ox+(x-8)*scale,oy+9*scale,f'CAN{k}' if k<2 else f'RES{k}',14)
   rect(x-C['db9_window_width_mm']/2,-outer,C['db9_window_width_mm'],outer,'#f7f6ee')
-  if k<n-1:dim(x,-42,x+B['port_pitch_mm'],-42,'42 pitch')
- cx=w/2-10;rect(cx-S['clamp_width_mm']/2,S['clamp_y_mm']-5,S['clamp_width_mm'],10,'#dba76c')
+  if k<n-1:dim(x,-42,x-B['port_pitch_mm'],-42,'42 pitch')
+ cx=w/2+10;rect(cx-S['clamp_width_mm']/2,S['clamp_y_mm']-5,S['clamp_width_mm'],10,'#dba76c')
  for dx in [-14,14]:out.append(f'<circle cx="{ox+(cx+dx)*scale}" cy="{oy+72*scale}" r="{3.2*scale}" fill="#f6f5ef" stroke="#233d49"/>')
  dim(-outer,rear+outer+7,w+outer,rear+outer+7,f'{w+2*outer:.1f} overall')
  dim(w+outer+6,-outer,w+outer+6,rear+outer,f'{rear+2*outer:.1f}')

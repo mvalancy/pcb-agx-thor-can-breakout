@@ -40,12 +40,23 @@
     26.799999999999997
   ],
   "mechanical_sources": {
-    "cad/build.py": "86d9e3fa9cb736e84e48cee06ad4875a188f434a04c2b9fbcb4297d960ee79b3",
+    "cad/build.py": "0dd2bb61bacdd2ef46a0007d3731fe1199dfdef716d5301b9b6aa7973c2dd3ee",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/parameters.json": "5ce10454a78c98033400abae1f4633b1703557cee80ddeb4fbd614fa89607002",
+    "cad/markings.py": "6310801e557dd29a009aec577bccc9d4ba78b8e4c16e75aefca5275f1fcacce0",
+    "cad/parameters.json": "b04e7a637e1c203d9f37c0278b9760d0b20cfd6f45fbeb5c176f2d9f650c4f6d",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec"
   },
-  "native_step_sha256": "bcdb5477f3b999eed7e1469df042362e0f5116c582308f20c851476bb6493f91",
+  "mechanical_library_sha256": {
+    "cadagent.geometry": "148f271304dab6fd940e813ca560871ba27e82e3ce23e67634e9627a05b1d163",
+    "cadagent.fasteners": "c0fcec84f9d888996b91ef07e94c739a37538cd655ba33bc3b41678ef1f0a312",
+    "cadagent.markings": "a6d02ce51e34cf06f8ab85f78a87d1588fd925ae19492b4f0ffa21f3aeed1330"
+  },
+  "native_step_sha256": "426ad8b99e7121f4f9b154e96e746dea81fee06cbf9a52ed233894eec070baa3",
+  "pcb_frame": {
+    "mapping": "KiCad STEP (x,-y,z) -> housing (width-x,y,z+board_z) by 180 degree Z rotation",
+    "determinant": 1,
+    "reflection_used": false
+  },
   "envelope_basis": "Native KiCad models plus original Assmann drawing envelopes; hood capture and screw seating assumed. No official manufacturer STEP.",
   "mating": {
     "hood_gap_nominal_mm": 8.200000000000003,

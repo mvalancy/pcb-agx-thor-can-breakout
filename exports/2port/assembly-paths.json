@@ -2,6 +2,11 @@
   "pass": true,
   "trials": [
     {
+      "test": "native PCB proper rotation / asymmetric center of mass",
+      "error_mm": 0.0,
+      "overlap_mm3": 0
+    },
+    {
       "test": "board insertion",
       "z_offset_mm": 0,
       "overlap_mm3": 0.0
@@ -65,12 +70,12 @@
     },
     {
       "test": "clamp driver access",
-      "x_mm": 22.5,
+      "x_mm": 42.5,
       "overlap_mm3": 0.0
     },
     {
       "test": "clamp driver access",
-      "x_mm": 50.5,
+      "x_mm": 70.5,
       "overlap_mm3": 0.0
     },
     {
@@ -157,17 +162,23 @@
   ],
   "limits": "Nominal/generic connector solids; XY translations are a sensitivity screen, not complete tolerance qualification. Silicone compression curve and pull strength unmeasured. Heat-set pilot and print shrink require coupons. Hood capture and thumbscrew engagement are unverified.",
   "physical_fit_verified": false,
+  "mechanical_library_sha256": {
+    "cadagent.geometry": "148f271304dab6fd940e813ca560871ba27e82e3ce23e67634e9627a05b1d163",
+    "cadagent.fasteners": "c0fcec84f9d888996b91ef07e94c739a37538cd655ba33bc3b41678ef1f0a312",
+    "cadagent.markings": "a6d02ce51e34cf06f8ab85f78a87d1588fd925ae19492b4f0ffa21f3aeed1330"
+  },
   "mechanical_sources": {
-    "cad/build.py": "86d9e3fa9cb736e84e48cee06ad4875a188f434a04c2b9fbcb4297d960ee79b3",
+    "cad/build.py": "0dd2bb61bacdd2ef46a0007d3731fe1199dfdef716d5301b9b6aa7973c2dd3ee",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/parameters.json": "5ce10454a78c98033400abae1f4633b1703557cee80ddeb4fbd614fa89607002",
+    "cad/markings.py": "6310801e557dd29a009aec577bccc9d4ba78b8e4c16e75aefca5275f1fcacce0",
+    "cad/parameters.json": "b04e7a637e1c203d9f37c0278b9760d0b20cfd6f45fbeb5c176f2d9f650c4f6d",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec",
-    "tools/check_mechanics.py": "ebe912d782661e90814d8b9ca25b77c1a52a26d076bea52d2f99ec71657f96a8"
+    "tools/check_mechanics.py": "bb9a50f25b05daaddb491f2da572eeb00964c661ba4c71ff0b033a1840911d4f"
   },
   "artifact_sha256": {
-    "exports/2port_base.step": "fd7b20722d8ea0ca05e4e8c62c0caa094033572324509011f05c1d5da8d1d650",
-    "exports/2port_lid.step": "fddd6ff324474bcdd2b8e397f50b6aae29fb12516c5d3ce57faea10ac37db63e",
-    "exports/asm_2port_clamp.step": "657f95c104d793321371b89e0fc8bf1283d8017035504f361f8fb7c4ad8a2584",
-    "exports/asm_2port_pcb.step": "b9e46700e6962ed75ec6be4be449aef25f8074e87fa7cb31c9ef196b73554af2"
+    "exports/2port_base.step": "22a1087c4dc4a42245f149eb63944d6105e5b4084fe0547599a59219d5fb7d3d",
+    "exports/2port_lid.step": "0ea242d44260f60e6a4c2cf62b03261359683620d1d904baaa6dafc0fa48cc31",
+    "exports/asm_2port_clamp.step": "e2f0b7545538fc85c6e36512edce419352566568a8aacb304e9de72cfe62a8af",
+    "exports/asm_2port_pcb.step": "4a96b28e7ecd33cc4d7fbcca9e94d90c7eabfebb5acaaaae6da09fb98200425a"
   }
 }

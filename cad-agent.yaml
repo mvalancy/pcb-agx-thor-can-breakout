@@ -1,24 +1,27 @@
 cad:
   name: pcb-agx-thor-can-breakout
   title: AGX Thor CAN breakout
-  revision: A0-development
+  revision: A1-development
   serve:
     host: 127.0.0.1
     port: 8765
   site:
-    title: Thor CAN / engineering workspace
-    tagline: "Protected CAN breakout, ribbon interconnect and printed enclosure \xB7\
-      \ 50-unit target"
-    theme: hud
-    notice: "Development in progress \u2014 prototype and electrical validation required\
-      \ before production."
+    title: Thor CAN breakout
+    tagline: Protected CAN adapter and printed enclosure for AGX Thor · engineering
+      development
+    theme: light
+    notice: A1 engineering review · CAD checks recorded · hardware qualification and
+      JLCDFM approval pending.
     milestones: docs/milestones.yaml
     decisions: docs/decisions.yaml
     designs: exports/designs.json
     pages:
     - README.md
+    - ASSEMBLY.md
     - docs/*.md
     - research/*.md
+    - exports/README.md
+    - releases/README.md
     live_reload:
       watch:
       - docs
@@ -35,6 +38,37 @@ cad:
     - title: Enclosure gallery
       href: preview/2port-assembled.png
     review: exports/review.json
+    nav:
+    - id: overview
+      title: Overview
+      href: site/
+    - id: review
+      title: Design review
+      href: site/#design-review
+    - id: model
+      title: 3D model
+      href: _cadagent/kit/viewer.html
+    - id: housing
+      title: Enclosure
+      href: site/pages/docs-enclosure-md.html
+    - id: proof
+      title: Pinout proof
+      href: site/pages/docs-pinout-proof-md.html
+    - id: checks
+      title: Checks
+      href: docs/cad-agent-report.html
+    - id: manufacturing
+      title: Manufacturing
+      href: site/pages/docs-manufacturing-md.html
+    - id: assembly
+      title: Assembly
+      href: site/pages/assembly-md.html
+    - id: docs
+      title: Docs
+      href: site/#documents
+    - id: repository
+      title: Repository
+      href: https://github.com/mvalancy/pcb-agx-thor-can-breakout
   printer:
     name: Bambu P1S / prototype
     bed_mm:
@@ -124,3 +158,15 @@ cad:
   - id: 4port-paths
     title: 4port assembly paths
     file: exports/4port/assembly-paths.json
+  - id: 2port-can-routing-review
+    title: 2port CAN paired routing
+    file: exports/2port/can-routing-review.json
+  - id: 2port-fabrication-profile-check
+    title: 2port Local fabrication profile
+    file: exports/2port/fabrication-profile-check.json
+  - id: 4port-can-routing-review
+    title: 4port CAN paired routing
+    file: exports/4port/can-routing-review.json
+  - id: 4port-fabrication-profile-check
+    title: 4port Local fabrication profile
+    file: exports/4port/fabrication-profile-check.json

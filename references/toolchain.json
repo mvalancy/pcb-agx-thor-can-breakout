@@ -5,7 +5,7 @@
   "cadquery": "2.8.0",
   "trimesh": "5.2.0",
   "vtk": "9.6.2",
-  "cad_agent_commit": "b7a366aaff627cad401684f84b91c1ccfe49535e",
+  "cad_agent_commit": "8e3bcdd4f43461d2fe4f405af092cb2adbc19eeb",
   "FreeRouting": "1.9.0",
   "FreeRouting_jar_sha256": "9084a4888937a7f31f857ecc12aa7a37407f51160e4d2892dff9c9bb47ae3102",
   "scope": "Observed local generation toolchain; CI validates committed artifacts and rebuilds packages, not KiCad/CAD geometry."

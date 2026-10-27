@@ -8,4 +8,4 @@ See the [KiCad library license](https://www.kicad.org/libraries/license/) and th
 
 STEP exports include standard KiCad 3D geometry under the same library design exception. These are nominal mechanical models, not manufacturer-certified models for substituted parts. `cad-agent` is separately MIT licensed. Dependency packages keep their own licenses.
 
-NVIDIA, Samtec, Bourns, Assmann and distributor PDFs/archives are referenced by URL and hash, not redistributed or relicensed here. No vendor endorsement is implied.
+Full NVIDIA, Samtec, Bourns, Assmann and distributor PDFs/archives are referenced by URL and hash, not redistributed or relicensed here. Small NVIDIA pinout excerpts in `docs/proof/` are included for engineering review at the project owner’s request. They remain © NVIDIA, are excluded from the MIT grant, and have source/capture provenance in `docs/proof/provenance.json`. No vendor endorsement is implied.

@@ -1,6 +1,6 @@
 # Assembly and prototype checks
 
-A0 is a fit-check and electrical-evaluation prototype. Read the [release checklist](docs/release-checklist.md) before connecting an expensive host.
+A1 is a fit-check and electrical-evaluation prototype. Read the [release checklist](docs/release-checklist.md) before connecting an expensive host.
 
 ![Open enclosure and ribbon clamp](preview/2port-open.png)
 
@@ -50,7 +50,7 @@ Identify the bus endpoints. Enable the host termination only where needed: JP1 f
 
 Leave JP5/JP6 open unless a documented internal auxiliary load requires the host rails and its current limit is verified. J12 shield bonding is a system-grounding choice. The auxiliary header is raw and unprotected; keep it internal unless a separately designed interface handles the environment.
 
-Seat the perimeter tongue in the lid groove and use four M3×20 socket-head screws. Fit four1mm silicone foam washers around the mount screws, between the PCB and lid sleeves. The sleeves leave a0.8mm gap at nominal board thickness, giving20% nominal washer compression; this accommodates board-thickness variation without a rigid plastic clamp on the PCB. The lid screws have 3.8 mm nominal insert overlap and 1.2 mm tip clearance above the blind-hole floor; clamp screws have 3.6 mm overlap and 1.4 mm tip clearance. These nominal stacks are CAD checks, not load or torque ratings. Tighten gently; insert pull-out and repeated service life remain physical tests. Check that the lid does not pinch the cable. The roof engraves CAN0/CAN1 (RES2/RES3 on four-port), CAN pinout, A0 development revision and github.com/mvalancy. Confirm labels against the schematic before electrical testing.
+Seat the perimeter tongue in the lid groove and use four M3×20 socket-head screws. Fit four1mm silicone foam washers around the mount screws, between the PCB and lid sleeves. The sleeves leave a0.8mm gap at nominal board thickness, giving20% nominal washer compression; this accommodates board-thickness variation without a rigid plastic clamp on the PCB. The lid screws have 3.8 mm nominal insert overlap and 1.2 mm tip clearance above the blind-hole floor; clamp screws have 3.6 mm overlap and 1.4 mm tip clearance. These nominal stacks are CAD checks, not load or torque ratings. Tighten gently; insert pull-out and repeated service life remain physical tests. Check that the lid does not pinch the cable. The roof engraves CAN0/CAN1 (RES2/RES3 on four-port), CAN pinout, A1 development revision and github.com/mvalancy. Confirm labels against the schematic before electrical testing.
 
 ## 5. Bench acceptance
 

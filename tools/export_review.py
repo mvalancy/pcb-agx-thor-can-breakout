@@ -10,8 +10,10 @@ def run(*args):
 for v in ('2port','4port'):
  base=Path('hardware')/v/f'thor-{v}';out=Path('exports')/v
  sch=base.with_suffix('.kicad_sch');pcb=base.with_suffix('.kicad_pcb')
- run('sch','erc','--format','json','-o',out/'erc.json',sch)
+ run('pcb','drc','--format','json','--schematic-parity','--refill-zones','--save-board','-o',out/'drc.json',pcb)
+ # --save-board runs after KiCad writes its first report; recheck the saved bytes.
  run('pcb','drc','--format','json','--schematic-parity','-o',out/'drc.json',pcb)
+ run('sch','erc','--format','json','-o',out/'erc.json',sch)
  run('sch','export','pdf','-o',out/'schematic.pdf',sch)
  run('sch','export','netlist','--format','kicadxml','-o',out/'netlist.xml',sch)
  # Strip machine-local prefixes from distributable XML metadata only.
@@ -24,9 +26,10 @@ for v in ('2port','4port'):
  fab=out/'fabrication-review';(ROOT/fab).mkdir(exist_ok=True)
  run('pcb','export','gerbers','--layers','F.Cu,B.Cu,F.Paste,F.Silkscreen,F.Mask,B.Mask,Edge.Cuts','-o',str(fab)+'/',pcb)
  run('pcb','export','drill','--format','excellon','--excellon-separate-th','--generate-map','--map-format','pdf','-o',str(fab)+'/',pcb)
- (ROOT/fab/'README.txt').write_text('A0 DEVELOPMENT / DO NOT ORDER\nPrototype connector mating, exact DE9 sourcing, assembly placement review and hardware qualification are incomplete.\n2 layers, 1.6 mm FR4, 1 oz copper; supplier DFM and stackup approval required.\nSee docs/release-checklist.md and docs/manufacturing.md.\n')
- with zipfile.ZipFile(ROOT/out/f'thor-{v}-A0-fabrication-REVIEW.zip','w',zipfile.ZIP_DEFLATED) as z:
-  for f in sorted((ROOT/fab).iterdir()):z.write(f,f.name)
+ (ROOT/fab/'README.txt').write_text('A1 DEVELOPMENT / DO NOT ORDER\nPrototype connector mating, exact DE9 sourcing, assembly placement review and hardware qualification are incomplete.\n2 layers, 1.6 mm FR4, 1 oz copper; supplier DFM and stackup approval required.\nSee docs/release-checklist.md and docs/manufacturing.md.\n')
+ with zipfile.ZipFile(ROOT/out/f'thor-{v}-A1-fabrication-REVIEW.zip','w',zipfile.ZIP_DEFLATED) as z:
+  for f in sorted((ROOT/fab).iterdir()):
+   if f.suffix!='.md':z.write(f,f.name)
  # Assemble only the exact-source TVS at this stage. Header is manual/consigned.
  parts=json.loads((ROOT/out/'components.json').read_text());smt=[p for p in parts if p['kind']=='tvs']
  with (ROOT/out/'jlc-bom.csv').open('w') as f:

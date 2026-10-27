@@ -1,2 +1,20 @@
 (version 1)
-(rule "Conservative JLCPCB prototype" (constraint clearance (min 0.2mm)) (constraint track_width (min 0.2mm)) (constraint hole_size (min 0.3mm)))
+# Project transcription of JLCPCB capabilities retrieved 2026-10-26.
+# Not a vendor DFM approval. See ../jlcpcb-profile.json.
+(rule "JLC conservative copper"
+ (constraint clearance (min 0.20mm))
+ (constraint track_width (min 0.20mm))
+ (constraint hole_size (min 0.30mm))
+ (constraint hole_to_hole (min 0.45mm))
+ (constraint hole_clearance (min 0.28mm))
+ (constraint edge_clearance (min 0.30mm)))
+(rule "JLC through-hole annular ring"
+ (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+ (constraint annular_width (min 0.25mm)))
+(rule "JLC via annular ring"
+ (condition "A.Type == 'Via'")
+ (constraint annular_width (min 0.15mm)))
+(rule "JLC legible silkscreen"
+ (layer outer)
+ (constraint text_height (min 1mm))
+ (constraint text_thickness (min 0.15mm)))

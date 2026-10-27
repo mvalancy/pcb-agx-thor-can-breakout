@@ -1,5 +1,5 @@
 (kicad_sch(version 20250114)(generator "eeschema")(uuid 7344a2f4-8aa6-51e2-a58b-a8d2edd9d164)(paper "A3")
-(title_block(title "Thor CAN breakout - 4 ports")(rev "A0 REVIEW")(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation"))
+(title_block(title "Thor CAN breakout - 4 ports")(rev "A1 REVIEW")(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation"))
 (lib_symbols (symbol "Thor:J1_function" (pin_names(offset 1.0) hide) (in_bom yes)(on_board yes)
 (property "Reference" "J" (at 0 20.32 0)(effects(font(size 1.27 1.27))))
 (property "Value" "J1_function" (at 0 -20.32 0)(effects(font(size 1.27 1.27))))

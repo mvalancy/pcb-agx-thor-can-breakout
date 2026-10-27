@@ -10,7 +10,7 @@ def load(v,name):
  return cq.importers.importStep(str(path)).val()
 colors={'base':(.20,.34,.40),'lid':(.32,.50,.58),'clamp':(.90,.48,.16),'pcb':(.10,.42,.28),'header':(.16,.17,.19),'ribbon':(.75,.73,.67),'inserts':(.85,.64,.24),'screws':(.65,.67,.69),'female':(.65,.67,.69),'hoods':(.16,.18,.21),'thumbscrews':(.82,.55,.25),'can_cables':(.09,.1,.12),'legend_paint':(.94,.93,.82)}
 for v in ['2port','4port']:
- r=Renderer(R/'preview',size=(1500,1050),background=(.065,.085,.105),subtitle=f'A0 DEVELOPMENT | {v.upper()} | EXPORTED STEP READBACK',branding='THOR CAN',accent='#11cbb1')
+ r=Renderer(R/'preview',size=(1500,1050),background=(.065,.085,.105),subtitle=f'A1 DEVELOPMENT | {v.upper()} | EXPORTED STEP READBACK',branding='THOR CAN',accent='#11cbb1')
  for mode in ['exploded','open','lid','assembled']:
   shapes=[]
   names=['lid','legend_paint'] if mode=='lid' else list(colors)

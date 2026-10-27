@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Optional route regeneration. Uses external GPL FreeRouting, never vendored.
-Run after build_electronics.py; subsequent finalization and native checks are mandatory.
+Run after build_electronics.py and route_can_pairs.py; finalization and native checks are mandatory.
 """
 from pathlib import Path
 import argparse,hashlib,subprocess
