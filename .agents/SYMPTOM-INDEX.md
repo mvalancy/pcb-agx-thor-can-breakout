@@ -7,3 +7,4 @@
 - Valid CAD but non-watertight STL at boss joins: [tangent contact lesson](inbox/2026-10-26-tangent-boss-mesh.md).
 - In-memory preview disagrees with exported STEP placement: [readback review lesson](inbox/2026-10-26-review-export-readbacks.md).
 - Local and clean-checkout release ZIPs differ: [manifest allowlist](inbox/2026-10-26-release-manifest-allowlist.md).
+- GitHub shows a folder index instead of the project overview: [README precedence](inbox/2026-10-26-github-readme-precedence.md).

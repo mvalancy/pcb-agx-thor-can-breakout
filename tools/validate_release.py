@@ -52,7 +52,8 @@ for p in files:
   if u.scheme or link.startswith(('#','/')):continue
   target=(p.parent/unquote(u.path)).resolve()
   require(target.exists(),str(p.relative_to(R))+': broken link '+link)
-for d in {p.parent for p in files if p.parent!=R}:
+require(not (R/'.github/README.md').exists(),'.github/README.md overrides the intended root README')
+for d in {p.parent for p in files if p.parent not in {R,R/'.github'}}:
  require((d/'README.md').is_file(),'Missing folder README '+str(d.relative_to(R)))
 manifest=R/'releases/manifest.json'
 exclude={'releases/manifest.json','releases/release-notes.md','releases/release-prerelease'}

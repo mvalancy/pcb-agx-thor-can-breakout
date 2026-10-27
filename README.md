@@ -1,60 +1,86 @@
-<h1 align="center">Thor CAN breakout</h1>
-<p align="center">Protected CAN adapters and printable ribbon-clamp housings for NVIDIA Thor.<br><b>A0 engineering prototype · two- and four-port variants · MIT licensed</b></p>
+# Thor CAN breakout
 
-<p align="center"><img src="preview/2port-open.png" alt="Two-port housing with DB9 connectors and replaceable ribbon clamp" width="850"></p>
+Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.
 
-**Local design workspace:** [localhost:8765/site/](http://localhost:8765/site/) embeds the schematics, PCB layers, assembly drawings, enclosure views, reports and downloads. It uses the reusable [cad-agent](https://github.com/Valpatel/cad-agent) review workbench.
+[Design packages](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
 
-**Status:** routed KiCad prototypes and printable CAD, undergoing repeated software/geometry validation. No hardware has been fabricated, printed, fit-tested or electrically qualified. Read the [release gates](docs/release-checklist.md) before ordering. The four-port version is an engineering extension of the generic P4071 A02 header; **IGX compatibility remains unverified**.
+![Two-port assembly with mating connectors and ribbon clamp](preview/2port-open.png)
 
-## Choose a variant
+**A0 engineering prototype — not production qualified.** Both boards pass electrical CAD checks, and the housings pass modeled collision, assembly-path and mesh checks. No physical board or housing has been tested. The exact ribbon/header mating, supplier assembly, CAN operation and transient protection must be verified before connecting an expensive host or ordering 50 units.
+
+## What it does
+
+- Uses the same Wieson **AC2800-0011-022-H0** header identified in Thor's P4071 A02 BOM. Its 26-pad footprint is recovered from NVIDIA's native layout.
+- Routes CAN directly to standard CAN DE9 pins: **2 = CAN-L, 7 = CAN-H, 3/6 = ground, 5/shell = shield**. Pins 1/4/8/9 are unconnected; pin 9 supplies no power.
+- Adds a **Bourns CDSOT23-SM712 TVS** to each channel. This is a passive breakout, not an isolated repeater or a transceiver board.
+- Provides removable links for the carrier's termination resistor, auxiliary power and shield bonding. **All links ship open.**
+- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam and a padded ribbon clamp. The lid carries the pinout, port names, A0 revision and `github.com/mvalancy`.
+
+The TVS is intended to reduce transients; the assembly has no verified surge rating and does not protect against sustained 24 V miswiring. Raw auxiliary I/O has no added protection. See [electrical scope](docs/interface-and-protection.md).
+
+## Choose the right variant
 
 | | Two-port | Four-port engineering variant |
 |---|---|---|
-| Target | AGX Thor FSI CAN0/1 | All four generic A02 CAN channels; exact host audit pending |
+| Intended use | AGX Thor FSI CAN0/CAN1 | Generic P4071 A02 full-header investigation |
+| Extra channels | Retained on internal J11 for investigation | External ports marked RES2/RES3 |
+| IGX compatibility | Not established | **Not established; do not infer it from AURIX net names** |
 | PCB | 93 × 65 mm | 177 × 65 mm |
 | Housing | 100.2 × 86.2 × 26.8 mm | 184.2 × 86.2 × 26.8 mm |
 | Schematic | [PDF](exports/2port/schematic.pdf) | [PDF](exports/4port/schematic.pdf) |
-| Layers | [Top](exports/2port/pcb-top.svg) · [Bottom](exports/2port/pcb-bottom.svg) | [Top](exports/4port/pcb-top.svg) · [Bottom](exports/4port/pcb-bottom.svg) |
-| Native project | [KiCad](hardware/2port/thor-2port.kicad_pro) | [KiCad](hardware/4port/thor-4port.kicad_pro) |
+| Copper | [Top](exports/2port/pcb-top.svg) · [Bottom](exports/2port/pcb-bottom.svg) | [Top](exports/4port/pcb-top.svg) · [Bottom](exports/4port/pcb-bottom.svg) |
+| Native KiCad project | [Two-port](hardware/2port/thor-2port.kicad_pro) | [Four-port](hardware/4port/thor-4port.kicad_pro) |
 | Assembly | [Drawing](exports/2port/assembly.svg) · [BOM](exports/2port/bom-review.csv) | [Drawing](exports/4port/assembly.svg) · [BOM](exports/4port/bom-review.csv) |
-| Evidence | [Electrical](exports/2port/pcb-evidence.json) · [Mechanical](exports/2port/mechanical-checks.json) | [Electrical](exports/4port/pcb-evidence.json) · [Mechanical](exports/4port/mechanical-checks.json) |
+| Housing dimensions | [Plan](exports/2port/enclosure-plan.svg) | [Plan](exports/4port/enclosure-plan.svg) |
+| Check reports | [Electrical](exports/2port/pcb-evidence.json) · [Mechanical](exports/2port/mechanical-checks.json) | [Electrical](exports/4port/pcb-evidence.json) · [Mechanical](exports/4port/mechanical-checks.json) |
 
-The board uses standard CAN DE9 pins2=L,7=H,3/6=GND,5/shell=shield; pin9 is unpowered. Termination shunts enable the carrier's own120Ω resistor. Auxiliary I/O is raw, with power links open by default. Each CAN channel has a Bourns CDSOT23-SM712 suppressor. It is **not isolated, sustained24V-miswire protected, or system surge-rated**. See [interface/protection](docs/interface-and-protection.md).
+The extra channels in the generic schematic do not prove that a particular AGX or IGX carrier populates or supports them. [Carrier compatibility research](research/igx-compatibility.md).
 
-## Header and cable
+## Header, ribbon cable and mating connectors
 
-Thor's J47 BOM identifies **Wieson AC2800-0011-022-H0**, male2×13 at1.27mm. J1 now uses the **same Wieson MPN**, with its26pad land pattern recovered and cross-checked from NVIDIA's native ODB/Allegro layout. [Audit and dimensions](research/j47-footprint-audit.md). Current manufacturer drawing, procurement, exact height and cable mating still require confirmation. Samtec SHF is retained only as a separately documented candidate, not an approved drop-in.
+The cable candidate is **Samtec FFSD-13-D-04.00-01-N**, 101.6 mm long, with two 26-position female connectors: [DigiKey SAM10480-ND](https://www.digikey.com/en/products/detail/samtec-inc/FFSD-13-D-04-00-01-N/6561558). Its fit on the actual Wieson header and pin-for-pin continuity are not yet verified. Do not treat the Samtec SHF alternative footprint as an approved Wieson substitute. [Header audit](research/j47-footprint-audit.md).
 
-Ribbon candidate: **Samtec FFSD-13-D-04.00-01-N**,101.6mm, two female connectors; [DigiKey SAM10480-ND](https://www.digikey.com/en/products/detail/samtec-inc/FFSD-13-D-04-00-01-N/6561558). Verify all26 conductors and key orientation before connecting Thor. [Sourcing audit](research/connector-sourcing.md) covers the AssmannC3127392 DE9 and exact auxiliary headers.
+The board DE9 is **Assmann A-DS 09 A/KG-T2S / C3127392**. Mating clearance models represent **A-DF 09 LL/Z** female connectors with **A-FT 09** backshells and #4-40 thumbscrews. At 42 mm port pitch, maximum-width hood envelopes leave 7.7 mm between neighbors. Actual screw engagement and hood capture still require a sample. [Connector sourcing](research/connector-sourcing.md) · [Mating audit](research/mating-dsub-clearance.md).
 
 ## Print and assemble
 
-Use one matching base/lid pair and one universal ribbon clamp. Test the fastener and port coupons first. [Assembly instructions](ASSEMBLY.md) specify recessed screws, heat-set inserts, silicone pads, termination and bench checks.
+![Lid with recessed CAN pinout, port labels and revision](preview/2port-lid.png)
 
-| Printed part | Download | Quantity |
+Use one matching base/lid pair and the common ribbon clamp. Print the insert/counterbore and port coupons first. The [assembly guide](ASSEMBLY.md) and [hardware BOM](exports/enclosure-bom.csv) specify six heat-set inserts, four M3 × 20 lid screws, two M3 × 6 clamp screws, PCB washers and silicone pads.
+
+| Printed part | STL | Quantity |
 |---|---|---:|
-| Two-port base/lid | [BaseSTL](exports/2port_base.stl) · [LidSTL](exports/2port_lid.stl) | One each if selected |
-| Four-port base/lid | [BaseSTL](exports/4port_base.stl) · [LidSTL](exports/4port_lid.stl) | One each if selected |
-| Universal ribbon clamp | [STL](exports/ribbon_clamp.stl) | 1 |
-| Fastener coupon | [STL](exports/fastener_coupon.stl) | Test first |
-| DE9 opening coupon | [STL](exports/port_coupon.stl) | Test first |
+| Two-port base/lid | [Base](exports/2port_base.stl) · [Lid](exports/2port_lid.stl) | One each for two-port |
+| Four-port base/lid | [Base](exports/4port_base.stl) · [Lid](exports/4port_lid.stl) | One each for four-port |
+| Common ribbon clamp | [Clamp](exports/ribbon_clamp.stl) | 1 |
+| Insert/counterbore coupon | [Coupon](exports/fastener_coupon.stl) | Test first |
+| DE9 opening coupon | [Coupon](exports/port_coupon.stl) | Test first |
 
-STEP and verified bed-oriented3MF files are in [exports](exports/README.md). The clamp has M3 heat-set inserts, a 1.8 mm hard gap and replaceable pads; the proposed10N/60s pull test has not been performed. Rounded shells include a perimeter tongue-and-groove seam, recessed screw heads and shared PCB/lid fasteners. The lid carries port names, CAN pinout, A0 revision and github.com/mvalancy. Ports have 42 mm pitch, leaving a 9.8 mm housing rib and 7.7 mm between maximum-width Assmann A-FT09 backshells. [Mating reference audit](research/mating-dsub-clearance.md). The rear clamp chamber keeps its screws away from PCB conductors.
+[STEP and 3MF files](exports/README.md) are also supplied. STL/3MF files are bed-oriented; STEP files use assembly coordinates. The proposed 10 N / 60 s cable pull test has not been performed. White paint fill is optional and is shown in the renders.
 
-## Manufacturing and releases
+## Manufacturing and release status
 
-See [JLCPCB upload instructions](docs/manufacturing.md). Each variant supplies Gerbers/drills, a fabrication-review ZIP, schematic PDF, assembly drawing, exact-part BOM, and separate SMT-only/full-sourced BOM/CPL options. J1 still requires an approved Wieson sourcing/consignment arrangement. No order has been placed.
+Download the selected PCB package plus the housing package from [GitHub Releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases). Each includes instructions and checksums. Hardware revision is **A0**; suffixes such as `revA0.1` identify packaging updates.
 
-[Release packages](releases/README.md) separate two-port PCB, four-port PCB and printable housings, with checksums and source/artifact hashes. GitHub releases remain marked **pre-release** until physical and electrical gates are closed. Start with3–5 engineering prototypes before the approximately50-unit target batch.
+The [JLCPCB guide](docs/manufacturing.md) explains the Gerber/drill ZIP, SMT-only BOM/CPL and full sourced BOM/CPL. **J1 Wieson procurement/consignment is unresolved**, so this is not a complete turnkey PCBA order. Review placements and supplier DFM before ordering prototypes. No purchase has been made.
 
-## Reproduce
+Start with 3–5 prototypes. Validate mating and continuity while disconnected from Thor, then check CAN communication, intended bitrates, grounding, protection and housing retention. Proceed toward approximately 50 units only after the [release checklist](docs/release-checklist.md) is closed.
 
-Use Python3.11, KiCad10.0.1 and the pinned cad-agent revision in `requirements.txt`. KiCad's Python must provide `pcbnew`; mechanical Python uses the local venv. Vendor reference archives are not redistributed.
+## Local review and reproduction
+
+The [localhost review page](http://localhost:8765/site/) embeds schematic PDFs, PCB layers, dimensions, lid drawings, 3D assemblies and check reports. This link works on the machine running the server; it is not a public web deployment. The site imports the reusable [cad-agent](https://github.com/Valpatel/cad-agent) tools.
+
+Use Python 3.11 or newer, KiCad 10.0.1 and the pinned dependencies. The recorded build used Python 3.12.3; KiCad's Python environment separately supplies `pcbnew`. See the [toolchain record](references/toolchain.json).
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
+.venv/bin/cad-agent site --serve --port 8765
+```
+
+To rebuild and validate the committed routed design:
+
+```bash
 .venv/bin/python tools/export_review.py
 .venv/bin/python tools/check_electronics.py
 .venv/bin/python cad/build.py
@@ -64,29 +90,31 @@ python3 -m venv .venv
 .venv/bin/cad-agent export-3mf
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py
+.venv/bin/python tools/write_readmes.py
 .venv/bin/python tools/validate_release.py --record
 .venv/bin/python tools/package_release.py
-.venv/bin/cad-agent site --serve --port 8765
 ```
 
-The committed boards are already routed. `tools/build_electronics.py` regenerates native sources from `hardware/interface.json`; it overwrites layouts unless invoked with `--schematic-only`. A full electrical regeneration requires route-session import/finalization and all checks again. See [tools](tools/README.md). `cad/parameters.json` owns mechanical dimensions. [Iteration history](docs/iterations.md) records checks that caught actual errors.
+`tools/build_electronics.py` regenerates native sources and overwrites layouts unless `--schematic-only` is used. Full electrical regeneration also requires routing, finalization and all checks. [Tool instructions](tools/README.md) · [Iteration history](docs/iterations.md).
 
-## Project folders
+## Project structure
 
 | Folder | Contents |
 |---|---|
-| [hardware](hardware/README.md) | Native KiCad projects, exact pin map, pinned footprints |
-| [cad](cad/README.md) | Parametric enclosure source and dimensions |
-| [exports](exports/README.md) | Check reports, PCB fabrication review, drawings and print files |
-| [preview](preview/README.md) | Current assembly and housing renders |
-| [docs](docs/README.md) | Manufacturing, protection, qualification and progress |
-| [research](research/README.md) | IGX compatibility and connector evidence |
-| [references](references/README.md) | Source identifiers/URLs/hashes; no vendor archives |
-| [tools](tools/README.md) | Rebuild, validation, release and README helpers |
-| [releases](releases/README.md) | Download/package structure and release notes |
-| [.agents](.agents/README.md) | Canonical lessons, evidence and review procedures |
-| [.github](.github/README.md) | CI and prerelease publication workflow |
+| [hardware](hardware/README.md) | KiCad projects, interface pin map and pinned footprints |
+| [cad](cad/README.md) | Parametric housing source and dimensions |
+| [exports](exports/README.md) | Manufacturing review, drawing, print and validation files |
+| [preview](preview/README.md) | Rendered assembly and lid views |
+| [docs](docs/README.md) | Manufacturing, qualification, decisions and progress |
+| [research](research/README.md) | Connector and carrier evidence |
+| [references](references/README.md) | Source register and toolchain; vendor archives excluded |
+| [tools](tools/README.md) | Generation, checks and release packaging |
+| [releases](releases/README.md) | Package structure and release notes |
+| [.agents](.agents/README.md) | Engineering lessons and review procedures |
+| [.github/workflows](.github/workflows/README.md) | CI and prerelease publication |
+
+Folders have READMEs except `.github` itself: GitHub prioritizes its README over this project overview. CI documentation lives in `.github/workflows/README.md`, and validation prevents recreating the overriding index.
 
 ## License
 
-Original work is [MIT licensed](LICENSE). Redistributed KiCad library files retain their own CC BY-SA4.0 terms with the design exception; see [third-party notices](THIRD_PARTY.md). Vendor PDFs and logos are not relicensed or redistributed. This project is not affiliated with NVIDIA, Samtec or JLCPCB.
+Original work is [MIT licensed](LICENSE). KiCad library derivatives retain CC BY-SA 4.0 and the KiCad design exception; see [third-party notices](THIRD_PARTY.md). Vendor PDFs and logos are not redistributed or relicensed. This project is not affiliated with NVIDIA, Samtec, Assmann or JLCPCB.
