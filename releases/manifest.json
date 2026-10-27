@@ -45,7 +45,7 @@
     "AGENTS.md": "bccb4282a0e0dc1e349c6153f8eac64777513bc1dc4237113a59c9bc218cc93e",
     "ASSEMBLY.md": "8cb70a80612d5af0384393c0d43dc76d905b0c332393ffb494ceec511f11d452",
     "LICENSE": "e4e42c0f6856121f5a909af40f3706832b168f5c1af4e92a9c58e184f5e6b902",
-    "README.md": "3a5b1908f94d024add2309530975a50363a289f6cba6b482579e0cbd5d432965",
+    "README.md": "efc47446784f16d36ae2d5e7cad8f289101e33a99ca6ccc8263a10411ff622e5",
     "THIRD_PARTY.md": "a76cdb36acdd60d4979989e4ab7edd8a4e8a654c616a6ed4f04e9f33e3e4ab8f",
     "cad/README.md": "7f9077718e50f104ddaac1b905ca40b688701f0eca40d7c75d86e58e6066b073",
     "cad/build.py": "0dd2bb61bacdd2ef46a0007d3731fe1199dfdef716d5301b9b6aa7973c2dd3ee",
@@ -56,14 +56,14 @@
     "docs/README.md": "c385c1b54ebca1b1103779d2c7451286ad01f2d47b3ccea2e15d9a2a04c2f6c4",
     "docs/cad-agent-report.html": "8013e62f3725c2d4293286252cb804af03a199efbc51e0b39d563967c89921b2",
     "docs/decisions.yaml": "6711c5cecde297883da004c1d8edb4a13c96d1bc8c9bf7bcd991790548915cca",
-    "docs/design-review.md": "e3bed439995e2b067d116cce0c034342e918da81afe801253eb231fd108ae70d",
+    "docs/design-review.md": "b8eb3b233b08db5a078a1f761cbc210ad49e7c4eb95c43e06f4e61d35ce8df8f",
     "docs/enclosure.md": "a68775eecb20d519b198dc5fe50a2d3eb906bf4f235998ed9ca93e896ee8fbd3",
     "docs/interface-and-protection.md": "a1f9dc1a0e0644b47fe1c6ab42db837fd54bfcade3c97670ab489e70f7485be2",
     "docs/iterations.md": "86e033288c947c90c1224ab25e72770ee1cc771021f4711359ea53089767009f",
     "docs/manufacturing.md": "a88e10337f696fb793fa0a1a2ea4a531adcc6fecb63f2d1bbfd382e6b1f8186e",
-    "docs/milestones.yaml": "e6f96bfed7fdf2134f2dfc70e15ce24bfa7ed6a77548faa3bcd3b1367a068a55",
+    "docs/milestones.yaml": "bd751fa5cfcb17e86ebe43cf8a151ffbcbccadc67c7088691d41e65d532db7c0",
     "docs/pinout-proof.md": "8d6e8e2a68adf3928b4986b4d91348a32e75d078c8beb50b00df1e3a0bb23ba4",
-    "docs/progress.md": "2f0ca78da0c55520099ac7db85fab54e3b37e1ed8ab831380a5b1722a59531fe",
+    "docs/progress.md": "8670a5c1ac76a88ec93e1d6306ff4427c37b5fc8c58bb04ba4bd5d383ed9b4ae",
     "docs/proof/README.md": "9b02ed4e3d2fa767998d9efb429e2a6d1c1d2a8756377900dd337d25a4b293f4",
     "docs/proof/nvidia-p4071-a02-j47.png": "58575e31d670b9531b5ba637a62ea2c41a7ed110011519d7fb5566a5480cf065",
     "docs/proof/nvidia-r38-2-thor-can.png": "e88ccd6661ce7201ef7ae92987aa7797850527477e3c45cd6626015febf96b6a",
@@ -282,7 +282,7 @@
     "references/README.md": "27328d420bd82832b053237d46a5ebc3e92b4ef680072d275c166b1d48012df7",
     "references/sources.json": "3c9345b39b48adea5be278ebef055fa58519404885d762d38a56d7def388b0d1",
     "references/toolchain.json": "100f5b83ca52e0f8fb746c1cabffa77d449ed16cee7223b48f2f5df950b2a61b",
-    "releases/README.md": "ab047629ed5ad5c49aa654d540fe74f682e915558a6db363c9b7106b4b6565cc",
+    "releases/README.md": "4242fe76c6ecdfe90f4b64627e826b248dac9f7c6fa280e0f44cb168f1eea6a3",
     "requirements-ci.txt": "6c2f361f8a30183e5de0bd8cbfd2bf64c0b0fdebda98484bf3b8dce1a42c8588",
     "requirements.txt": "bad110f55c86026eee0bda9ff8d8f955deef5e1419f91575b450c1a48221c5f7",
     "research/README.md": "09e26dae945f404947e8a30c5af4a7a5f8f90e122ad9c034836f65d8b2ce0ae0",
@@ -309,6 +309,6 @@
     "tools/route_can_pairs.py": "f69398c8a7d5b894059bdfcf17cb1fe79ff81cdc9f02cc2062b2082ab20dc16f",
     "tools/update_evidence.py": "ecd9160fab7e0980d8b05e1770553419539e8abdc3de45efa4dc67e4d03dd673",
     "tools/validate_release.py": "01c1da9504539188743cf5642695ce621be6ffa50885538bd5a85be1c38e5cdd",
-    "tools/write_readmes.py": "991ef39cbcf4f6a074273d88aec0568141fc6a15ade6b63bfce277e37479c4cc"
+    "tools/write_readmes.py": "17ab816c9c37a86b6e5607753157c54f95fb07cdd2d3d59559f307b7f7eb3ddf"
   }
 }

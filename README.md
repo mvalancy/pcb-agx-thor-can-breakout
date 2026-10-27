@@ -2,7 +2,7 @@
 
 Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.
 
-[Design packages](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
+[A1 review](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) · [Design packages](releases/README.md) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
 
 ![Two-port assembled product with engraved lid and mating connectors](preview/2port-assembled.png)
 
@@ -72,7 +72,7 @@ Use one matching base/lid pair and the common ribbon clamp. Print the insert/cou
 
 ## Manufacturing and release status
 
-**A1 is being reviewed on a development branch through a pull request into `main`.** Review packages are produced locally and by PR CI. Existing [A0 releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) are historical and superseded: A1 corrects the CAN pair routing and the enclosure's PCB handedness. Do not mix A0 housings with A1 files. [Package structure](releases/README.md).
+**A1 is under review in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) from `dev/a1-routing-lid-review` into `main`.** Review packages are produced locally and by PR CI. Existing [A0 releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) are historical and superseded: A1 corrects the CAN pair routing and the enclosure's PCB handedness. Do not mix A0 housings with A1 files. [Package structure](releases/README.md).
 
 The [JLCPCB guide](docs/manufacturing.md) explains the Gerber/drill ZIP, SMT-only BOM/CPL and full sourced BOM/CPL. **J1 Wieson procurement/consignment is unresolved**, so this is not a complete turnkey PCBA order. Review placements and supplier DFM before ordering prototypes. No purchase has been made.
 

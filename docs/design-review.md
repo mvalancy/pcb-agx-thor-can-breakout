@@ -25,4 +25,6 @@ The old PCB STEP import reflected the board across a plane, reversing handedness
 
 ## Review workflow
 
-The project changes are on `dev/a1-routing-lid-review` and submitted into `main` by pull request. Shared cad-agent code is pinned to its reviewed branch commit and proposed in [PR1](https://github.com/Valpatel/cad-agent/pull/1); connector resources remain in [KiCAD_Libs PR4](https://github.com/mvalancy/KiCAD_Libs/pull/4). No new release tag or production order is created by this review.
+The project changes are on `dev/a1-routing-lid-review` and submitted into `main` in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1). Shared cad-agent code is pinned to its reviewed branch commit and proposed in [PR1](https://github.com/Valpatel/cad-agent/pull/1); connector resources remain in [KiCAD_Libs PR4](https://github.com/mvalancy/KiCAD_Libs/pull/4). No new release tag or production order is created by this review.
+
+Final validation: both native electrical variants, independent routing/fabrication checks, both mechanical collision/path screens, seven STL/3MF parts and both current 13-part viewer scenes pass. Browser checks found no JavaScript exceptions, broken review assets or mobile page overflow. All three package ZIPs reproduce byte-for-byte from a clean checkout; project PR CI passes.

@@ -32,10 +32,11 @@
     fit remains open.
 - id: handoff
   title: Publish project and reusable PCB lessons
-  status: active
+  status: done
   done_when: Project published; cad-agent and library changes submitted through review.
-  notes: Shared cad-agent PR1 CI passes. Final A1 project evidence is being packaged
-    for a pull request into main; no release tag or order.
+  notes: Project PR1 into main and shared cad-agent PR1 are open with passing CI.
+    A1 packages reproduce byte-for-byte from a clean checkout. No merge, release tag
+    or order.
 - id: qualification
   title: Prototype validation before 50-unit order
   status: blocked

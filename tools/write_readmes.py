@@ -118,7 +118,7 @@ A document hash establishes which source was examined; it does not prove the sup
 
 ## Review before publication
 
-Work is developed on a branch and submitted by pull request into `main`. CI validates committed evidence and produces review packages. Tagged releases publish only after review; no automatic merge is used. A1 is currently a branch review package. Existing A0 releases are historical and superseded, including their enclosure handedness and CAN routing.
+Work is developed on a branch and submitted by pull request into `main`. CI validates committed evidence and produces review packages. Tagged releases publish only after review; no automatic merge is used. A1 is currently a branch review package in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1). Existing A0 releases are historical and superseded, including their enclosure handedness and CAN routing.
 
 Generate locally with `.venv/bin/python tools/package_release.py` after validation. ZIPs are CI/release artifacts rather than source-controlled binaries. [Manufacturing instructions](../docs/manufacturing.md) explain quote inputs and outstanding gates.'''),
 'docs/proof':('NVIDIA pinout evidence','Small source excerpts for direct review of the J47 connector and the supported Thor CAN pins.', '''[Read the annotated PINOUT proof](../pinout-proof.md) for the cross-check, source revisions and limits.
