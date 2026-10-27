@@ -2,11 +2,11 @@
 
 Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.
 
-[A1 review](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) · [Design packages](releases/README.md) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
+[Design review](docs/design-review.md) · [Design packages](releases/README.md) · [Termination & prototyping](docs/termination-and-io.md) · [Assembly guide](ASSEMBLY.md) · [Manufacturing guide](docs/manufacturing.md) · [Validation and open gates](docs/release-checklist.md) · [Local review page](http://localhost:8765/site/)
 
 ![Two-port assembled product with engraved lid and mating connectors](preview/2port-assembled.png)
 
-![Exploded housing with native PCB, keyed seam and ribbon clamp](preview/2port-exploded.png)
+![Exploded housing with six screws, six heat-set inserts, PCB, keyed seam and ribbon clamp](preview/2port-exploded.png)
 
 **A1 engineering prototype — not production qualified.** Both boards pass electrical CAD checks, and the housings pass modeled collision, assembly-path and mesh checks. No physical board or housing has been tested. The exact ribbon/header mating, supplier assembly, CAN operation and transient protection must be verified before connecting an expensive host or ordering 50 units.
 
@@ -25,8 +25,9 @@ Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adap
 - Uses the same Wieson **AC2800-0011-022-H0** header identified in Thor's P4071 A02 BOM. Its 26-pad footprint is recovered from NVIDIA's native layout.
 - Routes CAN directly to standard CAN DE9 pins: **2 = CAN-L, 7 = CAN-H, 3/6 = ground, 5/shell = shield**. Pins 1/4/8/9 are unconnected; pin 9 supplies no power.
 - Adds a **Bourns CDSOT23-SM712 TVS** to each channel. This is a passive breakout, not an isolated repeater or a transceiver board.
-- Provides removable links for the carrier's termination resistor, auxiliary power and shield bonding. **All links ship open.**
-- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam and a padded ribbon clamp. The lid carries the pinout, port names, A1 revision and `github.com/mvalancy`.
+- Enables the carrier’s existing **120 Ω termination with JP1 (CAN0) and JP2 (CAN1)**; fit a 2.54 mm jumper cap only at a bus endpoint. Auxiliary power and shield links also remain **open by default**. [Illustrated setup](docs/termination-and-io.md).
+- Retains all 26 header signals and adds isolated 2.54 mm prototyping grids, ground and gated 3.3 V/5 V taps. Raw FSI GPIO is firmware-dependent, not a normal Linux GPIO.
+- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam, two recessed M3 side mounting ears and a padded ribbon clamp with filleted rear supports. The lid carries the pinout, port names, A1 revision and `github.com/mvalancy`.
 
 The TVS is intended to reduce transients; the assembly has no verified surge rating and does not protect against sustained 24 V miswiring. Raw auxiliary I/O has no added protection. See [electrical scope](docs/interface-and-protection.md).
 
@@ -37,8 +38,10 @@ The TVS is intended to reduce transients; the assembly has no verified surge rat
 | Intended use | AGX Thor FSI CAN0/CAN1 | Generic P4071 A02 full-header investigation |
 | Extra channels | Retained on internal J11 for investigation | External ports marked RES2/RES3 |
 | IGX compatibility | Not established | **Not established; do not infer it from AURIX net names** |
-| PCB | 93 × 65 mm | 177 × 65 mm |
-| Housing | 100.2 × 86.2 × 26.8 mm | 184.2 × 86.2 × 26.8 mm |
+| PCB | 93 × 90 mm | 177 × 90 mm |
+| Housing | 103.2 × 114.2 × 26.8 mm | 187.2 × 114.2 × 26.8 mm |
+| Including mounting ears | 132.2 × 114.2 × 26.8 mm | 216.2 × 114.2 × 26.8 mm |
+| Prototype pads | 120 isolated pads + gated power taps | 324 isolated pads + gated power taps |
 | Schematic | [PDF](exports/2port/schematic.pdf) | [PDF](exports/4port/schematic.pdf) |
 | Copper | [Top](exports/2port/pcb-top.svg) · [Bottom](exports/2port/pcb-bottom.svg) | [Top](exports/4port/pcb-top.svg) · [Bottom](exports/4port/pcb-bottom.svg) |
 | Native KiCad project | [Two-port](hardware/2port/thor-2port.kicad_pro) | [Four-port](hardware/4port/thor-4port.kicad_pro) |
@@ -48,9 +51,15 @@ The TVS is intended to reduce transients; the assembly has no verified surge rat
 
 The extra channels in the generic schematic do not prove that a particular AGX or IGX carrier populates or supports them. [Carrier compatibility research](research/igx-compatibility.md).
 
+## Termination and room to build
+
+![Termination links, I/O and prototype pad map](exports/2port/controls.svg)
+
+[Termination, AUX pinout, FSI_EXT_GPIO1 limits and prototype wiring](docs/termination-and-io.md) explains every control and usable area. Both power rails stay disconnected until their individual enable shunts are fitted.
+
 ## Header, ribbon cable and mating connectors
 
-The cable candidate is **Samtec FFSD-13-D-04.00-01-N**, 101.6 mm long, with two 26-position female connectors: [DigiKey SAM10480-ND](https://www.digikey.com/en/products/detail/samtec-inc/FFSD-13-D-04-00-01-N/6561558). Its fit on the actual Wieson header and pin-for-pin continuity are not yet verified. Do not treat the Samtec SHF alternative footprint as an approved Wieson substitute. [Header audit](research/j47-footprint-audit.md).
+The cable candidate is **Samtec FFSD-13-D-06.00-01-N**, 152.4 mm long, with two 26-position female connectors: [DigiKey SAM8785-ND](https://www.digikey.com/en/products/detail/samtec-inc/FFSD-13-D-06-00-01-N/3190987). Its fit on the actual Wieson header and pin-for-pin continuity are not yet verified. Do not treat the Samtec SHF alternative footprint as an approved Wieson substitute. [Header audit](research/j47-footprint-audit.md).
 
 The board DE9 is **Assmann A-DS 09 A/KG-T2S / C3127392**. Mating clearance models represent **A-DF 09 LL/Z** female connectors with **A-FT 09** backshells and #4-40 thumbscrews. At 42 mm port pitch, maximum-width hood envelopes leave 7.7 mm between neighbors. Actual screw engagement and hood capture still require a sample. [Connector sourcing](research/connector-sourcing.md) · [Mating audit](research/mating-dsub-clearance.md).
 
@@ -72,7 +81,7 @@ Use one matching base/lid pair and the common ribbon clamp. Print the insert/cou
 
 ## Manufacturing and release status
 
-**A1 is under review in [PR #1](https://github.com/mvalancy/pcb-agx-thor-can-breakout/pull/1) from `dev/a1-routing-lid-review` into `main`.** Review packages are produced locally and by PR CI. Existing [A0 releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) are historical and superseded: A1 corrects the CAN pair routing and the enclosure's PCB handedness. Do not mix A0 housings with A1 files. [Package structure](releases/README.md).
+**A1 development is published on `main`.** Improvements use development branches and pull requests; merged feature branches are deleted, and plain `dev` follows `main`. Review packages are produced locally and by PR CI. Existing [A0 releases](https://github.com/mvalancy/pcb-agx-thor-can-breakout/releases) are historical and superseded: A1 corrects the CAN pair routing and the enclosure's PCB handedness. Use PCB and housing files from the same commit/manifest. The current 90 mm-deep design also supersedes earlier 65 mm A1 development drafts. [Package structure](releases/README.md).
 
 The [JLCPCB guide](docs/manufacturing.md) explains the Gerber/drill ZIP, SMT-only BOM/CPL and full sourced BOM/CPL. **J1 Wieson procurement/consignment is unresolved**, so this is not a complete turnkey PCBA order. Review placements and supplier DFM before ordering prototypes. No purchase has been made.
 
@@ -95,11 +104,12 @@ To rebuild and validate the committed routed design:
 ```bash
 .venv/bin/python tools/export_review.py
 .venv/bin/python tools/check_electronics.py
-# Also run check_can_routing.py and check_fabrication.py with KiCad Python.
+# Also run check_can_routing.py, check_fabrication.py and check_prototype.py with KiCad Python.
 .venv/bin/python cad/build.py
 .venv/bin/python tools/check_mechanics.py
 .venv/bin/python tools/render_review.py
 .venv/bin/python tools/draw_mechanics.py
+.venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
 .venv/bin/cad-agent view
 .venv/bin/python tools/update_evidence.py

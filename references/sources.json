@@ -63,6 +63,20 @@
       "sha256": "b3b8547259a62ff21d061c111f31a39a7183bc9989aee130e411bf05b6d4f722",
       "facts": "P4071A02 generic schematic: J47sheet11, CAN circuits47\u201350. Not IGXA04 population evidence.",
       "redistributed": false
+    },
+    {
+      "title": "NVIDIA FSI GPIO ownership clarification",
+      "url": "https://forums.developer.nvidia.com/t/question-about-can-stb-control-using-fsi-gpio05-06-in-the-jetson-thor-reference-design/383203",
+      "reviewed": "2026-10-26",
+      "facts": "NVIDIA staff September 14\u201315 2026: FSI_GPIO05/06 firmware-owned; not standard Linux runtime GPIOs",
+      "redistributed": false
+    },
+    {
+      "title": "Samtec FFSD-13-D-06.00-01-N distributor listing",
+      "url": "https://www.digikey.com/en/products/detail/samtec-inc/FFSD-13-D-06-00-01-N/3190987",
+      "reviewed": "2026-10-26",
+      "facts": "SAM8785-ND; 26 contacts, 152.4 mm, socket-to-socket; no reverse-wire suffix. Mating and continuity still unverified.",
+      "redistributed": false
     }
   ]
 }

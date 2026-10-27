@@ -51,6 +51,9 @@ cad:
     - id: housing
       title: Enclosure
       href: site/pages/docs-enclosure-md.html
+    - id: controls
+      title: Controls & I/O
+      href: site/pages/docs-termination-and-io-md.html
     - id: proof
       title: Pinout proof
       href: site/pages/docs-pinout-proof-md.html
@@ -129,6 +132,8 @@ cad:
   - name: mechanical
     run: cad/build.py
     log: mechanical-build.log
+  - name: control-drawings
+    run: tools/draw_controls.py
   - name: dimensional-drawings
     run: tools/draw_mechanics.py
   - name: render-readbacks
@@ -170,3 +175,9 @@ cad:
   - id: 4port-fabrication-profile-check
     title: 4port Local fabrication profile
     file: exports/4port/fabrication-profile-check.json
+  - id: 2port-prototype
+    title: 2port prototype pads and power
+    file: exports/2port/prototype-review.json
+  - id: 4port-prototype
+    title: 4port prototype pads and power
+    file: exports/4port/prototype-review.json

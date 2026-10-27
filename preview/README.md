@@ -30,10 +30,19 @@ Open views show the native PCB, ribbon clamp, mating female connectors, backshel
 | [2port-lid-artwork.svg](2port-lid-artwork.svg) | Scalable drawing |
 | [2port-lid.png](2port-lid.png) | Rendered design evidence |
 | [2port-open.png](2port-open.png) | Rendered design evidence |
+| [2port-rear-supports.png](2port-rear-supports.png) | Rendered design evidence |
+| [2port_base.png](2port_base.png) | Rendered design evidence |
+| [2port_lid.png](2port_lid.png) | Rendered design evidence |
 | [4port-assembled.png](4port-assembled.png) | Rendered design evidence |
 | [4port-exploded.png](4port-exploded.png) | Rendered design evidence |
 | [4port-lid-artwork.svg](4port-lid-artwork.svg) | Scalable drawing |
 | [4port-lid.png](4port-lid.png) | Rendered design evidence |
 | [4port-open.png](4port-open.png) | Rendered design evidence |
+| [4port-rear-supports.png](4port-rear-supports.png) | Rendered design evidence |
+| [4port_base.png](4port_base.png) | Rendered design evidence |
+| [4port_lid.png](4port_lid.png) | Rendered design evidence |
+| [fastener_coupon.png](fastener_coupon.png) | Rendered design evidence |
+| [port_coupon.png](port_coupon.png) | Rendered design evidence |
+| [ribbon_clamp.png](ribbon_clamp.png) | Rendered design evidence |
 
 </details>

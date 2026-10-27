@@ -1,7 +1,7 @@
 {
   "revision": "A1-development",
   "pcb": {
-    "depth_mm": 65,
+    "depth_mm": 90,
     "thickness_mm": 1.6,
     "width_2port_mm": 93,
     "width_4port_mm": 177,
@@ -11,7 +11,7 @@
     "mount_inset_mm": 4
   },
   "case": {
-    "wall_mm": 3.0,
+    "wall_mm": 4.5,
     "floor_mm": 2.4,
     "board_clearance_mm": 0.6,
     "standoff_height_mm": 5,
@@ -19,7 +19,7 @@
     "lid_mm": 2.4,
     "screw_clearance_mm": 3.4,
     "pilot_diameter_mm": 4.0,
-    "boss_diameter_mm": 9.6,
+    "boss_diameter_mm": 10.6,
     "db9_window_width_mm": 32.2,
     "db9_window_height_mm": 14,
     "db9_axis_above_pcb_mm": 6.3,
@@ -33,7 +33,7 @@
     "counterbore_diameter_mm": 6.4,
     "counterbore_depth_mm": 3.3,
     "lid_screw_length_mm": 20,
-    "lip_width_mm": 1.4,
+    "lip_width_mm": 2.0,
     "lip_height_mm": 1.6,
     "lip_clearance_mm": 0.25
   },
@@ -54,18 +54,21 @@
     "pad_length_mm": 6,
     "pad_thickness_mm": 0.8,
     "pad_material": "adhesive silicone foam; qualify compression and adhesive on cable jacket",
-    "clamp_width_mm": 38,
-    "clamp_depth_mm": 10,
+    "clamp_width_mm": 40,
+    "clamp_depth_mm": 12,
     "clamp_thickness_mm": 5.6,
     "gap_mm": 1.8,
     "screw_pitch_mm": 28,
-    "clamp_y_mm": 72,
+    "clamp_y_mm": 97,
     "lower_face_z_mm": 14.4,
     "screw_length_mm": 6,
     "target_pull_test_N": 10,
     "pull_test_seconds": 60,
     "pull_test_passed": false,
-    "boss_diameter_mm": 9.2
+    "boss_diameter_mm": 9.2,
+    "support_rib_mm": 3.2,
+    "support_root_radius_mm": 1.6,
+    "support_overlap_mm": 0.3
   },
   "inserts": {
     "mpn": "94459A130",
@@ -90,5 +93,28 @@
     "thumb_head_diameter_mm": 7.0,
     "thread": "4-40 UNC",
     "engagement_verified": false
+  },
+  "prototype": {
+    "pitch_mm": 2.54,
+    "drill_mm": 1.0,
+    "pad_mm": 1.8,
+    "first_y_mm": 72,
+    "rows": 6,
+    "edge_margin_mm": 10,
+    "ribbon_half_keepout_mm": 12,
+    "maximum_component_height_mm": 12,
+    "maximum_lead_below_board_mm": 3
+  },
+  "mounting_tabs": {
+    "quantity": 2,
+    "y_mm": 45,
+    "hole_offset_from_wall_mm": 8,
+    "outer_radius_mm": 6.5,
+    "thickness_mm": 7,
+    "root_radius_mm": 2,
+    "overlap_mm": 0.4,
+    "hole_diameter_mm": 3.4,
+    "counterbore_diameter_mm": 6.4,
+    "counterbore_depth_mm": 3.3
   }
 }

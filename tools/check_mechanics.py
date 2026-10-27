@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Independent assembly-path and fit-sensitivity screens; no physical load claims."""
 from pathlib import Path
-import sys,json,hashlib
+import sys,json,hashlib,argparse
 import cadquery as cq
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'cad'))
 import build as m
-for n in [2,4]:
+parser=argparse.ArgumentParser();parser.add_argument('variant',nargs='?',choices=['2port','4port']);args=parser.parse_args()
+for n in ([int(args.variant[0])] if args.variant else [2,4]):
  # Read the exact exported assembly instead of rebuilding expensive engravings.
  def read(name):return cq.importers.importStep(str(R/f'exports/{name}.step')).val()
  base=read(f'{n}port_base');lid=read(f'{n}port_lid');bar=read(f'asm_{n}port_clamp');native=read(f'asm_{n}port_pcb')
@@ -28,6 +29,20 @@ for n in [2,4]:
  for dx in [-m.S['screw_pitch_mm']/2,m.S['screw_pitch_mm']/2]:
   tool=m.cyl(cx+dx,cy,z+.05,3,30)
   trials.append({'test':'clamp driver access','x_mm':cx+dx,'overlap_mm3':round(tool.intersect(base.fuse(bar).fuse(native)).Volume(),6)})
+ # Side mount driver paths stay outside the assembled enclosure, even with lid fitted.
+ for x,y in review['structural_features']['mount_tab_centers_mm']:
+  tool=m.cyl(x,y,m.P['mounting_tabs']['thickness_mm']+.05,3,35)
+  trials.append({'test':'mounting ear driver access with lid fitted','x_mm':x,'overlap_mm3':round(tool.intersect(base.fuse(lid).fuse(native)).Volume(),6)})
+ # User circuits must stay within these documented XY regions, <=12 mm above
+ # the PCB and <=3 mm below it. The ribbon lane is deliberately excluded.
+ proto=json.loads((R/f'exports/{n}port/prototype-review.json').read_text())
+ w=m.B[f'width_{n}port_mm'];boardz=m.C['floor_mm']+m.C['standoff_height_mm']
+ ribbon=read(f'asm_{n}port_ribbon')
+ for grid in proto['grids']:
+  xlo,xhi=grid['x_range_mm'];ylo,yhi=grid['y_range_mm'];x=w-xhi-.5;y=ylo-.5
+  component=m.box(x,y,boardz+m.B['thickness_mm'],xhi-xlo+1,yhi-ylo+1,m.P['prototype']['maximum_component_height_mm'])
+  leads=m.box(x,y,boardz-m.P['prototype']['maximum_lead_below_board_mm'],xhi-xlo+1,yhi-ylo+1,m.P['prototype']['maximum_lead_below_board_mm'])
+  trials.append({'test':'prototype '+grid['reference']+' component and lead clearance','overlap_mm3':round(component.fuse(leads).intersect(base.fuse(lid).fuse(bar).fuse(ribbon)).Volume(),6)})
  # Tongue seats vertically without hitting the populated board or lower housing.
  for dz in [0,.5,1,2,5,12]:
   overlap=lid.translate((0,0,dz)).intersect(base.fuse(native).fuse(bar)).Volume()

@@ -5,11 +5,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      100.2,
-      86.2,
+      132.197,
+      114.2,
       16.9
     ],
-    "volume_cm3": 37.928,
+    "volume_cm3": 57.953,
     "physical_fit_verified": false
   },
   "2port_lid": {
@@ -18,11 +18,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      100.2,
-      86.2,
+      103.2,
+      114.2,
       17.0
     ],
-    "volume_cm3": 31.017,
+    "volume_cm3": 44.979,
     "physical_fit_verified": false
   },
   "4port_base": {
@@ -31,11 +31,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      184.2,
-      86.2,
+      216.197,
+      114.2,
       16.9
     ],
-    "volume_cm3": 60.687,
+    "volume_cm3": 89.031,
     "physical_fit_verified": false
   },
   "4port_lid": {
@@ -44,11 +44,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      184.2,
-      86.2,
+      187.2,
+      114.2,
       17.0
     ],
-    "volume_cm3": 51.233,
+    "volume_cm3": 72.342,
     "physical_fit_verified": false
   },
   "ribbon_clamp": {
@@ -57,11 +57,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      38.0,
-      10.0,
+      40.0,
+      12.0,
       5.6
     ],
-    "volume_cm3": 1.865,
+    "volume_cm3": 2.425,
     "physical_fit_verified": false
   },
   "fastener_coupon": {

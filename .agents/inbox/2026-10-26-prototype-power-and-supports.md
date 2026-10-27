@@ -1,0 +1,15 @@
+# Verify new power taps and post-cut structural webs independently
+
+2026-10-26 electrical evidence: the first prototype-area router session exported successfully but native DRC still found one unconnected AUX_3V3 branch. Direct top/bottom paths crossed raw-I/O or host-power traces. After a deliberate layer transition and clearance-preserving detour, `kicad-cli pcb drc --format json --schematic-parity --refill-zones --save-board` reported `0 violations, 0 unconnected items, 0 schematic parity issues`; the final export reruns DRC after saving. `check_prototype.py` independently reports 120 / 324 isolated pads and verifies three holes on each labeled gated-power row. CAN pair/reference-plane checks remain passing with zero sampled return gaps.
+
+Cause: the extra solder-pad rows added a real electrical branch; a router-success message did not establish that branch's connectivity. The original mechanical parameters also left only 1.35 mm outside the seam groove and 1.8 mm beside clamp counterbores despite larger nominal walls and bosses.
+
+Corrective rule: check all new tap nets against the default-open power boundary; require pad isolation, pitch, copper exclusion and assembly exclusions. Preserve routed CAN trunks. Measure material after counterbores/grooves and use filleted ribs from loaded insert bosses to the floor/wall with positive overlap. Side ears need recessed M3 clearance holes and driver access with the lid installed. Shared cad-agent now supplies `filleted_wall_rib`, with a three-test fastener suite and a full suite of `154 passed, 5 skipped`.
+
+FSI_EXT_GPIO1 is module J39 / FSI_GPIO06, as traced on P4071 A02 sheet 7. NVIDIA's September 2026 staff clarification says FSI_GPIO05/06 are firmware-owned, not ordinary Linux GPIOs. Preserve raw net access without promising software features from the label.
+
+Limits: all evidence is CAD/software-based. Raw I/O levels, host power budget, external circuits, insert strength, printed creep and actual cable/connector fit still require physical qualification. Documentation and code must travel with the project PR and the corresponding shared-toolkit PR.
+
+The first expanded lid failed the mandatory STL check at the new prototype legend. Native mesh diagnostics localized 91 non-manifold edges to two kerned bold glyphs around Y83, rather than the seam or mounting supports. A minimal shared cad-agent engraving regression reproduced the failure on a flat coupon before the fix. The engraver now fuses overlapping glyphs within each text item before subtraction; this remains bounded per label to avoid the earlier whole-panel boolean slowdown. Rebuild both variants after changing that shared geometry helper.
+
+A final parameter audit also found `(9.6 - 6.4) / 2 = 1.6 mm` around the lid counterbores. Boss diameter is now 10.6 mm, leaving 2.1 mm; the structural checker explicitly includes that radial web, engraved roof thickness, lower sleeve wall, clamp counterbore floor and blind insert floor. The third enclosure rebuild checks these additions rather than extrapolating from the clamp-only web measurements.

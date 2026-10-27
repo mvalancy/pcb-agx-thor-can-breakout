@@ -5,6 +5,12 @@
       "summary": "A1 engineering review. Native electrical and routing checks pass; physical tests and supplier DFM remain open.",
       "views": [
         {
+          "title": "Controls & prototype",
+          "kind": "svg",
+          "file": "exports/2port/controls.svg",
+          "caption": "Actual pad locations: termination shunts, AUX power enables, I/O and isolated prototype grids. All shunts open by default."
+        },
+        {
           "title": "Lid artwork",
           "kind": "svg",
           "file": "preview/2port-lid-artwork.svg",
@@ -41,7 +47,7 @@
           "title": "Enclosure",
           "kind": "image",
           "file": "preview/2port-exploded.png",
-          "caption": "Current geometry; supplier connector models and physical validation are tracked separately."
+          "caption": "Six exploded screws and six heat-set inserts; filleted rear supports and recessed side mounting ears."
         },
         {
           "title": "Cable clamp",
@@ -77,6 +83,12 @@
           "kind": "image",
           "file": "docs/proof/nvidia-p4071-a02-j47.png",
           "caption": "\u00a9 NVIDIA, P4071 A02 sheet 11. Original J47 source excerpt; see Pinout proof for provenance and carrier limits."
+        },
+        {
+          "title": "Insert supports",
+          "kind": "image",
+          "file": "preview/2port-rear-supports.png",
+          "caption": "Section of the exported base below the clamp deck: actual boss-to-wall ribs and filleted roots. No load rating is established by this view."
         }
       ],
       "reports": [
@@ -103,6 +115,10 @@
         {
           "title": "Local fabrication profile",
           "file": "exports/2port/fabrication-profile-check.json"
+        },
+        {
+          "title": "Prototype pads & gated power",
+          "file": "exports/2port/prototype-review.json"
         }
       ],
       "downloads": [
@@ -132,6 +148,12 @@
       "title": "4 ports",
       "summary": "A1 engineering review. Native electrical and routing checks pass; physical tests and supplier DFM remain open.",
       "views": [
+        {
+          "title": "Controls & prototype",
+          "kind": "svg",
+          "file": "exports/4port/controls.svg",
+          "caption": "Actual pad locations: termination shunts, AUX power enables, I/O and isolated prototype grids. All shunts open by default."
+        },
         {
           "title": "Lid artwork",
           "kind": "svg",
@@ -169,7 +191,7 @@
           "title": "Enclosure",
           "kind": "image",
           "file": "preview/4port-exploded.png",
-          "caption": "Current geometry; supplier connector models and physical validation are tracked separately."
+          "caption": "Six exploded screws and six heat-set inserts; filleted rear supports and recessed side mounting ears."
         },
         {
           "title": "Cable clamp",
@@ -205,6 +227,12 @@
           "kind": "image",
           "file": "docs/proof/nvidia-p4071-a02-j47.png",
           "caption": "\u00a9 NVIDIA, P4071 A02 sheet 11. Original J47 source excerpt; see Pinout proof for provenance and carrier limits."
+        },
+        {
+          "title": "Insert supports",
+          "kind": "image",
+          "file": "preview/4port-rear-supports.png",
+          "caption": "Section of the exported base below the clamp deck: actual boss-to-wall ribs and filleted roots. No load rating is established by this view."
         }
       ],
       "reports": [
@@ -231,6 +259,10 @@
         {
           "title": "Local fabrication profile",
           "file": "exports/4port/fabrication-profile-check.json"
+        },
+        {
+          "title": "Prototype pads & gated power",
+          "file": "exports/4port/prototype-review.json"
         }
       ],
       "downloads": [

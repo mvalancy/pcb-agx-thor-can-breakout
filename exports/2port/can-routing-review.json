@@ -65,10 +65,10 @@
     }
   ],
   "source_sha256": {
-    "hardware/2port/thor-2port.kicad_pcb": "5fe71d39df6c6bf5018fa3f1b1282ce3cf9e33bf33bfbd334f7041dac9d38138",
-    "tools/check_can_routing.py": "8e77dfcc41bd41e0f48941edf8eb0f83cc43363f4b15689111d084ecc19a68ab",
-    "tools/route_can_pairs.py": "f69398c8a7d5b894059bdfcf17cb1fe79ff81cdc9f02cc2062b2082ab20dc16f",
-    "hardware/jlcpcb-profile.json": "b818e99681e76ee1f957b24d6d9d56994c0f76a61f5cf0642de548abc34ba2c3"
+    "hardware/2port/thor-2port.kicad_pcb": "030a2b88f91b847fce4abdd496430ab2566f0a831a0365fdc7afdcaaf91acc7c",
+    "tools/check_can_routing.py": "5e63435866d6bc3e3b2b2241c12ed202bcf4c1bd9db97ac6f4c15c77d072bc56",
+    "tools/route_can_pairs.py": "802bfc79f9699293cce1af36fa7600e85c382aa97920383b7ee81824c93a86aa",
+    "hardware/jlcpcb-profile.json": "6c47ba60885769e1aa75d0ad101e0a59f1ec84955ba51684c5dcf137ea1509a6"
   },
   "limits": "Length includes nominal 1.6 mm via barrels. Trunk Y15\u201345 mm: 0.25 mm traces / 0.25 mm gap; header and component fanouts excluded from coupling screen. Return reference sampled under trace centerlines at 0.1 mm, not an EM simulation. Short two-layer routes and the ribbon are NOT controlled 120-ohm impedance. No data-rate or EMC qualification."
 }

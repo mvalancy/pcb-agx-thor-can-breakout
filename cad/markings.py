@@ -4,10 +4,12 @@ from cadagent.markings import PanelMarkings
 def lid_markings(n,w):
  m=PanelMarkings();cx=w/2
  # A compact nameplate with a paired-line motif, leaving the insert towers clear.
- m.text('THOR',cx-9,72,6.7,bold=True);m.text('CAN',cx+19,72,5.1,bold=True)
- for dy in [-1.4,1.4]:m.line([(cx-35.5,72+dy),(cx-31.5,72+dy),(cx-28.5,75+dy),(cx-23.5,75+dy)],.7)
- m.line([(10,64),(w-10,64)],.6)
- m.text('PCB-THOR-CAN  /  A1 DEV',cx,67,2.15,bold=True)
+ m.text('THOR',cx-9,97,6.7,bold=True);m.text('CAN',cx+19,97,5.1,bold=True)
+ for dy in [-1.4,1.4]:m.line([(cx-35.5,97+dy),(cx-31.5,97+dy),(cx-28.5,100+dy),(cx-23.5,100+dy)],.7)
+ m.line([(10,89),(w-10,89)],.6)
+ m.text('PCB-THOR-CAN  /  A1 DEV',cx,92,2.15,bold=True)
+ m.text('120R: JP1 / JP2  -  DEFAULT OPEN',cx,78,2.1,bold=True)
+ m.text('AUX + PROTOTYPING INSIDE',cx,83,2.2,bold=True)
  m.text('DE-9 MALE  /  MATING FACE',cx,57.7,2.25,bold=True)
  # Male mating face, 5-pin wide row above 4-pin row. No solder-side mirroring.
  m.line([(cx-17,52.5),(cx+17,52.5),(cx+14.2,35.5),(cx-14.2,35.5),(cx-17,52.5)],.65)

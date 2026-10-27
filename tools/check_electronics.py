@@ -17,6 +17,8 @@ for v,n in [('2port',2),('4port',4)]:
   if nodes.get(('J1',str(pin)))!='/'+name:errors.append(f'J47 source-map mismatch at J1.{pin}')
  for aux,host in [(3,6),(4,10),(5,14),(6,18),(7,19),(8,20),(9,22),(10,24),(11,23),(12,25),(13,21),(14,26)]:same(('J10',str(aux)),('J1',str(host)))
  same(('JP5','2'),('J10','1'));same(('JP6','2'),('J10','2'))
+ for ref in ['TP1','TP2']:
+  same((ref,'1'),('J1','10'));same((ref,'2'),('J10','1'));same((ref,'3'),('J10','2'))
  same(('J12','1'),('J2','SH'));same(('J12','2'),('J1','10'))
  if len({nodes['J1','1'],nodes['J1','2'],nodes['J10','1'],nodes['J10','2'],nodes['J1','10'],nodes['J2','SH']})!=6:errors.append('Power, ground or shield domains merged across an open link')
  if n==2:

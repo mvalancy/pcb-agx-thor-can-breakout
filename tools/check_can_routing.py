@@ -51,7 +51,7 @@ sources=[f'hardware/{v}/thor-{v}.kicad_pcb','tools/check_can_routing.py','tools/
 result={'pass':not errors,'errors':errors,'library_sha256':hashlib.sha256(Path(routing_library.__file__).read_bytes()).hexdigest(),'channels':channels,'source_sha256':{f:hashlib.sha256((R/f).read_bytes()).hexdigest() for f in sources},'limits':'Length includes nominal 1.6 mm via barrels. Trunk Y15–45 mm: 0.25 mm traces / 0.25 mm gap; header and component fanouts excluded from coupling screen. Return reference sampled under trace centerlines at 0.1 mm, not an EM simulation. Short two-layer routes and the ribbon are NOT controlled 120-ohm impedance. No data-rate or EMC qualification.'}
 (R/f'exports/{v}/can-routing-review.json').write_text(json.dumps(result,indent=2)+'\n')
 w=93 if n==2 else 177
-svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -9 {w+10} 83">',f'<rect x="-5" y="-9" width="{w+10}" height="83" fill="#10242e"/>',f'<rect width="{w}" height="65" fill="#183d45" stroke="#b6c2bb" stroke-width=".25"/>']
+svg=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -9 {w+10} 108">',f'<rect x="-5" y="-9" width="{w+10}" height="108" fill="#10242e"/>',f'<rect width="{w}" height="90" fill="#183d45" stroke="#b6c2bb" stroke-width=".25"/>']
 for f in board.GetFootprints():
  for pad in f.Pads():
   x,y=xy(pad.GetPosition());sx,sy=xy(pad.GetSize());svg.append(f'<rect x="{x-sx/2}" y="{y-sy/2}" width="{sx}" height="{sy}" fill="#768786" opacity=".65"/>')

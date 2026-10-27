@@ -28,5 +28,10 @@ rules='''(version 1)
 for v in ['2port','4port']:
  base=R/f'hardware/{v}/thor-{v}';p=base.with_suffix('.kicad_pro');d=json.loads(p.read_text());s=d['board']['design_settings'];s['rules'].update(min_clearance=r['clearance'],min_track_width=r['track_width'],min_via_annular_width=r['via_annular'],min_via_diameter=r['via_diameter'],min_through_hole_diameter=r['via_drill'],min_hole_clearance=r['hole_to_copper'],min_hole_to_hole=r['hole_to_hole'],min_copper_edge_clearance=r['copper_to_edge'],min_silk_clearance=r['silk_to_pad'],min_text_height=r['silk_height'],min_text_thickness=r['silk_stroke'])
  s['solder_mask_min_width']=r['soldermask_bridge'];s['solder_mask_clearance']=0.0
+ # KiCad defaults disable these checks. Enable them explicitly: no blanket waivers.
+ for key in ['missing_courtyard','track_not_centered_on_via','tuning_profile_track_geometries','footprint_filters_mismatch','footprint_type_mismatch']:
+  s['rule_severities'][key]='warning'
+ erc=d.setdefault('erc',{}).setdefault('rule_severities',{})
+ for key in ['single_global_label','four_way_junction','simulation_model_issue','footprint_filter']:erc[key]='warning'
  p.write_text(json.dumps(d,indent=2)+'\n');base.with_suffix('.kicad_dru').write_text(rules)
  print(v,'JLC-derived fabrication rules applied')

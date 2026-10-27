@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030">
+<rect width="1200" height="1030" fill="#f6f5ef"/>
+<style>text{font-family:DejaVu Sans,sans-serif;fill:#17313b} .small{font-size:13px}</style>
+<text x="45" y="50" font-size="30" text-anchor="start" style="fill:#17313b">THOR CAN / 2-PORT CONTROLS</text>
+<text x="45" y="81" font-size="16" text-anchor="start" style="fill:#17313b">PCB component-side plan · all shunts removed at delivery · dimensions in millimeters</text>
+<text x="45" y="112" font-size="14" text-anchor="start" style="fill:#17313b">Native KiCad orientation shown; enclosure assembly views use their own marked viewing direction.</text>
+<rect x="65.0" y="155.0" width="632.4" height="612.0" rx="0" fill="#d8e8df" stroke="#357970"/>
+<circle cx="92.2" cy="182.2" r="10.88" fill="#fff" stroke="#244e4c" stroke-width="1"/>
+<circle cx="670.1999999999999" cy="182.2" r="10.88" fill="#fff" stroke="#244e4c" stroke-width="1"/>
+<circle cx="92.2" cy="739.8" r="10.88" fill="#fff" stroke="#244e4c" stroke-width="1"/>
+<circle cx="670.1999999999999" cy="739.8" r="10.88" fill="#fff" stroke="#244e4c" stroke-width="1"/>
+<rect x="136.39999999999998" y="155.0" width="204.0" height="68.0" rx="0" fill="#748995" stroke="#357970"/>
+<text x="238.4" y="195.8" font-size="14" text-anchor="middle" style="fill:#fff">CAN 0</text>
+<rect x="221.4" y="270.6" width="35.36" height="43.52" rx="0" fill="#fff3d4" stroke="#357970"/>
+<circle cx="238.944" cy="284.2" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="238.944" cy="301.472" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="238.4" y="338.6" font-size="13" text-anchor="middle" style="fill:#17313b">JP1 / 120Ω</text>
+<rect x="422.0" y="155.0" width="204.0" height="68.0" rx="0" fill="#748995" stroke="#357970"/>
+<text x="524.0" y="195.8" font-size="14" text-anchor="middle" style="fill:#fff">CAN 1</text>
+<rect x="507.0" y="270.6" width="35.36" height="43.52" rx="0" fill="#fff3d4" stroke="#357970"/>
+<circle cx="524.544" cy="284.2" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="524.544" cy="301.472" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="524.0" y="338.6" font-size="13" text-anchor="middle" style="fill:#17313b">JP2 / 120Ω</text>
+<rect x="235.0" y="484.8" width="156.4" height="57.8" rx="0" fill="#33474e" stroke="#357970"/>
+<text x="313.2" y="518.8" font-size="12" text-anchor="middle" style="fill:#fff">J1 / THOR</text>
+<rect x="231.6" y="556.2" width="163.2" height="183.6" rx="0" fill="#f0c8bb" stroke="#357970"/>
+<text x="313.2" y="671.8" font-size="11" text-anchor="middle" style="fill:#17313b">RIBBON</text>
+<text x="313.2" y="692.1999999999999" font-size="10" text-anchor="middle" style="fill:#17313b">KEEP CLEAR</text>
+<rect x="417.23999999999995" y="491.59999999999997" width="23.119999999999997" height="37.4" rx="0" fill="#e8bc48" stroke="#357970"/>
+<circle cx="428.8" cy="501.8" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="428.8" cy="519.072" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="428.8" y="474.59999999999997" font-size="10" text-anchor="middle" style="fill:#17313b">JP5</text>
+<rect x="458.03999999999996" y="491.59999999999997" width="23.119999999999997" height="37.4" rx="0" fill="#e69573" stroke="#357970"/>
+<circle cx="469.59999999999997" cy="501.8" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="469.59999999999997" cy="519.072" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="469.59999999999997" y="474.59999999999997" font-size="10" text-anchor="middle" style="fill:#17313b">JP6</text>
+<circle cx="588.6" cy="420.2" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="420.2" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="437.472" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="437.472" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="454.74399999999997" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="454.74399999999997" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="472.01599999999996" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="472.01599999999996" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="489.28799999999995" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="489.28799999999995" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="506.56" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="506.56" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="588.6" cy="523.832" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="605.8720000000001" cy="523.832" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="597.4399999999999" y="399.79999999999995" font-size="12" text-anchor="middle" style="fill:#17313b">J10</text>
+<rect x="617.8399999999999" y="321.6" width="23.119999999999997" height="37.4" rx="0" fill="#d3d3e8" stroke="#357970"/>
+<circle cx="629.4" cy="331.79999999999995" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="629.4" cy="349.072" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="629.4" y="372.6" font-size="9" text-anchor="middle" style="fill:#17313b">J12 / SHIELD</text>
+<circle cx="153.39999999999998" cy="427.0" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="170.672" cy="427.0" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="153.39999999999998" cy="444.272" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="170.672" cy="444.272" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="153.39999999999998" cy="461.544" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<circle cx="170.672" cy="461.544" r="5.1" fill="#f8e7af" stroke="#244e4c" stroke-width="1"/>
+<text x="161.56" y="488.2" font-size="10" text-anchor="middle" style="fill:#17313b">J11 / RESERVED</text>
+<circle cx="133.0" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="133.0" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="133.0" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="133.0" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="133.0" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="133.0" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="184.816" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="202.088" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="219.35999999999999" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<text x="176.18" y="752.04" font-size="10" text-anchor="middle" style="fill:#17313b">P1 / 6 × 6</text>
+<circle cx="133.0" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<text x="180.6" y="580.0" font-size="9" text-anchor="start" style="fill:#17313b">GND</text>
+<circle cx="133.0" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<text x="180.6" y="597.272" font-size="9" text-anchor="start" style="fill:#17313b">3V3</text>
+<circle cx="133.0" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<circle cx="150.272" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<circle cx="167.54399999999998" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<text x="180.6" y="614.544" font-size="9" text-anchor="start" style="fill:#17313b">5V</text>
+<circle cx="394.8" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="644.5999999999999" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="394.8" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="661.8720000000001" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="394.8" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="679.144" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="394.8" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="696.416" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="394.8" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="713.688" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="394.8" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="446.616" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="463.888" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="481.16" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="498.432" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="515.704" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="532.9759999999999" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="550.248" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="567.52" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="584.7919999999999" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="602.064" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<circle cx="619.336" cy="730.96" r="4.42" fill="#edc66f" stroke="#244e4c" stroke-width="1"/>
+<text x="507.0679999999999" y="752.04" font-size="10" text-anchor="middle" style="fill:#17313b">P2 / 14 × 6</text>
+<circle cx="394.8" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="576.5999999999999" r="5.1" fill="#b0c0b9" stroke="#244e4c" stroke-width="1"/>
+<text x="442.4" y="580.0" font-size="9" text-anchor="start" style="fill:#17313b">GND</text>
+<circle cx="394.8" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="593.8720000000001" r="5.1" fill="#e8bc48" stroke="#244e4c" stroke-width="1"/>
+<text x="442.4" y="597.272" font-size="9" text-anchor="start" style="fill:#17313b">3V3</text>
+<circle cx="394.8" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<circle cx="412.072" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<circle cx="429.344" cy="611.144" r="5.1" fill="#e69573" stroke="#244e4c" stroke-width="1"/>
+<text x="442.4" y="614.544" font-size="9" text-anchor="start" style="fill:#17313b">5V</text>
+<text x="805" y="175" font-size="20" text-anchor="start" style="fill:#17313b">TERMINATION</text>
+<text x="805" y="204" font-size="15" text-anchor="start" style="fill:#17313b">JP1 → CAN0 (J47 3–4)</text>
+<text x="805" y="229" font-size="15" text-anchor="start" style="fill:#17313b">JP2 → CAN1 (J47 7–8)</text>
+<text x="805" y="254" font-size="15" text-anchor="start" style="fill:#17313b">JP3/JP4 → reserved channels</text>
+<text x="805" y="279" font-size="15" text-anchor="start" style="fill:#17313b">only on a verified carrier.</text>
+<text x="805" y="304" font-size="15" text-anchor="start" style="fill:#17313b">Fit shunts only at the two</text>
+<text x="805" y="329" font-size="15" text-anchor="start" style="fill:#17313b">physical ends of the CAN bus.</text>
+<text x="805" y="385" font-size="20" text-anchor="start" style="fill:#17313b">POWER &amp; RAW I/O</text>
+<text x="805" y="414" font-size="15" text-anchor="start" style="fill:#17313b">JP5 → enable AUX 3.3 V</text>
+<text x="805" y="439" font-size="15" text-anchor="start" style="fill:#17313b">JP6 → enable AUX 5 V</text>
+<text x="805" y="464" font-size="15" text-anchor="start" style="fill:#17313b">No shunts = power taps OFF</text>
+<text x="805" y="489" font-size="15" text-anchor="start" style="fill:#17313b">J10 exposes all non-CAN I/O.</text>
+<text x="805" y="514" font-size="15" text-anchor="start" style="fill:#17313b">FSI6 is FSI firmware owned;</text>
+<text x="805" y="539" font-size="15" text-anchor="start" style="fill:#17313b">it is not a Linux GPIO.</text>
+<text x="805" y="564" font-size="15" text-anchor="start" style="fill:#17313b">No 24 V inputs or backfeed.</text>
+<text x="805" y="620" font-size="20" text-anchor="start" style="fill:#17313b">PROTOTYPING</text>
+<text x="805" y="649" font-size="15" text-anchor="start" style="fill:#17313b">120 isolated plated holes</text>
+<text x="805" y="674" font-size="15" text-anchor="start" style="fill:#17313b">2.54 pitch / 1.0 drill / 1.8 pad</text>
+<text x="805" y="699" font-size="15" text-anchor="start" style="fill:#17313b">Each pad is independent.</text>
+<text x="805" y="724" font-size="15" text-anchor="start" style="fill:#17313b">3-hole rows: GND / 3V3 / 5V</text>
+<text x="805" y="749" font-size="15" text-anchor="start" style="fill:#17313b">Keep parts inside pad regions.</text>
+<text x="805" y="774" font-size="15" text-anchor="start" style="fill:#17313b">Max: 12 above PCB / 3 below.</text>
+<rect x="45" y="805" width="1110" height="185" rx="12" fill="#e6ece8" stroke="none"/>
+<text x="65" y="835" font-size="19" text-anchor="start" style="fill:#17313b">HOW THE SHUNT ENABLES THE CARRIER’S EXISTING 120 Ω RESISTOR</text>
+<text x="75" y="888" font-size="16" text-anchor="start" style="fill:#17313b">CAN_H</text>
+<polyline points="150,883 220,883" fill="none" stroke="#25665f" stroke-width="2"/>
+<circle cx="220" cy="883" r="5" fill="#fff" stroke="#25665f" stroke-width="2"/>
+<circle cx="270" cy="883" r="5" fill="#fff" stroke="#25665f" stroke-width="2"/>
+<polyline points="270,883 380,883" fill="none" stroke="#25665f" stroke-width="2"/>
+<text x="292" y="872" font-size="14" text-anchor="start" style="fill:#17313b">TERM</text>
+<rect x="380" y="871" width="95" height="24" rx="0" fill="#fff" stroke="#25665f"/>
+<text x="427" y="889" font-size="15" text-anchor="middle" style="fill:#17313b">120 Ω</text>
+<polyline points="475,883 555,883" fill="none" stroke="#25665f" stroke-width="2"/>
+<text x="568" y="888" font-size="16" text-anchor="start" style="fill:#17313b">CAN_L</text>
+<text x="65" y="924" font-size="15" text-anchor="start" style="fill:#17313b">OPEN (default): leave both pins uncovered.</text>
+<text x="65" y="950" font-size="15" text-anchor="start" style="fill:#17313b">ON: fit one 2.54 mm jumper cap over the two pins of the selected JP header.</text>
+<rect x="760" y="856" width="360" height="105" rx="8" fill="#fff" stroke="none"/>
+<text x="780" y="883" font-size="14" text-anchor="start" style="fill:#17313b">Power OFF before fitting or measuring.</text>
+<text x="780" y="910" font-size="14" text-anchor="start" style="fill:#17313b">One enabled endpoint: about 120 Ω.</text>
+<text x="780" y="937" font-size="14" text-anchor="start" style="fill:#17313b">Two endpoints on the bus: about 60 Ω.</text>
+<text x="45" y="1015" font-size="13" text-anchor="start" style="fill:#17313b">Development hardware · physical qualification pending · github.com/mvalancy/pcb-agx-thor-can-breakout</text>
+</svg>

@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "errors": [],
+  "isolated_pads": 120,
+  "grids": [
+    {
+      "reference": "P1",
+      "columns": 6,
+      "rows": 6,
+      "isolated_pads": 36,
+      "pitch_mm": 2.54,
+      "x_range_mm": [
+        10.0,
+        22.7
+      ],
+      "y_range_mm": [
+        72.0,
+        84.7
+      ]
+    },
+    {
+      "reference": "P2",
+      "columns": 14,
+      "rows": 6,
+      "isolated_pads": 84,
+      "pitch_mm": 2.54,
+      "x_range_mm": [
+        48.5,
+        81.52
+      ],
+      "y_range_mm": [
+        72.0,
+        84.7
+      ]
+    }
+  ],
+  "power_taps": "Two banks, each 3 GND + 3 AUX_3V3 + 3 AUX_5V_AO holes. JP5/JP6 remain open by default.",
+  "signal_access": "All 26 J47 pins retained by J10, DE9, termination links, power links and J11 on 2port. See electrical-review.json.",
+  "assembly_default": "All prototype and rail holes bare; no automatic assembly or net connections on free pads.",
+  "source_sha256": {
+    "hardware/2port/thor-2port.kicad_pcb": "030a2b88f91b847fce4abdd496430ab2566f0a831a0365fdc7afdcaaf91acc7c",
+    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
+    "tools/check_prototype.py": "ac3623805fdcfc524c12e27a5ebabaeac5a8555f0170a994e774fae878904430",
+    "tools/update_layout_features.py": "7127f423aa5e8871236a80729f093c4380d2cfe91197dcf9f1297f2402614034"
+  }
+}

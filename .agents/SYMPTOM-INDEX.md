@@ -12,3 +12,6 @@
 - Collision checks pass but PCB import reverses handedness: [proper PCB STEP transform](inbox/2026-10-26-preserve-pcb-handedness.md).
 - Zone-to-zone ground ratsnest despite vias touching both layers: [ground island bridge](inbox/2026-10-26-ground-islands-need-a-real-bridge.md).
 - Current generic report marked stale, or changed geometry still shows PASS: [report evidence formats](inbox/2026-10-26-report-freshness-formats.md).
+- Prototype taps remain disconnected after routing, raw GPIO is unusable in Linux, or insert supports have thin post-cut webs: [prototype power and support checks](inbox/2026-10-26-prototype-power-and-supports.md).
+
+- Reports pass locally but fail the merged toolkit: [all severities and default-disabled checks](inbox/2026-10-26-complete-kicad-evidence.md).

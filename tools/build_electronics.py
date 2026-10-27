@@ -77,6 +77,20 @@ for pad in M['land_pattern']['pads']:
  lines.append(f'(pad "{n}" smd rect(at {x} {y})(size {sx} {sy})(layers "F.Cu" "F.Paste" "F.Mask")(solder_mask_margin {mask}))')
 lines.append(')');(FPDIR/f'{wieson}.kicad_mod').write_text('\n'.join(lines));FP['header']='Thor:'+wieson
 
+def prototype_footprint(name,columns,rows,rail=False):
+ # Bare plated holes: grid pads are isolated; each three-hole rail has one pin number.
+ spec=P['prototype'];pitch=spec['pitch_mm'];size=spec['pad_mm'];drill=spec['drill_mm']
+ lines=[f'(footprint "{name}" (version 20241229)(generator "pcbnew")(layer "F.Cu")(attr through_hole exclude_from_bom exclude_from_pos_files)',
+  '(property "Reference" "REF**" (at 0 -2)(layer "F.SilkS")(effects(font(size 1 1)(thickness 0.15))))',
+  f'(property "Value" "{name}" (at 0 -4)(layer "F.Fab")(effects(font(size 1 1))))']
+ for row in range(rows):
+  for col in range(columns):
+   number=row+1 if rail else row*columns+col+1
+   lines.append(f'(pad "{number}" thru_hole circle(at {col*pitch} {row*pitch})(size {size} {size})(drill {drill})(layers "*.Cu" "*.Mask"))')
+ lines.append(f'(fp_rect(start -1.15 -1.15)(end {(columns-1)*pitch+1.15} {(rows-1)*pitch+1.15})(stroke(width 0.05)(type default))(fill none)(layer "F.CrtYd"))')
+ lines.append(')');(FPDIR/f'{name}.kicad_mod').write_text('\n'.join(lines));return 'Thor:'+name
+FP['rail']=prototype_footprint('Prototype_Power_3x3_P2.54',3,3,True)
+
 def symbol_def(name,pins):
  # Original passive functional symbols: pin names establish exact mapping, not MCU functions.
  n=len(pins); h=(math.ceil(n/2)+1)*2.54
@@ -110,24 +124,31 @@ def build(variant):
  add('JP5','3V3 AUX ENABLE / OPEN','jumper',{'1':'HOST_3V3','2':'AUX_3V3'},w/2+7,51,mpn='PZ254V-11-02P',lcsc='C492401')
  add('JP6','5V AUX ENABLE / OPEN','jumper',{'1':'HOST_5V_AO','2':'AUX_5V_AO'},w/2+13,51,mpn='PZ254V-11-02P',lcsc='C492401')
  add('J12','SHIELD / GND / OPEN','jumper',{'1':'SHIELD','2':'GND'},w-10,26,mpn='PZ254V-11-02P',lcsc='C492401')
+ spec=P['prototype'];cx=w/2-10;half=spec['ribbon_half_keepout_mm'];margin=spec['edge_margin_mm']
+ for k,(start,end) in enumerate([(margin,cx-half),(cx+half,w-margin)],1):
+  cols=math.floor((end-start)/spec['pitch_mm'])+1;kind='proto'+str(k)
+  FP[kind]=prototype_footprint(f'Prototype_{cols}x{spec["rows"]}_P2.54',cols,spec['rows'])
+  add('P'+str(k),'ISOLATED PROTOTYPING PADS',kind,{},start,spec['first_y_mm'])
+  add('TP'+str(k),'PROTO POWER / JP5-JP6 GATED','rail',{'1':'GND','2':'AUX_3V3','3':'AUX_5V_AO'},start,62)
  for k,(x,y) in enumerate([(4,4),(w-4,4),(4,d-4),(w-4,d-4)]):add('H'+str(k+1),'M3','mount',{},x,y)
  # Schematic: labels and short explicit wires make every net readable and testable.
  defs={};positions={};heights={}
  for part in parts:
-  if part['kind']=='mount':continue
+  if part['kind']=='mount' or part['kind'].startswith('proto'):continue
   name=part['ref']+'_function'; pins=[(p,(net or 'NC')) for p,net in part['nets'].items()]
   defs[name],positions[name],heights[name]=symbol_def(name,pins);part['symbol']=name
  schid=UUID(variant+'/schematic');lib='\n'.join(defs.values())
  sch=[f'(kicad_sch(version 20250114)(generator "eeschema")(uuid {schid})(paper "A3")',
  f'(title_block(title "Thor CAN breakout - {n} ports")(rev "A1 REVIEW")(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation"))',f'(lib_symbols {lib})']
  schpos={'J1':(62.23,66.04),'J10':(62.23,139.7),'J11':(62.23,208.28),'JP5':(62.23,248.92),'JP6':(149.86,248.92),'J12':(243.84,248.92)}
+ schpos.update(TP1=(325.12,222.25),TP2=(325.12,241.3))
  for k in range(n):
   x=170.18+(k%2)*127;y=55.88+(k//2)*91.44
   schpos['J'+str(k+2)]=(x,y);schpos['D'+str(k+1)]=(x,y+38.1);schpos['JP'+str(k+1)]=(x+55.88,y+53.34)
  for part in parts:
-  if part['kind']=='mount':continue
+  if part['kind']=='mount' or part['kind'].startswith('proto'):continue
   ref=part['ref'];name=part['symbol'];x,y=schpos[ref];hh=heights[name]
-  sch.append(f'(symbol(lib_id "Thor:{name}")(at {x} {y} 0)(unit 1)(in_bom yes)(on_board yes)(dnp no)(uuid {part["uuid"]})')
+  sch.append(f'(symbol(lib_id "Thor:{name}")(at {x} {y} 0)(unit 1)(in_bom {"no" if part["kind"]=="rail" else "yes"})(on_board yes)(dnp no)(uuid {part["uuid"]})')
   for prop,val,py,hide in [('Reference',ref,y-hh/2-2.54,False),('Value',part['value'],y+hh/2+2.54,False),('Footprint',part['footprint'],y,True),('MPN',part['mpn'],y,True),('LCSC',part['lcsc'],y,True)]:
    sch.append(f'(property {q(prop)} {q(val)}(at {x} {py} 0)(effects(font(size 1 1))'+('(hide yes)' if hide else '')+'))')
   for pin in part['nets']: sch.append(f'(pin {q(pin)}(uuid {UUID(variant+ref+pin)}))')
@@ -138,7 +159,7 @@ def build(variant):
    sch.append(f'(wire(pts(xy {px} {py})(xy {end} {py}))(stroke(width 0)(type default))(uuid {UUID(variant+ref+pin+"wire")}))')
    # labels point away from symbol: justify right on left-side wires.
    sch.append(f'(label {q(net)}(at {end} {py} 0)(effects(font(size 1 1))(justify {"left" if side else "right"} bottom))(uuid {UUID(variant+ref+pin+"label")}))')
- for text,y in [('Termination: fit shunt only at a bus endpoint; JP connects CAN_H to host TERM (internal 120R).',270),('DE9: 2=L, 7=H, 3/6=GND, 5/shell=SHIELD; 1/4/8/9 open. No power on pin 9.',274),('AUX power links ship open. AUX is unbuffered: not 24V tolerant. Reserved pins require carrier-specific verification.',278)]:
+ for text,y in [('Termination: fit shunt only at a bus endpoint; JP connects CAN_H to host TERM (internal 120R).',270),('DE9: 2=L, 7=H, 3/6=GND, 5/shell=SHIELD; 1/4/8/9 open. No power on pin 9.',274),('AUX power links ship open. AUX is unbuffered: not 24V tolerant. Reserved pins require carrier-specific verification.',278),('P1/P2: isolated prototype pads. TP1/TP2 power is JP5/JP6-gated. FSI_EXT_GPIO1 is not a Linux GPIO.',282)]:
   sch.append(f'(text {q(text)}(at 18 {y} 0)(effects(font(size 1.2 1.2))(justify left))(uuid {UUID(variant+text)}))')
  sch.append(')');base.with_suffix('.kicad_sch').write_text('\n'.join(sch))
  # Project-local symbol library matching the embedded instances.
@@ -163,7 +184,9 @@ def build(variant):
   for p in f.Pads():
    net=part['nets'].get(p.GetNumber());
    if net:p.SetNet(netmap[net])
-  if part['kind']=='mount':f.Reference().SetVisible(False);f.SetAttributes(f.GetAttributes()|pcb.FP_EXCLUDE_FROM_BOM|pcb.FP_EXCLUDE_FROM_POS_FILES)
+  if part['kind'] in {'mount','rail'} or part['kind'].startswith('proto'):
+   f.Reference().SetVisible(False);f.SetAttributes(f.GetAttributes()|pcb.FP_EXCLUDE_FROM_BOM|pcb.FP_EXCLUDE_FROM_POS_FILES)
+   if part['kind']!='rail':f.SetAttributes(f.GetAttributes()|pcb.FP_BOARD_ONLY)
  for a,z in [((0,0),(w,0)),((w,0),(w,d)),((w,d),(0,d)),((0,d),(0,0))]:
   e=pcb.PCB_SHAPE();e.SetShape(pcb.SHAPE_T_SEGMENT);e.SetStart(vec(*a));e.SetEnd(vec(*z));e.SetLayer(pcb.Edge_Cuts);e.SetWidth(mm(.05));b.Add(e)
  def label(txt,x,y,size=1):
@@ -182,7 +205,7 @@ def build(variant):
  with (exp/'bom-review.csv').open('w') as f:
   writer=csv.writer(f);writer.writerow(['Designator','Comment','Footprint','Manufacturer Part','LCSC Part #','Assembly','Status'])
   for p in parts:
-   if p['kind']=='mount':continue
+   if p['kind'] in {'mount','rail'} or p['kind'].startswith('proto'):continue
    writer.writerow([p['ref'],p['value'],p['footprint'],p['mpn'],p['lcsc'],'SMT' if p['kind'] in ('header','tvs') else 'THT','Supplier approval pending' if not p['lcsc'] else 'Exact manufacturer; availability recheck'])
  print(variant,len(parts),'footprints',len(netmap),'nets')
 for v in I['variants']:build(v)
@@ -190,3 +213,5 @@ for v in I['variants']:build(v)
 # Keep generator defaults aligned with the source-dated fabrication profile.
 import subprocess
 subprocess.run([sys.executable,str(ROOT/"tools/apply_fab_rules.py")],check=True)
+if '--schematic-only' not in sys.argv:
+ subprocess.run([sys.executable,str(ROOT/'tools/update_layout_features.py')],check=True)

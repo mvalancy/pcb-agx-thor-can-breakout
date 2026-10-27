@@ -7,6 +7,8 @@ Lid screw,4,M3 x 20; socket head diameter 5.5 x height 3 mm,ISO 4762 dimensional
 Clamp screw,2,M3 x 6; socket head diameter 5.5 x height 3 mm,McMaster 91292A111 candidate,Current catalog/stock recheck required
 PCB washer,4,Silicone foam OD7/ID3.4 x 1 mm,Cut to size,Compression/creep qualification pending
 Ribbon pad,2,Adhesive silicone foam 18 x 6 x 0.8 mm,Cut to size,Cable adhesive/compression qualification pending
-Ribbon assembly,1,26 positions; 101.6 mm; female/female,Samtec FFSD-13-D-04.00-01-N,Thor mating and 26-pin continuity pending
+Ribbon assembly,1,26 positions; 152.4 mm; female/female,Samtec FFSD-13-D-06.00-01-N,Thor mating and 26-pin continuity pending
 Female demonstration connector,2 or 4,DE9 female solder cup,Assmann A-DF 09 LL/Z / AE11063-ND,Physical mate unverified
 Demonstration hood,2 or 4,Hinged hood with two 4-40 thumbscrews,Assmann A-FT 09 / AE11002-ND,Capture/engagement unverified
+Jumper cap,5 (2port) / 7 (4port),2.54 mm two-position removable shunt,Generic compatible accessory,Ship loose; all links open by default
+Side mounting screws,2 optional,M3 socket head; length suits installation,User mounting surface / tapped hole or nut,Not included in six insert-fastened assembly screws

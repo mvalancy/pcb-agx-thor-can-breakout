@@ -7,7 +7,7 @@ Generated review and manufacturing inputs for two FSI channels plus two reserved
 
 ## Inspect the design
 
-[Schematic PDF](schematic.pdf) · [Top copper](pcb-top.svg) · [Bottom copper](pcb-bottom.svg) · [Assembly drawing](assembly.svg) · [Enclosure dimensions](enclosure-plan.svg)
+[Schematic PDF](schematic.pdf) · [Top copper](pcb-top.svg) · [Bottom copper](pcb-bottom.svg) · [Assembly drawing](assembly.svg) · [Enclosure dimensions](enclosure-plan.svg) · [Controls and prototype map](controls.svg)
 
 ![CAN pair review](can-routing.svg)
 
@@ -23,7 +23,7 @@ Generated review and manufacturing inputs for two FSI channels plus two reserved
 
 ## Evidence
 
-[Native electrical](pcb-evidence.json) · [Pin mapping](electrical-review.json) · [Pair routing](can-routing-review.json) · [Fabrication profile](fabrication-profile-check.json) · [Housing](mechanical-checks.json) · [Assembly paths](assembly-paths.json)
+[Native electrical](pcb-evidence.json) · [Pin mapping](electrical-review.json) · [Pair routing](can-routing-review.json) · [Fabrication profile](fabrication-profile-check.json) · [Prototype pads](prototype-review.json) · [Housing](mechanical-checks.json) · [Assembly paths](assembly-paths.json)
 
 Read [manufacturing instructions](../../docs/manufacturing.md) before upload. The local fabrication-profile report is **not JLCDFM approval**. Stock, J1 sourcing, placement rotations, panelization and physical testing remain open. Keep this variant's files together.
 
@@ -40,6 +40,7 @@ Read [manufacturing instructions](../../docs/manufacturing.md) before upload. Th
 | [can-routing-review.json](can-routing-review.json) | Measured paired paths and return-plane coverage |
 | [can-routing.svg](can-routing.svg) | Scalable drawing |
 | [components.json](components.json) | Machine-readable design evidence |
+| [controls.svg](controls.svg) | Scalable drawing |
 | [drc.json](drc.json) | Native layout, connectivity and parity check |
 | [electrical-review.json](electrical-review.json) | Independent connector/TVS semantic checks |
 | [enclosure-plan.svg](enclosure-plan.svg) | Scalable drawing |
@@ -57,6 +58,7 @@ Read [manufacturing instructions](../../docs/manufacturing.md) before upload. Th
 | [pcb-top.svg](pcb-top.svg) | Scalable drawing |
 | [pcb.step](pcb.step) | Solid model in assembly coordinates |
 | [positions-kicad.csv](positions-kicad.csv) | Assembly or sourcing table |
+| [prototype-review.json](prototype-review.json) | Machine-readable design evidence |
 | [schematic.pdf](schematic.pdf) | Printable review drawing |
 | [thor-4port-A1-fabrication-REVIEW.zip](thor-4port-A1-fabrication-REVIEW.zip) | Engineering review archive |
 
