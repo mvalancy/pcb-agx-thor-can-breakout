@@ -106,15 +106,18 @@
     "maximum_lead_below_board_mm": 3
   },
   "mounting_tabs": {
-    "quantity": 2,
-    "y_mm": 45,
-    "hole_offset_from_wall_mm": 8,
-    "outer_radius_mm": 6.5,
+    "quantity": 4,
+    "hole_offset_from_wall_mm": 10,
+    "outer_radius_mm": 13,
     "thickness_mm": 7,
-    "root_radius_mm": 2,
-    "overlap_mm": 0.4,
+    "root_radius_mm": 4,
+    "overlap_mm": 0.6,
     "hole_diameter_mm": 3.4,
     "counterbore_diameter_mm": 6.4,
-    "counterbore_depth_mm": 3.3
+    "counterbore_depth_mm": 3.3,
+    "y_centers_mm": [
+      14,
+      90
+    ]
   }
 }

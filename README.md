@@ -27,7 +27,7 @@ Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adap
 - Adds a **Bourns CDSOT23-SM712 TVS** to each channel. This is a passive breakout, not an isolated repeater or a transceiver board.
 - Enables the carrier’s existing **120 Ω termination with JP1 (CAN0) and JP2 (CAN1)**; fit a 2.54 mm jumper cap only at a bus endpoint. Auxiliary power and shield links also remain **open by default**. [Illustrated setup](docs/termination-and-io.md).
 - Retains all 26 header signals and adds isolated 2.54 mm prototyping grids, ground and gated 3.3 V/5 V taps. Raw FSI GPIO is firmware-dependent, not a normal Linux GPIO.
-- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam, two recessed M3 side mounting ears and a padded ribbon clamp with filleted rear supports. The lid carries the pinout, port names, A1 revision and `github.com/mvalancy`.
+- Houses the PCB with heat-set inserts, recessed screw heads, a keyed seam, four broad, recessed M3 corner mounting ears and a padded ribbon clamp with filleted rear supports. The lid carries the pinout, port names, A1 revision and `github.com/mvalancy`.
 
 The TVS is intended to reduce transients; the assembly has no verified surge rating and does not protect against sustained 24 V miswiring. Raw auxiliary I/O has no added protection. See [electrical scope](docs/interface-and-protection.md).
 
@@ -40,7 +40,7 @@ The TVS is intended to reduce transients; the assembly has no verified surge rat
 | IGX compatibility | Not established | **Not established; do not infer it from AURIX net names** |
 | PCB | 93 × 90 mm | 177 × 90 mm |
 | Housing | 103.2 × 114.2 × 26.8 mm | 187.2 × 114.2 × 26.8 mm |
-| Including mounting ears | 132.2 × 114.2 × 26.8 mm | 216.2 × 114.2 × 26.8 mm |
+| Including mounting ears | 149.2 × 114.2 × 26.8 mm | 233.2 × 114.2 × 26.8 mm |
 | Prototype pads | 120 isolated pads + gated power taps | 324 isolated pads + gated power taps |
 | Schematic | [PDF](exports/2port/schematic.pdf) | [PDF](exports/4port/schematic.pdf) |
 | Copper | [Top](exports/2port/pcb-top.svg) · [Bottom](exports/2port/pcb-bottom.svg) | [Top](exports/4port/pcb-top.svg) · [Bottom](exports/4port/pcb-bottom.svg) |
@@ -77,7 +77,7 @@ Use one matching base/lid pair and the common ribbon clamp. Print the insert/cou
 | Insert/counterbore coupon | [Coupon](exports/fastener_coupon.stl) | Test first |
 | DE9 opening coupon | [Coupon](exports/port_coupon.stl) | Test first |
 
-[STEP and 3MF files](exports/README.md) are also supplied. STL/3MF files are bed-oriented; STEP files use assembly coordinates. The proposed 10 N / 60 s cable pull test has not been performed. White paint fill is optional and is shown in the renders.
+[STEP and 3MF files](exports/README.md) are also supplied. STL/3MF files are bed-oriented; STEP files use assembly coordinates. Mounting ears are 26 mm wide with R4 roots and retain 7 mm thickness. Four M3 holes form a 123.2 × 76 mm pattern on the two-port base or 207.2 × 76 mm on the four-port base. The proposed 10 N / 60 s cable pull test has not been performed. White paint fill is optional and is shown in the renders.
 
 ## Manufacturing and release status
 
@@ -89,7 +89,7 @@ Start with 3–5 prototypes. Validate mating and continuity while disconnected f
 
 ## Local review and reproduction
 
-The [localhost review page](http://localhost:8765/site/) embeds schematic PDFs, PCB layers, dimensions, lid drawings, 3D assemblies and check reports. This link works on the machine running the server; it is not a public web deployment. The site imports the reusable [cad-agent](https://github.com/Valpatel/cad-agent) tools.
+The [localhost review page](http://localhost:8765/site/) embeds schematic PDFs, PCB layers, dimensions, lid drawings, 3D assemblies and check reports. This link works on the machine running the server; it is not a public web deployment. The site imports the reusable [cad-agent](https://github.com/Valpatel/cad-agent) tools, including the shared finer wheel zoom (four increments cover the former one-increment distance).
 
 Use Python 3.11 or newer, KiCad 10.0.1 and the pinned dependencies. The recorded build used Python 3.12.3; KiCad's Python environment separately supplies `pcbnew`. See the [toolchain record](references/toolchain.json).
 

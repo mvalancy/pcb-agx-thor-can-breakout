@@ -80,12 +80,50 @@
     },
     {
       "test": "mounting ear driver access with lid fitted",
-      "x_mm": -13.1,
+      "x_mm": -15.1,
+      "y_mm": 14,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear M3 head and shank clearance",
+      "x_mm": -15.1,
+      "y_mm": 14,
       "overlap_mm3": 0.0
     },
     {
       "test": "mounting ear driver access with lid fitted",
-      "x_mm": 190.1,
+      "x_mm": -15.1,
+      "y_mm": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear M3 head and shank clearance",
+      "x_mm": -15.1,
+      "y_mm": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear driver access with lid fitted",
+      "x_mm": 192.1,
+      "y_mm": 14,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear M3 head and shank clearance",
+      "x_mm": 192.1,
+      "y_mm": 14,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear driver access with lid fitted",
+      "x_mm": 192.1,
+      "y_mm": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "test": "mounting ear M3 head and shank clearance",
+      "x_mm": 192.1,
+      "y_mm": 90,
       "overlap_mm3": 0.0
     },
     {
@@ -186,17 +224,17 @@
     "cadagent.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
   "mechanical_sources": {
-    "cad/build.py": "cdfacc92f1b9da842eb803bd9bef0107a91316019eb3110f6ddf070f5896a05d",
+    "cad/build.py": "002f674698938fe2242d38bb018860da26d712c5ac104261dca9bc0d9233224d",
     "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
     "cad/markings.py": "f4d51d9594e95b1bc6e7914666744aa0ba22e213cdc5fe8fe102a03422a077ff",
-    "cad/parameters.json": "9ae25b3b9d12bca11f146cbd71fa4c31a81b235739b7ba1f383756d17a91b412",
+    "cad/parameters.json": "09e9b56b4d6b1c4dbb1c3bccbfe809ba471d34a9d4377b4cdb02c4a43e1bb09a",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec",
-    "tools/check_mechanics.py": "40517e76b0d22e28140341c0820eceea08622587e8f1656fc740de51653049f0"
+    "tools/check_mechanics.py": "98ddfe91e5a39a030dacf7b3e794d5ec2bd4a954bdd6e698b28f8df585cb087e"
   },
   "artifact_sha256": {
-    "exports/4port_base.step": "c65ef9b0c38cf8f85f1b202f8f525d3c32da8b352dcfe883717deee61f3eed1b",
-    "exports/4port_lid.step": "fe299597f17d9e4e51bece220378b494c9f0f97d0e1a4aef264d7a1cfb32b175",
-    "exports/asm_4port_clamp.step": "7c20c6ec1fac08016d3c8981b75142a6574e57a12d58c5a3c32b1e2b59698208",
-    "exports/asm_4port_pcb.step": "cd35e90ef734db638080488212343ff8d8e610ef40d160d5a798138ec917b37e"
+    "exports/4port_base.step": "07422e7c43731a02e08e32ce8c3db0012557688cdaa65b4664797ff44fef95f7",
+    "exports/4port_lid.step": "9ee5ef5d3ef340c1156177489b344572a33489e8cb2899021b2cd5c21c75414c",
+    "exports/asm_4port_clamp.step": "c749794da84a9d6782e2e88f2ce0f54226d8c88095a61a725a4104702c4d9bab",
+    "exports/asm_4port_pcb.step": "014f6393250f62ae3621e42d24b892424f0dc5c83ed7618090a8297a462ed2f1"
   }
 }

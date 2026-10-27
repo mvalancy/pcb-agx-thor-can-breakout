@@ -23,5 +23,6 @@ Use these records to understand why a guard or design constraint exists. Start a
 | [2026-10-26-review-export-readbacks.md](2026-10-26-review-export-readbacks.md) | Render the exported assembly readback to check the deliverable |
 | [2026-10-26-tangent-boss-mesh.md](2026-10-26-tangent-boss-mesh.md) | Valid CAD can hide non-manifold tangent boss contacts |
 | [2026-10-26-thor-hardware-validation.md](2026-10-26-thor-hardware-validation.md) | Verify exact footprints and real cable clearance after every design substitution |
+| [2026-10-27-four-corner-mounts.md](2026-10-27-four-corner-mounts.md) | Spread mounting loads with broad roots at the corners, not thickness alone |
 
 </details>

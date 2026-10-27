@@ -5,11 +5,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      132.197,
+      149.194,
       114.2,
       16.9
     ],
-    "volume_cm3": 57.953,
+    "volume_cm3": 70.17,
     "physical_fit_verified": false
   },
   "2port_lid": {
@@ -31,11 +31,11 @@
     "solid_count": 1,
     "watertight": true,
     "print_bounds_mm": [
-      216.197,
+      233.194,
       114.2,
       16.9
     ],
-    "volume_cm3": 89.031,
+    "volume_cm3": 101.248,
     "physical_fit_verified": false
   },
   "4port_lid": {

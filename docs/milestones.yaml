@@ -49,4 +49,10 @@
   title: Prototype pads, controls and sturdy mounting
   status: done
   done_when: Both variants pass native pad/power checks, enclosure mesh/path checks and browser review.
-  notes: Both all-severity ERC/DRC checks pass with no ignores, exclusions or waivers. 120/324 isolated pads, gated power, clearer silk, two M3 side ears and filleted rear supports are validated. Both collision/path screens, seven STL/3MF readbacks and desktop/mobile browser review pass. Physical qualification remains open.
+  notes: Both all-severity ERC/DRC checks pass with no ignores, exclusions or waivers. 120/324 isolated pads, gated power, clearer silk and filleted rear supports are validated. The current mounting layout has four broad corner ears. Both collision/path screens, seven STL/3MF readbacks and desktop/mobile browser review pass. Physical qualification remains open.
+
+- id: corner-mounts
+  title: Four broad corner mounts and finer viewer zoom
+  status: done
+  done_when: Both redesigned bases pass mechanical and mesh checks; current views and finer shared zoom are browser-checked and published.
+  notes: Both rebuilt variants pass collision checks, all 29 assembly/clearance trials and seven mesh/3MF readbacks. All rendered views and both 13-part viewer scenes are current. Finer shared zoom passed independent review and upstream CI in PR18.
