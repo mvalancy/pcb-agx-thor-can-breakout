@@ -57,7 +57,11 @@ def build_variant(n):
    tab_root_widths.append(round(base.intersect(probe).Volume()/(.2*tabs['thickness_mm']),4))
  # Continuous perimeter tongue is interrupted only by connector/cable openings.
  outer=clear+C['lip_width_mm'];h=C['lip_height_mm'];tol=C['lip_clearance_mm']
- base=base.fuse(openings(ring(w,rear,outer,clear,seam-.4,h+.4)))
+ tongue=openings(ring(w,rear,outer,clear,seam-.4,h+.4))
+ # The ribbon slot stops 1.5 mm above the seam but the tongue rises lip_height (1.6) above it: cut the tongue's full
+ # height there, so no 0.1 mm skin is left over the slot that the slicer would drop and the STEP would keep.
+ tongue=tongue.cut(box(cx-C['ribbon_slot_width_mm']/2,rear-clear-.2,seam-1,C['ribbon_slot_width_mm'],wall+2*clear+1.2,h+2))
+ base=base.fuse(tongue)
  # Groove is cut after the lid sleeves are fused so it also clears their wall overlap.
  holes=[(4,4),(w-4,4),(4,d-4),(w-4,d-4)]
  inserts=[];screws=[]

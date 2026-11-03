@@ -6,7 +6,7 @@ defaults: {material: petg-bambu-basic, head: socket, clearance_mm: 3.4, recess_m
 joints:
   # Lid: M3 x 20 through the lid counterbore (6.4 x 3.3) into the four PCB-support inserts. Under the head to the
   # insert face is 20 - 3.8 overlap - 0.1 recess = 16.1 mm of lid sleeve, foam washer and PCB; the check takes it as
-  # printed PETG, the softest member. Screw tip 3.9 mm below the support face (1.2 mm above the pilot floor).
+  # printed PETG (the 1 mm silicone foam washer is softer and is not modeled). Screw tip 3.9 mm below the support face (1.2 mm above the pilot floor).
   - {name: lid, insert: mcmaster-94459A130, boss_outside_mm: 10.6, clamped: {thickness_mm: 16.1}, screw_depth_mm: 3.9}
   # Ribbon clamp: M3 x 6 into the two rear-chamber inserts. 6 - 3.6 overlap = 2.4 mm of clamp bar under the head.
   - {name: ribbon-clamp, insert: mcmaster-94459A130, boss_outside_mm: 9.2, clamped: {thickness_mm: 2.4},

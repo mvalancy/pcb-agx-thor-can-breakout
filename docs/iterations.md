@@ -81,7 +81,8 @@ Text sizes are font em sizes, not guaranteed minimum stem widths. The lid-only s
 | Toolkit move | Seven imported modules moved; evidence hashed the old shim files, which never change | Imports and library hashes use the new module paths; runs with `-W error::DeprecationWarning` are clean |
 | Gerber revision | Gerber and job file revision read `rev?` because the boards had no title block | `apply_fab_rules.py` mirrors the schematic title block into each board; Gerbers read A1 REVIEW; ERC/DRC/parity still zero |
 | Hole check | The first run failed both lids: 9 "holes" each had material inside | They are the engraved 0.4 mm pin-number rings; listed as exceptions with reasons; every other hole is clear (fleet job 122 on cpu-a) |
-| Overhangs | Flat downward faces on the base clamp deck (389 mm²) and lid engraving roofs | The slicer prints both as bridges with supports off; a printed sample is still needed |
+| Overhangs | Flat downward faces on the base clamp deck (389 mm²), lid engraving roofs and lid counterbore floors (4 × 23 mm²) | The slicer bridges the first two and prints the counterbore floors as overhanging walls, all with supports off; a printed sample is still needed |
 | Slicing | Only the two lids were sliced before | All seven parts slice: 295 g, 9.9 h for one set |
-| Inserts | Inserts sit 0.1 mm below their faces, so the knurl carries all preload | 0.14 N·m torque ceiling for lid and clamp screws, in ASSEMBLY.md; washers are an owner option |
-| Snap-fit clamp | Could the clamp drop its screws? | 10 mm arms over-strain PETG and a passing 14 mm arm holds only about 2 N; keep the screws |
+| Inserts | Inserts sit 0.1 mm below their faces, so the knurl carries all preload | 0.14 N·m torque ceiling for lid and clamp screws, in ASSEMBLY.md; a head washer lowers it to 0.092 N·m and flush inserts raise it only to 0.17–0.22 N·m |
+| Snap-fit clamp | Could the clamp drop its screws? | 10 mm arms over-strain PETG; a 14 mm arm passes with about 5 % strain margin where about 50 % is recommended; keep the screws |
+| Ribbon slot skin | The base tongue rose 0.1 mm above the ribbon slot cut, leaving a 22 × 2 × 0.1 mm skin over the slot that the slicer drops but the STEP kept | The slot is cut through the tongue's full height, so the STEP matches the print |

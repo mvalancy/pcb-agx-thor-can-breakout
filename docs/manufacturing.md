@@ -40,10 +40,12 @@ All currently sourced electronic components are exact manufacturer/SKU selection
 
 Stock read from JLCPCB's public parts search and LCSC's product pages on 2026-11-03. Stock moves daily; nothing is reserved and nothing was ordered.
 
+Refs are the two-port board's; the four-port board adds D3, D4, J4, J5, JP3 and JP4, so it needs twice the TVS and DE9 parts.
+
 | Ref | Part | Order code | JLCPCB stock | Enough for 5 boards / 50 boards? |
 |---|---|---|---:|---|
-| D1, D2 | Bourns CDSOT23-SM712 | C404012 | 2,968 (LCSC 158) | Yes / yes (100 needed) |
-| J2, J3 | Assmann A-DS 09 A/KG-T2S | C3127392 | **0** (LCSC 0) | **No: consign, or JLC global sourcing** |
+| D1, D2 | Bourns CDSOT23-SM712 | C404012 | 2,968 (LCSC 158) | Yes / yes (100 two-port, 200 four-port) |
+| J2, J3 | Assmann A-DS 09 A/KG-T2S | C3127392 | **0** (LCSC 0) | **No: consign, or JLC global sourcing** (100 two-port, 200 four-port) |
 | J10 | BOOMELE 2.54 mm 2×7 male | C71397 | 20,893 | Yes / yes |
 | J11 | BOOMELE 2.54 mm 2×3 male | C65114 | 44,216 | Yes / yes |
 | JP1, JP2, JP5, JP6, J12 | XFCN PZ254V-11-02P | C492401 | 856,892 | Yes / yes |
