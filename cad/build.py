@@ -3,8 +3,8 @@
 import json, hashlib, importlib
 from pathlib import Path
 import cadquery as cq
-from cadagent.geometry import export_print_stl
-from cadagent.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack, filleted_wall_rib
+from cadagent.geometry import export_print_stl, export_step
+from cadagent.mechanical.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack, filleted_wall_rib
 from hardware_models import mating_set
 from markings import lid_markings
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,7 +13,7 @@ def box(x,y,z,dx,dy,dz):return cq.Solid.makeBox(dx,dy,dz,cq.Vector(x,y,z))
 def cyl(x,y,z,r,h):return cq.Solid.makeCylinder(r,h,cq.Vector(x,y,z))
 def rounded(shape,r):return cq.Workplane(obj=shape).edges('|Z').fillet(r).val()
 def source_hashes():return {f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['cad/build.py','cad/hardware_models.py','cad/markings.py','cad/parameters.json','research/mating-dsub-measurements.json']}
-def library_hashes():return {name:hashlib.sha256(Path(importlib.import_module(name).__file__).read_bytes()).hexdigest() for name in ['cadagent.geometry','cadagent.fasteners','cadagent.markings']}
+def library_hashes():return {name:hashlib.sha256(Path(importlib.import_module(name).__file__).read_bytes()).hexdigest() for name in ['cadagent.geometry','cadagent.mechanical.fasteners','cadagent.mechanical.markings']}
 def counterbore(shape,x,y,top):
  return shape.cut(cyl(x,y,top-60,C['screw_clearance_mm']/2,61)).cut(cyl(x,y,top-C['counterbore_depth_mm'],C['counterbore_diameter_mm']/2,C['counterbore_depth_mm']+1))
 def clamp_part():
@@ -130,11 +130,11 @@ if __name__=='__main__':
  for n in (2,4):
   base,lid,bar,board,native,header,cable,hardware,review=build_variant(n)
   for name,shape,rot in [('base',base,None),('lid',lid,((1,0,0),180))]:
-   part=f'{n}port_{name}';cq.exporters.export(shape,str(OUT/f'{part}.step'));geometry[part]=export_print_stl(shape,OUT/f'{part}.stl',rotation=rot);geometry[part]['physical_fit_verified']=False
+   part=f'{n}port_{name}';export_step(shape,OUT/f'{part}.step');geometry[part]=export_print_stl(shape,OUT/f'{part}.stl',rotation=rot);geometry[part]['physical_fit_verified']=False
   (OUT/f'{n}port/mechanical-checks.json').write_text(json.dumps(review,indent=2)+'\n')
   for name,shape in [('clamp',bar),('pcb',native),('ribbon',cable),('header',header),*hardware.items()]:
-   if shape:cq.exporters.export(shape,str(OUT/f'asm_{n}port_{name}.step'))
+   if shape:export_step(shape,OUT/f'asm_{n}port_{name}.step')
   print(n,review['pass'],review['checks'],flush=True)
  for part,shape in [('ribbon_clamp',clamp_part()),('fastener_coupon',fit_coupon()),('port_coupon',port_coupon())]:
-  cq.exporters.export(shape,str(OUT/f'{part}.step'));geometry[part]=export_print_stl(shape,OUT/f'{part}.stl');geometry[part]['physical_fit_verified']=False
+  export_step(shape,OUT/f'{part}.step');geometry[part]=export_print_stl(shape,OUT/f'{part}.stl');geometry[part]['physical_fit_verified']=False
  (OUT/'geometry-checks.json').write_text(json.dumps(geometry,indent=2)+'\n')

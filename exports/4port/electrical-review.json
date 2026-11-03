@@ -44,10 +44,10 @@
   "pins_checked": "All 26 J47 pins against independent source transcription; full AUX and reserved mapping; distinct power/ground/shield domains; DE9 CAN H/L/GND/shield/NC; TVS pin3; host termination tap; open auxiliary power boundaries",
   "physical_tested": false,
   "source_sha256": {
-    "exports/4port/netlist.xml": "6fefe8ecdf795fb23eb1005ad6a5793f671eead9f2486bd48b3ed4a8685d6e47",
-    "exports/4port/erc.json": "642246d3cf95cf3a5fb17c9fb738b5963e9ce3fde81c662aa5453f632b6d0cd2",
-    "exports/4port/drc.json": "e4d6c286479a16c0e0a98e8b1c7d8caaa2299ee8915dce1c675ffe8f3675b3a4",
-    "tools/check_electronics.py": "cf27bcc3d60628e349130dd3ba1948307c016e3be8d9346b999e765fc159f3b9",
+    "exports/4port/netlist.xml": "28167c92f6154ab85e5ea424d3d3e879ba67291a0627595430024c99b9fc77e2",
+    "exports/4port/erc.json": "7bc6fb3abc7433ca974e690c5e1bd5279661e6b0ca07e813dc439f66bb75bd4a",
+    "exports/4port/drc.json": "be111f0054faee53b8a0af608cca2c0162aba6e5e51469f09537c7a35120db70",
+    "tools/check_electronics.py": "03909c069bfb7d2c05e1e13a0193171390ffb4a8469029ed8512fe161a9ecf54",
     "hardware/interface.json": "1921e0cc59cfe9a4597145f08cf852d251a2f5faeb47da42dc454f562678edf3"
   }
 }

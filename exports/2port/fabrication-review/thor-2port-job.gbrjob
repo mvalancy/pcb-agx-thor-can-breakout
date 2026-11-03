@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "10.0.1"
     },
-    "CreationDate": "2026-10-26T22:37:55-07:00"
+    "CreationDate": "2026-11-03T08:40:08-08:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "thor-2port",
       "GUID": "74686f72-2d32-4706-9f72-742e6b696361",
-      "Revision": "rev?"
+      "Revision": "A1 REVIEW"
     },
     "Size": {
       "X": 93.05,

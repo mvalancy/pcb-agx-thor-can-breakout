@@ -85,6 +85,11 @@ cad:
     parts:
     - 2port_lid
     - 4port_lid
+    - 2port_base
+    - 4port_base
+    - ribbon_clamp
+    - fastener_coupon
+    - port_coupon
     overrides:
       wall_loops: '4'
       sparse_infill_density: 30%
@@ -209,3 +214,6 @@ cad:
   - id: 4port-lid-slicing
     title: 4port offline lid slicing
     file: exports/4port/lid-slicing-review.json
+  - id: inserts
+    title: Heat-set insert joints (cad-agent inserts cad/joints.yaml)
+    file: exports/inserts.json

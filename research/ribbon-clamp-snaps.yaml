@@ -1,0 +1,14 @@
+# Issue #5: could two printed cantilever snaps replace the ribbon clamp's two M3 x 6 screws?
+# Run: .venv/bin/cad-agent snapfit research/ribbon-clamp-snaps.yaml  (cad-agent v0.18.2, Covestro method)
+# Candidates are hooks at the clamp bar's ends (40 x 12 x 5.6 mm bar), released for service, so `repeated`.
+# Undercut 0.6 mm keeps a hook engaged across the bar's +/-0.25 mm print tolerance and the pad's spring-back.
+snaps:
+  - {name: arm-10mm-along, material: petg-bambu-basic, orientation: along, repeated: true, length_mm: 10,
+     undercut_mm: 0.6, design: 1, section: {rect: {width_mm: 6, thickness_mm: 1.6}}, root_radius_mm: 0.8,
+     lead_deg: 30, return_deg: 90}
+  - {name: arm-10mm-across, material: petg-bambu-basic, orientation: across, repeated: true, length_mm: 10,
+     undercut_mm: 0.6, design: 1, section: {rect: {width_mm: 6, thickness_mm: 1.6}}, root_radius_mm: 0.8,
+     lead_deg: 30, return_deg: 90}
+  - {name: arm-14mm-along, material: petg-bambu-basic, orientation: along, repeated: true, length_mm: 14,
+     undercut_mm: 0.6, design: 1, section: {rect: {width_mm: 6, thickness_mm: 1.6}}, root_radius_mm: 0.8,
+     lead_deg: 30, return_deg: 90}

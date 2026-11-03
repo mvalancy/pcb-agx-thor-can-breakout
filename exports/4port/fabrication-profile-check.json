@@ -17,9 +17,9 @@
   },
   "source_sha256": {
     "hardware/jlcpcb-profile.json": "6c47ba60885769e1aa75d0ad101e0a59f1ec84955ba51684c5dcf137ea1509a6",
-    "tools/apply_fab_rules.py": "ff81604383d949cc06d0d17b8ad0e3419df309f931d666b67a268286337290c7",
+    "tools/apply_fab_rules.py": "b13b8ce21be430e16628f7ba57feea8c315413b919a517b26cef7a2c8f642ce7",
     "tools/check_fabrication.py": "e49081015fddb39aa0e90e5a5f65d99acb57cc47b55c4ba2fe662da48dfabcab",
-    "hardware/4port/thor-4port.kicad_pcb": "111761434cfe97e47f39bf701ec65cfad7bd4a68519b899eaa80a41c79565446",
+    "hardware/4port/thor-4port.kicad_pcb": "cbacb29d5fc59b17c65b8e5b18c9985216939abd1561de998ac15c5fd7512e0b",
     "hardware/4port/thor-4port.kicad_pro": "51d15e9f45004d13fc27f015a55e0f660dcdd7843deb5482f0d8ea4835e58aee",
     "hardware/4port/thor-4port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1"
   },

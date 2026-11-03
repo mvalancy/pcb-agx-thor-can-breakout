@@ -1,0 +1,572 @@
+{
+  "verdict": "warn",
+  "pass": true,
+  "joints": [
+    {
+      "verdict": "warn",
+      "name": "lid",
+      "insert": {
+        "key": "mcmaster-94459A130",
+        "maker": "McMaster-Carr",
+        "part": "94459A130",
+        "thread": "M3",
+        "diameter_mm": 3.0,
+        "pitch_mm": 0.5,
+        "length_mm": 4.3,
+        "outer_mm": 4.7,
+        "hole_mm": 4.0,
+        "min_material_mm": 5.1,
+        "source": "McMaster-Carr, Heat-Set Threaded Inserts for Plastic, product page 94459A130 (https://www.mcmaster.com/94459A130/), its specification table read with cadagent.mechanical.mcmaster on 2026-10-27; knurl diameter 4.7 mm from bd_warehouse's McMaster-Carr column s (vendored at e6ae6e7)",
+        "drill": "No. 22 (3.99 mm)",
+        "volume_mm3": null,
+        "cad_bore_mm": null,
+        "hole_bottom_mm": null,
+        "min_wall_mm": null,
+        "material": "brass",
+        "note": ""
+      },
+      "material": {
+        "key": "petg-bambu-basic",
+        "name": "Bambu PETG Basic",
+        "family": "petg",
+        "shear_strength_pa": 17500000.0,
+        "status": "derived from the datasheet; a hypothesis until a printed coupon is measured"
+      },
+      "axis": "upright",
+      "clamp": {
+        "path": "jack-out",
+        "knurl_preload": 1.0,
+        "why": "recessed below the joint face, the insert is pulled towards the head until the gap closes: the whole preload goes into the knurl, pulling the insert out of the boss",
+        "instead": "press the insert in flush (the clamped part then bears on it), or from the far side against a shoulder, or put a compression limiter or a flanged insert in the clamp path; otherwise keep the torque under the pull-out limit"
+      },
+      "screw_class": "12.9",
+      "proof_load_n": 4879.91903898894,
+      "torque": {
+        "allowed_nm": 0.14339561018323163,
+        "governed_by": "jack_out",
+        "used_nm": 0.14339561018323163,
+        "ceilings": {
+          "screw": 2.2349469226786565,
+          "torque_out": 0.8646742675673005,
+          "jack_out": 0.14339561018323163,
+          "head_bearing": 0.22366706730748104,
+          "insert_thread": 0.6845790637029521
+        },
+        "preload_caps_n": {
+          "screw": 3659.9392792417048,
+          "head_bearing": 366.2762085330957,
+          "insert_thread": 1121.0636725054746
+        },
+        "preload_n": {
+          "low": 89.80605002930994,
+          "high": 234.8240223760788
+        },
+        "thread_share": 0.5019758282460849,
+        "nut_factor": {
+          "low": 0.20355045554578255,
+          "high": 0.532241833508365
+        },
+        "friction": {
+          "thread": [
+            0.1,
+            0.19
+          ],
+          "collar": [
+            0.2,
+            0.65
+          ]
+        }
+      },
+      "capacity": {
+        "insert": "mcmaster-94459A130",
+        "material": "petg-bambu-basic",
+        "family": "petg",
+        "axis": "upright",
+        "pull_out": {
+          "low": 563.0176006916687,
+          "mid": 735.5725915710526,
+          "high": 815.5584769913619
+        },
+        "push_out": {
+          "low": 563.0176006916687,
+          "mid": 735.5725915710526,
+          "high": 815.5584769913619
+        },
+        "torque_out": {
+          "low": 0.868091163250345,
+          "mid": 1.6635932208222703,
+          "high": 2.702865497600495
+        },
+        "shear_strength_pa": 17500000.0,
+        "diameter_mm": 4.7,
+        "diameter_basis": "the knurl's crests",
+        "length_mm": 4.3,
+        "c": {
+          "low": 0.5067196392044561,
+          "mid": 0.6620202951944516,
+          "high": 0.7340081317236052
+        },
+        "torque_ratio": {
+          "low": 0.6561082540693882,
+          "mid": 0.962395849128318,
+          "high": 1.4102673975467854
+        },
+        "calibrated_on": "petg",
+        "confidence": "low: 3 results from two groups, SPIROL's two M6 results read off a bar chart and CNC Kitchen's M3 (3 samples, the insert's length assumed)",
+        "outside_fit": "",
+        "fitted_size_mm": [
+          8.76,
+          12.7
+        ],
+        "aged_share": null,
+        "notes": [
+          "push-out: no published test; the pull-out model is taken as is (low confidence)",
+          "lying: no published number; Kastner 2023 found inserts along Z stronger and more predictable"
+        ]
+      },
+      "hole": {
+        "insert": "mcmaster-94459A130",
+        "axis": "upright",
+        "through": false,
+        "maker_mm": 4.0,
+        "diameter_mm": 4.2,
+        "allowance_mm": 0.2,
+        "taper_deg": 0.0,
+        "taper_max_deg": 1.0,
+        "chamfer": "none",
+        "depth_mm": 5.3,
+        "depth_rules_mm": {
+          "maker's least material thickness": 5.1,
+          "L + 1 mm (ruthex, CNC Kitchen)": 5.3,
+          "L + 2 pitches (SPIROL)": 5.3
+        },
+        "why": [
+          "the maker's hole is 4 mm; a printed hole comes out about 0.25 mm small, so CAD takes 0.2 mm more (CNC Kitchen 2026: 0.2-0.3 mm for small inserts)",
+          "straight, not tapered, and no chamfer (CNC Kitchen tips; SPIROL: a straight hole tapers at most 1 degree included)",
+          "blind: 5.3 mm deep, the deepest of the makers' rules, so the melt the insert pushes down has somewhere to go"
+        ]
+      },
+      "boss": {
+        "insert": "mcmaster-94459A130",
+        "least_outside_mm": 7.2,
+        "outside_mm": 9.4,
+        "least_wall_mm": 1.6,
+        "wall_mm": 2.7,
+        "perimeters": 7,
+        "line_mm": 0.42,
+        "knurl_mm": 4.7,
+        "knurl_basis": "the knurl's crests",
+        "why": [
+          "wall at least 1.6 mm round the hole (CNC Kitchen poster; ruthex)",
+          "outside at least 1.5 x the knurl diameter, full performance from 2 x (SPIROL's 3D-printing paper; PEM: boss 2 x the insert diameter)",
+          "print the boss solid: 7 perimeters out to its outside, at least as many as the metric size (SPIROL); pull-out rose about 2.5 x from 30 % to 70 % infill (Kastner 2023)",
+          "no maker gives an edge distance: keep at least the wall to any free face"
+        ]
+      },
+      "limiter": null,
+      "preload_kept": {
+        "basis": "plastic in the clamp path (the clamped plastic): it relaxes",
+        "low": 0.59,
+        "high": 0.67,
+        "hours": null,
+        "joint_7d": 0.885
+      },
+      "head": {
+        "head": "ISO 4762 socket head",
+        "bearing_mm": 5.07,
+        "on_plastic": {
+          "area_mm2": 11.109378481440574,
+          "outside_mm": 5.07,
+          "inner_mm": 3.4,
+          "washer": null,
+          "text": "the ISO 4762 socket head (5.07 mm on a 3.4 mm hole: 11.11 mm^2); the fillet under the head (up to 3.6 mm) is wider than the hole, so it rides on the hole's edge: chamfer it to at least 3.6 mm across"
+        },
+        "washer": null
+      },
+      "insert_washer": null,
+      "clamped_on_washer": null,
+      "install": {
+        "material": "petg-bambu-basic",
+        "temperature": "iron about 245 degC (CNC Kitchen tips: 10-20 degC over the print temperature)",
+        "how": "melt it in to about 90 % of its depth with the tip, then press it flush with a flat tool and hold it while it sets (CNC Kitchen tips); heat installation needs little force, generally under 220 N (SPIROL's inserts guide, p. 18); flush, or proud by no more than 0.13 mm (PEM; SPIROL): never below the face, where the screw jacks it out"
+      },
+      "checks": [
+        {
+          "check": "hole diameter",
+          "value": 4.2,
+          "limit": [
+            4.2,
+            4.3
+          ],
+          "verdict": "pass",
+          "detail": "in CAD; the maker's hole plus 0.2-0.3 mm prints to size (CNC Kitchen 2026)"
+        },
+        {
+          "check": "hole depth",
+          "value": 5.3,
+          "limit": 5.3,
+          "verdict": "pass",
+          "detail": "deep enough for the melt below the insert (the makers' rules)"
+        },
+        {
+          "check": "screw tip",
+          "value": 3.9,
+          "limit": 5.3,
+          "verdict": "pass",
+          "detail": "1.40 mm above the hole's floor; 3.80 of the insert's 4.3 mm of thread engaged"
+        },
+        {
+          "check": "boss wall",
+          "value": 3.2,
+          "limit": {
+            "least_wall_mm": 1.6,
+            "least_outside_mm": 7.2,
+            "full_outside_mm": 9.4
+          },
+          "verdict": "pass",
+          "detail": "the makers' full-performance boss (2 x the knurl, SPIROL), more than the about 1.5 x the tests that set the low end printed"
+        },
+        {
+          "check": "clamp path",
+          "value": "jack-out",
+          "limit": "seat or through-insert",
+          "verdict": "warn",
+          "detail": "recessed below the joint face, the insert is pulled towards the head until the gap closes: the whole preload goes into the knurl, pulling the insert out of the boss; instead: press the insert in flush (the clamped part then bears on it), or from the far side against a shoulder, or put a compression limiter or a flanged insert in the clamp path; otherwise keep the torque under the pull-out limit"
+        },
+        {
+          "check": "tightening torque",
+          "value": 0.1434,
+          "limit": 0.1434,
+          "verdict": "pass",
+          "detail": "the most is 0.143 N m, set by jack out"
+        },
+        {
+          "check": "insert thread",
+          "value": 234.8,
+          "limit": 1121.1,
+          "verdict": "pass",
+          "detail": "the preload and the separating load on the 3.80 mm of the insert's thread the screw engages, against the force that strips it (2242 N: the ISO 68 internal shear area at brass's shear yield, 0.577 x 124 MPa, the softest temper) / 2"
+        },
+        {
+          "check": "pull-out",
+          "value": 234.8,
+          "limit": 281.5,
+          "verdict": "pass",
+          "detail": "the separating load plus the preload (jack-out) against the low pull-out 563 N / 2"
+        },
+        {
+          "check": "head bearing",
+          "value": 21.14,
+          "limit": 32.97,
+          "verdict": "pass",
+          "detail": "the preload on the plastic under the ISO 4762 socket head (5.07 mm on a 3.4 mm hole: 11.11 mm^2); the fillet under the head (up to 3.6 mm) is wider than the hole, so it rides on the hole's edge: chamfer it to at least 3.6 mm across (MPa) against its compressive strength / 2 (printed PETG's measured compressive strength, Amza 2021); a washer under the head spreads it"
+        },
+        {
+          "check": "preload kept",
+          "value": "0.59-0.67",
+          "limit": "a limiter",
+          "verdict": "warn",
+          "detail": "the clamped plastic relaxes and takes the preload with it: a printed joint kept 0.885 of its untightening torque after 7 days (Amza 2021); moulded polycarbonate keeps 0.59-0.67 over 1-6 years (Covestro); no long-term printed figure was found. A compression limiter keeps the clamp in metal"
+        }
+      ],
+      "margin": 2.0,
+      "limits": [
+        "the strengths are a shear model calibrated to published pull-out tests of M3 x 5.7 and M6 x 12.7 inserts in printed PLA and PETG; other sizes scale by the knurl's area, but SPIROL's M6 results sit below the M3 ones (their c is lower), so the low end, which the checks use, comes from the larger insert; other families take the lowest fit: a starting point to test (coupon_plan), not a rating",
+        "torque-out comes from pull-out through the ratio r = 2 T / (F D) the published tests give (printed and moulded); its low end is taken",
+        "push-out has no published test, and an insert lying in the layer plane has no published number: both are flagged, not modelled",
+        "static, short-term, room temperature: a held load creeps; PLA inserts kept 26-55 % of their pull-out after a year of natural ageing (Materials 2025)",
+        "the boss is printed as the tests printed it: 1.5 x wall thickness, 5 wall loops, at 55 % infill (SPIROL), a 1.3-1.9 mm solid sleeve in 40 % infill, 1.5-1.75 x the knurl (Laszlo 2026), or solid (CNC Kitchen); a 2 x boss, the makers' full performance, is stronger than the tests behind the low end; fewer walls or sparser infill hold less (SPIROL's Figure 8: one wall loop at 15 % infill held about a quarter of eleven; Kastner 2023: 30 to 70 % infill raised pull-out about 2.5 x)",
+        "the insert's end takes the whole clamp where the clamped part or a limiter bears on it, brass being far stiffer than the boss round it, so its face is held to the softest temper's yield (124 MPa)",
+        "a printed clamped part on a flush insert is taken to carry the whole clamp on the insert's ring, the cautious side: once it yields the boss face takes some, which nothing here sizes",
+        "a far-side insert is taken as pressed onto the shoulder in front of it",
+        "a size outside the fitted ones (M3 x 5.7, M6 x 12.7) takes the fit as it is: larger ones are flagged, as the published results fall with size",
+        "preload relaxation: printed PLA was measured for an hour and printed joints for a week; the long-term figure is moulded polycarbonate's, and PLA, nearer its glass transition, will keep less",
+        "CAD and closed forms do not prove a joint holds: print the coupons and measure"
+      ],
+      "fixes": null
+    },
+    {
+      "verdict": "warn",
+      "name": "ribbon-clamp",
+      "insert": {
+        "key": "mcmaster-94459A130",
+        "maker": "McMaster-Carr",
+        "part": "94459A130",
+        "thread": "M3",
+        "diameter_mm": 3.0,
+        "pitch_mm": 0.5,
+        "length_mm": 4.3,
+        "outer_mm": 4.7,
+        "hole_mm": 4.0,
+        "min_material_mm": 5.1,
+        "source": "McMaster-Carr, Heat-Set Threaded Inserts for Plastic, product page 94459A130 (https://www.mcmaster.com/94459A130/), its specification table read with cadagent.mechanical.mcmaster on 2026-10-27; knurl diameter 4.7 mm from bd_warehouse's McMaster-Carr column s (vendored at e6ae6e7)",
+        "drill": "No. 22 (3.99 mm)",
+        "volume_mm3": null,
+        "cad_bore_mm": null,
+        "hole_bottom_mm": null,
+        "min_wall_mm": null,
+        "material": "brass",
+        "note": ""
+      },
+      "material": {
+        "key": "petg-bambu-basic",
+        "name": "Bambu PETG Basic",
+        "family": "petg",
+        "shear_strength_pa": 17500000.0,
+        "status": "derived from the datasheet; a hypothesis until a printed coupon is measured"
+      },
+      "axis": "upright",
+      "clamp": {
+        "path": "jack-out",
+        "knurl_preload": 1.0,
+        "why": "recessed below the joint face, the insert is pulled towards the head until the gap closes: the whole preload goes into the knurl, pulling the insert out of the boss",
+        "instead": "press the insert in flush (the clamped part then bears on it), or from the far side against a shoulder, or put a compression limiter or a flanged insert in the clamp path; otherwise keep the torque under the pull-out limit"
+      },
+      "screw_class": "12.9",
+      "proof_load_n": 4879.91903898894,
+      "torque": {
+        "allowed_nm": 0.14339561018323163,
+        "governed_by": "jack_out",
+        "used_nm": 0.14339561018323163,
+        "ceilings": {
+          "screw": 2.2349469226786565,
+          "torque_out": 0.8646742675673005,
+          "jack_out": 0.14339561018323163,
+          "head_bearing": 0.22366706730748104,
+          "insert_thread": 0.6485485866659546
+        },
+        "preload_caps_n": {
+          "screw": 3659.9392792417048,
+          "head_bearing": 366.2762085330957,
+          "insert_thread": 1062.060321320976
+        },
+        "preload_n": {
+          "low": 89.80605002930994,
+          "high": 234.8240223760788
+        },
+        "thread_share": 0.5019758282460849,
+        "nut_factor": {
+          "low": 0.20355045554578255,
+          "high": 0.532241833508365
+        },
+        "friction": {
+          "thread": [
+            0.1,
+            0.19
+          ],
+          "collar": [
+            0.2,
+            0.65
+          ]
+        }
+      },
+      "capacity": {
+        "insert": "mcmaster-94459A130",
+        "material": "petg-bambu-basic",
+        "family": "petg",
+        "axis": "upright",
+        "pull_out": {
+          "low": 563.0176006916687,
+          "mid": 735.5725915710526,
+          "high": 815.5584769913619
+        },
+        "push_out": {
+          "low": 563.0176006916687,
+          "mid": 735.5725915710526,
+          "high": 815.5584769913619
+        },
+        "torque_out": {
+          "low": 0.868091163250345,
+          "mid": 1.6635932208222703,
+          "high": 2.702865497600495
+        },
+        "shear_strength_pa": 17500000.0,
+        "diameter_mm": 4.7,
+        "diameter_basis": "the knurl's crests",
+        "length_mm": 4.3,
+        "c": {
+          "low": 0.5067196392044561,
+          "mid": 0.6620202951944516,
+          "high": 0.7340081317236052
+        },
+        "torque_ratio": {
+          "low": 0.6561082540693882,
+          "mid": 0.962395849128318,
+          "high": 1.4102673975467854
+        },
+        "calibrated_on": "petg",
+        "confidence": "low: 3 results from two groups, SPIROL's two M6 results read off a bar chart and CNC Kitchen's M3 (3 samples, the insert's length assumed)",
+        "outside_fit": "",
+        "fitted_size_mm": [
+          8.76,
+          12.7
+        ],
+        "aged_share": null,
+        "notes": [
+          "push-out: no published test; the pull-out model is taken as is (low confidence)",
+          "lying: no published number; Kastner 2023 found inserts along Z stronger and more predictable"
+        ]
+      },
+      "hole": {
+        "insert": "mcmaster-94459A130",
+        "axis": "upright",
+        "through": false,
+        "maker_mm": 4.0,
+        "diameter_mm": 4.2,
+        "allowance_mm": 0.2,
+        "taper_deg": 0.0,
+        "taper_max_deg": 1.0,
+        "chamfer": "none",
+        "depth_mm": 5.3,
+        "depth_rules_mm": {
+          "maker's least material thickness": 5.1,
+          "L + 1 mm (ruthex, CNC Kitchen)": 5.3,
+          "L + 2 pitches (SPIROL)": 5.3
+        },
+        "why": [
+          "the maker's hole is 4 mm; a printed hole comes out about 0.25 mm small, so CAD takes 0.2 mm more (CNC Kitchen 2026: 0.2-0.3 mm for small inserts)",
+          "straight, not tapered, and no chamfer (CNC Kitchen tips; SPIROL: a straight hole tapers at most 1 degree included)",
+          "blind: 5.3 mm deep, the deepest of the makers' rules, so the melt the insert pushes down has somewhere to go"
+        ]
+      },
+      "boss": {
+        "insert": "mcmaster-94459A130",
+        "least_outside_mm": 7.2,
+        "outside_mm": 9.4,
+        "least_wall_mm": 1.6,
+        "wall_mm": 2.7,
+        "perimeters": 7,
+        "line_mm": 0.42,
+        "knurl_mm": 4.7,
+        "knurl_basis": "the knurl's crests",
+        "why": [
+          "wall at least 1.6 mm round the hole (CNC Kitchen poster; ruthex)",
+          "outside at least 1.5 x the knurl diameter, full performance from 2 x (SPIROL's 3D-printing paper; PEM: boss 2 x the insert diameter)",
+          "print the boss solid: 7 perimeters out to its outside, at least as many as the metric size (SPIROL); pull-out rose about 2.5 x from 30 % to 70 % infill (Kastner 2023)",
+          "no maker gives an edge distance: keep at least the wall to any free face"
+        ]
+      },
+      "limiter": null,
+      "preload_kept": {
+        "basis": "plastic in the clamp path (the clamped plastic): it relaxes",
+        "low": 0.59,
+        "high": 0.67,
+        "hours": null,
+        "joint_7d": 0.885
+      },
+      "head": {
+        "head": "ISO 4762 socket head",
+        "bearing_mm": 5.07,
+        "on_plastic": {
+          "area_mm2": 11.109378481440574,
+          "outside_mm": 5.07,
+          "inner_mm": 3.4,
+          "washer": null,
+          "text": "the ISO 4762 socket head (5.07 mm on a 3.4 mm hole: 11.11 mm^2); the fillet under the head (up to 3.6 mm) is wider than the hole, so it rides on the hole's edge: chamfer it to at least 3.6 mm across"
+        },
+        "washer": null
+      },
+      "insert_washer": null,
+      "clamped_on_washer": null,
+      "install": {
+        "material": "petg-bambu-basic",
+        "temperature": "iron about 245 degC (CNC Kitchen tips: 10-20 degC over the print temperature)",
+        "how": "melt it in to about 90 % of its depth with the tip, then press it flush with a flat tool and hold it while it sets (CNC Kitchen tips); heat installation needs little force, generally under 220 N (SPIROL's inserts guide, p. 18); flush, or proud by no more than 0.13 mm (PEM; SPIROL): never below the face, where the screw jacks it out"
+      },
+      "checks": [
+        {
+          "check": "hole diameter",
+          "value": 4.2,
+          "limit": [
+            4.2,
+            4.3
+          ],
+          "verdict": "pass",
+          "detail": "in CAD; the maker's hole plus 0.2-0.3 mm prints to size (CNC Kitchen 2026)"
+        },
+        {
+          "check": "hole depth",
+          "value": 5.3,
+          "limit": 5.3,
+          "verdict": "pass",
+          "detail": "deep enough for the melt below the insert (the makers' rules)"
+        },
+        {
+          "check": "screw tip",
+          "value": 3.7,
+          "limit": 5.3,
+          "verdict": "pass",
+          "detail": "1.60 mm above the hole's floor; 3.60 of the insert's 4.3 mm of thread engaged"
+        },
+        {
+          "check": "boss wall",
+          "value": 2.5,
+          "limit": {
+            "least_wall_mm": 1.6,
+            "least_outside_mm": 7.2,
+            "full_outside_mm": 9.4
+          },
+          "verdict": "warn",
+          "detail": "above the makers' least wall but under their full-performance boss (2 x the knurl, SPIROL); the tests that set the low end used about 1.5 x (SPIROL: 1.5 x wall thickness, 5 loops; Laszlo 2026: 1.5-1.75 x)"
+        },
+        {
+          "check": "clamp path",
+          "value": "jack-out",
+          "limit": "seat or through-insert",
+          "verdict": "warn",
+          "detail": "recessed below the joint face, the insert is pulled towards the head until the gap closes: the whole preload goes into the knurl, pulling the insert out of the boss; instead: press the insert in flush (the clamped part then bears on it), or from the far side against a shoulder, or put a compression limiter or a flanged insert in the clamp path; otherwise keep the torque under the pull-out limit"
+        },
+        {
+          "check": "tightening torque",
+          "value": 0.1434,
+          "limit": 0.1434,
+          "verdict": "pass",
+          "detail": "the most is 0.143 N m, set by jack out"
+        },
+        {
+          "check": "insert thread",
+          "value": 234.8,
+          "limit": 1062.1,
+          "verdict": "pass",
+          "detail": "the preload and the separating load on the 3.60 mm of the insert's thread the screw engages, against the force that strips it (2124 N: the ISO 68 internal shear area at brass's shear yield, 0.577 x 124 MPa, the softest temper) / 2"
+        },
+        {
+          "check": "pull-out",
+          "value": 234.8,
+          "limit": 281.5,
+          "verdict": "pass",
+          "detail": "the separating load plus the preload (jack-out) against the low pull-out 563 N / 2"
+        },
+        {
+          "check": "head bearing",
+          "value": 21.14,
+          "limit": 32.97,
+          "verdict": "pass",
+          "detail": "the preload on the plastic under the ISO 4762 socket head (5.07 mm on a 3.4 mm hole: 11.11 mm^2); the fillet under the head (up to 3.6 mm) is wider than the hole, so it rides on the hole's edge: chamfer it to at least 3.6 mm across (MPa) against its compressive strength / 2 (printed PETG's measured compressive strength, Amza 2021); a washer under the head spreads it"
+        },
+        {
+          "check": "preload kept",
+          "value": "0.59-0.67",
+          "limit": "a limiter",
+          "verdict": "warn",
+          "detail": "the clamped plastic relaxes and takes the preload with it: a printed joint kept 0.885 of its untightening torque after 7 days (Amza 2021); moulded polycarbonate keeps 0.59-0.67 over 1-6 years (Covestro); no long-term printed figure was found. A compression limiter keeps the clamp in metal"
+        }
+      ],
+      "margin": 2.0,
+      "limits": [
+        "the strengths are a shear model calibrated to published pull-out tests of M3 x 5.7 and M6 x 12.7 inserts in printed PLA and PETG; other sizes scale by the knurl's area, but SPIROL's M6 results sit below the M3 ones (their c is lower), so the low end, which the checks use, comes from the larger insert; other families take the lowest fit: a starting point to test (coupon_plan), not a rating",
+        "torque-out comes from pull-out through the ratio r = 2 T / (F D) the published tests give (printed and moulded); its low end is taken",
+        "push-out has no published test, and an insert lying in the layer plane has no published number: both are flagged, not modelled",
+        "static, short-term, room temperature: a held load creeps; PLA inserts kept 26-55 % of their pull-out after a year of natural ageing (Materials 2025)",
+        "the boss is printed as the tests printed it: 1.5 x wall thickness, 5 wall loops, at 55 % infill (SPIROL), a 1.3-1.9 mm solid sleeve in 40 % infill, 1.5-1.75 x the knurl (Laszlo 2026), or solid (CNC Kitchen); a 2 x boss, the makers' full performance, is stronger than the tests behind the low end; fewer walls or sparser infill hold less (SPIROL's Figure 8: one wall loop at 15 % infill held about a quarter of eleven; Kastner 2023: 30 to 70 % infill raised pull-out about 2.5 x)",
+        "the insert's end takes the whole clamp where the clamped part or a limiter bears on it, brass being far stiffer than the boss round it, so its face is held to the softest temper's yield (124 MPa)",
+        "a printed clamped part on a flush insert is taken to carry the whole clamp on the insert's ring, the cautious side: once it yields the boss face takes some, which nothing here sizes",
+        "a far-side insert is taken as pressed onto the shoulder in front of it",
+        "a size outside the fitted ones (M3 x 5.7, M6 x 12.7) takes the fit as it is: larger ones are flagged, as the published results fall with size",
+        "preload relaxation: printed PLA was measured for an hour and printed joints for a week; the long-term figure is moulded polycarbonate's, and PLA, nearer its glass transition, will keep less",
+        "CAD and closed forms do not prove a joint holds: print the coupons and measure"
+      ],
+      "fixes": null
+    }
+  ]
+}

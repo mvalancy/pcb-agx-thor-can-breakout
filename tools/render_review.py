@@ -3,7 +3,7 @@
 from pathlib import Path
 import json
 import cadquery as cq
-from cadagent.render import Renderer
+from cadagent.publish.render import Renderer
 R=Path(__file__).resolve().parents[1]
 P=json.loads((R/'cad/parameters.json').read_text())
 def load(v,name):

@@ -10,7 +10,7 @@ import hashlib
 import json
 import re
 import zipfile
-import cadagent.slicer as slicer
+import cadagent.manufacturing.slicer as slicer
 from cadagent.project import load_project
 
 R = Path(__file__).resolve().parents[1]
