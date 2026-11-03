@@ -73,3 +73,15 @@ The user found the two central side ears too small. Both bases now use four corn
 | Toolpaths | Render contrast does not demonstrate nozzle-scale details | Both lids sliced into 85 layers with four walls and 30% infill; first-layer proofs are drawn from actual extrusion paths |
 
 Text sizes are font em sizes, not guaranteed minimum stem widths. The lid-only slicing checks do not close the complete-housing slicing or physical-print gates. The small islands inside letters and numerals still need a printed sample. No printer was contacted.
+
+## cad-agent v0.18.2 pass — 2026-11-03
+
+| Review | Finding and correction | Evidence |
+|---|---|---|
+| Toolkit move | Seven imported modules moved; evidence hashed the old shim files, which never change | Imports and library hashes use the new module paths; runs with `-W error::DeprecationWarning` are clean |
+| Gerber revision | Gerber and job file revision read `rev?` because the boards had no title block | `apply_fab_rules.py` mirrors the schematic title block into each board; Gerbers read A1 REVIEW; ERC/DRC/parity still zero |
+| Hole check | The first run failed both lids: 9 "holes" each had material inside | They are the engraved 0.4 mm pin-number rings; listed as exceptions with reasons; every other hole is clear (fleet job 122 on cpu-a) |
+| Overhangs | Flat downward faces on the base clamp deck (389 mm²) and lid engraving roofs | The slicer prints both as bridges with supports off; a printed sample is still needed |
+| Slicing | Only the two lids were sliced before | All seven parts slice: 295 g, 9.9 h for one set |
+| Inserts | Inserts sit 0.1 mm below their faces, so the knurl carries all preload | 0.14 N·m torque ceiling for lid and clamp screws, in ASSEMBLY.md; washers are an owner option |
+| Snap-fit clamp | Could the clamp drop its screws? | 10 mm arms over-strain PETG and a passing 14 mm arm holds only about 2 N; keep the screws |
