@@ -1,6 +1,7 @@
 {
   "2port_base": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -9,11 +10,14 @@
       114.2,
       16.9
     ],
-    "volume_cm3": 70.17,
+    "volume_cm3": 70.165,
+    "mesh_volume_before_weld_mm3": 70160.565,
+    "mesh_volume_mm3": 70160.565,
     "physical_fit_verified": false
   },
   "2port_lid": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -23,10 +27,13 @@
       17.0
     ],
     "volume_cm3": 44.614,
+    "mesh_volume_before_weld_mm3": 44612.996,
+    "mesh_volume_mm3": 44612.996,
     "physical_fit_verified": false
   },
   "4port_base": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -35,11 +42,14 @@
       114.2,
       16.9
     ],
-    "volume_cm3": 101.248,
+    "volume_cm3": 101.243,
+    "mesh_volume_before_weld_mm3": 101238.605,
+    "mesh_volume_mm3": 101238.605,
     "physical_fit_verified": false
   },
   "4port_lid": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -49,10 +59,13 @@
       17.0
     ],
     "volume_cm3": 71.924,
+    "mesh_volume_before_weld_mm3": 71922.976,
+    "mesh_volume_mm3": 71922.976,
     "physical_fit_verified": false
   },
   "ribbon_clamp": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -62,10 +75,13 @@
       5.6
     ],
     "volume_cm3": 2.425,
+    "mesh_volume_before_weld_mm3": 2424.704,
+    "mesh_volume_mm3": 2424.704,
     "physical_fit_verified": false
   },
   "fastener_coupon": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -75,10 +91,13 @@
       8.0
     ],
     "volume_cm3": 7.816,
+    "mesh_volume_before_weld_mm3": 7816.755,
+    "mesh_volume_mm3": 7816.755,
     "physical_fit_verified": false
   },
   "port_coupon": {
     "degenerate_tessellation_faces_removed": 0,
+    "vertices_welded": 0,
     "cad_valid": true,
     "solid_count": 1,
     "watertight": true,
@@ -88,6 +107,8 @@
       3.0
     ],
     "volume_cm3": 0.814,
+    "mesh_volume_before_weld_mm3": 813.6,
+    "mesh_volume_mm3": 813.6,
     "physical_fit_verified": false
   }
 }

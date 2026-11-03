@@ -10,7 +10,7 @@ import json
 import math
 import sys
 import cadquery as cq
-import cadagent.markings as library
+import cadagent.mechanical.markings as library
 
 R = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(R / 'cad'))

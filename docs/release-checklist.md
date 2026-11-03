@@ -12,8 +12,8 @@
 | Protection | Exact Bourns TVS and nominal voltage comparison | Defined ESD/EFT/surge setup, waveforms, survival and communication results |
 | Signal integrity | Paired trunks, measured skew/spacing and sampled return plane; no maximum rate qualified | Intended CAN/CAN-FD rates, bus lengths, ribbon, capacitance and error measurements |
 | Auxiliary I/O | Raw pins retained, power links open | Voltage/direction/current limits and any needed protection established |
-| PCB assembly | JLC-format SMT and full-BOM paths, exact sourced connectors | Supplier stock, Wieson J1 consignment, authenticated JLCDFM (no report yet)/panel, placement rotation, first article approval |
-| Housing | Valid solids/meshes, native PCB collisions, engraving clearances and offline slicing of both lids | Base/clamp slicing review, actual print and lettering legibility, flange/plug/header fit, lid fasteners, hot/creep checks |
+| PCB assembly | JLC-format SMT and full-BOM paths, exact sourced connectors; Gerbers carry revision A1 REVIEW; stock read 2026-11-03: TVS and headers in stock, **Assmann DE9 C3127392 at zero at JLC and LCSC** | DE9 supply (consign, global sourcing or an audited substitute), Wieson J1 consignment, authenticated JLCDFM (no report yet)/panel, placement rotation, first article approval |
+| Housing | Valid solids/meshes, native PCB collisions, engraving clearances; all seven printed parts sliced offline (PETG, 295 g, 9.9 h, supports off); every hole clear apart from the lids' engraved pin rings; insert screen gives a 0.14 N·m torque ceiling | Actual print of the bridged clamp deck and lid lettering, flange/plug/header fit, insert pull-out and torque, lid fasteners, hot/creep checks |
 | Strain relief | Heat-set inserts, recessed heads, hard stops, replaceable pads and clamp | Actual ribbon thickness;10N/60s pull and continuity before/after dwell |
 | Saleable units | Proposed50-unit target | Every-unit continuity/functional test, serial/revision tracking and documented ratings |
 

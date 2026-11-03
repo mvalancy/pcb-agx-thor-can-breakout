@@ -6,7 +6,8 @@ R=Path(__file__).resolve().parents[1]
 subprocess.run([sys.executable,str(R/'tools/validate_release.py')],cwd=R,check=True)
 manifest=json.loads((R/'releases/manifest.json').read_text());revision=manifest['revision']
 common=['LICENSE','THIRD_PARTY.md','ASSEMBLY.md','docs/manufacturing.md','docs/interface-and-protection.md','docs/release-checklist.md','research/connector-sourcing.md','research/j47-footprint-audit.md','research/igx-compatibility.md','releases/manifest.json']
-common += [str(p.relative_to(R)) for folder in ['docs','research','preview'] for p in (R/folder).rglob('*') if p.suffix in {'.md','.json','.png','.svg'}]
+common += [str(p.relative_to(R)) for folder in ['docs','research','preview'] for p in (R/folder).rglob('*') if p.suffix in {'.md','.json','.png','.svg'} and not p.is_relative_to(R/'docs/img')]
+# docs/img holds the README's decorative banner, not review evidence: keep it out of the packages.
 common += ['exports/enclosure-bom.csv','exports/slice-report.json'] + [f'exports/{v}/{name}' for v in ['2port','4port'] for name in ['controls.svg','enclosure-plan.svg','prototype-review.json','lid-markings-review.json','lid-slicing-review.json']]
 packages={}
 for v in ['2port','4port']:

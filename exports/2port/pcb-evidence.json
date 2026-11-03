@@ -39,15 +39,15 @@
   ],
   "source_sha256": {
     "hardware/2port/thor-2port.kicad_sch": "bad8ed9ad30753b186b4ecdc2503cc4ad23f2fdecab0243856c2f1f2d416b92a",
-    "hardware/2port/thor-2port.kicad_pcb": "030a2b88f91b847fce4abdd496430ab2566f0a831a0365fdc7afdcaaf91acc7c",
+    "hardware/2port/thor-2port.kicad_pcb": "467e91bcecc826b2657734e70072967c061cd29832584658fb61b87e6d125986",
     "hardware/2port/thor-2port.kicad_pro": "c270c9e495922f191f29cdf909d16b1ca9e67f32793637b12ff04601c43177ea",
     "hardware/2port/thor-2port.kicad_dru": "6e21e9b2200b0402161a32314c7ff5d3c25f3dfb80a1b034f96386c031aea4e1",
     "hardware/interface.json": "1921e0cc59cfe9a4597145f08cf852d251a2f5faeb47da42dc454f562678edf3",
     "research/j47-footprint-measurements.json": "826fcbe8c997e5bdd5d02492d9293ff240b68ba0026cf5da6c69d63f7650c235"
   },
   "report_sha256": {
-    "exports/2port/erc.json": "fd6444d400e382f5a54a1d28c0cb0b3775d6d450cf2306eb8769b8dd7cd97c26",
-    "exports/2port/drc.json": "0220943b45ac076a34abd27473ece4c3db84f4e7ec1a49bfa5a113dfbaae139c"
+    "exports/2port/erc.json": "2d4642ee2836fc836f0ea09a6944f65f0dbb9d4339a55d22f4ef0a5830f4b2f6",
+    "exports/2port/drc.json": "98d5b56dcd6c7efe9584d198abd86ef530eae29d8d6a48f0be6d6afcdfb88774"
   },
   "production_ready": false,
   "release_gates": [

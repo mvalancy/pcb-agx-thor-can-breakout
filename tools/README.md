@@ -34,9 +34,11 @@ KiCad-Python tools/check_prototype.py
 
 `KiCad-Python` above is a placeholder for your KiCad Python executable, not an installed command. Native exports refill and save the board before generating reports. Complete source-changing steps before recording hashes. For a schematic drawing-only adjustment, `export_review.py --schematic-only` regenerates ERC/PDF/netlist and checks parity without changing the board or its STEP.
 
-## Recheck the lid slicing
+## Recheck the slicing and printability
 
-With Bambu Studio installed, run `.venv/bin/cad-agent slice`, followed by `.venv/bin/python tools/check_lid_slicing.py`. The shared slicer resolves preset inheritance, runs the offline slices and binds the report to the 3MF hashes. `cad-agent.yaml` explicitly limits this check to the two lids. The project checker verifies effective P1S/PETG/nozzle/layer settings and adds actual first-layer SVGs. Vendor presets, sliced projects and G-code stay in ignored `build/slicer/`; no printer is contacted. This is lid-only evidence, not a complete housing print qualification.
+With Bambu Studio installed, run `.venv/bin/cad-agent slice`, followed by `.venv/bin/python tools/check_lid_slicing.py`. The shared slicer resolves preset inheritance, runs the offline slices and binds the report to the 3MF hashes. `cad-agent.yaml` lists all seven printed parts (both lids and bases, the ribbon clamp and both coupons), so `exports/slice-report.json` holds a slice, mass and time for each. The project checker then verifies the lids' effective P1S/PETG/nozzle/layer settings and adds actual first-layer SVGs. Vendor presets, sliced projects and G-code stay in ignored `build/slicer/`; no printer is contacted. A successful slice is not a print qualification.
+
+Before a release, also run `.venv/bin/cad-agent holes` (every hole and countersink in each STEP is clear of material: `exports/hole-checks.json`), `.venv/bin/cad-agent overhangs` (downward faces flatter than the limit: `exports/overhang-screen.json`) and `.venv/bin/cad-agent inserts cad/joints.yaml --output exports/inserts.json` (torque ceiling for the M3 insert joints).
 
 ## When changing the circuit or routing
 

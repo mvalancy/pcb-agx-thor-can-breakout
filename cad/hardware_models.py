@@ -3,7 +3,7 @@ Drawing authority: research/mating-dsub-measurements.json.
 Unspecified contours/capture positions are conservative envelopes or assumptions.
 """
 import cadquery as cq
-from cadagent.fasteners import socket_head_envelope, insert_envelope
+from cadagent.mechanical.fasteners import socket_head_envelope, insert_envelope
 
 def box(x,y,z,dx,dy,dz): return cq.Solid.makeBox(dx,dy,dz,cq.Vector(x,y,z))
 def along_y(x,y,z,r,length): return cq.Solid.makeCylinder(r,length,cq.Vector(x,y,z),cq.Vector(0,-1,0))

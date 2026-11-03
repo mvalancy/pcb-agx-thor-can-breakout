@@ -71,6 +71,12 @@ Follow the [assembly guide](../ASSEMBLY.md) and [manufacturing guide](../docs/ma
 | [fastener_coupon.step](fastener_coupon.step) | Solid model in assembly coordinates |
 | [fastener_coupon.stl](fastener_coupon.stl) | Bed-oriented print mesh |
 | [geometry-checks.json](geometry-checks.json) | Printable solid and mesh evidence |
+| [hole-checks.json](hole-checks.json) | Every hole and countersink clear of material, bound to each STEP |
+| [inserts.json](inserts.json) | M3 heat-set insert joints: capacities and torque ceiling |
+| [overhang-screen.json](overhang-screen.json) | Downward-facing regions flatter than the overhang limit |
+| [pcb-agx-thor-can-breakout-plates.3mf](pcb-agx-thor-can-breakout-plates.3mf) | Bed-oriented print mesh and units |
+| [pcb-agx-thor-can-breakout-plates.json](pcb-agx-thor-can-breakout-plates.json) | Machine-readable design evidence |
+| [pcb-agx-thor-can-breakout-plates.svg](pcb-agx-thor-can-breakout-plates.svg) | Scalable drawing |
 | [port_coupon.3mf](port_coupon.3mf) | Bed-oriented print mesh and units |
 | [port_coupon.step](port_coupon.step) | Solid model in assembly coordinates |
 | [port_coupon.stl](port_coupon.stl) | Bed-oriented print mesh |
@@ -78,6 +84,6 @@ Follow the [assembly guide](../ASSEMBLY.md) and [manufacturing guide](../docs/ma
 | [ribbon_clamp.3mf](ribbon_clamp.3mf) | Bed-oriented print mesh and units |
 | [ribbon_clamp.step](ribbon_clamp.step) | Solid model in assembly coordinates |
 | [ribbon_clamp.stl](ribbon_clamp.stl) | Bed-oriented print mesh |
-| [slice-report.json](slice-report.json) | Shared cad-agent lid slicing estimates and 3MF hashes |
+| [slice-report.json](slice-report.json) | Shared cad-agent slicing estimates and 3MF hashes for every printed part |
 
 </details>

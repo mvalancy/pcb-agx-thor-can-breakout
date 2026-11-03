@@ -31,6 +31,7 @@ The current design is **A1, under engineering review**. Native CAD passes do not
 
 | File or folder | Purpose |
 |---|---|
+| [img/](img/README.md) | Documentation images |
 | [proof/](proof/README.md) | NVIDIA pinout evidence |
 | [cad-agent-report.html](cad-agent-report.html) | Project support file |
 | [decisions.yaml](decisions.yaml) | Project status/configuration |

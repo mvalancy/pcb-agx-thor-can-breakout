@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import json
-from cadagent.pcb import evidence_bundle,check_jlc_files
+from cadagent.electrical.pcb import evidence_bundle,check_jlc_files
 R=Path(__file__).resolve().parents[1]
 for v in ['2port','4port']:
  out=R/'exports'/v

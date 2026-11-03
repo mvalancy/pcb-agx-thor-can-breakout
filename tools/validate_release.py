@@ -6,9 +6,9 @@ from pathlib import Path
 import sys,json,hashlib,subprocess,re,zipfile,importlib
 from urllib.parse import unquote,urlsplit
 import trimesh
-from cadagent.pcb import evidence_is_current
-import cadagent.pcb_routing as routing_library
-from cadagent.mesh3mf import read_3mf,is_edge_manifold,mesh_volume
+from cadagent.electrical.pcb import evidence_is_current
+import cadagent.electrical.pcb_routing as routing_library
+from cadagent.manufacturing.mesh3mf import read_3mf,is_edge_manifold,mesh_volume
 R=Path(__file__).resolve().parents[1]
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def public_files():
@@ -28,9 +28,9 @@ for v in ['2port','4port']:
  route=json.loads((out/'can-routing-review.json').read_text())
  require(route.get('library_sha256')==digest(Path(routing_library.__file__)),v+': routing library changed since measurement')
  markings=json.loads((out/'lid-markings-review.json').read_text())
- require(markings.get('library_sha256')==digest(Path(importlib.import_module('cadagent.markings').__file__)),v+': markings library changed since measurement')
+ require(markings.get('library_sha256')==digest(Path(importlib.import_module('cadagent.mechanical.markings').__file__)),v+': markings library changed since measurement')
  slicing=json.loads((out/'lid-slicing-review.json').read_text())
- require(slicing.get('library_sha256')==digest(Path(importlib.import_module('cadagent.slicer').__file__)),v+': slicer helper changed since measurement')
+ require(slicing.get('library_sha256')==digest(Path(importlib.import_module('cadagent.manufacturing.slicer').__file__)),v+': slicer helper changed since measurement')
  paths=json.loads((out/'assembly-paths.json').read_text())
  for rel,sha in {**paths.get('mechanical_sources',{}),**paths.get('artifact_sha256',{})}.items():require(digest(R/rel)==sha,rel+': stale assembly path evidence')
  require('tools/check_mechanics.py' in paths.get('mechanical_sources',{}),v+': missing assembly checker source hash')
@@ -51,7 +51,7 @@ for v in ['2port','4port']:
    require(raw.is_file() and hashlib.sha256(z.read(name)).hexdigest()==digest(raw),v+': fabrication ZIP has stale member '+name)
   for ending in ['F_Cu.gtl','B_Cu.gbl','F_Mask.gts','B_Mask.gbs','Edge_Cuts.gm1','PTH.drl','NPTH.drl']:
    require(any(n.endswith(ending) for n in names),v+': missing fabrication layer '+ending)
-from cadagent.slicer import current_report
+from cadagent.manufacturing.slicer import current_report
 from cadagent.project import load_project
 require(current_report(load_project(R)) is not None,'Shared lid-slicing report missing or stale')
 geometry=json.loads((R/'exports/geometry-checks.json').read_text())

@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/hero/pcb-agx-thor-can-breakout-dark.svg">
+  <img src="docs/img/hero/pcb-agx-thor-can-breakout-light.svg" width="100%" alt="Thor CAN breakout: protected CAN breakout boards and printed housings for NVIDIA Jetson AGX Thor. A drawing of the two-port board from its KiCad layout: the J47 header, both DE9 ports (CAN0, CAN1) and the two CAN pairs running from the header to their ports.">
+</picture>
+
 # Thor CAN breakout
 
 Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.
@@ -114,6 +119,9 @@ To rebuild and validate the committed routed design:
 .venv/bin/python tools/draw_mechanics.py
 .venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
+.venv/bin/cad-agent holes
+.venv/bin/cad-agent overhangs
+.venv/bin/cad-agent inserts cad/joints.yaml --output exports/inserts.json
 .venv/bin/cad-agent slice
 .venv/bin/python tools/check_lid_slicing.py
 .venv/bin/cad-agent view
