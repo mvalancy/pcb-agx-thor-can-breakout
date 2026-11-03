@@ -28,13 +28,29 @@ JLC provides a browser workflow, not a connected project API in this session. It
 Each variant has a separate folder under `exports/`. Never mix the two variants.
 
 1. Inspect `schematic.pdf`, `pcb-top.svg`, `pcb-bottom.svg`, `assembly.svg` and the ERC/DRC reports.
-2. For a fabrication quote, upload `thor-<variant>-A1-fabrication-REVIEW.zip`. It contains two copper layers, masks, top/bottom silkscreen and top paste, outline, and separate plated/non-plated Excellon drills. The accompanying text explicitly says **DO NOT ORDER** until the release checklist is complete.
+2. For a fabrication quote, upload `thor-<variant>-A1-fabrication-REVIEW.zip`. It contains two copper layers, masks, top/bottom silkscreen and top paste, outline, and separate plated/non-plated Excellon drills. The accompanying text explicitly says **DO NOT ORDER** until the release checklist is complete. Every Gerber's X2 header and the job file carry the board title and revision **A1 REVIEW**, copied from the schematic's title block by `apply_fab_rules.py` (until 2026-11-03 they read `rev?`).
 3. For an economical TVS-only PCBA quote, upload `jlc-bom.csv` and `jlc-cpl.csv`. All connectors are separately assembled/consigned in this route.
 4. For a quote including sourced through-hole connectors, upload `jlc-full-bom.csv` and `jlc-full-cpl.csv`. These contain the Bourns TVS, Assmann DE9, BOOMELE auxiliary/reserved headers and XFCN jumper headers. **J1 Wieson still requires manual installation or an approved consignment/sourcing arrangement.** This is not an all-inclusive turnkey BOM.
 5. Inspect every placement in JLC's assembly viewer. The CPL uses native KiCad coordinates, millimeters, top side and uncorrected KiCad rotation. Automated CSV checks cannot prove JLC's library zero-angle convention. Confirm Bourns pin 3, header pin 1 and DE9 orientation individually.
 6. Obtain supplier DFM, stock, panel, setup, attrition and shipping quotes before authorizing manufacture. No order has been submitted. J10 pin14 has a deliberate solid ground-plane connection; include its thermal mass in solder-process/first-article review.
 
 All currently sourced electronic components are exact manufacturer/SKU selections. They are not advertised as JLC Basic parts. Do not substitute a different manufacturer's SM712 based only on the shortened name. [Connector sourcing](../research/connector-sourcing.md) records drawings, drill changes and still-unverified mechanical assumptions.
+
+## Part availability — 2026-11-03
+
+Stock read from JLCPCB's public parts search and LCSC's product pages on 2026-11-03. Stock moves daily; nothing is reserved and nothing was ordered.
+
+| Ref | Part | Order code | JLCPCB stock | Enough for 5 boards / 50 boards? |
+|---|---|---|---:|---|
+| D1, D2 | Bourns CDSOT23-SM712 | C404012 | 2,968 (LCSC 158) | Yes / yes (100 needed) |
+| J2, J3 | Assmann A-DS 09 A/KG-T2S | C3127392 | **0** (LCSC 0) | **No: consign, or JLC global sourcing** |
+| J10 | BOOMELE 2.54 mm 2×7 male | C71397 | 20,893 | Yes / yes |
+| J11 | BOOMELE 2.54 mm 2×3 male | C65114 | 44,216 | Yes / yes |
+| JP1, JP2, JP5, JP6, J12 | XFCN PZ254V-11-02P | C492401 | 856,892 | Yes / yes |
+| J1 | Wieson AC2800-0011-022-H0 | none | not listed | Consign (unchanged) |
+| Cable | Samtec FFSD-13-D-06.00-01-N | none at this length | not listed | Buy separately (DigiKey SAM8785-ND) |
+
+**The DE9 is the new blocker for the full-BOM route.** JLCPCB and LCSC both list C3127392 with zero stock, so `jlc-full-bom.csv` cannot be assembled as written today. The TVS-only route (`jlc-bom.csv`) is unaffected. The choices are the owner's: consign Assmann DE9s bought from a distributor (the footprint is drawn for this exact part), use JLC's global-sourcing service for it, or approve a different DE9, which needs its own drawing audit and footprint check before any substitution. DigiKey stock (AE10968-ND) could not be read automatically on 2026-11-03; check it by hand.
 
 ## Quantity and budget
 

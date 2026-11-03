@@ -72,6 +72,31 @@ cad:
     - id: repository
       title: Repository
       href: https://github.com/mvalancy/pcb-agx-thor-can-breakout
+  holes:
+    # The lids' engraved DE9 pinout: each pin number sits in a 0.4 mm deep, 1 mm wide ring (outside 7.2 mm) cut
+    # into the roof (cad/markings.py). A ring around a raised numeral looks like a hole with material inside; it is
+    # artwork, not a fastener or pin hole. Every other hole in every part is checked.
+    exceptions:
+      2port_lid:
+      - {at: [29.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 1 number ring, not a hole"}
+      - {at: [38.0, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 2 number ring, not a hole"}
+      - {at: [46.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 3 number ring, not a hole"}
+      - {at: [55.0, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 4 number ring, not a hole"}
+      - {at: [63.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 5 number ring, not a hole"}
+      - {at: [33.75, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 6 number ring, not a hole"}
+      - {at: [42.25, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 7 number ring, not a hole"}
+      - {at: [50.75, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 8 number ring, not a hole"}
+      - {at: [59.25, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 9 number ring, not a hole"}
+      4port_lid:
+      - {at: [71.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 1 number ring, not a hole"}
+      - {at: [80.0, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 2 number ring, not a hole"}
+      - {at: [88.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 3 number ring, not a hole"}
+      - {at: [97.0, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 4 number ring, not a hole"}
+      - {at: [105.5, 51.8, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 5 number ring, not a hole"}
+      - {at: [75.75, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 6 number ring, not a hole"}
+      - {at: [84.25, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 7 number ring, not a hole"}
+      - {at: [92.75, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 8 number ring, not a hole"}
+      - {at: [101.25, 43.0, 26.6], diameter_mm: 7.2, reason: "engraved DE9 pin 9 number ring, not a hole"}
   printer:
     name: Bambu P1S / prototype
     bed_mm:
