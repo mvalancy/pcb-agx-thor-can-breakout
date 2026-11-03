@@ -27,6 +27,7 @@ KiCad STEP is placed by a proper 180° rotation, preserving connector handedness
 |---|---|
 | [build.py](build.py) | Generation or validation tool |
 | [hardware_models.py](hardware_models.py) | Generation or validation tool |
+| [joints.yaml](joints.yaml) | Screw joints into the heat-set inserts |
 | [markings.py](markings.py) | Generation or validation tool |
 | [parameters.json](parameters.json) | Canonical mechanical dimensions |
 

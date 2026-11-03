@@ -3,14 +3,15 @@
 
 No printer connection or print submission. G-code and vendor presets stay outside
 the public snapshot; only compact source-bound results and a toolpath SVG are public.
-Run `cad-agent slice` first; cad-agent.yaml limits this project to the two lids.
+Run `cad-agent slice` first. It slices all seven printed parts (exports/slice-report.json);
+this script adds the lid-specific settings and first-layer proof.
 """
 from pathlib import Path
 import hashlib
 import json
 import re
 import zipfile
-import cadagent.slicer as slicer
+import cadagent.manufacturing.slicer as slicer
 from cadagent.project import load_project
 
 R = Path(__file__).resolve().parents[1]
@@ -84,7 +85,7 @@ def run():
         segment_counts=first_layers(gcode,proof)
         version=re.search(r'; BambuStudio (\S+)',gcode).group(1)
         layers=int(re.search(r'; total layer number: (\d+)',gcode).group(1))
-        report={'pass':True,'scope':'Offline lid-only slicing by shared cad-agent; first two engraved layers contain extrusion paths. Does not certify every glyph, print adhesion, surface finish, other housing parts or physical readability.',
+        report={'pass':True,'scope':'Offline lid-only slicing by shared cad-agent; first two engraved layers contain extrusion paths. Does not certify every glyph, print adhesion, surface finish or physical readability. The other printed parts are sliced in exports/slice-report.json.',
                 'slicer':'BambuStudio '+version,'profile':expected,
                 'profile_names':{k:shared[k] for k in ['printer','process','filament']},
                 'source_sha256':{f:sha(R/f) for f in ['tools/check_lid_slicing.py','cad-agent.yaml']},

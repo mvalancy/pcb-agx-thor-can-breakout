@@ -7,6 +7,12 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "Thor CAN breakout - 4 ports")
+		(rev "A1 REVIEW")
+		(comment 1 "Not released: prototype mating, sourcing and bench qualification pending")
+		(comment 2 "J47 bus-side signals; passive TVS protection, no galvanic isolation")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)

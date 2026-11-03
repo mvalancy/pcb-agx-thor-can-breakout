@@ -1,5 +1,5 @@
 """Large, bold Thor lid markings: the same drawing drives engraving and proof."""
-from cadagent.markings import PanelMarkings
+from cadagent.mechanical.markings import PanelMarkings
 
 def lid_markings(n,w,style):
  m=PanelMarkings();cx=w/2;stroke=style['stroke_width_mm'];body=style['text_height_mm']

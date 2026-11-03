@@ -2,7 +2,7 @@
 """Check externally meaningful pin mappings and assembly files, beyond generic ERC."""
 from pathlib import Path
 import json,hashlib,xml.etree.ElementTree as ET
-from cadagent.pcb import kicad_report,check_jlc_files
+from cadagent.electrical.pcb import kicad_report,check_jlc_files
 R=Path(__file__).resolve().parents[1]
 for v,n in [('2port',2),('4port',4)]:
  root=ET.parse(R/f'exports/{v}/netlist.xml').getroot();nodes={}

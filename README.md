@@ -119,6 +119,9 @@ To rebuild and validate the committed routed design:
 .venv/bin/python tools/draw_mechanics.py
 .venv/bin/python tools/draw_controls.py
 .venv/bin/cad-agent export-3mf
+.venv/bin/cad-agent holes
+.venv/bin/cad-agent overhangs
+.venv/bin/cad-agent inserts cad/joints.yaml --output exports/inserts.json
 .venv/bin/cad-agent slice
 .venv/bin/python tools/check_lid_slicing.py
 .venv/bin/cad-agent view

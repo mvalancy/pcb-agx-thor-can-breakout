@@ -7,8 +7,8 @@ R=Path(__file__).resolve().parents[1]
 # Shared cad-agent is installed in the main project venv; KiCad has its own Python.
 module_root=subprocess.check_output([str(R/'.venv/bin/python'),'-c','import cadagent,pathlib;print(pathlib.Path(cadagent.__file__).parent.parent)'],text=True,env={k:v for k,v in os.environ.items() if k not in {'PYTHONHOME','PYTHONPATH'}}).strip()
 sys.path.insert(0,module_root)
-import cadagent.pcb_routing as routing_library
-from cadagent.pcb_routing import copper_graph,shortest_path,path_segments,pair_geometry,sample_segments
+import cadagent.electrical.pcb_routing as routing_library
+from cadagent.electrical.pcb_routing import copper_graph,shortest_path,path_segments,pair_geometry,sample_segments
 xy=lambda q:(round(p.ToMM(q.x),5),round(p.ToMM(q.y),5))
 if len(sys.argv)==1:
  for v in ['2port','4port']:subprocess.run([sys.executable,__file__,v],check=True)

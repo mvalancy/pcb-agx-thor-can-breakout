@@ -3,8 +3,8 @@
 import json, hashlib, importlib
 from pathlib import Path
 import cadquery as cq
-from cadagent.geometry import export_print_stl
-from cadagent.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack, filleted_wall_rib
+from cadagent.geometry import export_print_stl, export_step
+from cadagent.mechanical.fasteners import socket_head_envelope, insert_envelope, blind_insert_stack, filleted_wall_rib
 from hardware_models import mating_set
 from markings import lid_markings
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,7 +13,7 @@ def box(x,y,z,dx,dy,dz):return cq.Solid.makeBox(dx,dy,dz,cq.Vector(x,y,z))
 def cyl(x,y,z,r,h):return cq.Solid.makeCylinder(r,h,cq.Vector(x,y,z))
 def rounded(shape,r):return cq.Workplane(obj=shape).edges('|Z').fillet(r).val()
 def source_hashes():return {f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['cad/build.py','cad/hardware_models.py','cad/markings.py','cad/parameters.json','research/mating-dsub-measurements.json']}
-def library_hashes():return {name:hashlib.sha256(Path(importlib.import_module(name).__file__).read_bytes()).hexdigest() for name in ['cadagent.geometry','cadagent.fasteners','cadagent.markings']}
+def library_hashes():return {name:hashlib.sha256(Path(importlib.import_module(name).__file__).read_bytes()).hexdigest() for name in ['cadagent.geometry','cadagent.mechanical.fasteners','cadagent.mechanical.markings']}
 def counterbore(shape,x,y,top):
  return shape.cut(cyl(x,y,top-60,C['screw_clearance_mm']/2,61)).cut(cyl(x,y,top-C['counterbore_depth_mm'],C['counterbore_diameter_mm']/2,C['counterbore_depth_mm']+1))
 def clamp_part():
@@ -57,7 +57,11 @@ def build_variant(n):
    tab_root_widths.append(round(base.intersect(probe).Volume()/(.2*tabs['thickness_mm']),4))
  # Continuous perimeter tongue is interrupted only by connector/cable openings.
  outer=clear+C['lip_width_mm'];h=C['lip_height_mm'];tol=C['lip_clearance_mm']
- base=base.fuse(openings(ring(w,rear,outer,clear,seam-.4,h+.4)))
+ tongue=openings(ring(w,rear,outer,clear,seam-.4,h+.4))
+ # The ribbon slot stops 1.5 mm above the seam but the tongue rises lip_height (1.6) above it: cut the tongue's full
+ # height there, so no 0.1 mm skin is left over the slot that the slicer would drop and the STEP would keep.
+ tongue=tongue.cut(box(cx-C['ribbon_slot_width_mm']/2,rear-clear-.2,seam-1,C['ribbon_slot_width_mm'],wall+2*clear+1.2,h+2))
+ base=base.fuse(tongue)
  # Groove is cut after the lid sleeves are fused so it also clears their wall overlap.
  holes=[(4,4),(w-4,4),(4,d-4),(w-4,d-4)]
  inserts=[];screws=[]
@@ -130,11 +134,11 @@ if __name__=='__main__':
  for n in (2,4):
   base,lid,bar,board,native,header,cable,hardware,review=build_variant(n)
   for name,shape,rot in [('base',base,None),('lid',lid,((1,0,0),180))]:
-   part=f'{n}port_{name}';cq.exporters.export(shape,str(OUT/f'{part}.step'));geometry[part]=export_print_stl(shape,OUT/f'{part}.stl',rotation=rot);geometry[part]['physical_fit_verified']=False
+   part=f'{n}port_{name}';export_step(shape,OUT/f'{part}.step');geometry[part]=export_print_stl(shape,OUT/f'{part}.stl',rotation=rot);geometry[part]['physical_fit_verified']=False
   (OUT/f'{n}port/mechanical-checks.json').write_text(json.dumps(review,indent=2)+'\n')
   for name,shape in [('clamp',bar),('pcb',native),('ribbon',cable),('header',header),*hardware.items()]:
-   if shape:cq.exporters.export(shape,str(OUT/f'asm_{n}port_{name}.step'))
+   if shape:export_step(shape,OUT/f'asm_{n}port_{name}.step')
   print(n,review['pass'],review['checks'],flush=True)
  for part,shape in [('ribbon_clamp',clamp_part()),('fastener_coupon',fit_coupon()),('port_coupon',port_coupon())]:
-  cq.exporters.export(shape,str(OUT/f'{part}.step'));geometry[part]=export_print_stl(shape,OUT/f'{part}.stl');geometry[part]['physical_fit_verified']=False
+  export_step(shape,OUT/f'{part}.step');geometry[part]=export_print_stl(shape,OUT/f'{part}.stl');geometry[part]['physical_fit_verified']=False
  (OUT/'geometry-checks.json').write_text(json.dumps(geometry,indent=2)+'\n')

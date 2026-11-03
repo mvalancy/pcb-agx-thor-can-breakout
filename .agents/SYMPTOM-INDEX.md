@@ -18,3 +18,5 @@
 
 - Mounting ears pass minimum-web checks but look too narrow or fail to support corners: [four broad corner mounts](inbox/2026-10-27-four-corner-mounts.md).
 - Engraving looks clear in a render but uses tiny lettering, or a successful slice has incorrect inherited settings: [nozzle-scale lid review](inbox/2026-10-27-printable-lid-markings.md).
+
+- After a cad-agent upgrade, evidence reads stale or `DeprecationWarning: cadagent.X moved to ...` appears: [hash moved modules, not shims](inbox/2026-11-03-hash-moved-modules-not-shims.md).
