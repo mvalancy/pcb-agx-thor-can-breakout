@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/img/hero/pcb-agx-thor-can-breakout-dark.svg">
-  <img src="docs/img/hero/pcb-agx-thor-can-breakout-light.svg" width="100%" alt="Thor CAN breakout: the two-port board drawn from its KiCad layout; the J47 header and both DE9 ports drop on, the CAN0 and CAN1 pairs are laid from the header to their ports, and signal pulses run along each pair">
+  <img src="docs/img/hero/pcb-agx-thor-can-breakout-light.svg" width="100%" alt="Thor CAN breakout: protected CAN breakout boards and printed housings for NVIDIA Jetson AGX Thor. A drawing of the two-port board from its KiCad layout: the J47 header, both DE9 ports (CAN0, CAN1) and the two CAN pairs running from the header to their ports.">
 </picture>
 
 # Thor CAN breakout
