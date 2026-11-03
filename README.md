@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/hero/pcb-agx-thor-can-breakout-dark.svg">
+  <img src="docs/img/hero/pcb-agx-thor-can-breakout-light.svg" width="100%" alt="Thor CAN breakout: the two-port board drawn from its KiCad layout; the J47 header and both DE9 ports drop on, the CAN0 and CAN1 pairs are laid from the header to their ports, and signal pulses run along each pair">
+</picture>
+
 # Thor CAN breakout
 
 Passive CAN adapters and printable housings for NVIDIA Jetson AGX Thor. The adapter brings the carrier's CAN bus signals to male DE9 connectors and the remaining J47 signals to an internal I/O header.

@@ -50,7 +50,7 @@
     "AGENTS.md": "bccb4282a0e0dc1e349c6153f8eac64777513bc1dc4237113a59c9bc218cc93e",
     "ASSEMBLY.md": "fd60d1014fc1c2cc31f351af50f675ec945aada89e3850e1d2bd5421f1311ac4",
     "LICENSE": "e4e42c0f6856121f5a909af40f3706832b168f5c1af4e92a9c58e184f5e6b902",
-    "README.md": "e6dcf6897b5e6fd07914026bde622c64176e1c325e22314f2d5ebb8ba61a5d58",
+    "README.md": "ab5472c2c0b9313ea250a96c1c3b3a5eaf0781e70b33ccfb3c37cbf0ec302362",
     "THIRD_PARTY.md": "f84bd8d803f049f01def98bcbc26e33fb7ce30afd4e4874a7ccc366bb1d6279b",
     "cad/README.md": "7f9077718e50f104ddaac1b905ca40b688701f0eca40d7c75d86e58e6066b073",
     "cad/build.py": "12570a0e0ddadcfcfd3c2add9546013a675febb3e90bd7404a8788297371b48a",
@@ -58,11 +58,15 @@
     "cad/markings.py": "c40e0d6c4ee938af8b946a77ead7ecfd02582c0057505d4dcfd21b004fb76eb7",
     "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
     "cad-agent.yaml": "d5e493e196f7190fc07e72ec2ed0e456931f7023e0717a2608cd56d37facd564",
-    "docs/README.md": "0f6ec15f7aa576afe0a573dd2e99b4328ec1b9a02c15325a88adf8aa94bbc3da",
+    "docs/README.md": "da0f6515dc9eb6649566305165bb8511199e7a4ddb1fea82e81fcea0ac56dc6d",
     "docs/cad-agent-report.html": "5a38ee4a6347e68562084222d96b92c553c0bf42cfcd564f7f996e5dc1da8983",
     "docs/decisions.yaml": "6711c5cecde297883da004c1d8edb4a13c96d1bc8c9bf7bcd991790548915cca",
     "docs/design-review.md": "d31ee95c12a1adb9d7ed7e064e1c76a882718896ea3ff1618bb1a904220942a0",
     "docs/enclosure.md": "6ab017f7636dce50685ec769eb53e563fc25de68959b565ba6275d3eae5e202f",
+    "docs/img/README.md": "31ec85cdba15610a29dbde5f1fd8a60b5648dac11fe33d815aed51acffd7b4ea",
+    "docs/img/hero/README.md": "b3349c23053a686f91a9f1d6b9c6a81d49831f78314a28720fe72ffd3f9e6d7e",
+    "docs/img/hero/pcb-agx-thor-can-breakout-dark.svg": "a83aa597cb93b8a00dc7efb97201ab3f44d4f4088fcc1a90a9eca74f44f651e4",
+    "docs/img/hero/pcb-agx-thor-can-breakout-light.svg": "e9948526537ff2f77f1d03089a7241ddb1b96aad33df6a7afaa03fce25be4af1",
     "docs/interface-and-protection.md": "8323065fb6582cb9c8257b07319cc201ff5f626fed2fda720efe546179e10c7e",
     "docs/iterations.md": "65da2d23f97857a61f5d5be8f05a6b24e4ee47faf000edef4f252f39edb33c0b",
     "docs/manufacturing.md": "5ec4135311e6912522e98eb7b53db85f59ac9af5ddf074fc109616eff43a2879",
@@ -349,6 +353,6 @@
     "tools/update_evidence.py": "ecd9160fab7e0980d8b05e1770553419539e8abdc3de45efa4dc67e4d03dd673",
     "tools/update_layout_features.py": "7127f423aa5e8871236a80729f093c4380d2cfe91197dcf9f1297f2402614034",
     "tools/validate_release.py": "79a430ef447c598b19732f415421603d98568d6d20edc39ed56dc56e4978851d",
-    "tools/write_readmes.py": "308834b31235b63691cb91540ad127f9108ca6a7192ce5ae41e1f7f6aaceac55"
+    "tools/write_readmes.py": "9fe2a64fe0b79c7257ed37a83177c0a15c35f83103b8c8efcf5f0df7c7cf3f5f"
   }
 }
