@@ -36,10 +36,10 @@
   "artifact_sha256": {
     "exports/4port_lid.3mf": "f1ecc667643157b113b39e17d564cb47b200d2c079270fddcab315aef2160d52",
     "exports/4port_lid.stl": "67b572ba6890bcc5671be022ab721ddacce96cd2e6de531ed9d1320a9212f22a",
-    "preview/4port-lid-first-layer.svg": "7a9c68f2dbb1ba5ecf4d58dffe17aea11a9e6d6ae18c6b9ea37d74338d043e4b",
-    "exports/slice-report.json": "8035e57b80f813a663a3cf858c88f9873a10ceb5d6a83c843d478b63df1cabd5"
+    "preview/4port-lid-first-layer.svg": "c95182ed8f3d2977336414eef05117937f6e62539c33b307280b749e8643c588",
+    "exports/slice-report.json": "817a9379611fd209c387ce677e9d0ab72179b368543fef45b232dfe04d7e65ef"
   },
-  "gcode_sha256": "ed166b50946e00f37af16b5e343adaf3e8fee4c0d6770e3ecd7f3803c6f89067",
+  "gcode_sha256": "8f7a1011f2ccbcc828d0541c728969e82d77a9bceecf205339b3de1b6d41a489",
   "resolved_settings_sha256": "3bab08d5fe197b3eafcd471927b7b57a0059d36b414e4adcc309c595ef974f8a",
   "return_code": 0,
   "layers": 85,

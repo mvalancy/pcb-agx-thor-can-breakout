@@ -10,9 +10,9 @@
       114.2,
       16.9
     ],
-    "volume_cm3": 70.17,
-    "mesh_volume_before_weld_mm3": 70164.965,
-    "mesh_volume_mm3": 70164.965,
+    "volume_cm3": 70.165,
+    "mesh_volume_before_weld_mm3": 70160.565,
+    "mesh_volume_mm3": 70160.565,
     "physical_fit_verified": false
   },
   "2port_lid": {
@@ -42,9 +42,9 @@
       114.2,
       16.9
     ],
-    "volume_cm3": 101.248,
-    "mesh_volume_before_weld_mm3": 101243.005,
-    "mesh_volume_mm3": 101243.005,
+    "volume_cm3": 101.243,
+    "mesh_volume_before_weld_mm3": 101238.605,
+    "mesh_volume_mm3": 101238.605,
     "physical_fit_verified": false
   },
   "4port_lid": {

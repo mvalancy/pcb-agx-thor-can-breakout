@@ -15,7 +15,7 @@
   "parts": {
     "2port_lid": {
       "grams": 46.85,
-      "minutes": 108.3,
+      "minutes": 108.4,
       "filament_m": 15.34,
       "error": "Success.",
       "sha256": "bb893d4d562782c52e155e8b3f34018472ecd05c4c0c0db4dc74dbc787a74317"
@@ -32,14 +32,14 @@
       "minutes": 119.7,
       "filament_m": 21.78,
       "error": "Success.",
-      "sha256": "bf46f274e50aaa73c8198b6d3183fab7b480e5bada54c0147ae964d0688e47ff"
+      "sha256": "866d12f290b33e80a28dd215daf5b45fa56964f7f3d340b100ea6d148951301e"
     },
     "4port_base": {
       "grams": 97.16,
       "minutes": 163.9,
       "filament_m": 31.81,
       "error": "Success.",
-      "sha256": "35e4b5179cdc947363f60bacf9f69f1d7738fca073057eb1958d2d9b97b2d73d"
+      "sha256": "e897dede759dc213e3c6be5f40b93024aae606e0284102ef439743d0d401f08d"
     },
     "ribbon_clamp": {
       "grams": 2.47,
@@ -50,7 +50,7 @@
     },
     "fastener_coupon": {
       "grams": 6.8,
-      "minutes": 22.3,
+      "minutes": 22.2,
       "filament_m": 2.23,
       "error": "Success.",
       "sha256": "c5b147fac50975bccbb8e079e8e634b00a7a9dbc63d3a19e72900c8402e12b3c"

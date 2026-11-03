@@ -23,7 +23,7 @@
       "min_arc_deg": 200.0,
       "max_diameter_mm": 30.0,
       "step": "2port_base.step",
-      "sha256": "a9bb85ffa2e322b87d05e6d3fa664e2b34fc1a62ef00fd4070a0f73e32d0aa87"
+      "sha256": "df5e91c3e804155689b71c635ab07a1b9ab77e4a412dfeceb54a4058f6bf896f"
     },
     "2port_lid": {
       "pass": true,
@@ -325,7 +325,7 @@
       "min_arc_deg": 200.0,
       "max_diameter_mm": 30.0,
       "step": "4port_base.step",
-      "sha256": "27b6c024594faded62d06fda8acb1d9f209c72a6cd875caa391852434adfb8d9"
+      "sha256": "8ddb7731e68e2099207af34fdef68b80f98dcd2d1fdd363fdb93230deb9dac90"
     },
     "4port_lid": {
       "pass": true,

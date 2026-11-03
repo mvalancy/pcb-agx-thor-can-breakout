@@ -8,8 +8,8 @@
  "parts": {
   "2port_base": {
    "stl": "2port_base.stl",
-   "sha256": "42b59105baa92389efb94bdaf463cd03511168624e5de0faee32e5779c1b7f96",
-   "downward_area_mm2": 433.11,
+   "sha256": "75cf020158571b91963dc714296724e26a9b4539d489f8afad6fd829c60e6dc2",
+   "downward_area_mm2": 389.11,
    "regions": [
     {
      "area_mm2": 389.11,
@@ -26,25 +26,6 @@
       84.6,
       102.87,
       11.6
-     ],
-     "flattest_deg": 0.0,
-     "mean_slope_deg": 0.0
-    },
-    {
-     "area_mm2": 44.0,
-     "faces": 2,
-     "bounds_mm": [
-      73.6,
-      109.7,
-      16.8,
-      95.6,
-      111.7,
-      16.8
-     ],
-     "centre_mm": [
-      84.6,
-      110.7,
-      16.8
      ],
      "flattest_deg": 0.0,
      "mean_slope_deg": 0.0
@@ -2401,8 +2382,8 @@
   },
   "4port_base": {
    "stl": "4port_base.stl",
-   "sha256": "f0d721a5e821f9aa9529e2bede6bd6ab430daa038bb9639488eb9ac31a7f56c7",
-   "downward_area_mm2": 433.11,
+   "sha256": "a36443564ed74f6b61dd639cf1dd03f770fcc41beba2abf417e8a91722d3d2a3",
+   "downward_area_mm2": 389.11,
    "regions": [
     {
      "area_mm2": 389.11,
@@ -2419,25 +2400,6 @@
       126.6,
       102.87,
       11.6
-     ],
-     "flattest_deg": 0.0,
-     "mean_slope_deg": 0.0
-    },
-    {
-     "area_mm2": 44.0,
-     "faces": 2,
-     "bounds_mm": [
-      115.6,
-      109.7,
-      16.8,
-      137.6,
-      111.7,
-      16.8
-     ],
-     "centre_mm": [
-      126.6,
-      110.7,
-      16.8
      ],
      "flattest_deg": 0.0,
      "mean_slope_deg": 0.0

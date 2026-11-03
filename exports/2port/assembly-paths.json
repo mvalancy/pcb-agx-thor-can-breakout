@@ -224,7 +224,7 @@
     "cadagent.mechanical.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
   "mechanical_sources": {
-    "cad/build.py": "dcf63f8acffda08be6f3011d350673d0b2ff247503602cf2ad65ce75068bd097",
+    "cad/build.py": "d0221282ba0ac352bad543e9e985b431a01e238cab4ae826270e79ef51692443",
     "cad/hardware_models.py": "9710b6dbeeba4ea3a6c58473c0ba057102ef9063d7086e198815fb927ebdde89",
     "cad/markings.py": "ea0a4916fbeafc03a35e7f76810abac2437fd9c191d3e78664b6c2a3c81c8707",
     "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
@@ -232,7 +232,7 @@
     "tools/check_mechanics.py": "98ddfe91e5a39a030dacf7b3e794d5ec2bd4a954bdd6e698b28f8df585cb087e"
   },
   "artifact_sha256": {
-    "exports/2port_base.step": "a9bb85ffa2e322b87d05e6d3fa664e2b34fc1a62ef00fd4070a0f73e32d0aa87",
+    "exports/2port_base.step": "df5e91c3e804155689b71c635ab07a1b9ab77e4a412dfeceb54a4058f6bf896f",
     "exports/2port_lid.step": "98b9d12c38f33973d06972e8ede52c2f811ac499c5801afc0718a4eb35b5a2ba",
     "exports/asm_2port_clamp.step": "9cccdf5eaecb1954dab52d35816706cdeda1cb1aaa00b3fa45d5f1e50ecb51f5",
     "exports/asm_2port_pcb.step": "e064af2d1282a2f22c1d3ac3b96094763df691d5ee98d9faa719af8d5f4a2ffb"

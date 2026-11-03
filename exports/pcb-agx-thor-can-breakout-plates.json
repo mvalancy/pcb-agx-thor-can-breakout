@@ -1,7 +1,7 @@
 {
   "format": "cad-agent.plates/1",
   "file": "pcb-agx-thor-can-breakout-plates.3mf",
-  "sha256": "e3abd9ce771c497538ae34105b6ecf2a838cd94cc922630d6676d9f4a6eb54f0",
+  "sha256": "6fe4829f7f9793b9148a25ea7d5978caddda60b2f36daf8b8b70f05be8b9bc18",
   "picture": "pcb-agx-thor-can-breakout-plates.svg",
   "bed_mm": [
     256.0,

@@ -46,8 +46,8 @@
     "research/j47-footprint-measurements.json": "826fcbe8c997e5bdd5d02492d9293ff240b68ba0026cf5da6c69d63f7650c235"
   },
   "report_sha256": {
-    "exports/2port/erc.json": "edc0175f8af1daabb46a99c4717d918bcbaa51c8111f83e27c239730bf52c265",
-    "exports/2port/drc.json": "9784f7a9a3a6f5f4ec662ea0aeee20d4e06f38ed7375a9af947fc889a3dd2eaa"
+    "exports/2port/erc.json": "2d4642ee2836fc836f0ea09a6944f65f0dbb9d4339a55d22f4ef0a5830f4b2f6",
+    "exports/2port/drc.json": "98d5b56dcd6c7efe9584d198abd86ef530eae29d8d6a48f0be6d6afcdfb88774"
   },
   "production_ready": false,
   "release_gates": [

@@ -36,10 +36,10 @@
   "artifact_sha256": {
     "exports/2port_lid.3mf": "bb893d4d562782c52e155e8b3f34018472ecd05c4c0c0db4dc74dbc787a74317",
     "exports/2port_lid.stl": "59030bc1129c7a5b2e3d39a5f2397037229bc3222b00063bf16164f8a579a0ae",
-    "preview/2port-lid-first-layer.svg": "2e8b48b951b79a31810416c9500a4dd028f45413b8b16a88f88c4bbae705ce13",
-    "exports/slice-report.json": "8035e57b80f813a663a3cf858c88f9873a10ceb5d6a83c843d478b63df1cabd5"
+    "preview/2port-lid-first-layer.svg": "404e28c03e363863beabeb4246b70538787519bc1ac73bcea71b463091021072",
+    "exports/slice-report.json": "817a9379611fd209c387ce677e9d0ab72179b368543fef45b232dfe04d7e65ef"
   },
-  "gcode_sha256": "6b169fe9f5a8ab6543a234192177cf6c91a0a7c28e4fef0accb47735d3148ef9",
+  "gcode_sha256": "a6fa0190907856eccd9c36b9ac8f6c97a1e1b81bc1eaa2e437c8040fd0b43cdd",
   "resolved_settings_sha256": "3bab08d5fe197b3eafcd471927b7b57a0059d36b414e4adcc309c595ef974f8a",
   "return_code": 0,
   "layers": 85,
