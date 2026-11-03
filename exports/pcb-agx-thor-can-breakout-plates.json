@@ -1,0 +1,159 @@
+{
+  "format": "cad-agent.plates/1",
+  "file": "pcb-agx-thor-can-breakout-plates.3mf",
+  "sha256": "e3abd9ce771c497538ae34105b6ecf2a838cd94cc922630d6676d9f4a6eb54f0",
+  "picture": "pcb-agx-thor-can-breakout-plates.svg",
+  "bed_mm": [
+    256.0,
+    256.0,
+    256.0
+  ],
+  "plate_mm": [
+    256,
+    256
+  ],
+  "gap_mm": 5.0,
+  "margin_mm": 5.0,
+  "rotate": true,
+  "packing": {
+    "sort": "area",
+    "fit": "short-side"
+  },
+  "keep_out_mm": [
+    [
+      0.0,
+      0.0,
+      18.0,
+      28.0
+    ]
+  ],
+  "quantities": {
+    "2port_base": 1,
+    "2port_lid": 1,
+    "4port_base": 1,
+    "4port_lid": 1,
+    "ribbon_clamp": 1,
+    "fastener_coupon": 1,
+    "port_coupon": 1
+  },
+  "filaments": {
+    "2port_base": "Generic PETG",
+    "2port_lid": "Generic PETG",
+    "4port_base": "Generic PETG",
+    "4port_lid": "Generic PETG",
+    "ribbon_clamp": "Generic PETG",
+    "fastener_coupon": "Generic PETG",
+    "port_coupon": "Generic PETG"
+  },
+  "plates": [
+    {
+      "plate": 1,
+      "name": "Generic PETG 1 of 3",
+      "filament": "Generic PETG",
+      "bed_type": null,
+      "covered": 0.432,
+      "parts": [
+        {
+          "part": "4port_base",
+          "copy": 1,
+          "x_mm": 11.402,
+          "y_mm": 37.9,
+          "width_mm": 233.1942,
+          "depth_mm": 114.2,
+          "turn_deg": 0
+        },
+        {
+          "part": "fastener_coupon",
+          "copy": 1,
+          "x_mm": 11.402,
+          "y_mm": 157.1,
+          "width_mm": 24.0,
+          "depth_mm": 44.0,
+          "turn_deg": 90
+        },
+        {
+          "part": "port_coupon",
+          "copy": 1,
+          "x_mm": 29.402,
+          "y_mm": 9.9,
+          "width_mm": 38.0,
+          "depth_mm": 19.0,
+          "turn_deg": 0
+        },
+        {
+          "part": "ribbon_clamp",
+          "copy": 1,
+          "x_mm": 11.402,
+          "y_mm": 206.1,
+          "width_mm": 12.0,
+          "depth_mm": 40.0,
+          "turn_deg": 90
+        }
+      ]
+    },
+    {
+      "plate": 2,
+      "name": "Generic PETG 2 of 3",
+      "filament": "Generic PETG",
+      "bed_type": null,
+      "covered": 0.578,
+      "parts": [
+        {
+          "part": "4port_lid",
+          "copy": 1,
+          "x_mm": 11.3,
+          "y_mm": 48.4,
+          "width_mm": 114.2,
+          "depth_mm": 187.2,
+          "turn_deg": 90
+        },
+        {
+          "part": "2port_base",
+          "copy": 1,
+          "x_mm": 130.5,
+          "y_mm": 20.4,
+          "width_mm": 114.2,
+          "depth_mm": 149.1942,
+          "turn_deg": 90
+        }
+      ]
+    },
+    {
+      "plate": 3,
+      "name": "Generic PETG 3 of 3",
+      "filament": "Generic PETG",
+      "bed_type": null,
+      "covered": 0.18,
+      "parts": [
+        {
+          "part": "2port_lid",
+          "copy": 1,
+          "x_mm": 76.4,
+          "y_mm": 70.9,
+          "width_mm": 103.2,
+          "depth_mm": 114.2,
+          "turn_deg": 0
+        }
+      ]
+    }
+  ],
+  "project_settings": {
+    "embedded": true,
+    "slicer_version": "02.08.04.57",
+    "printer": "Bambu Lab P1S 0.4 nozzle",
+    "process": "0.20mm Standard @BBL X1C",
+    "filaments": [
+      "Generic PETG"
+    ],
+    "overrides": {
+      "wall_loops": "4",
+      "sparse_infill_density": "30%",
+      "curr_bed_type": "Textured PEI Plate",
+      "enable_arc_fitting": "0",
+      "layer_height": "0.2",
+      "initial_layer_print_height": "0.2"
+    }
+  },
+  "warnings": [],
+  "note": "CAD layout from footprint rectangles: not sliced, and not proof that a plate prints well (adhesion, warping, supports)."
+}

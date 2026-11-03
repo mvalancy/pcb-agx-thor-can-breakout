@@ -219,22 +219,22 @@
   "limits": "Nominal/generic connector solids; XY translations are a sensitivity screen, not complete tolerance qualification. Silicone compression curve and pull strength unmeasured. Heat-set pilot and print shrink require coupons. Hood capture and thumbscrew engagement are unverified.",
   "physical_fit_verified": false,
   "mechanical_library_sha256": {
-    "cadagent.geometry": "148f271304dab6fd940e813ca560871ba27e82e3ce23e67634e9627a05b1d163",
-    "cadagent.fasteners": "5f156ce960bb11705bd8cefd00f6191bec48fd7136ce680b609914fd4c37b6a1",
-    "cadagent.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
+    "cadagent.geometry": "e190552b3d491e68591db3dade950e0446177702b8cfe247f715ca86d3adf7cc",
+    "cadagent.mechanical.fasteners": "5f156ce960bb11705bd8cefd00f6191bec48fd7136ce680b609914fd4c37b6a1",
+    "cadagent.mechanical.markings": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277"
   },
   "mechanical_sources": {
-    "cad/build.py": "12570a0e0ddadcfcfd3c2add9546013a675febb3e90bd7404a8788297371b48a",
-    "cad/hardware_models.py": "733e384e34e3acbd886c3143098f55cdb454c16e9057671bea18cf46db3ff97c",
-    "cad/markings.py": "c40e0d6c4ee938af8b946a77ead7ecfd02582c0057505d4dcfd21b004fb76eb7",
+    "cad/build.py": "dcf63f8acffda08be6f3011d350673d0b2ff247503602cf2ad65ce75068bd097",
+    "cad/hardware_models.py": "9710b6dbeeba4ea3a6c58473c0ba057102ef9063d7086e198815fb927ebdde89",
+    "cad/markings.py": "ea0a4916fbeafc03a35e7f76810abac2437fd9c191d3e78664b6c2a3c81c8707",
     "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
     "research/mating-dsub-measurements.json": "4cc118d4ba31b8d6f959515d493eddddbbcb3d44e4a3de41bd200ec4a44e7dec",
     "tools/check_mechanics.py": "98ddfe91e5a39a030dacf7b3e794d5ec2bd4a954bdd6e698b28f8df585cb087e"
   },
   "artifact_sha256": {
-    "exports/4port_base.step": "58761167cff83c875a70bcba2ea9649d9402ce98ee4b90e981300f2fb38de315",
-    "exports/4port_lid.step": "1ce7b1a3080e64c5f7df541ca24dcb135eeb0d60a99fa76e5df2e9907b346000",
-    "exports/asm_4port_clamp.step": "265d57e053f60e49198b663c800b54fdb1aed9630a75cb3214c86bc3bc60726c",
-    "exports/asm_4port_pcb.step": "4735b0e5463f1c4a46d2667728b0acd9666af6c88977398c24dc5ef8e4709294"
+    "exports/4port_base.step": "27b6c024594faded62d06fda8acb1d9f209c72a6cd875caa391852434adfb8d9",
+    "exports/4port_lid.step": "facf9963fa88a25554456695930d1b4c736296e6e33eb345aa52bb76a9c60186",
+    "exports/asm_4port_clamp.step": "34744079fc9e5803a19fcdc2123707428a558deea78945f9688908956062a849",
+    "exports/asm_4port_pcb.step": "21f79f373749b14f6c8801389eef7ec6a1fa93892a8d14b8a20d607e2da497b3"
   }
 }

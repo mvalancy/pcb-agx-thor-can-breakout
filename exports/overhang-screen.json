@@ -1,0 +1,5048 @@
+{
+ "version": 1,
+ "limit_deg": 45.0,
+ "min_area_mm2": 4.0,
+ "bed_z_mm": 0.3,
+ "angle": "slope from horizontal: 0 = flat ceiling, 90 = vertical wall; faces flatter than limit_deg",
+ "note": "a screen of downward faces, not a slicer: bridges anchored on both sides are listed too",
+ "parts": {
+  "2port_base": {
+   "stl": "2port_base.stl",
+   "sha256": "42b59105baa92389efb94bdaf463cd03511168624e5de0faee32e5779c1b7f96",
+   "downward_area_mm2": 433.11,
+   "regions": [
+    {
+     "area_mm2": 389.11,
+     "faces": 304,
+     "bounds_mm": [
+      64.6,
+      96.1,
+      11.6,
+      104.6,
+      109.7,
+      11.6
+     ],
+     "centre_mm": [
+      84.6,
+      102.87,
+      11.6
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 44.0,
+     "faces": 2,
+     "bounds_mm": [
+      73.6,
+      109.7,
+      16.8,
+      95.6,
+      111.7,
+      16.8
+     ],
+     "centre_mm": [
+      84.6,
+      110.7,
+      16.8
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    }
+   ],
+   "small_regions": 0,
+   "small_area_mm2": 0.0
+  },
+  "2port_lid": {
+   "stl": "2port_lid.stl",
+   "sha256": "59030bc1129c7a5b2e3d39a5f2397037229bc3222b00063bf16164f8a579a0ae",
+   "downward_area_mm2": 1641.552,
+   "regions": [
+    {
+     "area_mm2": 342.9,
+     "faces": 4605,
+     "bounds_mm": [
+      15.6,
+      48.6,
+      0.4,
+      87.6,
+      76.6,
+      0.4
+     ],
+     "centre_mm": [
+      50.98,
+      61.17,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      14.1,
+      89.6,
+      0.4,
+      47.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      30.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      56.1,
+      89.6,
+      0.4,
+      89.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      72.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 73.78,
+     "faces": 317,
+     "bounds_mm": [
+      14.6,
+      25.9,
+      0.4,
+      88.6,
+      26.9,
+      0.4
+     ],
+     "centre_mm": [
+      51.6,
+      26.4,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.09,
+     "faces": 262,
+     "bounds_mm": [
+      41.59,
+      7.73,
+      0.4,
+      47.97,
+      14.16,
+      0.4
+     ],
+     "centre_mm": [
+      44.78,
+      10.95,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      5.9,
+      101.9,
+      3.3,
+      12.3,
+      108.3,
+      3.3
+     ],
+     "centre_mm": [
+      9.1,
+      105.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      90.9,
+      101.9,
+      3.3,
+      97.3,
+      108.3,
+      3.3
+     ],
+     "centre_mm": [
+      94.1,
+      105.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      5.9,
+      19.9,
+      3.3,
+      12.3,
+      26.3,
+      3.3
+     ],
+     "centre_mm": [
+      9.1,
+      23.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      90.9,
+      19.9,
+      3.3,
+      97.3,
+      26.3,
+      3.3
+     ],
+     "centre_mm": [
+      94.1,
+      23.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 22.65,
+     "faces": 10,
+     "bounds_mm": [
+      34.84,
+      7.85,
+      0.4,
+      40.39,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      37.61,
+      10.93,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 22.48,
+     "faces": 180,
+     "bounds_mm": [
+      49.18,
+      7.85,
+      0.4,
+      54.77,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      51.5,
+      10.84,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      65.0,
+      53.7,
+      0.4,
+      72.2,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      68.6,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      31.0,
+      53.7,
+      0.4,
+      38.2,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      34.6,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      56.5,
+      53.7,
+      0.4,
+      63.7,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      60.1,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      35.25,
+      62.5,
+      0.4,
+      42.45,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      38.85,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      52.25,
+      62.5,
+      0.4,
+      59.45,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      55.85,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      60.75,
+      62.5,
+      0.4,
+      67.95,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      64.35,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 14.87,
+     "faces": 6,
+     "bounds_mm": [
+      28.3,
+      7.85,
+      0.4,
+      34.01,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      31.16,
+      10.11,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 14.52,
+     "faces": 8,
+     "bounds_mm": [
+      77.38,
+      8.61,
+      0.4,
+      81.62,
+      13.35,
+      0.4
+     ],
+     "centre_mm": [
+      79.5,
+      10.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 13.78,
+     "faces": 727,
+     "bounds_mm": [
+      11.1,
+      10.4,
+      0.4,
+      24.1,
+      14.4,
+      0.4
+     ],
+     "centre_mm": [
+      17.6,
+      12.4,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 13.78,
+     "faces": 727,
+     "bounds_mm": [
+      11.1,
+      6.8,
+      0.4,
+      24.1,
+      10.8,
+      0.4
+     ],
+     "centre_mm": [
+      17.6,
+      8.8,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 12.09,
+     "faces": 11,
+     "bounds_mm": [
+      71.78,
+      8.61,
+      0.4,
+      76.75,
+      13.35,
+      0.4
+     ],
+     "centre_mm": [
+      74.26,
+      11.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.63,
+     "faces": 170,
+     "bounds_mm": [
+      67.3,
+      8.53,
+      0.4,
+      71.33,
+      13.44,
+      0.4
+     ],
+     "centre_mm": [
+      69.08,
+      10.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.29,
+     "faces": 8,
+     "bounds_mm": [
+      30.11,
+      94.81,
+      0.4,
+      33.5,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      31.81,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.29,
+     "faces": 8,
+     "bounds_mm": [
+      72.11,
+      94.81,
+      0.4,
+      75.5,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      73.81,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      27.1,
+      104.6,
+      0.4,
+      34.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      30.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      69.1,
+      104.6,
+      0.4,
+      76.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      72.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.74,
+     "faces": 11,
+     "bounds_mm": [
+      25.63,
+      94.81,
+      0.4,
+      29.6,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      27.62,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.74,
+     "faces": 11,
+     "bounds_mm": [
+      67.63,
+      94.81,
+      0.4,
+      71.6,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      69.62,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.51,
+     "faces": 262,
+     "bounds_mm": [
+      78.04,
+      94.74,
+      0.4,
+      81.16,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      79.6,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.85,
+     "faces": 11,
+     "bounds_mm": [
+      61.31,
+      83.17,
+      0.4,
+      65.48,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      63.4,
+      84.59,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.67,
+     "faces": 16,
+     "bounds_mm": [
+      50.45,
+      28.87,
+      0.4,
+      56.09,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      53.22,
+      30.0,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.34,
+     "faces": 11,
+     "bounds_mm": [
+      34.59,
+      44.77,
+      0.4,
+      37.83,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      36.21,
+      46.13,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.34,
+     "faces": 11,
+     "bounds_mm": [
+      51.19,
+      44.77,
+      0.4,
+      54.44,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      52.81,
+      46.13,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.16,
+     "faces": 170,
+     "bounds_mm": [
+      64.05,
+      94.74,
+      0.4,
+      67.27,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      65.47,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.16,
+     "faces": 170,
+     "bounds_mm": [
+      22.05,
+      94.74,
+      0.4,
+      25.27,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      23.47,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      17.39,
+      66.87,
+      0.4,
+      20.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      18.7,
+      68.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      17.79,
+      57.97,
+      0.4,
+      20.41,
+      60.88,
+      0.4
+     ],
+     "centre_mm": [
+      19.1,
+      59.43,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      36.57,
+      83.17,
+      0.4,
+      39.18,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      37.88,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      47.09,
+      83.17,
+      0.4,
+      49.7,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      48.39,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      60.84,
+      28.87,
+      0.4,
+      63.45,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      62.15,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      62.17,
+      44.77,
+      0.4,
+      64.79,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      63.48,
+      46.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      62.95,
+      78.07,
+      0.4,
+      65.57,
+      80.98,
+      0.4
+     ],
+     "centre_mm": [
+      64.26,
+      79.53,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      65.1,
+      39.37,
+      0.4,
+      67.72,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      66.41,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      70.35,
+      28.87,
+      0.4,
+      72.97,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      71.66,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      90.01,
+      57.57,
+      0.4,
+      92.63,
+      60.48,
+      0.4
+     ],
+     "centre_mm": [
+      91.32,
+      59.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      53.69,
+      15.27,
+      0.4,
+      56.3,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      54.99,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.33,
+     "faces": 253,
+     "bounds_mm": [
+      29.32,
+      15.27,
+      0.4,
+      31.72,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      30.41,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.26,
+     "faces": 9,
+     "bounds_mm": [
+      36.38,
+      94.81,
+      0.4,
+      39.05,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      37.63,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      92.31,
+      67.97,
+      0.4,
+      95.05,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      93.53,
+      69.43,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      78.07,
+      28.87,
+      0.4,
+      80.81,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      79.3,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      71.34,
+      15.27,
+      0.4,
+      74.08,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      72.56,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      93.36,
+      57.57,
+      0.4,
+      96.11,
+      60.48,
+      0.4
+     ],
+     "centre_mm": [
+      94.59,
+      59.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      22.7,
+      44.77,
+      0.4,
+      25.44,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      23.93,
+      46.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      35.48,
+      39.37,
+      0.4,
+      38.23,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      36.71,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.21,
+     "faces": 233,
+     "bounds_mm": [
+      49.1,
+      21.54,
+      0.4,
+      52.62,
+      23.78,
+      0.4
+     ],
+     "centre_mm": [
+      50.84,
+      22.61,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.21,
+     "faces": 233,
+     "bounds_mm": [
+      54.73,
+      21.54,
+      0.4,
+      58.25,
+      23.78,
+      0.4
+     ],
+     "centre_mm": [
+      56.47,
+      22.61,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.14,
+     "faces": 495,
+     "bounds_mm": [
+      54.65,
+      64.44,
+      0.4,
+      57.05,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      55.85,
+      66.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      41.1,
+      28.82,
+      0.4,
+      44.1,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      42.6,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      47.23,
+      28.82,
+      0.4,
+      50.23,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      48.73,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      55.87,
+      39.32,
+      0.4,
+      58.87,
+      42.34,
+      0.4
+     ],
+     "centre_mm": [
+      57.37,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      39.35,
+      15.22,
+      0.4,
+      42.35,
+      18.24,
+      0.4
+     ],
+     "centre_mm": [
+      40.85,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      50.27,
+      83.12,
+      0.4,
+      53.27,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      51.77,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      57.99,
+      83.12,
+      0.4,
+      60.99,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      59.49,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      22.4,
+      66.87,
+      0.4,
+      25.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      23.71,
+      68.32,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      82.19,
+      67.97,
+      0.4,
+      84.8,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      83.5,
+      69.42,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      36.17,
+      15.27,
+      0.4,
+      38.78,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      37.47,
+      16.72,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      86.39,
+      63.17,
+      0.4,
+      89.0,
+      66.08,
+      0.4
+     ],
+     "centre_mm": [
+      87.69,
+      64.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      43.78,
+      34.77,
+      0.4,
+      46.41,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      44.87,
+      36.18,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      38.19,
+      28.87,
+      0.4,
+      40.82,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      39.28,
+      30.28,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      42.91,
+      15.27,
+      0.4,
+      45.55,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      44.01,
+      16.68,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      68.7,
+      83.17,
+      0.4,
+      71.34,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      69.8,
+      84.58,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      65.35,
+      44.72,
+      0.4,
+      68.14,
+      47.74,
+      0.4
+     ],
+     "centre_mm": [
+      66.76,
+      46.29,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      86.56,
+      57.52,
+      0.4,
+      89.35,
+      60.54,
+      0.4
+     ],
+     "centre_mm": [
+      87.97,
+      59.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      64.02,
+      28.82,
+      0.4,
+      66.81,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      65.43,
+      30.39,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.8,
+     "faces": 314,
+     "bounds_mm": [
+      27.61,
+      21.55,
+      0.4,
+      29.96,
+      24.65,
+      0.4
+     ],
+     "centre_mm": [
+      28.88,
+      23.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.78,
+     "faces": 311,
+     "bounds_mm": [
+      63.11,
+      64.44,
+      0.4,
+      65.54,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      64.37,
+      65.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.78,
+     "faces": 311,
+     "bounds_mm": [
+      37.65,
+      64.44,
+      0.4,
+      40.09,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      38.82,
+      66.07,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.66,
+     "faces": 495,
+     "bounds_mm": [
+      48.63,
+      78.02,
+      0.4,
+      50.92,
+      81.04,
+      0.4
+     ],
+     "centre_mm": [
+      49.78,
+      79.53,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.63,
+     "faces": 136,
+     "bounds_mm": [
+      22.79,
+      28.87,
+      0.4,
+      25.3,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      24.04,
+      30.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.63,
+     "faces": 136,
+     "bounds_mm": [
+      46.78,
+      39.37,
+      0.4,
+      49.3,
+      42.34,
+      0.4
+     ],
+     "centre_mm": [
+      48.04,
+      40.88,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      13.95,
+      66.87,
+      0.4,
+      17.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      15.48,
+      68.47,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      14.35,
+      57.97,
+      0.4,
+      17.41,
+      60.88,
+      0.4
+     ],
+     "centre_mm": [
+      15.88,
+      59.57,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      19.47,
+      28.87,
+      0.4,
+      22.52,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      20.99,
+      30.47,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      38.22,
+      44.77,
+      0.4,
+      41.28,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      39.75,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      43.46,
+      39.37,
+      0.4,
+      46.52,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      44.99,
+      40.97,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      54.82,
+      44.77,
+      0.4,
+      57.88,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      56.35,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      72.12,
+      44.77,
+      0.4,
+      75.18,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      73.65,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      50.24,
+      15.27,
+      0.4,
+      53.3,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      51.77,
+      16.87,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      63.72,
+      15.27,
+      0.4,
+      66.77,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      65.25,
+      16.87,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.44,
+     "faces": 262,
+     "bounds_mm": [
+      40.82,
+      34.72,
+      0.4,
+      43.22,
+      37.74,
+      0.4
+     ],
+     "centre_mm": [
+      42.02,
+      36.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 163,
+     "bounds_mm": [
+      67.46,
+      55.69,
+      0.4,
+      69.77,
+      58.81,
+      0.4
+     ],
+     "centre_mm": [
+      68.61,
+      57.21,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 235,
+     "bounds_mm": [
+      39.61,
+      20.75,
+      0.4,
+      41.95,
+      23.84,
+      0.4
+     ],
+     "centre_mm": [
+      40.6,
+      22.48,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      26.02,
+      44.77,
+      0.4,
+      28.09,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      26.9,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      38.8,
+      39.37,
+      0.4,
+      40.88,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      39.68,
+      40.82,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      44.21,
+      44.77,
+      0.4,
+      46.29,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      45.09,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      62.37,
+      39.37,
+      0.4,
+      64.44,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      63.25,
+      40.82,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      65.97,
+      83.17,
+      0.4,
+      68.04,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      66.85,
+      84.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      78.5,
+      44.77,
+      0.4,
+      80.57,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      79.38,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      81.39,
+      28.87,
+      0.4,
+      83.46,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      82.27,
+      30.32,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      87.02,
+      67.97,
+      0.4,
+      89.1,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      87.9,
+      69.42,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      74.66,
+      15.27,
+      0.4,
+      76.73,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      75.53,
+      16.72,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      89.73,
+      63.17,
+      0.4,
+      91.81,
+      66.08,
+      0.4
+     ],
+     "centre_mm": [
+      90.61,
+      64.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      30.25,
+      44.72,
+      0.4,
+      32.57,
+      47.74,
+      0.4
+     ],
+     "centre_mm": [
+      31.46,
+      46.19,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      55.63,
+      78.02,
+      0.4,
+      57.95,
+      81.04,
+      0.4
+     ],
+     "centre_mm": [
+      56.83,
+      79.49,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      41.15,
+      83.12,
+      0.4,
+      43.47,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      42.36,
+      84.59,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      82.44,
+      57.52,
+      0.4,
+      84.76,
+      60.54,
+      0.4
+     ],
+     "centre_mm": [
+      83.55,
+      59.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      32.15,
+      83.17,
+      0.4,
+      34.55,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      33.13,
+      84.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      55.23,
+      83.17,
+      0.4,
+      57.63,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      56.2,
+      84.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      62.79,
+      34.77,
+      0.4,
+      65.19,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      63.76,
+      35.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      51.34,
+      34.77,
+      0.4,
+      53.74,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      52.31,
+      35.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      35.25,
+      28.87,
+      0.4,
+      37.65,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      36.23,
+      30.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      56.42,
+      28.87,
+      0.4,
+      58.82,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      57.4,
+      30.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      59.44,
+      39.37,
+      0.4,
+      61.84,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      60.41,
+      40.58,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      23.45,
+      15.27,
+      0.4,
+      25.85,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      24.42,
+      16.48,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.26,
+     "faces": 14,
+     "bounds_mm": [
+      58.83,
+      55.69,
+      0.4,
+      61.37,
+      58.75,
+      0.4
+     ],
+     "centre_mm": [
+      60.19,
+      57.29,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.26,
+     "faces": 10,
+     "bounds_mm": [
+      25.74,
+      28.87,
+      0.4,
+      28.67,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      27.21,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      79.23,
+      67.92,
+      0.4,
+      81.53,
+      70.94,
+      0.4
+     ],
+     "centre_mm": [
+      80.36,
+      69.45,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      73.62,
+      28.82,
+      0.4,
+      75.92,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      74.75,
+      30.35,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      83.43,
+      63.12,
+      0.4,
+      85.73,
+      66.14,
+      0.4
+     ],
+     "centre_mm": [
+      84.56,
+      64.65,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.13,
+     "faces": 276,
+     "bounds_mm": [
+      50.42,
+      55.64,
+      0.4,
+      52.73,
+      58.81,
+      0.4
+     ],
+     "centre_mm": [
+      51.73,
+      57.24,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.1,
+     "faces": 5,
+     "bounds_mm": [
+      77.04,
+      15.27,
+      0.4,
+      80.1,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      78.57,
+      16.65,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.03,
+     "faces": 122,
+     "bounds_mm": [
+      41.97,
+      55.64,
+      0.4,
+      44.2,
+      58.75,
+      0.4
+     ],
+     "centre_mm": [
+      43.14,
+      57.28,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    }
+   ],
+   "small_regions": 75,
+   "small_area_mm2": 185.175
+  },
+  "4port_base": {
+   "stl": "4port_base.stl",
+   "sha256": "f0d721a5e821f9aa9529e2bede6bd6ab430daa038bb9639488eb9ac31a7f56c7",
+   "downward_area_mm2": 433.11,
+   "regions": [
+    {
+     "area_mm2": 389.11,
+     "faces": 304,
+     "bounds_mm": [
+      106.6,
+      96.1,
+      11.6,
+      146.6,
+      109.7,
+      11.6
+     ],
+     "centre_mm": [
+      126.6,
+      102.87,
+      11.6
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 44.0,
+     "faces": 2,
+     "bounds_mm": [
+      115.6,
+      109.7,
+      16.8,
+      137.6,
+      111.7,
+      16.8
+     ],
+     "centre_mm": [
+      126.6,
+      110.7,
+      16.8
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    }
+   ],
+   "small_regions": 0,
+   "small_area_mm2": 0.0
+  },
+  "4port_lid": {
+   "stl": "4port_lid.stl",
+   "sha256": "67b572ba6890bcc5671be022ab721ddacce96cd2e6de531ed9d1320a9212f22a",
+   "downward_area_mm2": 1972.821,
+   "regions": [
+    {
+     "area_mm2": 342.9,
+     "faces": 4605,
+     "bounds_mm": [
+      57.6,
+      48.6,
+      0.4,
+      129.6,
+      76.6,
+      0.4
+     ],
+     "centre_mm": [
+      92.98,
+      61.17,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 157.78,
+     "faces": 317,
+     "bounds_mm": [
+      14.6,
+      25.9,
+      0.4,
+      172.6,
+      26.9,
+      0.4
+     ],
+     "centre_mm": [
+      93.6,
+      26.4,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      140.1,
+      89.6,
+      0.4,
+      173.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      156.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      98.1,
+      89.6,
+      0.4,
+      131.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      114.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      14.1,
+      89.6,
+      0.4,
+      47.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      30.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 86.36,
+     "faces": 1202,
+     "bounds_mm": [
+      56.1,
+      89.6,
+      0.4,
+      89.1,
+      103.6,
+      0.4
+     ],
+     "centre_mm": [
+      72.6,
+      96.6,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.09,
+     "faces": 262,
+     "bounds_mm": [
+      83.59,
+      7.73,
+      0.4,
+      89.97,
+      14.16,
+      0.4
+     ],
+     "centre_mm": [
+      86.78,
+      10.95,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      5.9,
+      101.9,
+      3.3,
+      12.3,
+      108.3,
+      3.3
+     ],
+     "centre_mm": [
+      9.1,
+      105.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      174.9,
+      101.9,
+      3.3,
+      181.3,
+      108.3,
+      3.3
+     ],
+     "centre_mm": [
+      178.1,
+      105.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      5.9,
+      19.9,
+      3.3,
+      12.3,
+      26.3,
+      3.3
+     ],
+     "centre_mm": [
+      9.1,
+      23.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 23.08,
+     "faces": 210,
+     "bounds_mm": [
+      174.9,
+      19.9,
+      3.3,
+      181.3,
+      26.3,
+      3.3
+     ],
+     "centre_mm": [
+      178.1,
+      23.1,
+      3.3
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 22.65,
+     "faces": 10,
+     "bounds_mm": [
+      76.84,
+      7.85,
+      0.4,
+      82.39,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      79.61,
+      10.93,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 22.48,
+     "faces": 180,
+     "bounds_mm": [
+      91.18,
+      7.85,
+      0.4,
+      96.77,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      93.5,
+      10.84,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      73.0,
+      53.7,
+      0.4,
+      80.2,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      76.6,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      98.5,
+      53.7,
+      0.4,
+      105.7,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      102.1,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      107.0,
+      53.7,
+      0.4,
+      114.2,
+      60.9,
+      0.4
+     ],
+     "centre_mm": [
+      110.6,
+      57.3,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      77.25,
+      62.5,
+      0.4,
+      84.45,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      80.85,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      94.25,
+      62.5,
+      0.4,
+      101.45,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      97.85,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 19.47,
+     "faces": 210,
+     "bounds_mm": [
+      102.75,
+      62.5,
+      0.4,
+      109.95,
+      69.7,
+      0.4
+     ],
+     "centre_mm": [
+      106.35,
+      66.1,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 14.87,
+     "faces": 6,
+     "bounds_mm": [
+      70.3,
+      7.85,
+      0.4,
+      76.01,
+      14.04,
+      0.4
+     ],
+     "centre_mm": [
+      73.16,
+      10.11,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 14.52,
+     "faces": 8,
+     "bounds_mm": [
+      119.38,
+      8.61,
+      0.4,
+      123.62,
+      13.35,
+      0.4
+     ],
+     "centre_mm": [
+      121.5,
+      10.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 13.78,
+     "faces": 727,
+     "bounds_mm": [
+      53.1,
+      10.4,
+      0.4,
+      66.1,
+      14.4,
+      0.4
+     ],
+     "centre_mm": [
+      59.6,
+      12.4,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 13.78,
+     "faces": 727,
+     "bounds_mm": [
+      53.1,
+      6.8,
+      0.4,
+      66.1,
+      10.8,
+      0.4
+     ],
+     "centre_mm": [
+      59.6,
+      8.8,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 12.09,
+     "faces": 11,
+     "bounds_mm": [
+      113.78,
+      8.61,
+      0.4,
+      118.75,
+      13.35,
+      0.4
+     ],
+     "centre_mm": [
+      116.26,
+      11.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.63,
+     "faces": 170,
+     "bounds_mm": [
+      109.3,
+      8.53,
+      0.4,
+      113.33,
+      13.44,
+      0.4
+     ],
+     "centre_mm": [
+      111.08,
+      10.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.29,
+     "faces": 8,
+     "bounds_mm": [
+      114.11,
+      94.81,
+      0.4,
+      117.5,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      115.81,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 9.29,
+     "faces": 8,
+     "bounds_mm": [
+      156.11,
+      94.81,
+      0.4,
+      159.5,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      157.81,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.41,
+     "faces": 180,
+     "bounds_mm": [
+      22.71,
+      94.81,
+      0.4,
+      26.14,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      24.13,
+      96.64,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.41,
+     "faces": 180,
+     "bounds_mm": [
+      64.71,
+      94.81,
+      0.4,
+      68.14,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      66.13,
+      96.64,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      27.1,
+      104.6,
+      0.4,
+      34.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      30.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      69.1,
+      104.6,
+      0.4,
+      76.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      72.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      111.1,
+      104.6,
+      0.4,
+      118.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      114.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 8.2,
+     "faces": 510,
+     "bounds_mm": [
+      153.1,
+      104.6,
+      0.4,
+      160.1,
+      107.8,
+      0.4
+     ],
+     "centre_mm": [
+      156.6,
+      106.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.74,
+     "faces": 11,
+     "bounds_mm": [
+      151.63,
+      94.81,
+      0.4,
+      155.6,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      153.62,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.74,
+     "faces": 11,
+     "bounds_mm": [
+      109.63,
+      94.81,
+      0.4,
+      113.6,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      111.62,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.51,
+     "faces": 262,
+     "bounds_mm": [
+      162.04,
+      94.74,
+      0.4,
+      165.16,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      163.6,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.35,
+     "faces": 10,
+     "bounds_mm": [
+      26.72,
+      94.81,
+      0.4,
+      29.41,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      27.86,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.35,
+     "faces": 10,
+     "bounds_mm": [
+      68.72,
+      94.81,
+      0.4,
+      71.41,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      69.86,
+      96.7,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.05,
+     "faces": 275,
+     "bounds_mm": [
+      72.16,
+      94.74,
+      0.4,
+      75.16,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      73.64,
+      96.74,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 7.05,
+     "faces": 275,
+     "bounds_mm": [
+      30.16,
+      94.74,
+      0.4,
+      33.16,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      31.64,
+      96.74,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.85,
+     "faces": 11,
+     "bounds_mm": [
+      103.31,
+      83.17,
+      0.4,
+      107.48,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      105.4,
+      84.59,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.67,
+     "faces": 16,
+     "bounds_mm": [
+      92.45,
+      28.87,
+      0.4,
+      98.09,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      95.22,
+      30.0,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.34,
+     "faces": 11,
+     "bounds_mm": [
+      76.59,
+      44.77,
+      0.4,
+      79.83,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      78.21,
+      46.13,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.34,
+     "faces": 11,
+     "bounds_mm": [
+      93.19,
+      44.77,
+      0.4,
+      96.44,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      94.81,
+      46.13,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.33,
+     "faces": 276,
+     "bounds_mm": [
+      35.69,
+      94.74,
+      0.4,
+      38.55,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      37.32,
+      96.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.18,
+     "faces": 122,
+     "bounds_mm": [
+      77.76,
+      94.74,
+      0.4,
+      80.51,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      79.2,
+      96.78,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.16,
+     "faces": 170,
+     "bounds_mm": [
+      106.05,
+      94.74,
+      0.4,
+      109.27,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      107.47,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 6.16,
+     "faces": 170,
+     "bounds_mm": [
+      148.05,
+      94.74,
+      0.4,
+      151.27,
+      98.67,
+      0.4
+     ],
+     "centre_mm": [
+      149.47,
+      96.71,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      59.39,
+      66.87,
+      0.4,
+      62.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      60.7,
+      68.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      59.79,
+      57.97,
+      0.4,
+      62.41,
+      60.88,
+      0.4
+     ],
+     "centre_mm": [
+      61.1,
+      59.43,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      78.57,
+      83.17,
+      0.4,
+      81.18,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      79.88,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      89.09,
+      83.17,
+      0.4,
+      91.7,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      90.39,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      102.84,
+      28.87,
+      0.4,
+      105.45,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      104.15,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      104.17,
+      44.77,
+      0.4,
+      106.79,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      105.48,
+      46.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      104.95,
+      78.07,
+      0.4,
+      107.57,
+      80.98,
+      0.4
+     ],
+     "centre_mm": [
+      106.26,
+      79.53,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      107.1,
+      39.37,
+      0.4,
+      109.72,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      108.41,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      112.35,
+      28.87,
+      0.4,
+      114.97,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      113.66,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      132.01,
+      57.57,
+      0.4,
+      134.63,
+      60.48,
+      0.4
+     ],
+     "centre_mm": [
+      133.32,
+      59.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.5,
+     "faces": 8,
+     "bounds_mm": [
+      95.69,
+      15.27,
+      0.4,
+      98.3,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      96.99,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.33,
+     "faces": 253,
+     "bounds_mm": [
+      71.32,
+      15.27,
+      0.4,
+      73.72,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      72.41,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.26,
+     "faces": 9,
+     "bounds_mm": [
+      120.38,
+      94.81,
+      0.4,
+      123.05,
+      98.6,
+      0.4
+     ],
+     "centre_mm": [
+      121.63,
+      96.89,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      64.7,
+      44.77,
+      0.4,
+      67.44,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      65.93,
+      46.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      120.07,
+      28.87,
+      0.4,
+      122.81,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      121.3,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      113.34,
+      15.27,
+      0.4,
+      116.08,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      114.56,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      77.48,
+      39.37,
+      0.4,
+      80.23,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      78.71,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      134.31,
+      67.97,
+      0.4,
+      137.05,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      135.53,
+      69.43,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.24,
+     "faces": 135,
+     "bounds_mm": [
+      135.36,
+      57.57,
+      0.4,
+      138.11,
+      60.48,
+      0.4
+     ],
+     "centre_mm": [
+      136.59,
+      59.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.21,
+     "faces": 233,
+     "bounds_mm": [
+      91.1,
+      21.54,
+      0.4,
+      94.62,
+      23.78,
+      0.4
+     ],
+     "centre_mm": [
+      92.84,
+      22.61,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.21,
+     "faces": 233,
+     "bounds_mm": [
+      96.73,
+      21.54,
+      0.4,
+      100.25,
+      23.78,
+      0.4
+     ],
+     "centre_mm": [
+      98.47,
+      22.61,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.14,
+     "faces": 495,
+     "bounds_mm": [
+      96.65,
+      64.44,
+      0.4,
+      99.05,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      97.85,
+      66.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      83.1,
+      28.82,
+      0.4,
+      86.1,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      84.6,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      89.23,
+      28.82,
+      0.4,
+      92.23,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      90.73,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      97.87,
+      39.32,
+      0.4,
+      100.87,
+      42.34,
+      0.4
+     ],
+     "centre_mm": [
+      99.37,
+      40.83,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      81.35,
+      15.22,
+      0.4,
+      84.35,
+      18.24,
+      0.4
+     ],
+     "centre_mm": [
+      82.85,
+      16.73,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      92.27,
+      83.12,
+      0.4,
+      95.27,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      93.77,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.11,
+     "faces": 262,
+     "bounds_mm": [
+      99.99,
+      83.12,
+      0.4,
+      102.99,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      101.49,
+      84.63,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      64.4,
+      66.87,
+      0.4,
+      67.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      65.71,
+      68.32,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      124.19,
+      67.97,
+      0.4,
+      126.8,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      125.5,
+      69.42,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      78.17,
+      15.27,
+      0.4,
+      80.78,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      79.47,
+      16.72,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 5.02,
+     "faces": 10,
+     "bounds_mm": [
+      128.39,
+      63.17,
+      0.4,
+      131.0,
+      66.08,
+      0.4
+     ],
+     "centre_mm": [
+      129.69,
+      64.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      85.78,
+      34.77,
+      0.4,
+      88.41,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      86.87,
+      36.18,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      80.19,
+      28.87,
+      0.4,
+      82.82,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      81.28,
+      30.28,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      84.91,
+      15.27,
+      0.4,
+      87.55,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      86.01,
+      16.68,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.98,
+     "faces": 180,
+     "bounds_mm": [
+      110.7,
+      83.17,
+      0.4,
+      113.34,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      111.8,
+      84.58,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      128.56,
+      57.52,
+      0.4,
+      131.35,
+      60.54,
+      0.4
+     ],
+     "centre_mm": [
+      129.97,
+      59.09,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      107.35,
+      44.72,
+      0.4,
+      110.14,
+      47.74,
+      0.4
+     ],
+     "centre_mm": [
+      108.76,
+      46.29,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.85,
+     "faces": 169,
+     "bounds_mm": [
+      106.02,
+      28.82,
+      0.4,
+      108.81,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      107.43,
+      30.39,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.8,
+     "faces": 314,
+     "bounds_mm": [
+      69.61,
+      21.55,
+      0.4,
+      71.96,
+      24.65,
+      0.4
+     ],
+     "centre_mm": [
+      70.88,
+      23.03,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.78,
+     "faces": 311,
+     "bounds_mm": [
+      105.11,
+      64.44,
+      0.4,
+      107.54,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      106.37,
+      65.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.78,
+     "faces": 311,
+     "bounds_mm": [
+      79.65,
+      64.44,
+      0.4,
+      82.09,
+      67.61,
+      0.4
+     ],
+     "centre_mm": [
+      80.82,
+      66.07,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.66,
+     "faces": 495,
+     "bounds_mm": [
+      90.63,
+      78.02,
+      0.4,
+      92.92,
+      81.04,
+      0.4
+     ],
+     "centre_mm": [
+      91.78,
+      79.53,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.63,
+     "faces": 136,
+     "bounds_mm": [
+      64.79,
+      28.87,
+      0.4,
+      67.3,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      66.04,
+      30.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.63,
+     "faces": 136,
+     "bounds_mm": [
+      88.78,
+      39.37,
+      0.4,
+      91.3,
+      42.34,
+      0.4
+     ],
+     "centre_mm": [
+      90.04,
+      40.88,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      55.95,
+      66.87,
+      0.4,
+      59.01,
+      69.78,
+      0.4
+     ],
+     "centre_mm": [
+      57.48,
+      68.47,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      56.35,
+      57.97,
+      0.4,
+      59.41,
+      60.88,
+      0.4
+     ],
+     "centre_mm": [
+      57.88,
+      59.57,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      61.47,
+      28.87,
+      0.4,
+      64.52,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      62.99,
+      30.47,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      80.22,
+      44.77,
+      0.4,
+      83.28,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      81.75,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      85.46,
+      39.37,
+      0.4,
+      88.52,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      86.99,
+      40.97,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      96.82,
+      44.77,
+      0.4,
+      99.88,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      98.35,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      114.12,
+      44.77,
+      0.4,
+      117.18,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      115.65,
+      46.37,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      92.24,
+      15.27,
+      0.4,
+      95.3,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      93.77,
+      16.87,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.58,
+     "faces": 11,
+     "bounds_mm": [
+      105.72,
+      15.27,
+      0.4,
+      108.77,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      107.25,
+      16.87,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.44,
+     "faces": 262,
+     "bounds_mm": [
+      82.82,
+      34.72,
+      0.4,
+      85.22,
+      37.74,
+      0.4
+     ],
+     "centre_mm": [
+      84.02,
+      36.23,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 163,
+     "bounds_mm": [
+      109.46,
+      55.69,
+      0.4,
+      111.77,
+      58.81,
+      0.4
+     ],
+     "centre_mm": [
+      110.61,
+      57.21,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 235,
+     "bounds_mm": [
+      81.61,
+      20.75,
+      0.4,
+      83.95,
+      23.84,
+      0.4
+     ],
+     "centre_mm": [
+      82.6,
+      22.48,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      68.02,
+      44.77,
+      0.4,
+      70.09,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      68.9,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      80.8,
+      39.37,
+      0.4,
+      82.88,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      81.68,
+      40.82,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      86.21,
+      44.77,
+      0.4,
+      88.29,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      87.09,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      104.37,
+      39.37,
+      0.4,
+      106.44,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      105.25,
+      40.82,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      107.97,
+      83.17,
+      0.4,
+      110.04,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      108.85,
+      84.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      120.5,
+      44.77,
+      0.4,
+      122.57,
+      47.68,
+      0.4
+     ],
+     "centre_mm": [
+      121.38,
+      46.22,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      123.39,
+      28.87,
+      0.4,
+      125.46,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      124.27,
+      30.32,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      129.02,
+      67.97,
+      0.4,
+      131.1,
+      70.88,
+      0.4
+     ],
+     "centre_mm": [
+      129.9,
+      69.42,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      116.66,
+      15.27,
+      0.4,
+      118.73,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      117.53,
+      16.72,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.35,
+     "faces": 10,
+     "bounds_mm": [
+      131.73,
+      63.17,
+      0.4,
+      133.81,
+      66.08,
+      0.4
+     ],
+     "centre_mm": [
+      132.61,
+      64.62,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      72.25,
+      44.72,
+      0.4,
+      74.57,
+      47.74,
+      0.4
+     ],
+     "centre_mm": [
+      73.46,
+      46.19,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      97.63,
+      78.02,
+      0.4,
+      99.95,
+      81.04,
+      0.4
+     ],
+     "centre_mm": [
+      98.83,
+      79.49,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      83.15,
+      83.12,
+      0.4,
+      85.47,
+      86.14,
+      0.4
+     ],
+     "centre_mm": [
+      84.36,
+      84.59,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.34,
+     "faces": 311,
+     "bounds_mm": [
+      124.44,
+      57.52,
+      0.4,
+      126.76,
+      60.54,
+      0.4
+     ],
+     "centre_mm": [
+      125.55,
+      59.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      74.15,
+      83.17,
+      0.4,
+      76.55,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      75.13,
+      84.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      97.23,
+      83.17,
+      0.4,
+      99.63,
+      86.08,
+      0.4
+     ],
+     "centre_mm": [
+      98.2,
+      84.38,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      93.34,
+      34.77,
+      0.4,
+      95.74,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      94.31,
+      35.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      104.79,
+      34.77,
+      0.4,
+      107.19,
+      37.68,
+      0.4
+     ],
+     "centre_mm": [
+      105.76,
+      35.98,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      77.25,
+      28.87,
+      0.4,
+      79.65,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      78.23,
+      30.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      98.42,
+      28.87,
+      0.4,
+      100.82,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      99.4,
+      30.08,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      101.44,
+      39.37,
+      0.4,
+      103.84,
+      42.28,
+      0.4
+     ],
+     "centre_mm": [
+      102.41,
+      40.58,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.3,
+     "faces": 134,
+     "bounds_mm": [
+      65.45,
+      15.27,
+      0.4,
+      67.85,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      66.42,
+      16.48,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.26,
+     "faces": 14,
+     "bounds_mm": [
+      100.83,
+      55.69,
+      0.4,
+      103.37,
+      58.75,
+      0.4
+     ],
+     "centre_mm": [
+      102.19,
+      57.29,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.26,
+     "faces": 10,
+     "bounds_mm": [
+      67.74,
+      28.87,
+      0.4,
+      70.67,
+      31.78,
+      0.4
+     ],
+     "centre_mm": [
+      69.21,
+      30.33,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      121.23,
+      67.92,
+      0.4,
+      123.53,
+      70.94,
+      0.4
+     ],
+     "centre_mm": [
+      122.36,
+      69.45,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      115.62,
+      28.82,
+      0.4,
+      117.92,
+      31.84,
+      0.4
+     ],
+     "centre_mm": [
+      116.75,
+      30.35,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.17,
+     "faces": 274,
+     "bounds_mm": [
+      125.43,
+      63.12,
+      0.4,
+      127.73,
+      66.14,
+      0.4
+     ],
+     "centre_mm": [
+      126.56,
+      64.65,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.13,
+     "faces": 276,
+     "bounds_mm": [
+      92.42,
+      55.64,
+      0.4,
+      94.73,
+      58.81,
+      0.4
+     ],
+     "centre_mm": [
+      93.73,
+      57.24,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.1,
+     "faces": 5,
+     "bounds_mm": [
+      119.04,
+      15.27,
+      0.4,
+      122.1,
+      18.18,
+      0.4
+     ],
+     "centre_mm": [
+      120.57,
+      16.65,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    },
+    {
+     "area_mm2": 4.03,
+     "faces": 122,
+     "bounds_mm": [
+      83.97,
+      55.64,
+      0.4,
+      86.2,
+      58.75,
+      0.4
+     ],
+     "centre_mm": [
+      85.14,
+      57.28,
+      0.4
+     ],
+     "flattest_deg": 0.0,
+     "mean_slope_deg": 0.0
+    }
+   ],
+   "small_regions": 75,
+   "small_area_mm2": 185.175
+  },
+  "fastener_coupon": {
+   "stl": "fastener_coupon.stl",
+   "sha256": "3208e1c963a5212d450804b60d536ce6128d690ede1cbad9559e7f1420d11bdf",
+   "downward_area_mm2": 0.0,
+   "regions": [],
+   "small_regions": 0,
+   "small_area_mm2": 0.0
+  },
+  "port_coupon": {
+   "stl": "port_coupon.stl",
+   "sha256": "73836e9e6b8d63b776da361bd8e23352ee367232fe3cf9cf7d48b288be01dfb3",
+   "downward_area_mm2": 0.0,
+   "regions": [],
+   "small_regions": 0,
+   "small_area_mm2": 0.0
+  },
+  "ribbon_clamp": {
+   "stl": "ribbon_clamp.stl",
+   "sha256": "9ceb2611d4bd5194fd6b7f81a5928a19327a6055c29af67d4b155975b9304b1a",
+   "downward_area_mm2": 0.0,
+   "regions": [],
+   "small_regions": 0,
+   "small_area_mm2": 0.0
+  }
+ }
+}

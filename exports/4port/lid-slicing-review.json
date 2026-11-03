@@ -1,6 +1,6 @@
 {
   "pass": true,
-  "scope": "Offline lid-only slicing by shared cad-agent; first two engraved layers contain extrusion paths. Does not certify every glyph, print adhesion, surface finish, other housing parts or physical readability.",
+  "scope": "Offline lid-only slicing by shared cad-agent; first two engraved layers contain extrusion paths. Does not certify every glyph, print adhesion, surface finish or physical readability. The other printed parts are sliced in exports/slice-report.json.",
   "slicer": "BambuStudio 02.08.04.57",
   "profile": {
     "printer_model": "Bambu Lab P1S",
@@ -29,22 +29,22 @@
     "filament": "Generic PETG"
   },
   "source_sha256": {
-    "tools/check_lid_slicing.py": "cafdd6fa12e375604f561426345cdeedecc133510da891766a60b4bece4cf5a4",
-    "cad-agent.yaml": "d5e493e196f7190fc07e72ec2ed0e456931f7023e0717a2608cd56d37facd564"
+    "tools/check_lid_slicing.py": "300f5bd3f8e8be975e29bd67d1549bc5a3600a649442c303471ab80f428bb537",
+    "cad-agent.yaml": "0a3936d2d3d1ac49d48b58d0082f322064f9c765a69172e02d8af67a5d6eaad3"
   },
-  "library_sha256": "fd5a746a54d920d13af228a9766da4b5b390cc043dded2fd0be4486db3f415f0",
+  "library_sha256": "1abb3c15b97ddfb18b639fca43e521764e30e999d129de57efc1a867b35ed19c",
   "artifact_sha256": {
-    "exports/4port_lid.3mf": "63f96d4fd16b6d6520bd106dc06cd36a117ed088aa3ae2e035440535609412ba",
-    "exports/4port_lid.stl": "9fb748b2684727d6657ddf5fa41a02368d426346b0a1fb9f3556b474e556161d",
-    "preview/4port-lid-first-layer.svg": "eb998ed2855c2bb7f555308ac807b16c66f7486b605c532e04d41cb8256f4f30",
-    "exports/slice-report.json": "f782fc1a8086f82b69338a99f212486183f45c816015e4f7a9a0608489891ae0"
+    "exports/4port_lid.3mf": "f1ecc667643157b113b39e17d564cb47b200d2c079270fddcab315aef2160d52",
+    "exports/4port_lid.stl": "67b572ba6890bcc5671be022ab721ddacce96cd2e6de531ed9d1320a9212f22a",
+    "preview/4port-lid-first-layer.svg": "7a9c68f2dbb1ba5ecf4d58dffe17aea11a9e6d6ae18c6b9ea37d74338d043e4b",
+    "exports/slice-report.json": "8035e57b80f813a663a3cf858c88f9873a10ceb5d6a83c843d478b63df1cabd5"
   },
-  "gcode_sha256": "15225bf75f63d8b74050796e8aa654a1428c363e63ebf2f8cf9f33d5fa30dc93",
-  "resolved_settings_sha256": "d6b8dc223d77092cd85a2088bab5b25c3f2905250363c9220ea5d8778cfd3a53",
+  "gcode_sha256": "ed166b50946e00f37af16b5e343adaf3e8fee4c0d6770e3ecd7f3803c6f89067",
+  "resolved_settings_sha256": "3bab08d5fe197b3eafcd471927b7b57a0059d36b414e4adcc309c595ef974f8a",
   "return_code": 0,
   "layers": 85,
-  "layer_1_extruding_segments": 19634,
-  "layer_2_extruding_segments": 20116,
+  "layer_1_extruding_segments": 19642,
+  "layer_2_extruding_segments": 20102,
   "warnings": [],
   "physical_print_verified": false,
   "printer_submission": false

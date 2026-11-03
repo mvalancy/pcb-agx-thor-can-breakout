@@ -29,5 +29,7 @@ Measurement JSON files preserve dimensions used by the builders. [Source registe
 | [j47-footprint-measurements.json](j47-footprint-measurements.json) | Machine-readable design evidence |
 | [mating-dsub-clearance.md](mating-dsub-clearance.md) | Mating DE9 connector, hood and screw clearances |
 | [mating-dsub-measurements.json](mating-dsub-measurements.json) | Machine-readable design evidence |
+| [ribbon-clamp-snaps.json](ribbon-clamp-snaps.json) | Ribbon-clamp snap sizing result |
+| [ribbon-clamp-snaps.yaml](ribbon-clamp-snaps.yaml) | Ribbon-clamp snap candidates for cad-agent snapfit |
 
 </details>

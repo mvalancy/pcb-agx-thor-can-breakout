@@ -4,8 +4,8 @@
   "scope": "Native DejaVu Sans bold glyph solids and shared vector tools; actual text-to-artwork, roof edge and counterbore distances. Does not establish minimum glyph stroke, slicer survival or printed legibility.",
   "source_sha256": {
     "cad/parameters.json": "28058aee68177b98586bf0b67f43e580da6057050a4e385fab0ea429340ba1fc",
-    "cad/markings.py": "c40e0d6c4ee938af8b946a77ead7ecfd02582c0057505d4dcfd21b004fb76eb7",
-    "tools/check_lid_markings.py": "daf7eca86c0b6983ca7e0e7ffbe7d82e1fee4b2f1914424b125ab066a1a29155"
+    "cad/markings.py": "ea0a4916fbeafc03a35e7f76810abac2437fd9c191d3e78664b6c2a3c81c8707",
+    "tools/check_lid_markings.py": "1895367729e1e27e30043ba85e4ed86072152fcf65957d20a8bbae12b3ac0f2b"
   },
   "library_sha256": "4d07c0b36617fdf9dac0edd21b8ad40750c17d60749e7fbbd6d59cf71bd3e277",
   "minimum_required_clearance_mm": 0.6,

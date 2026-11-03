@@ -15,21 +15,56 @@
   "parts": {
     "2port_lid": {
       "grams": 46.85,
-      "minutes": 104.3,
+      "minutes": 108.3,
       "filament_m": 15.34,
       "error": "Success.",
-      "sha256": "c47e87869e3a1783eb98ad9099f74418fa8e135a7f5c360fd226cbbd5cacd111"
+      "sha256": "bb893d4d562782c52e155e8b3f34018472ecd05c4c0c0db4dc74dbc787a74317"
     },
     "4port_lid": {
-      "grams": 74.21,
-      "minutes": 149.0,
-      "filament_m": 24.29,
+      "grams": 74.22,
+      "minutes": 152.8,
+      "filament_m": 24.3,
       "error": "Success.",
-      "sha256": "63f96d4fd16b6d6520bd106dc06cd36a117ed088aa3ae2e035440535609412ba"
+      "sha256": "f1ecc667643157b113b39e17d564cb47b200d2c079270fddcab315aef2160d52"
+    },
+    "2port_base": {
+      "grams": 66.53,
+      "minutes": 119.7,
+      "filament_m": 21.78,
+      "error": "Success.",
+      "sha256": "bf46f274e50aaa73c8198b6d3183fab7b480e5bada54c0147ae964d0688e47ff"
+    },
+    "4port_base": {
+      "grams": 97.16,
+      "minutes": 163.9,
+      "filament_m": 31.81,
+      "error": "Success.",
+      "sha256": "35e4b5179cdc947363f60bacf9f69f1d7738fca073057eb1958d2d9b97b2d73d"
+    },
+    "ribbon_clamp": {
+      "grams": 2.47,
+      "minutes": 14.2,
+      "filament_m": 0.81,
+      "error": "Success.",
+      "sha256": "93827f1741c1c507ce07720eb947d5ba53e72aa157cc9557ab03edd3134ee211"
+    },
+    "fastener_coupon": {
+      "grams": 6.8,
+      "minutes": 22.3,
+      "filament_m": 2.23,
+      "error": "Success.",
+      "sha256": "c5b147fac50975bccbb8e079e8e634b00a7a9dbc63d3a19e72900c8402e12b3c"
+    },
+    "port_coupon": {
+      "grams": 1.05,
+      "minutes": 9.8,
+      "filament_m": 0.34,
+      "error": "Success.",
+      "sha256": "982b8c75b8b5e2fbd193847e52523c0b06e9d2f045cbafb6ef2b22f30d91b7e5"
     }
   },
-  "total_grams": 121.1,
-  "total_hours": 4.22,
+  "total_grams": 295.1,
+  "total_hours": 9.85,
   "pass": true,
   "note": "Slicer estimates for one copy of each part with the stated profile; supports off unless the profile turns them on."
 }

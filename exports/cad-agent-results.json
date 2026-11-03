@@ -120,6 +120,47 @@
       ]
     },
     {
+      "feature_id": "cad-holes",
+      "feature_title": "Holes clear",
+      "checks": [
+        {
+          "name": "2port base",
+          "status": "pass",
+          "message": "14 hole(s) clear"
+        },
+        {
+          "name": "2port lid",
+          "status": "pass",
+          "message": "17 hole(s) clear, 9 listed exception(s)"
+        },
+        {
+          "name": "4port base",
+          "status": "pass",
+          "message": "14 hole(s) clear"
+        },
+        {
+          "name": "4port lid",
+          "status": "pass",
+          "message": "17 hole(s) clear, 9 listed exception(s)"
+        },
+        {
+          "name": "ribbon clamp",
+          "status": "pass",
+          "message": "4 hole(s) clear"
+        },
+        {
+          "name": "fastener coupon",
+          "status": "pass",
+          "message": "9 hole(s) clear"
+        },
+        {
+          "name": "port coupon",
+          "status": "pass",
+          "message": "0 hole(s) clear"
+        }
+      ]
+    },
+    {
       "feature_id": "cad-checks",
       "feature_title": "Design checks",
       "checks": [
@@ -282,6 +323,16 @@
             "url": "../exports/4port/lid-slicing-review.json",
             "label": "exports/4port/lid-slicing-review.json"
           }
+        },
+        {
+          "name": "inserts \u00b7 Heat-set insert joints (cad-agent inserts cad/joints.yaml)",
+          "status": "pass",
+          "message": "pass true in exports/inserts.json",
+          "evidence": {
+            "type": "link",
+            "url": "../exports/inserts.json",
+            "label": "exports/inserts.json"
+          }
         }
       ]
     },
@@ -300,15 +351,16 @@
   "header_meta": {
     "project": "pcb-agx-thor-can-breakout",
     "revision": "rev A1-development",
-    "generated": "2026-10-27 15:25 UTC"
+    "generated": "2026-11-03 17:03 UTC (last commit)"
   },
   "footer_meta": {
-    "checks": "30 pass / 0 fail / 1 skip",
+    "checks": "38 pass / 0 fail / 1 skip",
     "physical_fit": "physical fit NOT verified (CAD only)",
-    "slicer": "sliced (Bambu Studio (command line)): 121.1 g, 4.22 h for 2 part(s), 0.20mm Standard @BBL X1C, Generic PETG"
+    "slicer": "sliced (Bambu Studio (command line)): 295.1 g, 9.85 h for 7 part(s), 0.20mm Standard @BBL X1C, Generic PETG"
   },
   "project": "pcb-agx-thor-can-breakout",
   "revision": "A1-development",
+  "cad_agent": "0.18.2",
   "physical_fit_verified": false,
   "slicer_run": true,
   "pass": true
