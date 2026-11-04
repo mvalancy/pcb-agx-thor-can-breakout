@@ -66,9 +66,9 @@
     "docs/design-review.md": "56265a70f1d6de85f3cee1904e9726aa110a379cf9de546174861113d54b1baa",
     "docs/enclosure.md": "dd102a2e13dfa9ff0661903119fb2f3c1cab9573e8a340156302fd2a9ab577a1",
     "docs/img/README.md": "31ec85cdba15610a29dbde5f1fd8a60b5648dac11fe33d815aed51acffd7b4ea",
-    "docs/img/hero/README.md": "b3349c23053a686f91a9f1d6b9c6a81d49831f78314a28720fe72ffd3f9e6d7e",
-    "docs/img/hero/pcb-agx-thor-can-breakout-dark.svg": "2d7343400a5d701b6ab057bccb9c7e2dd344e3363c896030f39d9ca71420058d",
-    "docs/img/hero/pcb-agx-thor-can-breakout-light.svg": "d722f6480f153d87c3481a622fbcd04d3afbefc6128259cb71402e1d83657641",
+    "docs/img/hero/README.md": "75991ef1afa4460c3e683065bf36b93a7865b44c2dc0802e692126c851d5743e",
+    "docs/img/hero/pcb-agx-thor-can-breakout-dark.svg": "e52e2dfee5aa8df650b91c35a6ed24e021f79e58bd6b558b83ce4729928b8181",
+    "docs/img/hero/pcb-agx-thor-can-breakout-light.svg": "ff0f6eb899e318d7660c7baf6585a9c7978f91e9d640564a99ef903acfb22650",
     "docs/interface-and-protection.md": "8323065fb6582cb9c8257b07319cc201ff5f626fed2fda720efe546179e10c7e",
     "docs/iterations.md": "834a0db4555261c3b7e7e53c9995c12f5504a2e0598727431de31b0710453a0e",
     "docs/manufacturing.md": "770864815894edb7d7977f1573274252e8650b4c1a77afcc899fb47a3bb5d6b6",
@@ -363,6 +363,6 @@
     "tools/update_evidence.py": "532cf50eac05dcf51f2dbcc4b50cbd67b630c1a87c868674ea73c506137a3900",
     "tools/update_layout_features.py": "7127f423aa5e8871236a80729f093c4380d2cfe91197dcf9f1297f2402614034",
     "tools/validate_release.py": "953850c1112ab0814633ff08e81fb29ab221343d885c357f4b6ffa79effdda3a",
-    "tools/write_readmes.py": "ec71137cbb657e2077d068bbe03afda6657f700e866835815e1afd44a96e40d4"
+    "tools/write_readmes.py": "8001df59454a2755b3b3a3f4f5a43c5bdd16dfb2d164792e57136b46cb81390c"
   }
 }
